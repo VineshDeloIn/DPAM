@@ -62,8 +62,7 @@ span.forgotPswrd {
 }
 
 .rememberLogin label input{
-    margin: 0;
-    width: 10%;
+       width: 10%;
     position: relative;
     display: inline-block;
     
@@ -92,15 +91,15 @@ span.forgotPswrd {
 {
     top: -12px;
     left: 0px;
-    color: #EF5350;
+    color: grey;
     font-size: 14px;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 .login input:focus,
 .login textarea:focus,
 .login input:valid{
-   border-bottom: 1px solid #EF5350; 
+   border-bottom: 1px solid grey; 
 }
 
 
