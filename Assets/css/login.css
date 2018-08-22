@@ -1,28 +1,105 @@
-body,html{
+/* .landingBody{
     margin:0;
     padding:0;
-    height: 100%;
+    height: 92%;
     font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid green;
+} */
+
+.loginFooter {
+    position: fixed;
+    height: 8%;
+    width: 100%;
+    bottom: 0;
+    border: 2px solid red;
+    /* background-color: #EF5350;  */
+    color:red;
+    text-align: center;
 }
 
-.landing{
-    width: 66%;
-    height: 100%;
+.landing {
+    width: 66.7%;
+    height: 700px;
     overflow: hidden;
     float: left;
-   
-}
-.dpamLogo{
-   
+    border: 2px solid green;
+    background-image: url("../images/landing.jpg");
+    background-size: 100% 100%;
+    
 }
 
-.login{
-  position: fixed;
+.login {
+  float: left;
   overflow: hidden;
-  width: 100%;
+  width: 33.3%;
   max-width: 500px;
   right:0;  
   margin: 0;
-  height: 100%;
+  height: 700px;
+  border: 2px solid blue;
+}
 
+.dpamLogo {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+span.forgotPswrd {
+    float: right;
+}
+
+
+
+.login input {
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    color:#999;
+    border-bottom: 1px solid #999;
+    padding: 10px 0;
+    margin-bottom: 30px;
+}
+
+.rememberLogin label input{
+    margin: 0;
+    width: 10%;
+    position: relative;
+    display: inline-block;
+    
+}
+
+.rememberLogin label {
+    display: inline-block;
+    vertical-align: middle;
+    width: 40%;
+}
+
+
+.login form div {
+    position: relative;
+}
+.login form div label {
+    position: absolute;
+    top: 10px;
+    color: #999;     
+    transition: .5s;
+    pointer-events: none;
+}
+
+.login input:focus ~ label,
+.login input:valid ~ label
+{
+    top: -12px;
+    left: 0px;
+    color: #EF5350;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.login input:focus,
+.login textarea:focus,
+.login input:valid{
+   border-bottom: 1px solid #EF5350; 
 }

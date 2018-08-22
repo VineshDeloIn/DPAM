@@ -15,32 +15,47 @@
 </head>
 
 <body>
-    <div class="landing"><img style="height:100%;width:100%" src="Assets/images/landing.jpg" alt="Chania"> </div>
+    <div class="landing">
+        <!-- <img src="Assets/images/landing.jpg" alt="Chania">  -->
+    </div>
 
     <div class="login">
-
         <div class="dpamLogo">
-            <img src="Assets/images/dpamLogo.png" alt="">
+            <img src="Assets/images/dpamLogo.png" alt="Avatar" class="avatar">
         </div>
-        <p>Login</p>
-        <form action="login.html">
-            <div class="form-group">
-                <label for="email">Email address:</label>
-                <input type="email" class="form-control" id="email">
-                
-            </div>
-            <div class="form-group">
-                <label for="pwd">Password:</label>
-                <input type="password" class="form-control" id="pwd">
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox"> Remember me
-                </label>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+        <h2>Login</h2>
+        <div class="container">
+            <form>
+                <div>
+                    <input type="mail" name="mail" required="">
+                    <label>Email/Mobile Number</label>
+                    <p class="mailErr"></p>
+                    <br>
+                </div>
+                <div>
+                    <input type="text" name="password" required="">
+                    <label>Password</label>
+                    <p class="pswdErr"></p>
+                    <br>
+                </div>
+                <span class="rememberLogin">
+                <label for="rememberLogin">
+                        <input type="checkbox"> Remember me</label>
+                </span>
+               
+                 <span class="forgotPswrd"><a href="#">Forgot Password</a> </span> 
+
+                 <button type="button" class="btn btn-dark">LOGIN</button>
+                <p>OR</p>
+                <button type="button" class="btn btn-dark">LOGIN USING UAE PASS</button>
+                <button type="button" class="btn btn-dark">FACEBOOK</button>
+                <button type="button" class="btn btn-dark">GOOGLE</button> 
+            </form>
+        </div>
     </div>
 </body>
-<footer></footer>
+<footer class="loginFooter">
+    <p>This is footer for the page</p>
+</footer>
+
 </html>
