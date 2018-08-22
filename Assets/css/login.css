@@ -1,0 +1,28 @@
+body,html{
+    margin:0;
+    padding:0;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.landing{
+    width: 66%;
+    height: 100%;
+    overflow: hidden;
+    float: left;
+   
+}
+.dpamLogo{
+   
+}
+
+.login{
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px;
+  right:0;  
+  margin: 0;
+  height: 100%;
+
+}
