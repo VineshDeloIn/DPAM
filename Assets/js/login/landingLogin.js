@@ -4,7 +4,8 @@ var username = $("mail").val();
 var password = $("password").val();
 
 
-    $("#loginBtn").click(function () {
+
+    $("#loginForm").click(function () {
      alert(username);
     });
 });
