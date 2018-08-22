@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
     <script src="Assets/js/jquery-3.3.2.min.js"></script>
     <script src="Assets/js/bootstrap.min.js"></script>
-
+    <script src="Assets/js/login/landingLogin.js"></script>
 </head>
 
 <body>
@@ -27,25 +27,25 @@
         <div class="container">
             <form>
                 <div>
-                    <input type="mail" name="mail" required="">
+                    <input type="mail" id="mail" name="mail" required="">
                     <label>Email/Mobile Number</label>
                     <p class="mailErr"></p>
                     <br>
                 </div>
                 <div>
-                    <input type="text" name="password" required="">
+                    <input type="text" id="password" name="password" required="">
                     <label>Password</label>
                     <p class="pswdErr"></p>
                     <br>
                 </div>
                 <span class="rememberLogin">
                 <label for="rememberLogin">
-                        <input type="checkbox"> Remember me</label>
+                        <input type="checkbox" id="remeberMeCbx"> Remember me</label>
                 </span>
                
                  <span class="forgotPswrd"><a href="#">Forgot Password</a> </span> 
 
-                 <button type="button" class="btn btn-dark">LOGIN</button>
+                 <button type="button" id="loginBtn" class="btn btn-dark">LOGIN</button>
                 <p>OR</p>
                 <button type="button" class="btn btn-dark">LOGIN USING UAE PASS</button>
                 <button type="button" class="btn btn-dark">FACEBOOK</button>
@@ -54,6 +54,7 @@
         </div>
     </div>
 </body>
+
 <footer class="loginFooter">
     <p>This is footer for the page</p>
 </footer>
