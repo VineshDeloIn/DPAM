@@ -49,7 +49,6 @@ span.forgotPswrd {
 }
 
 
-
 .login input {
     width: 100%;
     box-sizing: border-box;
@@ -59,7 +58,7 @@ span.forgotPswrd {
     color:#999;
     border-bottom: 1px solid #999;
     padding: 10px 0;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
 
 .rememberLogin label input{
@@ -102,4 +101,37 @@ span.forgotPswrd {
 .login textarea:focus,
 .login input:valid{
    border-bottom: 1px solid #EF5350; 
+}
+
+
+
+#loginBtn {
+    width: 100%;
+}
+
+#uaeLogin {
+    width: 100%
+}
+
+#fbLogin {
+    text-align: center;
+    width: 100%;
+}
+
+#googleLogin {
+    text-align: center;
+    width: 100%;
+}
+
+#fbGoogleBtnDiv {
+    margin-top: 5%;
+}
+
+#loginText {
+       margin-top: 8%;
+       margin-left: 10%;
+}
+
+#loginForm {
+    padding: 0% 10%;
 }
