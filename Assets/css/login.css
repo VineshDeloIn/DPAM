@@ -5,6 +5,7 @@
     font-family: Arial, Helvetica, sans-serif;
     border: 2px solid green;
 } */
+<<<<<<< HEAD
 
 /* .mailErr{
     margin-bottom: 5%;
@@ -60,22 +61,44 @@
         width: 50px;
         height: 16px;
         padding-left:27px;
+=======
+@media only screen and (min-width: 482px) {
+    .loginFooter {
+        position: fixed;
+        height: 60px;
+        width: 100%;
+        bottom: 0;
+        border: 2px solid #585d63;
+         background-color: #585d63;  
+        color:#ffffff;
+        text-align: center;
+    }
+    .footerDiv{
+     padding-top: 23px;
+     padding-bottom: 22px;
+    
+    }
+    .dubaiProperties{
+        width: 144px;
+        height: 15px;
+>>>>>>> de6421bcc7d3f9d0b0f841eb756df31401d559e4
         font-family: HelveticaNeue;
         font-size: 13px;
-        font-weight: bold;
+        font-weight: normal;
         font-style: normal;
         font-stretch: normal;
         line-height: normal;
         letter-spacing: normal;
         color: #ffffff;
+        padding-left: 135px;
       }
-  
-.privacyPolicy {
-        width: 87px;
+    
+    .aboutUs {
+        width: 58px;
         height: 16px;
         font-family: HelveticaNeue;
         font-size: 13px;
-        padding-left:27px;
+        padding-left:262px;
         font-weight: bold;
         font-style: normal;
         font-stretch: normal;
@@ -83,31 +106,179 @@
         letter-spacing: normal;
         color: #ffffff;
       }
-
- .termsOfUse{
-        width: 83px;
-        height: 16px;
-        font-family: HelveticaNeue;
-        padding-left:26px;
-        font-size: 13px;
-        font-weight: bold;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        color: #ffffff;
-      }
-
-.facebookLogoButton {
-        width: 10px;
+    .contact {
+            width: 50px;
+            height: 16px;
+            padding-left:27px;
+            font-family: HelveticaNeue;
+            font-size: 13px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #ffffff;
+          }
+      
+    .privacyPolicy {
+            width: 87px;
+            height: 16px;
+            font-family: HelveticaNeue;
+            font-size: 13px;
+            padding-left:27px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #ffffff;
+          }
+    
+     .termsOfUse{
+            width: 83px;
+            height: 16px;
+            font-family: HelveticaNeue;
+            padding-left:26px;
+            font-size: 13px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #ffffff;
+          }
+.facebookSpan{
+            padding-left:344.4px;
+        }
+ .instaSpan{
+            padding-left:26.4px;
+        }
+    
+ .facebookLogoButton {
+            width: 10px;
+            height: 19px;
+            object-fit: contain;
+          }
+.instagramLogo {
+        width: 19px;
         height: 19px;
         object-fit: contain;
       }
-.instagramLogo {
-    width: 19px;
-    height: 19px;
-    object-fit: contain;
-  }
+}
+
+/*for mobile screen*/
+@media only screen and (max-width: 483px) {
+    .loginFooter {
+        position: fixed;
+        height: 90px;
+        width: 483px;
+        bottom: 0;
+        border: 2px solid #585d63;
+         background-color: #585d63;  
+        color:#ffffff;
+        text-align: center;
+    }
+    .footerDiv{
+     padding-top: 23px;
+     padding-bottom: 22px;
+    
+    }
+    .dubaiProperties{
+        width: 144px;
+        height: 15px;
+        font-family: HelveticaNeue;
+        font-size: 13px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #ffffff;
+        padding-left: 150px;
+        
+      }
+    
+    .aboutUs {
+        width: 58px;
+        height: 16px;
+        font-family: HelveticaNeue;
+        font-size: 13px;
+        padding-left:162px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #ffffff;
+        padding-top: 50px;
+        
+      }
+    .contact {
+            width: 50px;
+            height: 16px;
+            padding-left:27px;
+            font-family: HelveticaNeue;
+            font-size: 13px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #ffffff;
+            padding-top: 50px;
+          
+          }
+      
+    .privacyPolicy {
+            width: 87px;
+            height: 16px;
+            font-family: HelveticaNeue;
+            font-size: 13px;
+            padding-left:27px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #ffffff;
+            padding-top: 50px;
+          }
+    
+     .termsOfUse{
+            width: 83px;
+            height: 16px;
+            font-family: HelveticaNeue;
+            padding-left:26px;
+            font-size: 13px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #ffffff;
+            padding-top: 50px;
+          }
+    .facebookSpan{
+        padding-left:244.4px;
+        padding-top: 70px;
+    }
+    .instaSpan{
+        padding-left:26.4px;
+        padding-top: 70px;
+    }
+    
+    .facebookLogoButton {
+            width: 10px;
+            height: 19px;
+            object-fit: contain;
+          }
+    .instagramLogo {
+        width: 19px;
+        height: 19px;
+        object-fit: contain;
+      }
+}
+
 .landing {
     width: 66.7%;
     height: 92vh;
