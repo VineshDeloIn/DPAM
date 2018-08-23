@@ -11,7 +11,7 @@
     height: 8%;
     width: 100%;
     bottom: 0;
-    border: 2px solid red;
+    border: 2px solid blue;
     /* background-color: #EF5350;  */
     color:red;
     text-align: center;
@@ -19,10 +19,10 @@
 
 .landing {
     width: 66.7%;
-    height: 700px;
+    height: 92vh;
     overflow: hidden;
     float: left;
-    border: 2px solid green;
+    /* border: 2px solid red; */
     background-image: url("../images/landing.jpg");
     background-size: 100% 100%;
     
@@ -35,19 +35,14 @@
   max-width: 500px;
   right:0;  
   margin: 0;
-  height: 700px;
-  border: 2px solid blue;
+  height: 92vh;
+  /* border: 2px solid blue; */
 }
 
 .dpamLogo {
     text-align: center;
     margin: 24px 0 12px 0;
 }
-
-span.forgotPswrd {
-    float: right;
-}
-
 
 .login input {
     width: 100%;
@@ -57,21 +52,28 @@ span.forgotPswrd {
     border: none;
     color:#999;
     border-bottom: 1px solid #999;
-    padding: 10px 0;
+    padding: 5px 0;
     /* margin-bottom: 30px; */
 }
 
-.rememberLogin label input{
-       width: 10%;
-    position: relative;
-    display: inline-block;
+
+ .rememberLogin label input{
+    width: 10%;  
+    margin-top:12%;
+    /* position: relative; */
+    /* display: inline-block; */
     
-}
+} 
 
 .rememberLogin label {
-    display: inline-block;
-    vertical-align: middle;
+    /* display: inline-block;
+     vertical-align: middle;  */
     width: 40%;
+}
+
+.forgotPswrd {
+    float: right;
+    margin-top:3%;
 }
 
 
@@ -89,10 +91,10 @@ span.forgotPswrd {
 .login input:focus ~ label,
 .login input:valid ~ label
 {
-    top: -12px;
+    top: -9px;
     left: 0px;
     color: grey;
-    font-size: 14px;
+    font-size: 12px;
     /* font-weight: bold; */
 }
 
@@ -106,10 +108,11 @@ span.forgotPswrd {
 
 #loginBtn {
     width: 100%;
+    margin-top: 8%;
 }
 
 #uaeLogin {
-    width: 100%
+    width: 100%;
 }
 
 #fbLogin {
@@ -127,10 +130,37 @@ span.forgotPswrd {
 }
 
 #loginText {
-       margin-top: 8%;
+       margin-top: 5%;
        margin-left: 10%;
 }
 
 #loginForm {
-    padding: 0% 10%;
+    padding: 0% 9%;
+    height: 80vh;
 }
+
+#signUpText{
+    text-align: center;
+    margin-top: 8%;
+}
+
+/* #rememberChck {
+    float: left;
+    margin-left:0;
+    vertical-align:middle;
+    display: inline-block;
+} */
+
+@media screen and (max-width: 450px) {
+    .landing {
+      /* border: 2px solid blue; */
+      display: none;
+    }
+
+    .login {
+        width: 100%;
+        overflow-y: scroll;
+    }
+    
+}
+

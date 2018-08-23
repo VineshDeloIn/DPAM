@@ -30,33 +30,45 @@
                 <div>
                     <input type="mail" name="mail" required="">
                     <label>Email/Mobile Number</label>
-                    <p class="mailErr">sdjfglsdjgfsjd</p>
-                    <br>
+                    <p class="mailErr">email error msg</p>
                 </div>
                 <div>
                     <input type="text" name="password" required="">
                     <label>Password</label>
-                    <p class="pswdErr">jksfgilasudgf</p>
-                    <br>
-                </div>
-                <span class="rememberLogin">
-                <label for="rememberLogin">
+                    <p class="pswdErr">pswrd error msg</p>
+                 </div>
+                 
+                 <span class="rememberLogin">
+                    <label for="rememberLogin">
                         <input type="checkbox"> Remember me</label>
                 </span>
-               
-                 <span class="forgotPswrd"><a href="#">Forgot Password</a> </span> 
-                <div>
-                 <button type="button" class="btn btn-dark" id="loginBtn">LOGIN</button><br>
-                <p style="text-align: center;">OR</p><br>
-                <button type="button" class="btn btn-outline-secondary" id="uaeLogin">LOGIN USING UAE PASS</button>
 
-                <div class="row" id="fbGoogleBtnDiv">
-                        <div class="col-md-6"><button type="button" id="fbLogin" class="btn btn-outline-secondary">FACEBOOK</button></div>
-                        <div class="col-md-6"><button type="button" id="googleLogin" class="btn btn-outline-secondary">GOOGLE</button> </div>
-                      </div>
-                      <p style="text-align: center;">Don't have an account?<a href="#">SIGN UP</a></p>
-            </div>
+                <span class="forgotPswrd">
+                    <a href="#">Forgot Password</a>
+                </span> 
+                
+                
+                    <button type="button" class="btn btn-dark btn-lg" id="loginBtn">LOGIN</button>
+                    <br>
+                
             </form>
+            <p style="text-align: center;margin-top:2%;">OR</p>
+           
+            <button type="button" class="btn btn-outline-secondary btn-lg" id="uaeLogin">LOGIN USING UAE PASS</button>
+
+            <div class="row" id="fbGoogleBtnDiv">
+                <div class="col-md-6">
+                    <button type="button" id="fbLogin" class="btn btn-outline-secondary btn-lg">FACEBOOK</button>
+                </div>
+                <div class="col-md-6">
+                    <button type="button" id="googleLogin" class="btn btn-outline-secondary btn-lg">GOOGLE</button>
+                </div>
+            </div>
+            <p id="signUpText" >Don't have an account?
+                <a href="#">SIGN UP</a>
+            </p>
+            </div>
+
         </div>
     </div>
 </body>
