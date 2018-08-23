@@ -223,7 +223,7 @@
 
 .landing {
     width: 66.7%;
-    height: 92vh;
+    height: 92.5vh;
     overflow: hidden;
     float: left;
     /* border: 2px solid red; */
@@ -239,7 +239,7 @@
   max-width: 500px;
   right:0;  
   margin: 0;
-  height: 92vh;
+  height: 92.5vh;
   /* border: 2px solid blue; */
 }
 
