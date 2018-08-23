@@ -6,6 +6,14 @@
     border: 2px solid green;
 } */
 
+/* .mailErr{
+    margin-bottom: 5%;
+}
+
+.pswdErr {
+    margin-bottom: 3%;
+} */
+
 .loginFooter {
     position: fixed;
     height: 8%;
@@ -217,7 +225,7 @@
        margin-left: 10%;
 }
 
-#loginForm {
+#loginFormDiv {
     padding: 0% 9%;
     height: 80vh;
 }
