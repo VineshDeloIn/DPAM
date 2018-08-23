@@ -5,63 +5,6 @@
     font-family: Arial, Helvetica, sans-serif;
     border: 2px solid green;
 } */
-<<<<<<< HEAD
-
-/* .mailErr{
-    margin-bottom: 5%;
-}
-
-.pswdErr {
-    margin-bottom: 3%;
-} */
-
-.loginFooter {
-    position: fixed;
-    height: 8%;
-    width: 100%;
-    bottom: 0;
-    border: 2px solid #585d63;
-     background-color: #585d63;  
-    color:#ffffff;
-    text-align: center;
-}
-.footerDiv{
- padding-top: 23px;
- padding-bottom: 22px;
-
-}
-.dubaiProperties{
-    width: 144px;
-    height: 15px;
-    font-family: HelveticaNeue;
-    font-size: 13px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #ffffff;
-    padding-left: 135px;
-  }
-
-.aboutUs {
-    width: 58px;
-    height: 16px;
-    font-family: HelveticaNeue;
-    font-size: 13px;
-    padding-left:262px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #ffffff;
-  }
-.contact {
-        width: 50px;
-        height: 16px;
-        padding-left:27px;
-=======
 @media only screen and (min-width: 482px) {
     .loginFooter {
         position: fixed;
@@ -81,7 +24,6 @@
     .dubaiProperties{
         width: 144px;
         height: 15px;
->>>>>>> de6421bcc7d3f9d0b0f841eb756df31401d559e4
         font-family: HelveticaNeue;
         font-size: 13px;
         font-weight: normal;
