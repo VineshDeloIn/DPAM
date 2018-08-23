@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
     <script src="Assets/js/jquery-3.3.2.min.js"></script>
     <script src="Assets/js/bootstrap.min.js"></script>
-
+    <script src="Assets/js/login/landingLogin.js"></script>
 </head>
 
 <body>
@@ -26,21 +26,21 @@
         <h2 id="loginText">Login</h2>
         <br>
         <div class="container" id="loginForm">
-            <form>
+            <form id="loginForm">
                 <div>
-                    <input type="mail" name="mail" required="">
+                    <input type="mail" id="mail" name="mail">
                     <label>Email/Mobile Number</label>
                     <p class="mailErr">email error msg</p>
                 </div>
                 <div>
-                    <input type="password" name="password" required="">
+                    <input type="password" id="password" name="password">
                     <label>Password</label>
-                    <p class="pswdErr">pswrd error msg</p>
-                 </div>
-                 
-                 <span class="rememberLogin">
-                    <label for="rememberLogin">
-                        <input type="checkbox"> Remember me</label>
+                    <p class="pswdErr">jksfgilasudgf</p>
+                    <br>
+                </div>
+                <span class="rememberLogin">
+                <label for="rememberLogin">
+                        <input type="checkbox" id="remeberMeCbx"> Remember me</label>
                 </span>
 
                 <span class="forgotPswrd">
@@ -72,8 +72,35 @@
         </div>
     </div>
 </body>
+
 <footer class="loginFooter">
-    <p>This is footer for the page</p>
+    <div class="footerDiv">
+    <span class="dubaiProperties" >
+            &copy; Dubai Properties 2018
+    </span>
+    <span class="aboutUs">
+        About Us
+    </span>
+    <span class="contact">
+       Contact
+    </span>
+    <span class="privacyPolicy">
+       Privacy Policy
+    </span>
+    <span class="termsOfUse">
+        Terms of Use
+    </span>
+
+    <span style="padding-left:344.4px">
+            <img src="Assets/images/001-facebook-logo-button.png"
+            class="facebookLogoButton">
+    </span>
+
+        <span style="padding-left:26.4px">
+                <img src="Assets/images/002-instagram-logo.png"
+                class="instagramLogo">
+            </span>   
+</div>
 </footer>
 
 </html>
