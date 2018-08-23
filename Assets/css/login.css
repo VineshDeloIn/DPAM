@@ -132,7 +132,7 @@
         line-height: normal;
         letter-spacing: normal;
         color: #ffffff;
-        margin-left: -56px;
+        margin-left: -36px;
         margin-top: 1%;
         
       }
@@ -142,7 +142,7 @@
         height: 16px;
         font-family: HelveticaNeue;
         font-size: 13px;
-        margin-left:-100px;
+        margin-left:-80px;
         font-weight: bold;
         font-style: normal;
         font-stretch: normal;
@@ -156,7 +156,6 @@
             width: 50px;
             height: 16px;
             padding-left:16px;
-            margin-right:20px;
             font-family: HelveticaNeue;
             font-size: 13px;
             font-weight: bold;
@@ -175,7 +174,7 @@
             font-family: HelveticaNeue;
             font-size: 13px;
             padding-top:15px;
-            margin-left:-112px;
+            margin-left:-92px;
             font-weight: bold;
             font-style: normal;
             font-stretch: normal;
@@ -189,7 +188,7 @@
             width: 83px;
             height: 16px;
             font-family: HelveticaNeue;
-            padding-left:16px;
+            margin-left:25px;
             font-size: 13px;
             font-weight: bold;
             font-style: normal;
@@ -200,12 +199,12 @@
             
           }
     .facebookSpan{
-        padding-left:175px;
-        padding-top: 29px;
+        padding-left:215px;
+        padding-top: 25px;
     }
     .instaSpan{
         padding-left:26.4px;
-        padding-top: 29px;
+        padding-top: 25px;
     }
     
     .facebookLogoButton {
