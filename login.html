@@ -31,8 +31,7 @@
                 <div>
                     <input type="text" id="mail" name="" required>
                     <label>Email/Mobile Number</label>
-                    <p class="mailErr">sdjfglsdjgfsjd</p>
-                    <br>
+                    <p class="mailErr">email error msg</p>
                 </div>
                 <div>
                     <input type="password" id="password" name="" required>
@@ -44,26 +43,65 @@
                 <label for="rememberLogin">
                         <input type="checkbox" id="remeberMeCbx"> Remember me</label>
                 </span>
-               
-                 <span class="forgotPswrd"><a href="#">Forgot Password</a> </span> 
-                <div>
-                 <button type="button" class="btn btn-dark" id="loginBtn">LOGIN</button><br>
-                <p style="text-align: center;">OR</p><br>
-                <button type="button" class="btn btn-outline-secondary" id="uaeLogin">LOGIN USING UAE PASS</button>
 
-                <div class="row" id="fbGoogleBtnDiv">
-                        <div class="col-md-6"><button type="button" id="fbLogin" class="btn btn-outline-secondary">FACEBOOK</button></div>
-                        <div class="col-md-6"><button type="button" id="googleLogin" class="btn btn-outline-secondary">GOOGLE</button> </div>
-                      </div>
-                      <p style="text-align: center;">Don't have an account?<a href="#">SIGN UP</a></p>
-            </div>
+                <span class="forgotPswrd">
+                    <a href="#">Forgot Password</a>
+                </span> 
+                
+                
+                    <button type="button" class="btn btn-dark btn-lg" id="loginBtn">LOGIN</button>
+                    <br>
+                
             </form>
+            <p style="text-align: center;margin-top:2%;">OR</p>
+           
+            <button type="button" class="btn btn-outline-secondary btn-lg" id="uaeLogin">LOGIN USING UAE PASS</button>
+
+            <div class="row" id="fbGoogleBtnDiv">
+                <div class="col-md-6">
+                    <button type="button" id="fbLogin" class="btn btn-outline-secondary btn-lg">FACEBOOK</button>
+                </div>
+                <div class="col-md-6">
+                    <button type="button" id="googleLogin" class="btn btn-outline-secondary btn-lg">GOOGLE</button>
+                </div>
+            </div>
+            <p id="signUpText" >Don't have an account?
+                <a href="#">SIGN UP</a>
+            </p>
+            </div>
+
         </div>
     </div>
 </body>
 
 <footer class="loginFooter">
-    <p>This is footer for the page</p>
+    <div class="footerDiv">
+    <span class="dubaiProperties" >
+            &copy; Dubai Properties 2018
+    </span>
+    <span class="aboutUs">
+        About Us
+    </span>
+    <span class="contact">
+       Contact
+    </span>
+    <span class="privacyPolicy">
+       Privacy Policy
+    </span>
+    <span class="termsOfUse">
+        Terms of Use
+    </span>
+
+    <span style="padding-left:344.4px">
+            <img src="Assets/images/001-facebook-logo-button.png"
+            class="facebookLogoButton">
+    </span>
+
+        <span style="padding-left:26.4px">
+                <img src="Assets/images/002-instagram-logo.png"
+                class="instagramLogo">
+            </span>   
+</div>
 </footer>
 
 </html>
