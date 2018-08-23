@@ -223,7 +223,7 @@
 
 .landing {
     width: 66.7%;
-    height: 92vh;
+    height: 92.5vh;
     overflow: hidden;
     float: left;
     /* border: 2px solid red; */
@@ -239,7 +239,7 @@
   max-width: 500px;
   right:0;  
   margin: 0;
-  height: 92vh;
+  height: 92.5vh;
   /* border: 2px solid blue; */
 }
 
@@ -263,7 +263,7 @@
 
  .rememberLogin label input{
     width: 10%;  
-    margin-top:12%;
+    margin-top:2%;
     /* position: relative; */
     /* display: inline-block; */
     
@@ -277,7 +277,7 @@
 
 .forgotPswrd {
     float: right;
-    margin-top:3%;
+    /* margin-top:1%; */
 }
 
 
@@ -320,13 +320,19 @@
 }
 
 #fbLogin {
+   text-align: center;
+    width: 100%; 
+}
+
+#orText {
     text-align: center;
-    width: 100%;
+    margin-top:2%;
 }
 
 #googleLogin {
-    text-align: center;
-    width: 100%;
+   
+  text-align: center;
+    width: 100%; 
 }
 
 #fbGoogleBtnDiv {
@@ -335,7 +341,7 @@
 
 #loginText {
        margin-top: 5%;
-       margin-left: 10%;
+       margin-left: 9%;
 }
 
 #loginFormDiv {
@@ -348,12 +354,14 @@
     margin-top: 8%;
 }
 
-/* #rememberChck {
-    float: left;
-    margin-left:0;
-    vertical-align:middle;
-    display: inline-block;
-} */
+.pswdErr {
+    color: red;
+}
+
+.mailErr {
+    color: red;
+    margin-bottom: 7%;
+}
 
 @media screen and (max-width: 450px) {
     .landing {
