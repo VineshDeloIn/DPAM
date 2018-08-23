@@ -363,7 +363,7 @@
     margin-bottom: 7%;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 768px) {
     .landing {
       /* border: 2px solid blue; */
       display: none;
@@ -372,6 +372,10 @@
     .login {
         width: 100%;
         overflow-y: scroll;
+    }
+
+    #fbLogin {
+        margin-bottom: 2%
     }
     
 }
