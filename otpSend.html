@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dubai Properties - Login</title>
+    <title>Dubai Properties - OTP</title>
 
     <link rel="stylesheet" href="Assets/css/customFont.css">
     <link rel="stylesheet" href="Assets/css/otp.css">    
@@ -26,25 +26,26 @@
         <div class="dpamLogoOTP">
             <img src="Assets/images/dam_logo.svg" alt="Avatar" class="avatar">
         </div>
-        <h2 id="EnterTextOTP">Enter OTP</h2>
-        <p class="otpRegNumSentFirst">We have sent an OTP to your registered mobile 
+        <br>
+        <h2 id="EnterTextOTP" class="EnterTextClassOTP">Enter OTP</h2>
+        <p class="otpRegNumSent">We have sent an OTP to your registered mobile 
         number. Please enter it below.</p>
         <br>
         <div class="container" id="FormDivOTP">
-            <form id="OtpForm" method="POST">
+            <form id="OtpForm" method="POST" novalidate>
                 <div>
                     <input type="text" id="otpNumber" name="" required>
                     <label>Enter OTP</label>
-                    <p class="emailPhOtpErr">Invalid OTP!</p>
+                    <p class="emailPhOtpErr"></p>
                 </div>
 
-                <br>
-                <button type="submit" class="btn btn-dark btn-lg" id="submitOtpBtn">Submit</button>
+                <button type="submit" class="btn btn-dark btn-lg" id="submitOtpBtn">SUBMIT</button>
                 <br>
 
             </form>
-            <p id="signUpText">Did not recieve OTP yet?
-                <a href="#">Resend</a>
+            <br>
+            <p id="ResendOtpText">Did not recieve OTP yet?
+                <a href="#">RESEND</a>
             </p>
         </div>
 
