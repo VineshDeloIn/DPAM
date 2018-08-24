@@ -1,11 +1,5 @@
-/* .landingBody{
-    margin:0;
-    padding:0;
-    height: 92%;
-    font-family: Arial, Helvetica, sans-serif;
-    border: 2px solid green;
-} */
-@media only screen and (min-width: 482px) {
+
+@media only screen and (min-width: 768px) {
     .loginFooter {
         position: fixed;
         height: 60px;
@@ -40,7 +34,7 @@
         height: 16px;
         font-family: HelveticaNeue;
         font-size: 13px;
-        padding-left:262px;
+        margin-left:70px;
         font-weight: bold;
         font-style: normal;
         font-stretch: normal;
@@ -51,7 +45,7 @@
     .contact {
             width: 50px;
             height: 16px;
-            padding-left:27px;
+            margin-left: -30px;
             font-family: HelveticaNeue;
             font-size: 13px;
             font-weight: bold;
@@ -67,20 +61,20 @@
             height: 16px;
             font-family: HelveticaNeue;
             font-size: 13px;
-            padding-left:27px;
             font-weight: bold;
             font-style: normal;
             font-stretch: normal;
             line-height: normal;
             letter-spacing: normal;
             color: #ffffff;
+            margin-left: -22px;
           }
     
      .termsOfUse{
             width: 83px;
             height: 16px;
             font-family: HelveticaNeue;
-            padding-left:26px;
+            margin-left: -22px;
             font-size: 13px;
             font-weight: bold;
             font-style: normal;
@@ -90,10 +84,12 @@
             color: #ffffff;
           }
 .facebookSpan{
-            padding-left:344.4px;
+         padding-left: 284px;
+         margin-top: -7px;
         }
  .instaSpan{
-            padding-left:26.4px;
+            margin-top: -7px;
+            padding-left: 26px;
         }
     
  .facebookLogoButton {
@@ -106,14 +102,14 @@
         height: 19px;
         object-fit: contain;
       }
-}
 
+
+} 
 /*for mobile screen*/
-@media only screen and (max-width: 483px) {
+@media only screen and (max-width: 768px) {
     .loginFooter {
         position: fixed;
-        height: 90px;
-        width: 483px;
+        width: 100%;
         bottom: 0;
         border: 2px solid #585d63;
          background-color: #585d63;  
@@ -136,7 +132,8 @@
         line-height: normal;
         letter-spacing: normal;
         color: #ffffff;
-        padding-left: 150px;
+        margin-left: -36px;
+        margin-top: 1%;
         
       }
     
@@ -145,20 +142,20 @@
         height: 16px;
         font-family: HelveticaNeue;
         font-size: 13px;
-        padding-left:162px;
+        margin-left:-80px;
         font-weight: bold;
         font-style: normal;
         font-stretch: normal;
         line-height: normal;
         letter-spacing: normal;
         color: #ffffff;
-        padding-top: 50px;
+        padding-top: 20px;
         
       }
     .contact {
             width: 50px;
             height: 16px;
-            padding-left:27px;
+            padding-left:16px;
             font-family: HelveticaNeue;
             font-size: 13px;
             font-weight: bold;
@@ -167,7 +164,7 @@
             line-height: normal;
             letter-spacing: normal;
             color: #ffffff;
-            padding-top: 50px;
+            
           
           }
       
@@ -176,21 +173,22 @@
             height: 16px;
             font-family: HelveticaNeue;
             font-size: 13px;
-            padding-left:27px;
+            padding-top:15px;
+            margin-left:-92px;
             font-weight: bold;
             font-style: normal;
             font-stretch: normal;
             line-height: normal;
             letter-spacing: normal;
             color: #ffffff;
-            padding-top: 50px;
+            
           }
     
      .termsOfUse{
             width: 83px;
             height: 16px;
             font-family: HelveticaNeue;
-            padding-left:26px;
+            margin-left:25px;
             font-size: 13px;
             font-weight: bold;
             font-style: normal;
@@ -198,15 +196,15 @@
             line-height: normal;
             letter-spacing: normal;
             color: #ffffff;
-            padding-top: 50px;
+            
           }
     .facebookSpan{
-        padding-left:244.4px;
-        padding-top: 70px;
+        padding-left:215px;
+        padding-top: 25px;
     }
     .instaSpan{
         padding-left:26.4px;
-        padding-top: 70px;
+        padding-top: 25px;
     }
     
     .facebookLogoButton {
@@ -363,7 +361,7 @@
     margin-bottom: 7%;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 768px) {
     .landing {
       /* border: 2px solid blue; */
       display: none;
@@ -372,7 +370,17 @@
     .login {
         width: 100%;
         overflow-y: scroll;
+        height:75vh;
     }
+
+    #fbLogin {
+        margin-bottom: 2%
+    }
+   .loginFooter{
+       height: 25vh;
+   }
+
+
     
 }
 
