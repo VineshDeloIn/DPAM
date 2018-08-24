@@ -1,55 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Forgot Password</title>
 
-    <link rel="stylesheet" href="Assets/css/login.css">
+     <!-- <link rel="stylesheet" href="Assets/css/login.css">  -->
     <link rel="stylesheet" href="Assets/css/forgotPswrd.css">
+    <link rel="stylesheet" href="Assets/css/customFont.css">
+    <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
+    <script src="Assets/js/jquery-3.3.2.min.js"></script>
+    <script src="Assets/js/jqueryValidation/jquery.validate.min.js"></script>
+    <script src="Assets/js/bootstrap.min.js"></script>
 </head>
+
 <body>
-        <div class="forgotPswrdlanding">
-                <!-- <img src="Assets/images/landing.jpg" alt="Chania">  -->
-            </div>
+    <div class="forgotPswrdlanding">
+        <!-- <img src="Assets/images/landing.jpg" alt="Chania">  -->
+    </div>
+
+    <div class="forgotPswrdRightPane">
+        <div class="forgotPswrdDpamLogo">
+            <img src="Assets/images/dam_logo.svg" alt="Avatar" class="avatar">
+        </div>
         
-            <div class="forgotPswrd">
-                <div class="forgotPswrdDpamLogo">
-                    <img src="Assets/images/dam_logo.svg" alt="Avatar" class="avatar">
-                </div>
-               
-               
-        
+        <div class="container" id="forgotPswrdFormDiv">
+                <p id="isForgotPswrd">Forgot your password?</p>
+                <p class="enterEmailMobForgtPswrd">Please enter your registered email or phone
+                     number below to resetyour password</p>
+                <br>
+                <br>
+                <form id="forgotPswrdForm" method="POST">
+                        <div>
+                            <input type="text" id="emailMobForgotPswrd" name="" required>
+                            <label id="emailMobForgotPswrdTxt" >Email / Mobile Number</label>
+                            <p class="emailMobForgtPswrdErr"></p>
+                        </div>
+                        <br>
+                        <button type="button" class="btn btn-dark" id="sendFrgtPswrdBtn">SEND VERIFICATION CODE</button>
+                        <br>
+                    </form>
+                    <p id="noAcntFrgtPswrdTxt">Don't have an account?
+                            <a id="signUpFrgtPswrdText" href="#">SIGN UP</a>
+                        </p>    
             </div>
-           
+
+
+    </div>
+
 </body>
 
 <footer class="loginFooter">
-        <div class="footerDiv">
-            <span class="dubaiProperties">
-                &copy; Dubai Properties 2018
-            </span>
-            <span class="aboutUs">
-                About Us
-            </span>
-            <span class="contact">
-                Contact
-            </span>
-            <span class="privacyPolicy">
-                Privacy Policy
-            </span>
-            <span class="termsOfUse">
-                Terms of Use
-            </span>
-    
-            <span class="facebookSpan">
-                <img src="Assets/images/001-facebook-logo-button.png" class="facebookLogoButton">
-            </span>
-    
-            <span class="instaSpan">
-                <img src="Assets/images/002-instagram-logo.png" class="instagramLogo">
-            </span>
-        </div>
-    </footer>
+    <div class="footerDiv">
+        <span class="dubaiProperties">
+            &copy; Dubai Properties 2018
+        </span>
+        <span class="aboutUs">
+            About Us
+        </span>
+        <span class="contact">
+            Contact
+        </span>
+        <span class="privacyPolicy">
+            Privacy Policy
+        </span>
+        <span class="termsOfUse">
+            Terms of Use
+        </span>
+
+        <span class="facebookSpan">
+            <img src="Assets/images/001-facebook-logo-button.png" class="facebookLogoButton">
+        </span>
+
+        <span class="instaSpan">
+            <img src="Assets/images/002-instagram-logo.png" class="instagramLogo">
+        </span>
+    </div>
+</footer>
+
 </html>
