@@ -4,6 +4,7 @@ $(document).ready(function(){
         $(".emailPhOtpErr").html("");
     });
 
+    var isOtpValid;
     $( "#OtpForm" ).on('submit',function( event ) {
         var emailMobOtp = $('#otpNumber').val();
         event.preventDefault();
@@ -11,6 +12,7 @@ $(document).ready(function(){
         if(emailMobOtp == '') {
           $('.emailPhOtpErr').html('Invalid OTP');
           //$('p.emailPhOtpErr').slideDown(5000);
+          isOtpValid = false;
         }
       });
 });

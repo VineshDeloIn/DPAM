@@ -8,13 +8,14 @@
     <title>Dubai Properties - OTP</title>
 
     <link rel="stylesheet" href="Assets/css/customFont.css">
-    <link rel="stylesheet" href="Assets/css/otp.css">    
+    <link rel="stylesheet" href="Assets/css/otp.css">
     <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Assets/css/footer.css">
     <script src="Assets/js/jquery-3.3.2.min.js"></script>
     <script src="Assets/js/jqueryValidation/jquery.validate.min.js"></script>
     <script src="Assets/js/bootstrap.min.js"></script>
     <script src="Assets/js/otp/otp.js"></script>
-    
+
 </head>
 
 <body>
@@ -27,12 +28,13 @@
             <img src="Assets/images/dam_logo.svg" alt="Avatar" class="avatar">
         </div>
         <br>
-        <h2 id="EnterTextOTP" class="EnterTextClassOTP">Enter OTP</h2>
-        <p class="otpRegNumSent">We have sent an OTP to your registered mobile 
-        number. Please enter it below.</p>
-        <br>
+
         <div class="container" id="FormDivOTP">
+            <h2 id="EnterTextOTP" class="EnterTextClassOTP">Enter OTP</h2>
+            <p class="otpRegNumSent">We have sent an OTP to your registered mobile number. Please enter it below.</p>
+            <br>
             <form id="OtpForm" method="POST" novalidate>
+
                 <div>
                     <input type="text" id="otpNumber" name="" required>
                     <label>Enter OTP</label>

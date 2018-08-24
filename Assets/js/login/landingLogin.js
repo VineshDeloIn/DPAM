@@ -1,6 +1,6 @@
-$( document ).ready(function() {
-    
-    $("input").focus(function() {
+$(document).ready(function () {
+
+    $("input").focus(function () {
         $(".mailErr").html("");
         $(".pswdErr").html("");
     });
@@ -10,35 +10,49 @@ $( document ).ready(function() {
         var emailMob = $("#mail").val();
         var password = $("#password").val();
 
-        var isEmailMobValid;  
+        function  validatePhone(txtPhone) {
+            var  filter  =  /^(?:\+971|00971|0)?(?:50|51|52|55|56|54|57)\d{7}$/;
+            if  (filter.test(txtPhone)) {
+                if (txtPhone.length == 10) {
+                    return  true;
+                }
+                return  false;
+            }
+        }
+
+        function  validateEmail(email) {
+            var  emailReg  =  /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+            return  emailReg.test( email );
+        }
+        var isEmailMobValid = validatePhone(emailMob) || validateEmail(emailMob);
         var isPasswordValid;
 
         //Checking if email/mob is not empty
-        if(emailMob == "") {
-            $(".mailErr").html("Email/MobileNumber Cannot Be Empty!");
+        if (emailMob == "" || !isEmailMobValid) {
+            $(".mailErr").html("Invalid Email / Mobile Number");
             isEmailMobValid = false;
-        } else  {
+        } else {
             isEmailMobValid = true;
         }
 
         //Checking if password is not empty
-        if(password == "") {
-            $(".pswdErr").html("Password Cannot Be Empty!");
+        if (password == "") {
+            $(".pswdErr").html("Incorrect Password");
             isPasswordValid = false;
         } else {
             isPasswordValid = true;
         }
 
-        if(isEmailMobValid && isPasswordValid) {
-            alert(emailMob + " "+password);
+        if (isEmailMobValid && isPasswordValid) {
+            alert(emailMob + " " + password);
         }
-        
-        
+
+
         //added RememberMe functionality of rememberme is checked, Email and password cannot be empty
         if ($('#remeberMeCbx').is(':checked') && isEmailMobValid && isPasswordValid) {
             // save username and password
             console.log('Entering!');
-            localStorage.userName =$("#mail").val();
+            localStorage.userName = $("#mail").val();
             localStorage.password = $("#password").val();
             localStorage.checkBoxValidation = $('#remeberMeCbx').val();
         } else {
@@ -51,6 +65,6 @@ $( document ).ready(function() {
         $('#password').val('');
         $('#remeberMeCbx').prop('checked', false);
     });
-    
+
 
 });
