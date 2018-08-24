@@ -43,3 +43,18 @@
     background-size: 100% 100%;
     
 }
+
+.forgotPswrd {
+    float: left;
+    overflow: hidden;
+    width: 33.3%;
+    max-width: 500px;
+    right:0;  
+    margin: 0;
+    height: 92.5vh;
+  }
+
+  .forgotPswrdDpamLogo {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
