@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dubai Properties - SignUp</title>
+
+    <link rel="stylesheet" href="../css/signup.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.3.2.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/signup.js"></script>
+    <script src="../js/jqueryValidation/jquery.validate.min.js"></script>
+</head>
+
+<body>
+    <div class="landing">
+        <!-- <img src="Assets/images/landing.jpg" alt="Chania">  -->
+    </div>
+
+    <div class="signup">
+        <div class="dpamLogo">
+            <img src="../images/dpamLogo.png" alt="Avatar" class="avatar">
+        </div>
+        <h2 id="signUpHeading">Sign Up</h2>
+        <br>
+        <div class="container" id="signUpFormDiv">
+            <form id="signUpForm">
+                <div>
+                    <input type="text" id="mail" name="" required>
+                    <label>Email/Mobile Number</label>
+                    <p class="mailErr invalidEmailErr"></p>
+                   
+                </div>
+                <div >
+                    <input type="password" id="password" name="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase 
+                    letter, and at least 8 or more characters" required>
+                    <label >Password </label>
+                    <p class="pswdErr"></p>
+                    
+                    <br>
+                </div>
+                <div>
+                    <input type="password" id="cnfpassword" name="" required>
+                    <label>Confirm Password</label>
+                    <p class="pswdErr invalidPassErr"></p>
+                    <br>
+                </div>
+                <div id="signUpText">
+                    By Signing Up you accept the <a href="#"> terms and conditions </a> of Dubai
+                    Asset Management.
+                 </div>
+
+                
+
+
+                <button type="button" class="btn btn-dark btn-lg" id="signUpBtn">SIGNUP</button>
+                <br>
+
+            </form>
+            
+            <p id="signUpText">Already have an account?
+                <a href="#">LOGIN</a>
+            </p>
+        </div>
+
+    </div>
+    </div>
+</body>
+
+<footer class="loginFooter ">
+    <div class="footerDiv  row">
+     <div class="col-sm dubaiProperties">
+            &copy; Dubai Properties 2018         
+    </div>
+    <div class="col-sm" >
+         <div class="row">
+            <div class="col-md-3 col-xs-3 aboutUs">
+                    About Us    
+            </div>
+            <div class="col-md-3 col-xs-3 contact ">
+                   Contact         
+            </div>
+            <div class="col-md-3 col-xs-3  privacyPolicy">
+                    Privacy Policy     
+            </div>
+            <div class="col-md-3 col-xs-3  termsOfUse">
+                   Terms of Use        
+            </div>  
+        </div>       
+    </div>
+    <div class="col-sm row">
+    <div class="facebookSpan">
+            <img src="../images/001-facebook-logo-button.png"
+            class="facebookLogoButton">   
+        </div>
+        <div class="instaSpan">        
+            <img src="../images/002-instagram-logo.png"
+            class="instagramLogo">
+        </div>
+     </div>
+                
+  
+</div>
+</footer>
+
+</html>
