@@ -1,0 +1,394 @@
+.signup{
+    
+        float: left;
+        overflow: hidden;
+        width: 29.3%;
+        max-width: 500px;
+        margin-left: 2%;
+        height: 92.5vh;  
+}
+
+
+@media only screen and (min-width: 768px) {
+    .loginFooter {
+        position: fixed;
+        height: 60px;
+        width: 100%;
+        bottom: 0;
+        border: 2px solid #585d63;
+         background-color: #585d63;  
+        color:#ffffff;
+        text-align: center;
+    }
+    .footerDiv{
+     padding-top: 23px;
+     padding-bottom: 22px;
+    
+    }
+    .dubaiProperties{
+        width: 144px;
+        height: 15px;
+        font-family: HelveticaNeue;
+        font-size: 13px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #ffffff;
+        padding-left: 135px;
+      }
+    
+    .aboutUs {
+        width: 58px;
+        height: 16px;
+        font-family: HelveticaNeue;
+        font-size: 13px;
+        margin-left:70px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #ffffff;
+      }
+    .contact {
+            width: 50px;
+            height: 16px;
+            margin-left: -30px;
+            font-family: HelveticaNeue;
+            font-size: 13px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #ffffff;
+          }
+      
+    .privacyPolicy {
+            width: 87px;
+            height: 16px;
+            font-family: HelveticaNeue;
+            font-size: 13px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #ffffff;
+            margin-left: -22px;
+          }
+    
+     .termsOfUse{
+            width: 83px;
+            height: 16px;
+            font-family: HelveticaNeue;
+            margin-left: -22px;
+            font-size: 13px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #ffffff;
+          }
+.facebookSpan{
+         padding-left: 284px;
+         margin-top: -7px;
+        }
+ .instaSpan{
+            margin-top: -7px;
+            padding-left: 26px;
+        }
+    
+ .facebookLogoButton {
+            width: 10px;
+            height: 19px;
+            object-fit: contain;
+          }
+.instagramLogo {
+        width: 19px;
+        height: 19px;
+        object-fit: contain;
+      }
+
+
+} 
+/*for mobile screen*/
+@media only screen and (max-width: 768px) {
+    .loginFooter {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        border: 2px solid #585d63;
+         background-color: #585d63;  
+        color:#ffffff;
+        text-align: center;
+    }
+    .footerDiv{
+     padding-top: 23px;
+     padding-bottom: 22px;
+    
+    }
+    .dubaiProperties{
+        width: 144px;
+        height: 15px;
+        font-family: HelveticaNeue;
+        font-size: 13px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #ffffff;
+        margin-left: -36px;
+        margin-top: 1%;
+        
+      }
+    
+    .aboutUs {
+        width: 58px;
+        height: 16px;
+        font-family: HelveticaNeue;
+        font-size: 13px;
+        margin-left:-80px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #ffffff;
+        padding-top: 20px;
+        
+      }
+    .contact {
+            width: 50px;
+            height: 16px;
+            padding-left:16px;
+            font-family: HelveticaNeue;
+            font-size: 13px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #ffffff;
+            
+          
+          }
+      
+    .privacyPolicy {
+            width: 87px;
+            height: 16px;
+            font-family: HelveticaNeue;
+            font-size: 13px;
+            padding-top:15px;
+            margin-left:-92px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #ffffff;
+            
+          }
+    
+     .termsOfUse{
+            width: 83px;
+            height: 16px;
+            font-family: HelveticaNeue;
+            margin-left:25px;
+            font-size: 13px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #ffffff;
+            
+          }
+    .facebookSpan{
+        padding-left:215px;
+        padding-top: 25px;
+    }
+    .instaSpan{
+        padding-left:26.4px;
+        padding-top: 25px;
+    }
+    
+    .facebookLogoButton {
+            width: 10px;
+            height: 19px;
+            object-fit: contain;
+          }
+    .instagramLogo {
+        width: 19px;
+        height: 19px;
+        object-fit: contain;
+      }
+}
+
+.landing {
+    width: 66.7%;
+    height: 92.5vh;
+    overflow: hidden;
+    float: left;
+    /* border: 2px solid red; */
+    background-image: url("../images/landing.jpg");
+    background-size: 100% 100%;
+    
+}
+
+.login {
+  float: left;
+  overflow: hidden;
+  width: 33.3%;
+  max-width: 500px;
+  right:0;  
+  margin: 0;
+  height: 92.5vh;
+  /* border: 2px solid blue; */
+}
+
+.dpamLogo {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+.signup input {
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    color:#999;
+    border-bottom: 1px solid #999;
+    padding: 5px 0;
+    margin-bottom: 8px;
+}
+
+
+ .rememberLogin label input{
+    width: 10%;  
+    margin-top:2%;
+    /* position: relative; */
+    /* display: inline-block; */
+    
+} 
+
+.rememberLogin label {
+    /* display: inline-block;
+     vertical-align: middle;  */
+    width: 40%;
+}
+
+.forgotPswrd {
+    float: right;
+    /* margin-top:1%; */
+}
+
+
+.signup form div {
+    position: relative;
+}
+.signup form div label {
+    position: absolute;
+    top: 10px;
+    color: #999;     
+    transition: .5s;
+    pointer-events: none;
+}
+
+.signup input:focus ~ label,
+.signup input:valid ~ label
+{
+    top: -9px;
+    left: 0px;
+    color: grey;
+    font-size: 12px;
+    /* font-weight: bold; */
+}
+
+.signup input:focus,
+.signup textarea:focus,
+.signup input:valid{
+   border-bottom: 1px solid grey; 
+}
+
+
+
+#loginBtn {
+    width: 100%;
+    margin-top: 8%;
+}
+
+#uaeLogin {
+    width: 100%;
+}
+
+#fbLogin {
+   text-align: center;
+    width: 100%; 
+}
+
+#orText {
+    text-align: center;
+    margin-top:2%;
+}
+
+
+
+#signUpHeading {
+       margin-top: 5%;
+       margin-left: 9%;
+}
+
+#signUpFormDiv {
+    padding: 0% 9%;
+    height: 80vh;
+}
+
+#signUpText{
+    text-align: center;
+    margin-top: 8%;
+    font-size: 13px;
+}
+
+.pswdErr {
+    color: red;
+}
+
+.mailErr {
+    color: red;
+    margin-bottom: 7%;
+}
+.invalidEmailErr {
+    color: red;
+    margin-bottom: 7%;
+}
+
+
+@media screen and (max-width: 768px) {
+    .landing {
+      /* border: 2px solid blue; */
+      display: none;
+    }
+
+    .signup {
+        width: 100%;
+        overflow-y: scroll;
+        height:75vh;
+    }
+
+    #fbLogin {
+        margin-bottom: 2%
+    }
+   .loginFooter{
+       height: 25vh;
+   }
+
+
+    
+}
+
