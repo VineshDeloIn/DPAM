@@ -5,6 +5,7 @@ $( document ).ready(function() {
         $(".pswdErr").html("");
         $(".invalidEmailErr").html("");
         $(".invalidPassErr").html("");
+        $(".pwdStrengthSignUp").html("");
 
         var email = $("#mail").val();
       
@@ -16,6 +17,19 @@ if(!validatePhone(email)&&(!validateEmail(email)))
 }
 
 });
+
+function checkPasswordStrength(pass){
+  if(pass.length<=8){
+    $(".pwdStrengthSignUp").html("Weak");
+
+  }else if(pass.length>8 && pass.length<=13){
+    $(".pwdStrengthSignUp").html("Medium");
+
+  }else if(pass.length>15){
+    $(".pwdStrengthSignUp").html("Strong");
+
+  }
+}
 
 function validatePhone(txtPhone) {
    
