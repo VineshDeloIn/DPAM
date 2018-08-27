@@ -1,0 +1,164 @@
+.landingEmailVer {
+    width: 66.7%;
+    height: 92.5vh;
+    overflow: hidden;
+    float: left;
+    /* border: 2px solid red; */
+    background-image: url("../images/landing.jpg");
+    background-size: 100% 100%;
+}
+
+.sidePaneEmailVer {
+    float: left;
+    overflow: hidden;
+    width: 33.3%;
+    max-width: 500px;
+    right: 0;
+    margin: 0;
+    height: 92.5vh;
+    /* border: 2px solid blue; */
+}
+
+.dpamLogoEmailVer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+.sidePaneEmailVer form div {
+    position: relative;
+}
+
+
+#gmailBtn {
+    width: 100%;
+    margin-top: 8%;
+    font-family: HelveticaNeueBold;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.57;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #ffffff;
+}
+
+#resendVeriBtn {
+    width: 100%;
+    margin-top: 8%;
+    font-family: HelveticaNeueBold;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.57;
+    letter-spacing: 1px;
+    white-space:normal;
+    text-align: center;
+    color: #585d63;
+}
+
+
+
+.VerifyEmailTxt {
+    /* width: 105px; */
+    margin-top: 5%;
+    height: 26px;
+    font-family: HelveticaNeueMed;
+    font-size: 22px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #243745;
+}
+
+#FormDivEmailVer {
+    padding: 0% 9%;
+    height: 80vh;
+}
+
+.emailPhOtpErr {
+    font-size: 12px;
+    margin-bottom: 7%;
+    font-family: HelveticaNeueReg;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
+    color: #da291c;
+}
+
+#ResendOtpText {
+    font-family: HelveticaNeueReg;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: #585d63;
+}
+
+.otpRegNumSent {
+    text-align: left;
+    /* margin-left: 9%; */
+    font-family: HelveticaNeueReg;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    color: #243745;
+}
+#resendVeriBtn:hover {
+    color: #ffffff;
+}
+.loginFooter {
+    height: 25vh;
+}
+
+.otpRegNumSentSecond {
+    text-align: left;
+    margin-left: 10%;
+    /* margin-top: -5px; */
+}
+
+@media screen and (min-width: 300px) and (orientation:potrait) {
+    .landingEmailVer {
+        /* border: 2px solid blue; */
+        display: none;
+    }
+    .sidePaneEmailVer {
+        width: 100%;
+        overflow-y: scroll;
+        overflow-x: scroll;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .landingEmailVer {
+        /* border: 2px solid blue; */
+        display: none;
+    }
+    .sidePaneEmailVer {
+        width: 100%;
+        overflow-y: scroll;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .landingEmailVer {
+        /* border: 2px solid blue; */
+        display: none;
+    }
+    .sidePaneEmailVer {
+        width: 130%;
+        /* overflow-y: scroll; */
+    }
+}
