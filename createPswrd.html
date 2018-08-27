@@ -8,7 +8,7 @@
     <title>Forgot Password</title>
 
      <!-- <link rel="stylesheet" href="Assets/css/login.css">  -->
-    <link rel="stylesheet" href="Assets/css/forgotPswrd.css">
+    <link rel="stylesheet" href="Assets/css/createPswrd.css">
     <link rel="stylesheet" href="Assets/css/customFont.css">
     <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="Assets/css/footer.css">
@@ -18,34 +18,36 @@
 </head>
 
 <body>
-    <div class="forgotPswrdlanding">
-         <img src="Assets/images/landing.jpg" alt="Chania">  
+    <div class="createPswrdlanding">
+        <!-- <img src="Assets/images/landing.jpg" alt="Chania">  -->
     </div>
 
-    <div class="forgotPswrdRightPane">
-        <div class="forgotPswrdDpamLogo">
+    <div class="createPswrdRightPane">
+        <div class="createPswrdDpamLogo">
             <img src="Assets/images/dam_logo.svg" alt="Avatar" class="avatar">
         </div>
         
-        <div class="container" id="forgotPswrdFormDiv">
-                <p id="isForgotPswrd">Forgot your password?</p>
-                <p class="enterEmailMobForgtPswrd">Please enter your registered email or phone
-                     number below to resetyour password</p>
+        <div class="container" id="createPswrdFormDiv">
+                <p id="createPswrdTxt">Create new password</p>
+                <p class="loggedCreatePswrdTxt">Create a new password. You will be logged in once you are done.</p>
                 <br>
-                <br>
-                <form id="forgotPswrdForm" method="POST">
+                <form id="createPswrdForm" method="POST">
                         <div>
-                            <input type="text" id="emailMobForgotPswrd" name="" required>
-                            <label id="emailMobForgotPswrdTxt" >Email / Mobile Number</label>
-                            <p class="emailMobForgtPswrdErr"></p>
+                            <input type="text" id="newPswrd" name="" required>
+                            <label id="newPswrdTxt" >New  Password</label>
+                            <p class="newPswrdErr"></p>
                         </div>
+
+                        <div>
+                                <input type="text" id="confirmNewPswrd" name="" required>
+                                <label id="confirmNewPswrdTxt" >Confirm New Password</label>
+                                <p class="confirmNewPswrdErr"></p>
+                            </div>
                         <br>
-                        <button type="button" class="btn btn-dark" id="sendFrgtPswrdBtn">SEND VERIFICATION CODE</button>
+                        <button type="button" class="btn btn-dark" id="sbmitNewPswrd">LOGIN</button>
                         <br>
-                    </form>
-                    <p id="noAcntFrgtPswrdTxt">Don't have an account?
-                            <a id="signUpFrgtPswrdText" href="#">SIGN UP</a>
-                        </p>    
+                    </form> 
+                     
             </div>
 
 
