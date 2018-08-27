@@ -1,3 +1,6 @@
+body {
+    overflow-y: scroll;
+}
 .landingEmailVer {
     width: 66.7%;
     height: 92.5vh;
@@ -12,9 +15,10 @@
     float: left;
     overflow: hidden;
     width: 33.3%;
-    max-width: 500px;
-    right: 0;
+    /* max-width: 500px; */
+    /* right: 0; */
     margin: 0;
+    /* padding: 0% 9%; */
     height: 92.5vh;
     /* border: 2px solid blue; */
 }
@@ -63,6 +67,7 @@
 .VerifyEmailTxt {
     /* width: 105px; */
     margin-top: 5%;
+    margin-left: 9%;
     height: 26px;
     font-family: HelveticaNeueMed;
     font-size: 22px;
@@ -104,9 +109,9 @@
     color: #585d63;
 }
 
-.otpRegNumSent {
+.verifyEmailLinkMsg {
     text-align: left;
-    /* margin-left: 9%; */
+    margin-left: 9%;
     font-family: HelveticaNeueReg;
     font-size: 16px;
     font-weight: normal;
@@ -137,6 +142,7 @@
     .sidePaneEmailVer {
         width: 100%;
         overflow-y: scroll;
+        text-align: center;
         overflow-x: scroll;
     }
 }
@@ -145,9 +151,11 @@
     .landingEmailVer {
         /* border: 2px solid blue; */
         display: none;
+
     }
     .sidePaneEmailVer {
         width: 100%;
+        text-align: center;
         overflow-y: scroll;
     }
 }
@@ -158,7 +166,15 @@
         display: none;
     }
     .sidePaneEmailVer {
-        width: 130%;
-        /* overflow-y: scroll; */
+        text-align: center;
+        width: 100%;
+        overflow-y: scroll;
+        
+    }
+    .VerifyEmailTxt {
+        text-align: left;
+    }
+    .verifyEmailLinkMsg {
+        text-align: left;
     }
 }
