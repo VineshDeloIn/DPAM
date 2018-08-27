@@ -53,6 +53,7 @@
     font-stretch: normal;
     line-height: 1.57;
     letter-spacing: 1px;
+    white-space:normal;
     text-align: center;
     color: #585d63;
 }
