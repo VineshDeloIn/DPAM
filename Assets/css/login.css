@@ -17,7 +17,7 @@
   overflow: hidden;
   width: 33.3%;
   /* max-width: 500px; */
-  right:0;  
+  /* right:0;   */
   margin: 0;
   height: 92.5vh;
 }
@@ -55,6 +55,7 @@
     top: 10px;
     color: #999;     
     transition: .5s;
+    left: 0%;
     pointer-events: none;
     font-family: HelveticaNeueLight;
     font-size: 16px;
@@ -157,7 +158,7 @@
 
 #loginText {
     margin-top: 6%;
-    margin-left: 9%;
+    /* margin-left: 9%; */
     font-family: HelveticaNeueMed;
     font-size: 22px;
     font-weight: 500;
@@ -178,6 +179,7 @@
 #loginRemembrMeTxt {
     margin-top:2%;
     width: 40%;
+    float:left;
     height: 21px;
     font-family: HelveticaNeueLight;
     font-size: 13px;
@@ -269,38 +271,58 @@
     height: 25vh;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (min-width: 300px) and (orientation:potrait) {
     .landing {
-       border: 5px solid blue; 
-      display: none;
+        /* border: 2px solid blue; */
+        display: none;
     }
-
     .login {
-        width: 300%;
         overflow-y: scroll;
+        text-align: center;
+        overflow-x: scroll;
+        width: 100%;
         height:75vh;
     }
 
-    #fbLogin {
-        margin-bottom: 2%
+    #loginText{
+        text-align: left;
     }
-    
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 480px) {
     .landing {
-      width: 40%;
+        /* border: 2px solid blue; */
+        display: none;
     }
-
     .login {
-        width: 60%;
+        width: 100%;
+        text-align: center;
         overflow-y: scroll;
         height:75vh;
     }
 
-    #fbLogin {
-        margin-bottom: 2%
+    #loginText{
+        text-align: left;
     }
+}
+
+@media screen and (max-width: 768px) {
+    .landing {
+        /* border: 2px solid blue; */
+        display: none;
+    }
+    .login {
+        text-align: center;
+        width: 100%;
+        overflow-y: scroll;
+        height:75vh;
+        /* overflow-y: scroll; */
+    }
+
+    #loginText{
+        text-align: left;
+    }
+    
     
 }
 
