@@ -6,56 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dubai Properties - SignUp</title>
-
+    
+    <link rel="stylesheet" href="Assets/css/customFont.css">
     <link rel="stylesheet" href="Assets/css/signup.css">
     <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
+   
     <script src="Assets/js/jquery-3.3.2.min.js"></script>
+    <script src="Assets/js/popper.min.js"></script>
     <script src="Assets/js/bootstrap.min.js"></script>
     <script src="Assets/js/signup.js"></script>
     <script src="Assets/js/jqueryValidation/jquery.validate.min.js"></script>
 </head>
 
 <body>
-    <div class="landing">
+    <div class="landingSignUp">
         <!-- <img src="Assets/images/landing.jpg" alt="Chania">  -->
     </div>
 
     <div class="signup">
         <div class="dpamLogo">
-            <img src="Assets/images/dpamLogo.png" alt="Avatar" class="avatar">
+            <img src="Assets/images/dam_logo.svg" alt="Avatar" class="avatar">
         </div>
         <h2 id="signUpHeading">Sign Up</h2>
         <br>
         <div class="container" id="signUpFormDiv">
             <form id="signUpForm">
                 <div>
-                    <input type="text" id="mail" name="" required>
+                    <input type="text" id="mailSignUp" name="" required>
                     <label>Email/Mobile Number</label>
                     <p class="mailErr invalidEmailErr"></p>
                    
                 </div>
                 <div>
                 <div class="row">
-                    <div class="col-sm-11" data-tip="The password must  have atleast one Capital letter atleast one number and atleast
-                         one special character">
-                   <input type="password" id="password" name=""   required> <label >Password </label></div><div class="col-sm-1"> 
-                        <img src="Assets/images/show_pass.png" id="showPassSignUp"></div>
+                    <div class="col-sm-11" data-toggle="tooltip" data-placement="bottom" title="The password must have atleast one Capital letter,
+                     atleast one number and atleast one special character">
+                   <input type="password" id="passwordSignUp" name=""   required> <label >Password </label></div><div class="col-sm-1"> 
+                        <img src="Assets/images/show_pass.png" id="showPassSignUp"> <p class="pwdStrengthSignUp "></p></div>
                    
-                    <p class="pswdErr invalidPassErr pwdStrengthSignUp "></p>
+                    <p class="pswdErr invalidPassErr"></p>
                     
                   
                     
                     <br>
                 </div>
                 <div style="margin-top:9%">
-                    <input type="password" id="cnfpassword" name="" required>
+                    <input type="password" id="cnfpasswordSignUp" name="" required>
                     <label>Confirm Password</label>
                     <p class="pswdErr "></p>
                     <br>
                 </div>
                 <div id="signUpText">
                     By Signing Up you accept the <a href="#"> terms and conditions </a> of Dubai
-                    Asset Management.
+                  <br/>  Asset Management.
                  </div>
 
                 
@@ -66,7 +69,7 @@
 
             </form>
             
-            <p id="signUpText">Already have an account?
+            <p id="signUpTextSec">Already have an account?
                 <a href="#">LOGIN</a>
             </p>
         </div>
@@ -78,7 +81,7 @@
 <footer class="loginFooter ">
     <div class="footerDiv  row">
      <div class="col-sm dubaiProperties">
-            &copy; Dubai Properties 2018         
+            &copy; Dubai Properties Asset Management 2018         
     </div>
     <div class="col-sm" >
          <div class="row">

@@ -1,5 +1,9 @@
 $( document ).ready(function() {
     
+
+ $('[data-toggle="tooltip"]').tooltip(); 
+    
+
     $("input").focus(function() {
         $(".mailErr").html("");
         $(".pswdErr").html("");
@@ -7,9 +11,9 @@ $( document ).ready(function() {
         $(".invalidPassErr").html("");
         $(".pwdStrengthSignUp").html("");
 
-        var email = $("#mail").val();
+        var email = $("#mailSignUp").val();
       
-   
+  // check for email and mobile number text field
 if(!validatePhone(email)&&(!validateEmail(email)))
 {
   
@@ -18,6 +22,54 @@ if(!validatePhone(email)&&(!validateEmail(email)))
 
 });
 
+//phone validation for Dubai number
+
+function validatePhone(txtPhone) {
+   
+    var filter = /^(?:\+971|00971|0)?(?:50|51|52|55|56|54|57)\d{7}$/;;
+    if (filter.test(txtPhone)) {
+        if(txtPhone.length<=12){
+        return true;
+      }
+      return false;
+    }
+    
+}
+// email validation 
+
+function validateEmail(email) {
+    var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+    return emailReg.test( email );
+  }
+
+// function to show password
+
+  $('#showPassSignUp').click(function() {
+    passtoTextSignUp();
+  
+  });
+
+  function passtoTextSignUp() {
+    var x = document.getElementById("passwordSignUp");
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+}
+
+$("#passwordSignUp").keyup(function(){
+
+    var passWord=$("#passwordSignUp").val();
+
+    if(!validatePassword(passWord)){
+  
+        $(".invalidPassErr").html("Invalid Password ");
+}
+     checkPasswordStrength(passWord);
+});
+
+// function to check password strength
 function checkPasswordStrength(pass){
   if(pass.length<=8){
     $(".pwdStrengthSignUp").html("Weak");
@@ -33,53 +85,8 @@ function checkPasswordStrength(pass){
 
   }
 }
+// function for password Validation
 
-
-
-$('#showPassSignUp').click(function() {
-    passtoTextSignUp();
-  
-  });
-    
-
-function passtoTextSignUp() {
-    var x = document.getElementById("password");
-    if (x.type === "password") {
-        x.type = "text";
-    } else {
-        x.type = "password";
-    }
-}
-
-function validatePhone(txtPhone) {
-   
-    var filter = /^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
-    if (filter.test(txtPhone)) {
-        if(txtPhone.length==10){
-        return true;
-      }
-      return false;
-    }
-    
-}
-
-function validateEmail(email) {
-    var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-    return emailReg.test( email );
-  }
-
-
-  $("input").keyup(function(){
-    var passWord=$("#password").val();
-
-    if(!validatePassword(passWord))
-{
-  
-        $(".invalidPassErr").html("Invalid Password ");
-}
-
- checkPasswordStrength(passWord);
-});
 
 function validatePassword(inputValue){
     console.log(inputValue);
@@ -93,15 +100,17 @@ function validatePassword(inputValue){
   numbers.test(inputValue) && inputValue.length >= 8 ) { 
           console.log("valid Password")
         return true;
-}else{
+   }else{
   return false;
  }   
 }
 
+// Empty Fields Validation
+
     $("#signUpBtn").click(function () {
         //getting values from the form
-        var emailMob = $("#mail").val();
-        var password = $("#password").val();
+        var emailMob = $("#mailSignUp").val();
+        var password = $("#passwordSignUp").val();
 
         var isEmailMobValid;  
         var isPasswordValid;
@@ -122,27 +131,21 @@ function validatePassword(inputValue){
             isPasswordValid = true;
         }
 
-        if(isEmailMobValid && isPasswordValid) {
-            alert(emailMob + " "+password);
+        if(!validatePhone(emailMob)&&(!validateEmail(emailMob)))
+        {
+          
+                $(".invalidEmailErr").html("Invalid Email/Phone number ");
         }
         
-        
-        //added RememberMe functionality of rememberme is checked, Email and password cannot be empty
-        if ($('#remeberMeCbx').is(':checked') && isEmailMobValid && isPasswordValid) {
-            // save username and password
-            console.log('Entering!');
-            localStorage.userName =$("#mail").val();
-            localStorage.password = $("#password").val();
-            localStorage.checkBoxValidation = $('#remeberMeCbx').val();
-        } else {
-            localStorage.userName = '';
-            localStorage.password = '';
-            localStorage.checkBoxValidation = '';
-        }
+        if(!validatePassword(password)){
+  
+            $(".invalidPassErr").html("Invalid Password ");
+    }
 
-        $('#mail').val('');
-        $('#password').val('');
-        $('#remeberMeCbx').prop('checked', false);
+        $('#mailSignUp').val('');
+        $('#passwordSignUp').val('');
+        $('#cnfpasswordSignUp').val('');
+       
     });
     
 
@@ -151,20 +154,3 @@ function validatePassword(inputValue){
 $("#password").hover(function() {
     $(this).css('cursor','pointer').attr('title', 'titleThe password must have atleast one Capital letter,  atleast one number and atleast one special character');
 });
-/*
-$("#password :hover").tooltip({
- 
-    // place tooltip on the right edge
-    position: "center right",
-
-    // a little tweaking of the position
-    offset: [1, 10],
-
-    // use the built-in fadeIn/fadeOut effect
-    effect: "fade",
-
-    // custom opacity setting
-    opacity: 0.7
-
-    });*/
-
