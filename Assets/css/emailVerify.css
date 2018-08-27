@@ -147,7 +147,7 @@ body {
     }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 480px) {
     .landingEmailVer {
         /* border: 2px solid blue; */
         display: none;
@@ -168,8 +168,7 @@ body {
     .sidePaneEmailVer {
         text-align: center;
         width: 100%;
-        overflow-y: scroll;
-        
+        overflow-y: scroll;    
     }
     .VerifyEmailTxt {
         text-align: left;
