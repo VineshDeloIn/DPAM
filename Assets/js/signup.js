@@ -5,6 +5,7 @@ $( document ).ready(function() {
         $(".pswdErr").html("");
         $(".invalidEmailErr").html("");
         $(".invalidPassErr").html("");
+        $(".pwdStrengthSignUp").html("");
 
         var email = $("#mail").val();
       
@@ -16,6 +17,39 @@ if(!validatePhone(email)&&(!validateEmail(email)))
 }
 
 });
+
+function checkPasswordStrength(pass){
+  if(pass.length<=8){
+    $(".pwdStrengthSignUp").html("Weak");
+    $(".pwdStrengthSignUp").css("color", "red");
+
+  }else if(pass.length>8 && pass.length<=12){
+    $(".pwdStrengthSignUp").html("Medium");
+    $(".pwdStrengthSignUp").css("color", "green");
+
+  }else if(pass.length>12){
+    $(".pwdStrengthSignUp").html("Strong");
+    $(".pwdStrengthSignUp").css("color", "green");
+
+  }
+}
+
+
+
+$('#showPassSignUp').click(function() {
+    passtoTextSignUp();
+  
+  });
+    
+
+function passtoTextSignUp() {
+    var x = document.getElementById("password");
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+}
 
 function validatePhone(txtPhone) {
    
@@ -43,6 +77,8 @@ function validateEmail(email) {
   
         $(".invalidPassErr").html("Invalid Password ");
 }
+
+ checkPasswordStrength(passWord);
 });
 
 function validatePassword(inputValue){
@@ -111,3 +147,24 @@ function validatePassword(inputValue){
     
 
 });
+
+$("#password").hover(function() {
+    $(this).css('cursor','pointer').attr('title', 'titleThe password must have atleast one Capital letter,  atleast one number and atleast one special character');
+});
+/*
+$("#password :hover").tooltip({
+ 
+    // place tooltip on the right edge
+    position: "center right",
+
+    // a little tweaking of the position
+    offset: [1, 10],
+
+    // use the built-in fadeIn/fadeOut effect
+    effect: "fade",
+
+    // custom opacity setting
+    opacity: 0.7
+
+    });*/
+
