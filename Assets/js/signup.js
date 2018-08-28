@@ -74,14 +74,15 @@ function checkPasswordStrength(pass){
   if(pass.length<=8){
     $(".pwdStrengthSignUp").html("Weak");
     $(".pwdStrengthSignUp").css("color", "red");
-
+   
   }else if(pass.length>8 && pass.length<=12){
     $(".pwdStrengthSignUp").html("Medium");
     $(".pwdStrengthSignUp").css("color", "green");
-
+   
   }else if(pass.length>12){
     $(".pwdStrengthSignUp").html("Strong");
     $(".pwdStrengthSignUp").css("color", "green");
+
 
   }
 }
