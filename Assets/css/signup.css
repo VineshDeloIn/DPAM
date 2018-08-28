@@ -10,6 +10,10 @@
 }
 
 
+.pass-input { position: relative; width:100%; }
+.pass-input input { border:none; background:#fff; display:block; width: 100%; box-sizing: border-box }
+.pass-input img { position: absolute; top: 2px; right: 5px }
+.pass-input .pwdStrengthSignUp{position: absolute; right: 5px }
 @media only screen and (min-width: 450px) {
     .loginFooter {
         position: fixed;
@@ -427,8 +431,16 @@
     /* font-weight: bold; */
 }
 #passwordSignUp{
-    width:110%;
+    width:100%;
 }
+
+/*
+.bs-tooltip-auto[x-placement^=top] .arrow::before, .bs-tooltip-top .arrow::before {
+    top: 0;
+    border-width: .4rem .4rem 0;
+    border-top-color: #d9dfdf !important;
+}
+*/
 
 /*password label*/
 #passwordSignUp input:valid ~ label,#passwordSignUp input:valid ~ label {
@@ -440,7 +452,7 @@
 }
 .pswdErr {
     color: red;
-    margin-left: 4%;
+    margin-left: 0%;
 }
 
 .pwdStrengthSignUp{
@@ -451,7 +463,7 @@ margin-left: -47px;
 
 .invalidPassErr {
     color: red;
-    margin-left: 4%;
+    margin-left: 0%;
 }
 
 #showPassSignUp{
@@ -534,7 +546,12 @@ margin-left: -47px;
 .equalCheck{
     color: red; 
 }
-
+.tooltip-inner ul li{
+    color: red; 
+}
+.tooltip-inner ul li:nth-child(odd){
+    color: green;
+}
 .cnfPswdErr {
     color: red;
 }
@@ -550,29 +567,38 @@ margin-left: -47px;
  
 .tooltip-inner ul{
     padding-left: 20px;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .arrow{
-    left: 65px !important;
+    left: 22px !important;
 }
 .tooltip-inner {
-    background-color: #eaf0f5  !important;
+    background-color: #e7e5e5  !important;
     /*!important is not necessary if you place custom.css at the end of your css calls. For the purpose of this demo, it seems to be required in SO snippet*/
-    color: #28a745 !important;
+    color: #031607 !important;
     max-width: 250px !important;
-    margin-right: 10%;
+    margin-left: -8%;
     text-align: left !important;
+ 
   }
 
   .bs-tooltip-auto[x-placement^=top] .arrow::before, .bs-tooltip-top .arrow::before {
+    top: 0;
+    border-width: 0.5rem 0.5rem 0 !important;
+    border-top-color: #e7e5e5 !important;
    
-    border-top-color: #dee2e6;
+}
+
+.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .bs-tooltip-bottom .arrow::before {
+    bottom: 0;
+    border-width: 0 .5rem .5rem !important;
+    border-bottom-color: #e7e5e5 !important;
 }
 
 .bs-tooltip-top .arrow {
     bottom: 0;
-    background-color: #d9dfdf;
+    background-color: #fdfdfd;
     margin-left: -29px;
 }
   
@@ -616,8 +642,12 @@ margin-left: -47px;
    .loginFooter{
        height: 25vh;
    }
+   #passwordSignUp {
+    width: 100%;
+}
     
 }
+
 
 
 @media screen and (min-width: 300px) and (orientation:potrait) {
@@ -630,6 +660,9 @@ margin-left: -47px;
         overflow-y: scroll;
         overflow-x: scroll;
     }
+    #passwordSignUp {
+        width: 110%;
+    }
 }
 
 @media screen and (max-width: 450px) {
@@ -640,6 +673,9 @@ margin-left: -47px;
     .signup {
         width: 100%;
         overflow-y: scroll;
+    }
+    #passwordSignUp {
+        width: 110%;
     }
 }
 
