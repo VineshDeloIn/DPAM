@@ -157,7 +157,7 @@
 }
 
 #loginText {
-    margin-top: 6%;
+    /* margin-top: 1%; */
     /* margin-left: 9%; */
     font-family: HelveticaNeueMed;
     font-size: 22px;
@@ -253,7 +253,7 @@
 }
 
 .mailErr {
-    margin-bottom: 7%;
+    margin-bottom: 5%;
     font-family: HelveticaNeueReg;
     font-size: 12px;
     font-weight: normal;
