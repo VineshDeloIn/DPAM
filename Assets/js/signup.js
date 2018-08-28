@@ -106,16 +106,30 @@ function validatePassword(inputValue){
  }   
 }
 
+//function to check password equality
+
+function comparePassword(pass1,pass2){
+
+    if(pass1===pass2){
+        return true;
+    }else{
+        return false;
+    }
+}
+
 // Empty Fields Validation
 
     $("#signUpBtn").click(function () {
         //getting values from the form
         var emailMob = $("#mailSignUp").val();
         var password = $("#passwordSignUp").val();
+        var cnfpassword = $("#cnfpasswordSignUp").val();
 
         var isEmailMobValid;  
         var isPasswordValid;
-
+        if(!comparePassword(password,cnfpassword)){
+            $(".equalCheck").html("Passwords do not match");
+        }
         //Checking if email/mob is not empty
         if(emailMob == "") {
             $(".mailErr").html("Email/MobileNumber Cannot Be Empty!");

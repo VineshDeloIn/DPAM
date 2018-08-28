@@ -426,15 +426,46 @@
     font-size: 12px;
     /* font-weight: bold; */
 }
+#passwordSignUp{
+    width:110%;
+}
 
-#passwordSignUp input:valid ~ label
+/*password label*/
+#passwordSignUp input:valid ~ label,#passwordSignUp input:valid ~ label {
+    top: -9px;
+    left: 15px;
+    color: grey;
+    font-size: 12px;
+    /* font-weight: bold; */
+}
+.pswdErr {
+    color: red;
+    margin-left: 4%;
+}
+
+.pwdStrengthSignUp{
+font-size: 12px;
+margin-left: -47px;
+ margin-top: -6px;
+}
+
+.invalidPassErr {
+    color: red;
+    margin-left: 4%;
+}
+
+#showPassSignUp{
+    margin-left: -41px;
+}
+/*
+.passwordSignUpLabel input:valid ~ label
 {
     top: -9px;
     left: 14px;
     color: grey;
     font-size: 12px;
-    /* font-weight: bold; */
-}
+    /* font-weight: bold; 
+}*/
 
 .signup input:focus,
 .signup textarea:focus,
@@ -500,7 +531,11 @@
     font-size: 14px;
 }
 
-.pswdErr {
+.equalCheck{
+    color: red; 
+}
+
+.cnfPswdErr {
     color: red;
 }
 
@@ -512,15 +547,22 @@
     color: red;
     margin-bottom: 7%;
 }
+ 
+.tooltip-inner ul{
+    padding-left: 20px;
+    font-size: 12px;
+}
 
-
-
+.arrow{
+    left: 65px !important;
+}
 .tooltip-inner {
-    background-color: #dee2e6  !important;
+    background-color: #eaf0f5  !important;
     /*!important is not necessary if you place custom.css at the end of your css calls. For the purpose of this demo, it seems to be required in SO snippet*/
-    color: #28a745;
-    max-width: 210px;
+    color: #28a745 !important;
+    max-width: 250px !important;
     margin-right: 10%;
+    text-align: left !important;
   }
 
   .bs-tooltip-auto[x-placement^=top] .arrow::before, .bs-tooltip-top .arrow::before {
