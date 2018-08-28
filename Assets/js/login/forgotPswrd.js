@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    $('#myPasswrd').strength_meter();
+
     $("input").focus(function () {
         $(".emailMobForgtPswrdErr").html("");
     });
