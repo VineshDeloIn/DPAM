@@ -3,13 +3,14 @@
         float: left;
         overflow: hidden;
         width: 33.4%;
-      /*  max-width: 500px;*/
+        padding-left: 1%;
+        padding-right: 1%;
         margin-left: -1%;
         height: 92.5vh;  
 }
 
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 450px) {
     .loginFooter {
         position: fixed;
         height: 60px;
@@ -94,7 +95,7 @@
             color: #ffffff;
           }
 .facebookSpan{
-         padding-left: 284px;
+         padding-left: 215px;
          margin-top: -7px;
         }
  .instaSpan{
@@ -117,6 +118,121 @@
 } 
 /*for mobile screen*/
 @media only screen and (max-width: 768px) {
+    .loginFooter {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        border: 2px solid #585d63;
+         background-color: #585d63;  
+        color:#ffffff;
+        text-align: center;
+    }
+    .footerDiv{
+     padding-top: 23px;
+     padding-bottom: 22px;
+    
+    }
+    .dubaiProperties{
+        width: 144px;
+        height: 15px;
+        font-family: HelveticaNeue;
+        font-size: 13px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #ffffff;
+        margin-left: -36px;
+        margin-top: 1%;
+        
+      }
+    
+    .aboutUs {
+        width: 58px;
+        height: 16px;
+        font-family: HelveticaNeue;
+        font-size: 13px;
+        margin-left:-80px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #ffffff;
+        padding-top: 20px;
+        
+      }
+    .contact {
+            width: 50px;
+            height: 16px;
+            margin-left:12px;
+            font-family: HelveticaNeue;
+            font-size: 13px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #ffffff;
+            
+          
+          }
+      
+    .privacyPolicy {
+            width: 87px;
+            height: 16px;
+            font-family: HelveticaNeue;
+            font-size: 13px;
+            padding-top:15px;
+            margin-left:-92px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #ffffff;
+            
+          }
+    
+     .termsOfUse{
+            width: 83px;
+            height: 16px;
+            font-family: HelveticaNeue;
+            margin-left:25px;
+            font-size: 13px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #ffffff;
+            
+          }
+    .facebookSpan{
+        padding-left:215px;
+        padding-top: 25px;
+    }
+    .instaSpan{
+        padding-left:26.4px;
+        padding-top: 25px;
+    }
+    
+    .facebookLogoButton {
+            width: 10px;
+            height: 19px;
+            object-fit: contain;
+          }
+    .instagramLogo {
+        width: 19px;
+        height: 19px;
+        object-fit: contain;
+      }
+}
+
+
+/*for mobile screen and orientation*/
+@media only screen and (min-width: 300px) and (orientation:potrait) {
     .loginFooter {
         position: fixed;
         width: 100%;
@@ -229,6 +345,7 @@
       }
 }
 
+
 .landingSignUp {
     width: 66.7%;
     height: 92.5vh;
@@ -257,7 +374,7 @@
 }
 
 .signup input {
-    width: 125%;
+    width: 100%;
     box-sizing: border-box;
     box-shadow: none;
     outline: none;
@@ -305,6 +422,15 @@
 {
     top: -9px;
     left: 0px;
+    color: grey;
+    font-size: 12px;
+    /* font-weight: bold; */
+}
+
+#passwordSignUp input:valid ~ label
+{
+    top: -9px;
+    left: 14px;
     color: grey;
     font-size: 12px;
     /* font-weight: bold; */
@@ -390,11 +516,23 @@
 
 
 .tooltip-inner {
-    background-color: #f2d7d9 !important;
+    background-color: #dee2e6  !important;
     /*!important is not necessary if you place custom.css at the end of your css calls. For the purpose of this demo, it seems to be required in SO snippet*/
-    color: #499131;
+    color: #28a745;
+    max-width: 210px;
     margin-right: 10%;
   }
+
+  .bs-tooltip-auto[x-placement^=top] .arrow::before, .bs-tooltip-top .arrow::before {
+   
+    border-top-color: #dee2e6;
+}
+
+.bs-tooltip-top .arrow {
+    bottom: 0;
+    background-color: #d9dfdf;
+    margin-left: -29px;
+}
   
   .tooltip.top .tooltip-arrow {
     border-top-color: #f2d7d9;
