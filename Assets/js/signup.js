@@ -135,106 +135,53 @@ function changeTooltipColor(inputValue){
    // later, when your loading is done:
   
     if(inputValue.length<=0){
-        console.log("no length");
+        
         $("ul li span" ).remove();
         $( "ul li" ).prepend(spanRemove);
         $( "ul li" ).css("color", "red");
       
         
     }
-
-
+    if(lowerCaseLetters.test(inputValue) && specialChar.test(inputValue) && upperCaseLetters.test(inputValue) && numbers.test(inputValue) 
+    && inputValue.length>=8 && inputValue.length<=20){
+     
+        $("ul li span" ).remove();
+        $( "ul li" ).css("color", "green");
+        $( "ul li" ).prepend(spanTick);
+    }else{
+        $( "ul li" ).css("color", "red");
+        $("ul li span" ).remove();
+        $( "ul li" ).prepend(spanRemove);
     if(lowerCaseLetters.test(inputValue) && inputValue.length>=8 && inputValue.length<=20 ){
        
-        console.log("lower case");
+        
          $("ul li:nth-child(1) span" ).remove();
            $( "ul li:nth-child(1)" ).css("color", "green");
            $( "ul li:nth-child(1)" ).prepend(spanTick);
       
-       }else if(specialChar.test(inputValue)){
-           console.log("spcl case");
+       }
+        if(specialChar.test(inputValue)){
+          
            $( "ul li:nth-child(4) span" ).remove();
            $( "ul li:nth-child(4)" ).css("color", "green");
            $( "ul li:nth-child(4)" ).prepend(spanTick);
-      }else if(upperCaseLetters.test(inputValue)){
-           console.log("upper case");
+      }
+       if(upperCaseLetters.test(inputValue)){
+           
            $( "ul li:nth-child(2) span" ).remove();
            $( "ul li:nth-child(2)" ).css("color", "green");
            $( "ul li:nth-child(2)" ).prepend(spanTick);
            
-       }else if(numbers.test(inputValue) ) { 
-       console.log("numver case");
+       }
+        if(numbers.test(inputValue) ) { 
+      
        $( "ul li:nth-child(3) span" ).remove();
        $( "ul li:nth-child(3)" ).css("color", "green");
        $( "ul li:nth-child(3)" ).prepend(spanTick);
        
-      }else{
-      
-     /*  $( "ul li:nth-child(3) span" ).remove();
-       $( "ul li:nth-child(3)" ).css("color", "red");
-       $( "ul li:nth-child(3)" ).prepend(spanRemove);*/
-       
-   }
-   /*
-    if(lowerCaseLetters.test(inputValue) && inputValue.length>=8 && inputValue.length<=20 ){
-       
-     console.log("lower case");
-      $("ul li:nth-child(1) span" ).remove();
-        $( "ul li:nth-child(1)" ).css("color", "green");
-        $( "ul li:nth-child(1)" ).prepend(spanTick);
-   
-    }else{
-        $( "ul li:nth-child(1) span" ).remove();
-        $( "ul li:nth-child(1)" ).css("color", "red");
-        $( "ul li:nth-child(1)" ).prepend(spanRemove);
-        
+      }
     }
-    
-    if(specialChar.test(inputValue)){
-        console.log("spcl case");
-        $( "ul li:nth-child(4) span" ).remove();
-        $( "ul li:nth-child(4)" ).css("color", "green");
-        $( "ul li:nth-child(4)" ).prepend(spanTick);
-   }else{
-       
-        $( "ul li:nth-child(4) span" ).remove();
-        $( "ul li:nth-child(4)" ).css("color", "red");
-        $( "ul li:nth-child(4)" ).prepend(spanRemove);
-        
-    }
-     // Validate capital letters
-     
-     if(upperCaseLetters.test(inputValue)){
-        console.log("upper case");
-        $( "ul li:nth-child(2) span" ).remove();
-        $( "ul li:nth-child(2)" ).css("color", "green");
-        $( "ul li:nth-child(2)" ).prepend(spanTick);
-        
-    }else{
-       
-        
-        $( "ul li:nth-child(2) span" ).remove();
-        $( "ul li:nth-child(2)" ).css("color", "red");
-        $( "ul li:nth-child(2)" ).prepend(spanRemove);
-        
-    }
-       // Validate numbers
    
-    
- if(numbers.test(inputValue) ) { 
-    console.log("numver case");
-    $( "ul li:nth-child(3) span" ).remove();
-    $( "ul li:nth-child(3)" ).css("color", "green");
-    $( "ul li:nth-child(3)" ).prepend(spanTick);
-    
-   }else{
-   
-    $( "ul li:nth-child(3) span" ).remove();
-    $( "ul li:nth-child(3)" ).css("color", "red");
-    $( "ul li:nth-child(3)" ).prepend(spanRemove);
-    
-}
-*/
 
 }
 
@@ -299,6 +246,4 @@ function comparePassword(pass1,pass2){
 
 });
 
-$("#password").hover(function() {
-    $(this).css('cursor','pointer').attr('title', 'titleThe password must have atleast one Capital letter,  atleast one number and atleast one special character');
-});
+
