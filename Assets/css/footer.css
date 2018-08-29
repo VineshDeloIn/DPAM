@@ -1,220 +1,301 @@
-@media only screen and (min-width: 768px) {
-    .loginFooter {
-        position: fixed;
-        height: 60px;
-        width: 100%;
-        bottom: 0;
-        border: 2px solid #585d63;
-         background-color: #585d63;  
-        color:#ffffff;
-        text-align: center;
+#footer {
+  background-color: #585d63;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height:10%;
+  color: whitesmoke;
+  font-size: 11px;
+  white-space: normal;
+}
+
+.footerTopAdj {
+  margin-top: 2%;
+}
+.dubaiColAdj {
+  display: flex;
+  justify-content:center;
+}
+.midCols1Adj {
+  display: flex;
+  justify-content:center;   
+}
+.midCols2Adj {
+  display: flex;
+  justify-content:center;   
+}
+
+.fbColAdj {
+  display: flex;
+  justify-content:flex-end; 
+  height: 20px;
+  width: 20px;
+}
+
+<<<<<<< HEAD
+.instColAdj {
+  display: flex;
+  justify-content:flex-start;
+  height: 20px;
+  width: 20px;
+}
+
+@media(max-width:576px){
+  /* .mainSection {
+      height: 100%;
+=======
+@media screen and (max-width: 450px) {
+  .loginFooter {
+      position: fixed;
+      height: 60px;
+      width: 100%;
+      bottom: 0;
+      border: 2px solid #585d63;
+       background-color: #585d63;  
+      color:#ffffff;
+      text-align: center;
+  }
+  .footerDiv{
+   padding-top: 23px;
+   padding-bottom: 22px;
+  
+  }
+  .dubaiProperties{
+      width: 144px;
+      height: 15px;
+      font-family: HelveticaNeue;
+      font-size: 13px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #ffffff;
+      padding-left: 135px;
     }
-    .footerDiv{
-     padding-top: 23px;
-     padding-bottom: 22px;
-    
+  
+  .aboutUs {
+      width: 58px;
+      height: 16px;
+      font-family: HelveticaNeue;
+      font-size: 13px;
+      margin-left:70px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #ffffff;
     }
-    .dubaiProperties{
-        width: 144px;
-        height: 15px;
-        font-family: HelveticaNeue;
-        font-size: 13px;
-        font-weight: normal;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        color: #ffffff;
-        padding-left: 135px;
-      }
+  .contact {
+          width: 50px;
+          height: 16px;
+          margin-left: -30px;
+          font-family: HelveticaNeue;
+          font-size: 13px;
+          font-weight: bold;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          color: #ffffff;
+        }
     
-    .aboutUs {
-        width: 58px;
-        height: 16px;
-        font-family: HelveticaNeue;
-        font-size: 13px;
-        margin-left:70px;
-        font-weight: bold;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        color: #ffffff;
-      }
-    .contact {
-            width: 50px;
-            height: 16px;
-            margin-left: -30px;
-            font-family: HelveticaNeue;
-            font-size: 13px;
-            font-weight: bold;
-            font-style: normal;
-            font-stretch: normal;
-            line-height: normal;
-            letter-spacing: normal;
-            color: #ffffff;
-          }
-      
-    .privacyPolicy {
-            width: 87px;
-            height: 16px;
-            font-family: HelveticaNeue;
-            font-size: 13px;
-            font-weight: bold;
-            font-style: normal;
-            font-stretch: normal;
-            line-height: normal;
-            letter-spacing: normal;
-            color: #ffffff;
-            margin-left: -22px;
-          }
-    
-     .termsOfUse{
-            width: 83px;
-            height: 16px;
-            font-family: HelveticaNeue;
-            margin-left: -22px;
-            font-size: 13px;
-            font-weight: bold;
-            font-style: normal;
-            font-stretch: normal;
-            line-height: normal;
-            letter-spacing: normal;
-            color: #ffffff;
-          }
+  .privacyPolicy {
+          width: 87px;
+          height: 16px;
+          font-family: HelveticaNeue;
+          font-size: 13px;
+          font-weight: bold;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          color: #ffffff;
+          margin-left: -22px;
+        }
+  
+   .termsOfUse{
+          width: 83px;
+          height: 16px;
+          font-family: HelveticaNeue;
+          margin-left: -22px;
+          font-size: 13px;
+          font-weight: bold;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          color: #ffffff;
+        }
 .facebookSpan{
-         padding-left: 284px;
-         margin-top: -7px;
-        }
- .instaSpan{
-            margin-top: -7px;
-            padding-left: 26px;
-        }
-    
- .facebookLogoButton {
-            width: 10px;
-            height: 19px;
-            object-fit: contain;
-          }
-.instagramLogo {
-        width: 19px;
-        height: 19px;
-        object-fit: contain;
+       padding-left: 215px;
+       margin-top: -7px;
       }
+.instaSpan{
+          margin-top: -7px;
+          padding-left: 26px;
+      }
+  
+.facebookLogoButton {
+          width: 10px;
+          height: 19px;
+          object-fit: contain;
+        }
+.instagramLogo {
+      width: 19px;
+      height: 19px;
+      object-fit: contain;
+    }
 
 
 } 
-
 /*for mobile screen*/
-@media only screen and (max-width: 768px) {
-    .loginFooter {
-        position: fixed;
-        width: 100%;
-        bottom: 0;
-        border: 2px solid #585d63;
-         background-color: #585d63;  
-        color:#ffffff;
-        text-align: center;
-    }
-    .footerDiv{
-     padding-top: 23px;
-     padding-bottom: 22px;
-    
-    }
-    .dubaiProperties{
-        width: 144px;
-        height: 15px;
-        font-family: HelveticaNeue;
-        font-size: 13px;
-        font-weight: normal;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        color: #ffffff;
-        margin-left: -36px;
-        margin-top: 1%;
-        
-      }
-    
-    .aboutUs {
-        width: 58px;
-        height: 16px;
-        font-family: HelveticaNeue;
-        font-size: 13px;
-        margin-left:-80px;
-        font-weight: bold;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        color: #ffffff;
-        padding-top: 20px;
-        
-      }
-    .contact {
-            width: 50px;
-            height: 16px;
-            padding-left:16px;
-            font-family: HelveticaNeue;
-            font-size: 13px;
-            font-weight: bold;
-            font-style: normal;
-            font-stretch: normal;
-            line-height: normal;
-            letter-spacing: normal;
-            color: #ffffff;
-            
-          
-          }
-      
-    .privacyPolicy {
-            width: 87px;
-            height: 16px;
-            font-family: HelveticaNeue;
-            font-size: 13px;
-            padding-top:15px;
-            margin-left:-92px;
-            font-weight: bold;
-            font-style: normal;
-            font-stretch: normal;
-            line-height: normal;
-            letter-spacing: normal;
-            color: #ffffff;
-            
-          }
-    
-     .termsOfUse{
-            width: 83px;
-            height: 16px;
-            font-family: HelveticaNeue;
-            margin-left:25px;
-            font-size: 13px;
-            font-weight: bold;
-            font-style: normal;
-            font-stretch: normal;
-            line-height: normal;
-            letter-spacing: normal;
-            color: #ffffff;
-            
-          }
-    .facebookSpan{
-        padding-left:40%;
-        padding-top: 25px;
-    }
-    .instaSpan{
-        padding-left:26.4px;
-        padding-top: 25px;
-    }
-    
-    .facebookLogoButton {
-            width: 10px;
-            height: 19px;
-            object-fit: contain;
-          }
-    .instagramLogo {
-        width: 19px;
-        height: 19px;
-        object-fit: contain;
-      }
+@media screen and (max-width: 768px) {
+  .loginFooter {
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      border: 2px solid #585d63;
+       background-color: #585d63;  
+      color:#ffffff;
+>>>>>>> 8b815ea4e08ea1395476bec126994641bc47d544
+      text-align: center;
+      overflow: auto;
+      padding-bottom: 10%;
+  }
+  */
+  #footer {
+      background-color: #585d63;
+      /* position: relative; */
+      /* border: 2px solid yellow; */
+      /* height: 21%; */
+      /* color: whitesmoke;
+      font-size: 11px;
+      white-space: normal; */
+      /* overflow-y: auto; */
+  } 
+  .midCols1Adj {
+      display: flex;
+      justify-content:flex-end;   
+      /* margin-top: 2%; */
+  }
+  .midCols2Adj {
+      display: flex;
+      justify-content:flex-start;   
+      /* margin-top: 2%; */
+  }
+  .fbColAdj {
+      display: flex;
+      justify-content:flex-end; 
+      height: 20px;
+      width: 20px;
+  }
+  
+  .instColAdj {
+      display: flex;
+      justify-content:flex-start;
+      height: 20px;
+      width: 20px;
+  }
 }
+<<<<<<< HEAD
+/* tab */
+@media(max-width:768px){
+  /* .mainSection {
+      height: 100%;
+=======
+
+
+/*for mobile screen and orientation*/
+@media  screen and (min-width: 300px) and (orientation:potrait) {
+  .loginFooter {
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      border: 2px solid #585d63;
+       background-color: #585d63;  
+      color:#ffffff;
+>>>>>>> 8b815ea4e08ea1395476bec126994641bc47d544
+      text-align: center;
+      overflow: auto;
+      padding-bottom: 10%;
+  }
+  */
+
+  body {
+    margin-bottom: 14%; /* bottom = footer height */
+}
+  #footer {
+      background-color: #585d63;
+      height: 18%;
+      /* position: relative;
+      
+      color: whitesmoke;
+      font-size: 11px;
+      white-space: normal;
+      overflow-y: auto; */
+      /* border: 3px solid orange; */
+  } 
+  .midCols1Adj {
+      display: flex;
+      justify-content:flex-end;   
+      /* margin-top: 2%; */
+  }
+  .midCols2Adj {
+      display: flex;
+      justify-content:flex-start;   
+      /* margin-top: 2%; */
+  }
+  .fbColAdj {
+      display: flex;
+      justify-content:flex-end; 
+      height: 20px;
+      width: 20px;
+  }
+  
+  .instColAdj {
+      display: flex;
+      justify-content:flex-start;
+      height: 20px; 
+      width: 20px;
+  }
+}
+
+/* Medium */
+@media(min-width:768px) and (max-width:1199px){
+  /* .mainSection {
+      height: 100%;
+      text-align: center;
+      overflow: auto;
+      padding-bottom: 14%;
+  } */
+
+  .midCols1Adj {
+      display: flex;
+      justify-content:flex-end;   
+      /* margin-top: 2%; */
+  }
+  .midCols2Adj {
+      display: flex;
+      justify-content:flex-start;   
+      /* margin-top: 2%; */
+  }
+
+  .fbColAdj {
+      display: flex;
+      justify-content:flex-end; 
+      height: 20px;
+      width: 20px;
+  }
+  
+  .instColAdj {
+      display: flex;
+      justify-content:flex-start;
+      height: 20px;
+      width: 20px;
+  }
+
+}
+

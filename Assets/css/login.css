@@ -1,10 +1,15 @@
+body {
+    margin-bottom: 10%; /* bottom = footer height */
+}
+
 
 .landing {
     width: 66.7%;
-    height: 92.5vh;
+     height: 90vh; 
+    /* height: 655px; */
+    /* border: 2px solid red; */
     overflow: hidden;
     float: left;
-    /* border: 2px solid red; */
     background-image: url("../../Assets/images/landing.jpg");;
     background-size: 100% 100%;
     
@@ -14,10 +19,18 @@
   float: left;
   overflow: hidden;
   width: 33.3%;
-  max-width: 500px;
-  right:0;  
+  /* right:0;   */
+  /* border: 2px solid blue;  */
   margin: 0;
-  height: 92.5vh;
+   height: 90vh; 
+  /* height: 90%; */
+}
+
+#loginFormDiv {
+    padding: 0% 9%;
+     height: 80vh; 
+     /* border: 2px solid green; */
+    /* height:90%; */
 }
 
 
@@ -53,7 +66,10 @@
     top: 10px;
     color: #999;     
     transition: .5s;
+    left: 0%;
     pointer-events: none;
+    font-family: HelveticaNeueLight;
+    font-size: 16px;
 }
 
 .login input:focus ~ label,
@@ -109,9 +125,9 @@
     color: #585d63;
 }
 
-#fbLogin {
-   text-align: center;
-    width: 100%; 
+ #fbLogin {
+   float: left;
+     width: 100%;  
 }
 
 #fbLogin:hover, #fbLogin:focus, #fbLogin:active {
@@ -119,14 +135,13 @@
 }
 
 #googleLogin {
-   
-    text-align: center;
-      width: 100%; 
+    float:right;
+       width: 100%;  
 }
 
 #googleLogin:hover, #googleLogin:focus, #googleLogin:active {
     background-color: #F2F2F2;
-}
+} 
 
 #orText {
     text-align: center;
@@ -141,19 +156,14 @@
     color: #6f747a;
 }
 
-#googleLogin {
-   
-  text-align: center;
-    width: 100%; 
-}
 
 #fbGoogleBtnDiv {
     margin-top: 5%;
 }
 
 #loginText {
-    margin-top: 6%;
-    margin-left: 9%;
+    /* margin-top: 1%; */
+    /* margin-left: 9%; */
     font-family: HelveticaNeueMed;
     font-size: 22px;
     font-weight: 500;
@@ -166,32 +176,31 @@
 
 
 
-.rememberLogin {
+/* .rememberLogin {
     margin-top:10%;
 }
-
+*/
 
 #loginRemembrMeTxt {
-    margin-top:2%;
-    width: 40%;
-    height: 21px;
+    float: left;
+    width: 30%;
+    margin-top: 4%;
+    position: relative;
     font-family: HelveticaNeueLight;
     font-size: 13px;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
-    line-height: 1.62; 
-    letter-spacing: normal;
-    color: #585d63;
+    line-height: 1.62;
+     letter-spacing: normal;
+     color: #585d63;
+     margin-left: 0%;
   }
 
   #remeberMeCbx {
-    width: 10%;  
-    margin-top:6%;
-    /* position: relative; */
-    /* display: inline-block; */
-    
-} 
+      width: 10%;
+      vertical-align: middle   
+}  
 
 .forgotPswrd {
     float: right;
@@ -206,13 +215,10 @@
     letter-spacing: normal;
     text-align: right;
     color: #4ea6f1;
-    margin-top:4%; 
+    margin-top:4.5%; 
 }
 
-#loginFormDiv {
-    padding: 0% 9%;
-    height: 80vh;
-}
+
 
 #noAcntTxt{
     text-align: center;
@@ -250,7 +256,7 @@
 }
 
 .mailErr {
-    margin-bottom: 7%;
+    margin-bottom: 4%;
     font-family: HelveticaNeueReg;
     font-size: 12px;
     font-weight: normal;
@@ -261,25 +267,89 @@
     color: #da291c;
 }
 
-@media screen and (max-width: 768px) {
+.loginFooter{
+    height: 25vh;
+}
+
+@media screen and (min-width: 300px) and (orientation:potrait) {
     .landing {
-      /* border: 2px solid blue; */
-      display: none;
+        /* border: 2px solid blue; */
+        display: none;
+    }
+    .login {
+        overflow-y: scroll;
+        text-align: center;
+        overflow-x: scroll;
+        width: 100%;
+        height:75vh;
     }
 
+    #loginText{
+        text-align: left;
+    }
+    #loginRemembrMeTxt {
+        width:40%;
+
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .landing {
+        /* border: 2px solid blue; */
+        display: none;
+    }
     .login {
         width: 100%;
+        text-align: center;
         overflow-y: scroll;
         height:75vh;
     }
 
-    #fbLogin {
-        margin-bottom: 2%
+    #loginText{
+        text-align: left;
     }
-   .loginFooter{
-       height: 25vh;
-   }
+    #loginRemembrMeTxt {
+        width:40%;
 
+    }
+}
 
+@media screen and (max-width: 768px) {
+    .landing {
+        /* border: 2px solid blue; */
+        display: none;
+    }
+    .login {
+        text-align: center;
+        width: 100%;
+        overflow-y: scroll;
+        /* height:75vh; */
+        height:82vh;
+        /* overflow-y: scroll; */
+    }
+
+    #loginText{
+        text-align: left;
+    }
+
+    #loginRemembrMeTxt {
+        width:40%;
+
+    }
+     
     
 }
+
+@media screen and (min-width: 770px) and  (max-width: 1500px) {
+    
+    #loginRemembrMeTxt {
+        width:40%;
+
+    }
+    
+}
+
+
+
+
+

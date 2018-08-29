@@ -7,31 +7,38 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dubai Properties - Login</title>
 
-    <!-- <link rel="stylesheet" href="Assets/css/customFont.css">
+   <link rel="stylesheet" href="Assets/css/customFont.css">
     <link rel="stylesheet" href="Assets/css/login.css">
     <link rel="stylesheet" href="Assets/css/footer.css">
     <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
     <script src="Assets/js/jquery-3.3.2.min.js"></script>
     <script src="Assets/js/bootstrap.min.js"></script>
     <script src="Assets/js/login/landingLogin.js"></script>
-    <script src="Assets/js/jqueryValidation/jquery.validate.min.js"></script> -->
+    <script src="Assets/js/jqueryValidation/jquery.validate.min.js"></script> 
+    <script src="Assets/js/commonValidations/emailMobValidation.js"></script>
 
-    <link rel="stylesheet" href="dist/css/style.css">
-    <script src="dist/js/script.js"></script>
+    <!-- <link rel="stylesheet" href="dist/css/style.css">
+    <script src="dist/js/script.js"></script> -->
 </head>      
 
 <body>
-    <div class="landing">
+ 
+    <article>
+        <section class="landing">
+   
         <!-- <img src="Assets/images/landing.jpg" alt="Chania">  -->
-    </div>
+    
+</section>
 
- <div class="login">
+ <section class="login">
         <div class="dpamLogo">
             <img src="Assets/images/dam_logo.svg" alt="Avatar" class="avatar">
         </div>
-        <h2 id="loginText">Login</h2>
+        <!-- <h2 id="loginText">Login</h2> -->
         <br>
         <div class="container" id="loginFormDiv">
+                <h2 id="loginText">Login</h2>
+             <br>  
             <form id="loginForm">
                 <div>
                     <input type="text" id="mail" name="" required>
@@ -43,10 +50,10 @@
                     <label id="loginPswrdTxt">Password</label>
                     <p class="pswdErr"></p>
                 </div>
-                <span class="rememberLogin">
+                <span>
                     <label for="rememberLogin" id="loginRemembrMeTxt">
-                        <input type="checkbox" id="remeberMeCbx"> Remember me</label>
-                </span>
+                        <input type="checkbox" id="remeberMeCbx" > Remember me</label>
+                    </span>
 
                 <span class="forgotPswrd">
                     <a href="#">Forgot Password?</a>
@@ -62,12 +69,12 @@
             <button type="button" class="btn btn-outline-secondary" id="uaeLogin">LOGIN USING UAE PASS</button>
 
             <div class="row" id="fbGoogleBtnDiv">
-                <div class="col-md-6">
+                <div class="col">
                     <button type="button" id="fbLogin" class="btn btn-outline-secondary btn-lg">
                         <img src="Assets/images/fbBtn.png" alt="Avatar" class="avatar">
                     </button>
                 </div>
-                <div class="col-md-6">
+                <div class="col">
 
                     <button type="button" id="googleLogin" class="btn btn-outline-secondary btn-lg">
                         <img src="Assets/images/googleBtn.png" alt="Avatar" class="avatar">
@@ -79,44 +86,74 @@
             </p>
         </div>
 
+    
+</section>
+</article> 
+<footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 dubaiColAdj footerTopAdj">
+                    &copy; Dubai Asset Management 2018
+                </div>
+
+                <div class="col-6 col-sm-6 col-md-1 col-lg-1 midCols1Adj footerTopAdj">
+                    About Us
+                </div>
+                <div class="col-6 col-sm-6 col-md-1 col-lg-1 midCols2Adj footerTopAdj">
+                    Contact
+                </div>
+                <div class="col-6 col-sm-6 col-md-1 col-lg-1 midCols1Adj footerTopAdj">
+                    Privacy Policy
+                </div>
+                <div class="col-6 col-sm-6 col-md-1 col-lg-1 midCols2Adj footerTopAdj">
+                    Terms of use
+                </div>
+                <div class="col-6 col-sm-6 col-md-2 col-lg-2 fbColAdj footerTopAdj">
+                    <img src="Assets/images/fb-logo.png" alt="avatar">
+                </div>
+                <div class="col-6 col-sm-6 col-md-2 col-lg-2 instColAdj footerTopAdj">
+                    <img src="Assets/images/insta-logo.png" alt="avatar">
+                </div>
+            </div>
+        </div>
+    </footer>
+<!-- <footer class="loginFooter ">
+        <div class="footerDiv  row">
+         <div class="col-sm dubaiProperties">
+                &copy; Dubai Properties 2018         
+        </div>
+        <div class="col-sm" >
+             <div class="row">
+                <div class="col-md-3 col-xs-3 aboutUs">
+                        About Us    
+                </div>
+                <div class="col-md-3 col-xs-3 contact ">
+                       Contact         
+                </div>
+                <div class="col-md-3 col-xs-3  privacyPolicy">
+                        Privacy Policy     
+                </div>
+                <div class="col-md-3 col-xs-3  termsOfUse">
+                       Terms of Use        
+                </div>  
+            </div>       
+        </div>
+        <div class="col-sm row">
+        <div class="facebookSpan">
+                <img src="Assets/images/001-facebook-logo-button.png"
+                class="facebookLogoButton">   
+            </div>
+            <div class="instaSpan">        
+                <img src="Assets/images/002-instagram-logo.png"
+                class="instagramLogo">
+            </div>
+         </div>
+                    
+      
     </div>
-    </div>
+    </footer> -->
 </body>
 
-<footer class="loginFooter ">
-    <div class="footerDiv  row">
-     <div class="col-sm dubaiProperties">
-            &copy; Dubai Properties 2018         
-    </div>
-    <div class="col-sm" >
-         <div class="row">
-            <div class="col-md-3 col-xs-3 aboutUs">
-                    About Us    
-            </div>
-            <div class="col-md-3 col-xs-3 contact ">
-                   Contact         
-            </div>
-            <div class="col-md-3 col-xs-3  privacyPolicy">
-                    Privacy Policy     
-            </div>
-            <div class="col-md-3 col-xs-3  termsOfUse">
-                   Terms of Use        
-            </div>  
-        </div>       
-    </div>
-    <div class="col-sm row">
-    <div class="facebookSpan">
-            <img src="Assets/images/001-facebook-logo-button.png"
-            class="facebookLogoButton">   
-        </div>
-        <div class="instaSpan">        
-            <img src="Assets/images/002-instagram-logo.png"
-            class="instagramLogo">
-        </div>
-     </div>
-                
-  
-</div>
-</footer>
+
 
 </html>

@@ -2,14 +2,19 @@
     
         float: left;
         overflow: hidden;
-        width: 29.3%;
-        max-width: 500px;
-        margin-left: 2%;
+        width: 33.4%;
+        padding-left: 1%;
+        padding-right: 1%;
+        margin-left: -1%;
         height: 92.5vh;  
 }
 
 
-@media only screen and (min-width: 768px) {
+.pass-input { position: relative; width:100%; }
+.pass-input input { border:none; background:#fff; display:block; width: 100%; box-sizing: border-box }
+.pass-input img { position: absolute; top: 2px; right: 5px }
+.pass-input .pwdStrengthSignUp{position: absolute; right: 5px }
+@media only screen and (min-width: 450px) {
     .loginFooter {
         position: fixed;
         height: 60px;
@@ -94,7 +99,7 @@
             color: #ffffff;
           }
 .facebookSpan{
-         padding-left: 284px;
+         padding-left: 215px;
          margin-top: -7px;
         }
  .instaSpan{
@@ -117,6 +122,121 @@
 } 
 /*for mobile screen*/
 @media only screen and (max-width: 768px) {
+    .loginFooter {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        border: 2px solid #585d63;
+         background-color: #585d63;  
+        color:#ffffff;
+        text-align: center;
+    }
+    .footerDiv{
+     padding-top: 23px;
+     padding-bottom: 22px;
+    
+    }
+    .dubaiProperties{
+        width: 144px;
+        height: 15px;
+        font-family: HelveticaNeue;
+        font-size: 13px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #ffffff;
+        margin-left: -36px;
+        margin-top: 1%;
+        
+      }
+    
+    .aboutUs {
+        width: 58px;
+        height: 16px;
+        font-family: HelveticaNeue;
+        font-size: 13px;
+        margin-left:-80px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #ffffff;
+        padding-top: 20px;
+        
+      }
+    .contact {
+            width: 50px;
+            height: 16px;
+            margin-left:12px;
+            font-family: HelveticaNeue;
+            font-size: 13px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #ffffff;
+            
+          
+          }
+      
+    .privacyPolicy {
+            width: 87px;
+            height: 16px;
+            font-family: HelveticaNeue;
+            font-size: 13px;
+            padding-top:15px;
+            margin-left:-92px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #ffffff;
+            
+          }
+    
+     .termsOfUse{
+            width: 83px;
+            height: 16px;
+            font-family: HelveticaNeue;
+            margin-left:25px;
+            font-size: 13px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #ffffff;
+            
+          }
+    .facebookSpan{
+        padding-left:215px;
+        padding-top: 25px;
+    }
+    .instaSpan{
+        padding-left:26.4px;
+        padding-top: 25px;
+    }
+    
+    .facebookLogoButton {
+            width: 10px;
+            height: 19px;
+            object-fit: contain;
+          }
+    .instagramLogo {
+        width: 19px;
+        height: 19px;
+        object-fit: contain;
+      }
+}
+
+
+/*for mobile screen and orientation*/
+@media only screen and (min-width: 300px) and (orientation:potrait) {
     .loginFooter {
         position: fixed;
         width: 100%;
@@ -229,7 +349,8 @@
       }
 }
 
-.landing {
+
+.landingSignUp {
     width: 66.7%;
     height: 92.5vh;
     overflow: hidden;
@@ -257,7 +378,7 @@
 }
 
 .signup input {
-    width: 125%;
+    width: 100%;
     box-sizing: border-box;
     box-shadow: none;
     outline: none;
@@ -309,6 +430,54 @@
     font-size: 12px;
     /* font-weight: bold; */
 }
+#passwordSignUp{
+    width:100%;
+}
+
+/*
+.bs-tooltip-auto[x-placement^=top] .arrow::before, .bs-tooltip-top .arrow::before {
+    top: 0;
+    border-width: .4rem .4rem 0;
+    border-top-color: #d9dfdf !important;
+}
+*/
+
+/*password label*/
+#passwordSignUp input:valid ~ label,#passwordSignUp input:valid ~ label {
+    top: -9px;
+    left: 15px;
+    color: grey;
+    font-size: 12px;
+    /* font-weight: bold; */
+}
+.pswdErr {
+    color: red;
+    margin-left: 0%;
+}
+
+.pwdStrengthSignUp{
+font-size: 12px;
+margin-left: -47px;
+ margin-top: -6px;
+}
+
+.invalidPassErr {
+    color: red;
+    margin-left: 0%;
+}
+
+#showPassSignUp{
+    margin-left: -41px;
+}
+/*
+.passwordSignUpLabel input:valid ~ label
+{
+    top: -9px;
+    left: 14px;
+    color: grey;
+    font-size: 12px;
+    /* font-weight: bold; 
+}*/
 
 .signup input:focus,
 .signup textarea:focus,
@@ -363,12 +532,27 @@
 }
 
 #signUpText{
-    text-align: center;
-    margin-top: 8%;
-    font-size: 13px;
+    text-align: left;
+    margin-top: 2%;
+    font-size: 14px;
 }
 
-.pswdErr {
+#signUpTextSec{
+    text-align: center;
+    margin-top: 8%;
+    font-size: 14px;
+}
+
+.equalCheck{
+    color: red; 
+}
+.tooltip-inner ul li{
+    color: red; 
+}
+.tooltip-inner ul li:nth-child(odd){
+    color: green;
+}
+.cnfPswdErr {
     color: red;
 }
 
@@ -380,10 +564,68 @@
     color: red;
     margin-bottom: 7%;
 }
+ 
+.tooltip-inner ul{
+    padding-left: 20px;
+    font-size: 13px;
+}
 
+.arrow{
+    left: 22px !important;
+}
+.tooltip-inner {
+    background-color: #e7e5e5  !important;
+    /*!important is not necessary if you place custom.css at the end of your css calls. For the purpose of this demo, it seems to be required in SO snippet*/
+    color: #031607 !important;
+    max-width: 250px !important;
+    margin-left: -8%;
+    text-align: left !important;
+ 
+  }
+
+  .bs-tooltip-auto[x-placement^=top] .arrow::before, .bs-tooltip-top .arrow::before {
+    top: 0;
+    border-width: 0.5rem 0.5rem 0 !important;
+    border-top-color: #e7e5e5 !important;
+   
+}
+
+.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .bs-tooltip-bottom .arrow::before {
+    bottom: 0;
+    border-width: 0 .5rem .5rem !important;
+    border-bottom-color: #e7e5e5 !important;
+}
+
+.bs-tooltip-top .arrow {
+    bottom: 0;
+    background-color: #fdfdfd;
+    margin-left: -29px;
+}
+  
+  .tooltip.top .tooltip-arrow {
+    border-top-color: #f2d7d9;
+    background-color: #f2d7d9
+  }
+  
+  .tooltip.right .tooltip-arrow {
+    border-right-color: #f2d7d9;
+    background-color: #f2d7d9
+  }
+  
+  .tooltip.bottom .tooltip-arrow {
+    border-bottom-color: #f2d7d9;
+    background-color: #f2d7d9
+  }
+  
+  .tooltip.left .tooltip-arrow {
+    border-left-color: #f2d7d9;
+    background-color: #f2d7d9
+  }
+
+/*Resolution Screen Size*/
 
 @media screen and (max-width: 768px) {
-    .landing {
+    .landingSignUp {
       /* border: 2px solid blue; */
       display: none;
     }
@@ -400,50 +642,40 @@
    .loginFooter{
        height: 25vh;
    }
+   #passwordSignUp {
+    width: 100%;
+}
     
 }
 
-[data-tip] {
-	position:relative;
 
+
+@media screen and (min-width: 300px) and (orientation:potrait) {
+    .landingSignUp {
+        /* border: 2px solid blue; */
+        display: none;
+    }
+    .signup {
+        width: 100%;
+        overflow-y: scroll;
+        overflow-x: scroll;
+    }
+    #passwordSignUp {
+        width: 110%;
+    }
 }
-[data-tip]:before {
-	content:'';
-	/* hides the tooltip when not hovered */
-	display:none;
-	content:'';
-	border-left: 5px solid transparent;
-	border-right: 5px solid transparent;
-	border-bottom: 5px solid #1a1a1a;	
-	position:absolute;
-	top:30px;
-	left:35px;
-	z-index:8;
-	font-size:0;
-	line-height:0;
-	width:0;
-	height:0;
+
+@media screen and (max-width: 450px) {
+    .landingSignUp {
+        /* border: 2px solid blue; */
+        display: none;
+    }
+    .signup {
+        width: 100%;
+        overflow-y: scroll;
+    }
+    #passwordSignUp {
+        width: 110%;
+    }
 }
-[data-tip]:after {
-	display:none;
-	content:attr(data-tip);
-	position:absolute;
-	top:35px;
-	left:0px;
-	padding:5px 8px;
-	background:#f3efef;
-	color:#361717;
-	z-index:9;
-	font-size: 0.75em;
-	height:64px;
-	line-height:18px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	white-space:nowrap;
-	word-wrap:normal;
-}
-[data-tip]:hover:before,
-[data-tip]:hover:after {
-	display:block;
-}
+

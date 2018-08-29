@@ -1,6 +1,5 @@
 
-
-.forgotPswrdlanding {
+.createPswrdlanding {
     width: 66.7%;
     height: 92.5vh;
     overflow: hidden;
@@ -11,7 +10,7 @@
     
 }
 
-.forgotPswrdRightPane {
+.createPswrdRightPane {
     float: left;
     overflow: hidden;
     width: 33.3%;
@@ -21,17 +20,40 @@
     height: 92.5vh;
   }
 
-  .forgotPswrdDpamLogo {
+  .createPswrdDpamLogo {
     text-align: center;
     margin: 24px 0 12px 0;
 }
 
-#forgotPswrdFormDiv {
+#createPswrdFormDiv {
     padding: 0% 9%;
     height: 61vh;
 }
 
-#emailMobForgotPswrd {
+#createPswrdTxt {
+    margin-top: 12%;
+    font-family: HelveticaNeueMed;
+    font-size: 22px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #243745;
+}
+
+.loggedCreatePswrdTxt {
+    font-family: HelveticaNeueReg;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    color: #243745;
+}
+
+.createPswrdRightPane input {
     width: 100%;
     box-sizing: border-box;
     box-shadow: none;
@@ -49,11 +71,11 @@
     /* margin-bottom: 30px; */
 }
 
-.forgotPswrdRightPane form div {
+
+.createPswrdRightPane form div {
     position: relative;
 }
-
-#emailMobForgotPswrdTxt {
+.createPswrdRightPane form div label {
     position: absolute;
     top: 10px;
     color: #999;     
@@ -63,8 +85,8 @@
     font-size: 16px;
 }
 
-#emailMobForgotPswrd:focus ~ label,
-#emailMobForgotPswrd:valid ~ label
+.createPswrdRightPane input:focus ~ label,
+.createPswrdRightPane input:valid ~ label
 {
     top: -9px;
     left: 0px;
@@ -73,35 +95,12 @@
     /* font-weight: bold; */
 }
 
-#emailMobForgotPswrd:focus,
-#emailMobForgotPswrd:valid{
+.createPswrdRightPane input:focus,
+.createPswrdRightPane input:valid{
    border-bottom: 1px solid grey; 
 }
 
-#isForgotPswrd {
-    margin-top: 12%;
-    font-family: HelveticaNeueMed;
-    font-size: 22px;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #243745;
-}
-
-.enterEmailMobForgtPswrd {
-    font-family: HelveticaNeueReg;
-    font-size: 16px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.25;
-    letter-spacing: normal;
-    color: #243745;
-}
-
-.emailMobForgtPswrdErr {
+.newPswrdErr {
     margin-bottom: 7%;
     font-family: HelveticaNeueReg;
     font-size: 12px;
@@ -113,7 +112,7 @@
     color: #da291c;
 }
 
-#sendFrgtPswrdBtn {
+#sbmitNewPswrd {
     width: 100%;
     margin-top: 8%;
     font-family: HelveticaNeueReg;
@@ -127,32 +126,3 @@
     color: #ffffff;
     padding: 14px 0;
 }
-
-#noAcntFrgtPswrdTxt{
-    text-align: center;
-    margin-top: 8%;
-  font-family: HelveticaNeueLight;
-  font-size: 14px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.5;
-  letter-spacing: normal;
-  color: #585d63;
-}
-
-#signUpFrgtPswrdText {
-    font-family: HelveticaNeueReg;
-    font-size: 14px;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.5;
-    letter-spacing: normal;
-    color: #4ea6f1;
-}
-
-.loginFooter{
-    height: 25vh;
-}
-

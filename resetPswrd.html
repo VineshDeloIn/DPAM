@@ -5,50 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Forgot Password</title>
+    <title>Reset Password</title>
 
      <!-- <link rel="stylesheet" href="Assets/css/login.css">  -->
-    <link rel="stylesheet" href="Assets/css/forgotPswrd.css">
+    <link rel="stylesheet" href="Assets/css/resetPswrd.css">
     <link rel="stylesheet" href="Assets/css/customFont.css">
     <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="Assets/css/footer.css">
     <script src="Assets/js/jquery-3.3.2.min.js"></script>
-    <script src="Assets/js/login/forgotPswrd.js"></script>
-    <script src="Assets/js/commonValidations/emailMobValidation.js"></script>
+    <!-- <script src="Assets/js/login/forgotPswrd.js"></script> -->
     <script src="Assets/js/jqueryValidation/jquery.validate.min.js"></script>
     <script src="Assets/js/bootstrap.min.js"></script>
-    
 </head>
 
 <body>
-    <div class="forgotPswrdlanding">
-         <!-- <img src="Assets/images/landing.jpg" alt="Chania">   -->
+    <div class="resetPswrdlanding">
+        <!-- <img src="Assets/images/landing.jpg" alt="Chania">  -->
     </div>
 
-    <div class="forgotPswrdRightPane">
-        <div class="forgotPswrdDpamLogo">
+    <div class="resetPswrdRightPane">
+        <div class="resetPswrdDpamLogo">
             <img src="Assets/images/dam_logo.svg" alt="Avatar" class="avatar">
         </div>
         
-        <div class="container" id="forgotPswrdFormDiv">
-                <p id="isForgotPswrd">Forgot your password?</p>
-                <p class="enterEmailMobForgtPswrd">Please enter your registered email or phone
-                     number below to resetyour password</p>
+        <div class="container" id="resetPswrdFormDiv">
+                <p id="resetPswrdTxt">Reset password</p>
+                <p class="loggedResetPswrdTxt">Create a new password. You will be logged in once you are done.</p>
                 <br>
-                <br>
-                <form id="forgotPswrdForm" method="POST">
+                <form id="resetPswrdForm" method="POST">
                         <div>
-                            <input type="text" id="emailMobForgotPswrd" name="" required>
-                            <label id="emailMobForgotPswrdTxt" >Email / Mobile Number</label>
-                            <p class="emailMobForgtPswrdErr"></p>
+                                <input type="text" id="oldResetPswrd" name="" required>
+                                <label id="oldResetPswrdTxt" >Old  Password</label>
+                                <p class="oldResetPswrdErr"></p>
+                            </div>
+                        <div>
+                            <input type="text" id="newResetPswrd" name="" required>
+                            <label id="newResetPswrdTxt" >New  Password</label>
+                            <p class="newResetPswrdErr"></p>
                         </div>
+
+                        <div>
+                                <input type="text" id="confrmNewResetPswrd" name="" required>
+                                <label id="confrmNewResetPswrdTxt" >Confirm New Password</label>
+                                <p class="confrmNewResetPswrdErr"></p>
+                            </div>
                         <br>
-                        <button type="button" class="btn btn-dark" id="sendFrgtPswrdBtn">SEND VERIFICATION CODE</button>
+                        <button type="button" class="btn btn-dark" id="submitResetPswrd">LOGIN</button>
                         <br>
-                    </form>
-                    <p id="noAcntFrgtPswrdTxt">Don't have an account?
-                            <a id="signUpFrgtPswrdText" href="#">SIGN UP</a>
-                        </p>    
+                    </form> 
+                     
             </div>
 
 
