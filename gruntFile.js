@@ -13,7 +13,7 @@ module.exports = function(grunt) {
                 dest: 'dist/css/style.css'
             },
             js: {
-                src: ['./Assets/js/jquery-3.3.2.min.js','./Assets/js/jqueryValidation/jquery.validate.js','./Assets/js/bootstrap.js','./Assets/js/**/*.js'],
+                src: ['./Assets/js/jquery-3.3.2.min.js','./Assets/js/jqueryValidation/jquery.validate.js','./Assets/js/bootstrap.js','./Assets/js/popper.min.js','./Assets/js/**/*.js'],
                 dest: 'dist/js/script.js'
             }
         },
