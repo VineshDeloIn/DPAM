@@ -1,11 +1,12 @@
-
+body {
+    margin-bottom: 10%; 
+}
 
 .forgotPswrdlanding {
     width: 66.7%;
-    height: 92.5vh;
+    height: 90vh; 
     overflow: hidden;
     float: left;
-    /* border: 2px solid red; */
     background-image: url("../images/landing.jpg");
     background-size: 100% 100%;
     
@@ -14,22 +15,22 @@
 .forgotPswrdRightPane {
     float: left;
     overflow: hidden;
-    width: 33.3%;
-    max-width: 500px;
-    right:0;  
+    width: 33.3%; 
     margin: 0;
-    height: 92.5vh;
+    height: 90vh;
   }
 
-  .forgotPswrdDpamLogo {
+#forgotPswrdFormDiv {
+    padding: 0% 9%;
+    height: 80vh;
+}
+
+.forgotPswrdDpamLogo {
     text-align: center;
     margin: 24px 0 12px 0;
 }
 
-#forgotPswrdFormDiv {
-    padding: 0% 9%;
-    height: 61vh;
-}
+
 
 #emailMobForgotPswrd {
     width: 100%;
@@ -46,7 +47,6 @@
     font-stretch: normal;
     letter-spacing: normal;
     color: #243745;
-    /* margin-bottom: 30px; */
 }
 
 .forgotPswrdRightPane form div {
@@ -56,7 +56,8 @@
 #emailMobForgotPswrdTxt {
     position: absolute;
     top: 10px;
-    color: #999;     
+    color: #999;   
+    left: 0%;  
     transition: .5s;
     pointer-events: none;
     font-family: HelveticaNeueLight;
@@ -70,7 +71,6 @@
     left: 0px;
     color: grey;
     font-size: 12px;
-    /* font-weight: bold; */
 }
 
 #emailMobForgotPswrd:focus,
@@ -78,7 +78,7 @@
    border-bottom: 1px solid grey; 
 }
 
-#isForgotPswrd {
+#forgotPswrdTxt {
     margin-top: 12%;
     font-family: HelveticaNeueMed;
     font-size: 22px;
@@ -98,6 +98,7 @@
     font-stretch: normal;
     line-height: 1.25;
     letter-spacing: normal;
+    text-align: left;
     color: #243745;
 }
 
@@ -152,7 +153,64 @@
     color: #4ea6f1;
 }
 
-.loginFooter{
-    height: 25vh;
+@media screen and (min-width: 300px) and (orientation:potrait) {
+    .forgotPswrdlanding {
+        display: none;
+    }
+    .forgotPswrdRightPane {
+        overflow-y: scroll;
+        text-align: center;
+        overflow-x: scroll;
+        width: 100%;
+        height:75vh;
+    }
+
+    #forgotPswrdTxt{
+        text-align: left;
+    }
+   
 }
+
+@media screen and (max-width: 480px) {
+    .forgotPswrdlanding {
+        /* border: 2px solid blue; */
+        display: none;
+    }
+    .forgotPswrdRightPane {
+        width: 100%;
+        text-align: center;
+        overflow-y: scroll;
+        height:75vh;
+    }
+
+    #forgotPswrdTxt{
+        text-align: left;
+    }
+   
+}
+
+@media screen and (max-width: 768px) {
+    .forgotPswrdlanding {
+        /* border: 2px solid blue; */
+        display: none;
+    }
+    .forgotPswrdRightPane {
+        text-align: center;
+        width: 100%;
+        overflow-y: scroll;
+        /* height:75vh; */
+        height:82vh;
+        /* overflow-y: scroll; */
+    }
+
+    #forgotPswrdTxt{
+        text-align: left;
+    }
+
+
+     
+    
+}
+
+
 

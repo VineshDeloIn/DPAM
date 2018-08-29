@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Forgot Password</title>
 
-     <!-- <link rel="stylesheet" href="Assets/css/login.css">  -->
+    <!-- <link rel="stylesheet" href="Assets/css/login.css">  -->
     <link rel="stylesheet" href="Assets/css/forgotPswrd.css">
     <link rel="stylesheet" href="Assets/css/customFont.css">
     <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
@@ -17,71 +17,72 @@
     <script src="Assets/js/commonValidations/emailMobValidation.js"></script>
     <script src="Assets/js/jqueryValidation/jquery.validate.min.js"></script>
     <script src="Assets/js/bootstrap.min.js"></script>
-    
+
 </head>
 
 <body>
-    <div class="forgotPswrdlanding">
-         <!-- <img src="Assets/images/landing.jpg" alt="Chania">   -->
-    </div>
 
-    <div class="forgotPswrdRightPane">
-        <div class="forgotPswrdDpamLogo">
-            <img src="Assets/images/dam_logo.svg" alt="Avatar" class="avatar">
-        </div>
-        
-        <div class="container" id="forgotPswrdFormDiv">
-                <p id="isForgotPswrd">Forgot your password?</p>
-                <p class="enterEmailMobForgtPswrd">Please enter your registered email or phone
-                     number below to resetyour password</p>
+    <article>
+        <section class="forgotPswrdlanding">
+        </section>
+
+        <section class="forgotPswrdRightPane">
+            <div class="forgotPswrdDpamLogo">
+                <img src="Assets/images/dam_logo.svg" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container" id="forgotPswrdFormDiv">
+                <p id="forgotPswrdTxt">Forgot your password?</p>
+                <p class="enterEmailMobForgtPswrd">Please enter your registered email or phone number below to resetyour password</p>
                 <br>
                 <br>
                 <form id="forgotPswrdForm" method="POST">
-                        <div>
-                            <input type="text" id="emailMobForgotPswrd" name="" required>
-                            <label id="emailMobForgotPswrdTxt" >Email / Mobile Number</label>
-                            <p class="emailMobForgtPswrdErr"></p>
-                        </div>
-                        <br>
-                        <button type="button" class="btn btn-dark" id="sendFrgtPswrdBtn">SEND VERIFICATION CODE</button>
-                        <br>
-                    </form>
-                    <p id="noAcntFrgtPswrdTxt">Don't have an account?
-                            <a id="signUpFrgtPswrdText" href="#">SIGN UP</a>
-                        </p>    
+                    <div>
+                        <input type="text" id="emailMobForgotPswrd" name="" required>
+                        <label id="emailMobForgotPswrdTxt">Email / Mobile Number</label>
+                        <p class="emailMobForgtPswrdErr"></p>
+                    </div>
+                    <br>
+                    <button type="button" class="btn btn-dark" id="sendFrgtPswrdBtn">SEND VERIFICATION CODE</button>
+                    <br>
+                </form>
+                <p id="noAcntFrgtPswrdTxt">Don't have an account?
+                    <a id="signUpFrgtPswrdText" href="#">SIGN UP</a>
+                </p>
             </div>
 
 
-    </div>
+        </section>
+    </article>
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 dubaiColAdj footerTopAdj">
+                    &copy; Dubai Asset Management 2018
+                </div>
 
+                <div class="col-6 col-sm-6 col-md-1 col-lg-1 midCols1Adj footerTopAdj">
+                    About Us
+                </div>
+                <div class="col-6 col-sm-6 col-md-1 col-lg-1 midCols2Adj footerTopAdj">
+                    Contact
+                </div>
+                <div class="col-6 col-sm-6 col-md-1 col-lg-1 midCols1Adj footerTopAdj">
+                    Privacy Policy
+                </div>
+                <div class="col-6 col-sm-6 col-md-1 col-lg-1 midCols2Adj footerTopAdj">
+                    Terms of use
+                </div>
+                <div class="col-6 col-sm-6 col-md-2 col-lg-2 fbColAdj footerTopAdj">
+                    <img src="Assets/images/fb-logo.png" alt="avatar">
+                </div>
+                <div class="col-6 col-sm-6 col-md-2 col-lg-2 instColAdj footerTopAdj">
+                    <img src="Assets/images/insta-logo.png" alt="avatar">
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
-<footer class="loginFooter">
-    <div class="footerDiv">
-        <span class="dubaiProperties">
-            &copy; Dubai Properties 2018
-        </span>
-        <span class="aboutUs">
-            About Us
-        </span>
-        <span class="contact">
-            Contact
-        </span>
-        <span class="privacyPolicy">
-            Privacy Policy
-        </span>
-        <span class="termsOfUse">
-            Terms of Use
-        </span>
-
-        <span class="facebookSpan">
-            <img src="Assets/images/001-facebook-logo-button.png" class="facebookLogoButton">
-        </span>
-
-        <span class="instaSpan">
-            <img src="Assets/images/002-instagram-logo.png" class="instagramLogo">
-        </span>
-    </div>
-</footer>
 
 </html>
