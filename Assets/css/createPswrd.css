@@ -1,10 +1,12 @@
+body {
+    margin-bottom: 10%; 
+}
 
 .createPswrdlanding {
     width: 66.7%;
-    height: 92.5vh;
+    height: 90vh; 
     overflow: hidden;
     float: left;
-    /* border: 2px solid red; */
     background-image: url("../images/landing.jpg");
     background-size: 100% 100%;
     
@@ -14,21 +16,20 @@
     float: left;
     overflow: hidden;
     width: 33.3%;
-    max-width: 500px;
-    right:0;  
     margin: 0;
-    height: 92.5vh;
+    height: 90vh; 
   }
-
-  .createPswrdDpamLogo {
-    text-align: center;
-    margin: 24px 0 12px 0;
-}
 
 #createPswrdFormDiv {
     padding: 0% 9%;
     height: 61vh;
 }
+
+.createPswrdDpamLogo {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
 
 #createPswrdTxt {
     margin-top: 12%;
@@ -80,6 +81,7 @@
     top: 10px;
     color: #999;     
     transition: .5s;
+    left: 0%;
     pointer-events: none;
     font-family: HelveticaNeueLight;
     font-size: 16px;
@@ -126,3 +128,64 @@
     color: #ffffff;
     padding: 14px 0;
 }
+
+@media screen and (min-width: 300px) and (orientation:potrait) {
+    .createPswrdlanding {
+        display: none;
+    }
+    .createPswrdRightPane {
+        overflow-y: scroll;
+        text-align: center;
+        overflow-x: scroll;
+        width: 100%;
+        height:75vh;
+    }
+
+    #createPswrdTxt{
+        text-align: left;
+    }
+   
+}
+
+@media screen and (max-width: 480px) {
+    .createPswrdlanding {
+        /* border: 2px solid blue; */
+        display: none;
+    }
+    .createPswrdRightPane {
+        width: 100%;
+        text-align: center;
+        overflow-y: scroll;
+        height:75vh;
+    }
+
+    #createPswrdTxt{
+        text-align: left;
+    }
+   
+}
+
+@media screen and (max-width: 768px) {
+    .createPswrdlanding {
+        /* border: 2px solid blue; */
+        display: none;
+    }
+    .createPswrdRightPane {
+        text-align: center;
+        width: 100%;
+        overflow-y: scroll;
+        /* height:75vh; */
+        height:82vh;
+        /* overflow-y: scroll; */
+    }
+
+    #createPswrdTxt{
+        text-align: left;
+    }
+
+
+     
+    
+}
+
+
