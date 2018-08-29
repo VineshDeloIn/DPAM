@@ -118,6 +118,13 @@ margin-left: -47px;
 .invalidPassErr {
     color: red;
     margin-left: 0%;
+    font-family: HelveticaNeueReg;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
 }
 
 #showPassSignUp{
@@ -214,6 +221,13 @@ margin-left: -47px;
 }
 .cnfPswdErr {
     color: red;
+    font-family: HelveticaNeueReg;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
 }
 
 .mailErr {
@@ -223,6 +237,13 @@ margin-left: -47px;
 .invalidEmailErr {
     color: red;
     margin-bottom: 7%;
+    font-family: HelveticaNeueReg;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
 }
  
 .tooltip-inner ul{
