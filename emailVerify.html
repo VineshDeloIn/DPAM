@@ -19,36 +19,38 @@
 </head>
 
 <body>
-    <div class="landingEmailVer">
-        <!-- <img src="Assets/images/landing.jpg" alt="Chania">  -->
-    </div>
+    <article>
+        <section class="landingEmailVer">
+            <!-- <img src="Assets/images/landing.jpg" alt="Chania">  -->
+        </section>
 
-    <div class="sidePaneEmailVer">
-        <div class="dpamLogoEmailVer">
-            <img src="Assets/images/dam_logo.svg" alt="Avatar" class="avatar">
-        </div>
-        <br>
-
-        <div class="container" id="FormDivEmailVer">
-            <h2 class="VerifyEmailTxt">Verify your email</h2>
-            <p class="verifyEmailLinkMsg">An email verification link has been sent to your email address
-                <span id="userEmailID"><b>UserEmail@gmail.com</b></span>. Please click on the link to complete registration.</p>
+        <section class="sidePaneEmailVer">
+            <div class="dpamLogoEmailVer">
+                <img src="Assets/images/dam_logo.svg" alt="Avatar" class="avatar">
+            </div>
             <br>
 
-            <div class="container">
-            <a href="https://accounts.google.com/ServiceLogin">
-                <button type="submit" class="btn btn-dark btn-lg" id="gmailBtn">GMAIL</button>
-            </a>
-            <form id="emailVerifyForm" method="POST" novalidate>
-                <button type="submit" class="btn btn-outline-secondary btn-lg" id="resendVeriBtn">RESEND VERIFICATION LINK</button>
+            <div class="container" id="FormDivEmailVer">
+                <h2 class="VerifyEmailTxt">Verify your email</h2>
+                <p class="verifyEmailLinkMsg">An email verification link has been sent to your email address
+                    <span id="userEmailID">
+                        <b>UserEmail@gmail.com</b>
+                    </span>. Please click on the link to complete registration.</p>
                 <br>
-            </form>
-        </div>
-            <br>
-        </div>
 
-    </div>
-    </div>
+                <div class="container">
+                    <a href="https://accounts.google.com/ServiceLogin">
+                        <button type="submit" class="btn btn-dark btn-lg" id="gmailBtn">GMAIL</button>
+                    </a>
+                    <form id="emailVerifyForm" method="POST" novalidate>
+                        <button type="submit" class="btn btn-outline-secondary btn-lg" id="resendVeriBtn">RESEND VERIFICATION LINK</button>
+                        <br>
+                    </form>
+                </div>
+                <br>
+            </div>
+        </section>
+    </article>
 </body>
 
 <footer class="loginFooter ">

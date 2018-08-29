@@ -19,40 +19,41 @@
 </head>
 
 <body>
-    <div class="landingOTP">
-        <!-- <img src="Assets/images/landing.jpg" alt="Chania">  -->
-    </div>
+    <article>
+        <section class="landingOTP">
+            <!-- <img src="Assets/images/landing.jpg" alt="Chania">  -->
+        </section>
 
-    <div class="sidePaneOTP">
-        <div class="dpamLogoOTP">
-            <img src="Assets/images/dam_logo.svg" alt="Avatar" class="avatar">
-        </div>
-        <br>
-
-        <div class="container" id="FormDivOTP">
-            <h2 id="EnterTextOTP" class="EnterTextClassOTP">Enter OTP</h2>
-            <p class="otpRegNumSent">We have sent an OTP to your registered mobile number. Please enter it below.</p>
+        <section class="sidePaneOTP">
+            <div class="dpamLogoOTP">
+                <img src="Assets/images/dam_logo.svg" alt="Avatar" class="avatar">
+            </div>
             <br>
-            <form id="OtpForm" method="POST" novalidate>
 
-                <div>
-                    <input type="text" id="otpNumber" name="" required>
-                    <label>Enter OTP</label>
-                    <p class="emailPhOtpErr"></p>
-                </div>
-
-                <button type="submit" class="btn btn-dark btn-lg" id="submitOtpBtn">SUBMIT</button>
+            <div class="container" id="FormDivOTP">
+                <h2 class="EnterTextClassOTP">Enter OTP</h2>
+                <p class="otpRegNumSent">We have sent an OTP to your registered mobile number. Please enter it below.</p>
                 <br>
+                <form id="OtpForm" method="POST" novalidate>
 
-            </form>
-            <br>
-            <p id="ResendOtpText">Did not recieve OTP yet?
-                <a href="#">RESEND</a>
-            </p>
-        </div>
+                    <div>
+                        <input type="text" id="otpNumber" name="" required>
+                        <label>Enter OTP</label>
+                        <p class="emailPhOtpErr"></p>
+                    </div>
 
-    </div>
-    </div>
+                    <button type="submit" class="btn btn-dark btn-lg" id="submitOtpBtn">SUBMIT</button>
+                    <br>
+
+                </form>
+                <br>
+                <p id="ResendOtpText">Did not recieve OTP yet?
+                    <a href="#">RESEND</a>
+                </p>
+            </div>
+
+        </section>
+    </article>
 </body>
 
 <footer class="loginFooter">

@@ -170,7 +170,7 @@ body {
         width: 100%;
         overflow-y: scroll;    
     }
-    .VerifyEmailTxt {
+    .VerifyEmailTxt  {
         text-align: left;
     }
     .verifyEmailLinkMsg {
