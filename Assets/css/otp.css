@@ -1,9 +1,12 @@
+body {
+    margin-bottom: 10%;
+}
+
 .landingOTP {
     width: 66.7%;
-    height: 92.5vh;
+    height: 90vh;
     overflow: hidden;
     float: left;
-    /* border: 2px solid red; */
     background-image: url("../images/landing.jpg");
     background-size: 100% 100%;
 }
@@ -12,11 +15,8 @@
     float: left;
     overflow: hidden;
     width: 33.3%;
-    /* max-width: 500px; */
-    /* right: 0; */
     margin: 0;
-    height: 92.5vh;
-    /* border: 2px solid blue; */
+    height: 90vh;
 }
 
 .dpamLogoOTP {
@@ -43,7 +43,7 @@
 .sidePaneOTP form div label {
     position: absolute;
     top: 10px;
-    left:0;
+    left: 0;
     color: #999;
     transition: .5s;
     pointer-events: none;
@@ -98,7 +98,6 @@
     text-align: center;
     color: #ffffff;
 }
-
 
 .EnterTextClassOTP {
     margin-top: 5%;
@@ -157,14 +156,9 @@
     color: #243745;
 }
 
-.loginFooter {
-    height: 25vh;
-}
-
 .otpRegNumSentSecond {
     text-align: left;
     margin-left: 10%;
-    /* margin-top: -5px; */
 }
 
 @media screen and (min-width: 300px) and (orientation:potrait) {
@@ -209,5 +203,4 @@
     .verifyEmailLinkMsg {
         text-align: left;
     }
-     
 }
