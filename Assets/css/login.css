@@ -253,7 +253,6 @@ body {
 
 @media screen and (min-width: 300px) and (orientation:potrait) {
     .landing {
-        /* border: 2px solid blue; */
         display: none;
     }
     .login {
@@ -275,7 +274,6 @@ body {
 
 @media screen and (max-width: 480px) {
     .landing {
-        /* border: 2px solid blue; */
         display: none;
     }
     .login {
@@ -296,16 +294,13 @@ body {
 
 @media screen and (max-width: 768px) {
     .landing {
-        /* border: 2px solid blue; */
         display: none;
     }
     .login {
         text-align: center;
         width: 100%;
         overflow-y: scroll;
-        /* height:75vh; */
         height:82vh;
-        /* overflow-y: scroll; */
     }
 
     #loginText{
