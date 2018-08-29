@@ -77,6 +77,7 @@ $("#passwordSignUp").on('input',function(e){
         //Checking if email/mob is not empty
         if(emailMob == "") {
             $(".mailErr").html("Email/MobileNumber Cannot Be Empty!");
+            $('#mailSignUp').val('');
             isEmailMobValid = false;
         } else  {
             isEmailMobValid = true;
@@ -101,7 +102,12 @@ $("#passwordSignUp").on('input',function(e){
             $(".invalidPassErr").html("Invalid Password ");
     }
 
-        $('#mailSignUp').val('');
+    if(!validatePassword(cnfpassword)){
+  
+        $(".cnfPswdErr").html("Invalid Password ");
+     }
+
+       
         $('#passwordSignUp').val('');
         $('#cnfpasswordSignUp').val('');
        
