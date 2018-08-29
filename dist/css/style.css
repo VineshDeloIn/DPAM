@@ -11506,6 +11506,63 @@ body {
     padding: 14px 0;
 }
 
+#showCreatePswrd{
+    float: right;
+    position: relative;
+    margin-top :-7%;
+    /* margin-left: -41px; */
+}
+
+
+.tooltip-inner {
+    background-color: #e7e5e5  !important;
+    /*!important is not necessary if you place custom.css at the end of your css calls. For the purpose of this demo, it seems to be required in SO snippet*/
+    color: #031607 !important;
+    max-width: 250px !important;
+    margin-left: -8%;
+    text-align: left !important;
+ 
+  }
+
+  .bs-tooltip-auto[x-placement^=top] .arrow::before, .bs-tooltip-top .arrow::before {
+    top: 0;
+    border-width: 0.5rem 0.5rem 0 !important;
+    border-top-color: #e7e5e5 !important;
+   
+}
+
+
+.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .bs-tooltip-bottom .arrow::before {
+    bottom: 0;
+    border-width: 0 .5rem .5rem !important;
+    border-bottom-color: #e7e5e5 !important;
+}
+
+.bs-tooltip-top .arrow {
+    bottom: 0;
+    background-color: #fdfdfd;
+    margin-left: -29px;
+}
+
+.tooltip.top .tooltip-arrow {
+    border-top-color: #f2d7d9;
+    background-color: #f2d7d9
+  }
+  
+  .tooltip.right .tooltip-arrow {
+    border-right-color: #f2d7d9;
+    background-color: #f2d7d9
+  }
+  
+  .tooltip.bottom .tooltip-arrow {
+    border-bottom-color: #f2d7d9;
+    background-color: #f2d7d9
+  }
+  
+  .tooltip.left .tooltip-arrow {
+    border-left-color: #f2d7d9;
+    background-color: #f2d7d9
+  }
 
 @media screen and (min-width: 300px) and (orientation:potrait) {
     .createPswrdlanding {
@@ -12958,6 +13015,13 @@ margin-left: -47px;
 .invalidPassErr {
     color: red;
     margin-left: 0%;
+    font-family: HelveticaNeueReg;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
 }
 
 #showPassSignUp{
@@ -13054,6 +13118,13 @@ margin-left: -47px;
 }
 .cnfPswdErr {
     color: red;
+    font-family: HelveticaNeueReg;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
 }
 
 .mailErr {
@@ -13063,6 +13134,13 @@ margin-left: -47px;
 .invalidEmailErr {
     color: red;
     margin-bottom: 7%;
+    font-family: HelveticaNeueReg;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
 }
  
 .tooltip-inner ul{
