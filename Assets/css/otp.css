@@ -43,6 +43,7 @@
 .sidePaneOTP form div label {
     position: absolute;
     top: 10px;
+    left:0;
     color: #999;
     transition: .5s;
     pointer-events: none;
@@ -98,12 +99,9 @@
     color: #ffffff;
 }
 
-#EnterTextOTP {
-    margin-top: 5%;
-    /* margin-left: 9%; */
-}
 
 .EnterTextClassOTP {
+    margin-top: 5%;
     width: 105px;
     height: 26px;
     font-family: HelveticaNeueMed;
@@ -205,10 +203,11 @@
         overflow-y: scroll;
         /* overflow-y: scroll; */
     }
-    .VerifyEmailTxt {
+    .VerifyEmailTxt .EnterTextClassOTP #otpNumber {
         text-align: left;
     }
     .verifyEmailLinkMsg {
         text-align: left;
     }
+     
 }
