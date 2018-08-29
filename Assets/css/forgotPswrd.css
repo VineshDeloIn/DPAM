@@ -173,7 +173,6 @@ body {
 
 @media screen and (max-width: 480px) {
     .forgotPswrdlanding {
-        /* border: 2px solid blue; */
         display: none;
     }
     .forgotPswrdRightPane {
@@ -191,16 +190,13 @@ body {
 
 @media screen and (max-width: 768px) {
     .forgotPswrdlanding {
-        /* border: 2px solid blue; */
         display: none;
     }
     .forgotPswrdRightPane {
         text-align: center;
         width: 100%;
         overflow-y: scroll;
-        /* height:75vh; */
         height:82vh;
-        /* overflow-y: scroll; */
     }
 
     #forgotPswrdTxt{
