@@ -8,7 +8,7 @@ body {
     height: 90vh; 
     overflow: hidden;
     float: left;
-    background-image: url("../../Assets/images/landing.jpg");;
+    background-image: url("../../Assets/images/landing.jpg");
     background-size: 100% 100%;
     
 }
