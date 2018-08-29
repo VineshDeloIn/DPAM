@@ -549,7 +549,8 @@ margin-left: -47px;
 .tooltip-inner ul li{
     color: red; 
 }
-.tooltip-inner ul li:nth-child(odd){
+
+.changeColor{
     color: green;
 }
 .cnfPswdErr {

@@ -63,10 +63,7 @@ $("#passwordSignUp").keyup(function(){
 
     var passWord=$("#passwordSignUp").val();
 
- /*   if(!validatePassword(passWord)){
-  
-        $(".invalidPassErr").html("Invalid Password ");
-}*/
+     changeTooltipColor(passWord);
      checkPasswordStrength(passWord);
 });
 
@@ -112,11 +109,98 @@ function validatePassword(inputValue){
    if(lowerCaseLetters.test(inputValue) &&
   upperCaseLetters.test(inputValue) &&
   numbers.test(inputValue) && specialChar.test(inputValue) && inputValue.length >= 8 ) { 
-          console.log("valid Password")
+         
         return true;
    }else{
   return false;
  }   
+}
+
+
+// function for password tooltip Color Change
+
+
+function changeTooltipColor(inputValue){
+    
+    var lowerCaseLetters = /[a-z]/g;
+  
+
+   var spanTick = $("<span>&#10004;</span>");
+   var spanRemove = $("<span>&#10006;</span>");
+   var tickClass=$('<span class="glyphicon glyphicon-plus"></span');
+   var minClass=$('<span class="glyphicon glyphicon-minus"></span');
+   $( "ul li" ).prepend(spanRemove);
+   $( "ul li" ).prepend(minClass);
+   // later, when your loading is done:
+  
+    if(inputValue.length<=0){
+        console.log("no length");
+        $( "ul li:nth-child(1)" ).prepend(spanRemove);
+        $( "ul li:nth-child(2)" ).prepend(spanRemove);
+        $( "ul li:nth-child(3)" ).prepend(spanRemove);
+        $( "ul li:nth-child(4)" ).prepend(spanRemove);
+        
+    }
+   
+    if(lowerCaseLetters.test(inputValue) && inputValue.length>=8 && inputValue.length<=20 ){
+       
+     console.log("lower case");
+      $( "ul li:nth-child(1) span" ).remove();
+        $( "ul li:nth-child(1)" ).css("color", "green");
+        $( "ul li:nth-child(1)" ).prepend(spanTick);
+   
+    }else{
+        $( "ul li:nth-child(1) span" ).remove();
+        $( "ul li:nth-child(1)" ).css("color", "red");
+        $( "ul li:nth-child(1)" ).prepend(spanRemove);
+        
+    }
+    var specialChar = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
+    if(specialChar.test(inputValue)){
+        console.log("spcl case");
+        $( "ul li:nth-child(4) span" ).remove();
+        $( "ul li:nth-child(4)" ).css("color", "green");
+        $( "ul li:nth-child(4)" ).prepend(spanTick);
+   }else{
+       
+        $( "ul li:nth-child(4) span" ).remove();
+        $( "ul li:nth-child(4)" ).css("color", "red");
+        $( "ul li:nth-child(4)" ).prepend(spanRemove);
+        
+    }
+     // Validate capital letters
+     var upperCaseLetters = /[A-Z]/g;
+     if(upperCaseLetters.test(inputValue)){
+        console.log("upper case");
+        $( "ul li:nth-child(2) span" ).remove();
+        $( "ul li:nth-child(2)" ).css("color", "green");
+        $( "ul li:nth-child(2)" ).prepend(spanTick);
+        
+    }else{
+       
+        
+        $( "ul li:nth-child(2) span" ).remove();
+        $( "ul li:nth-child(2)" ).css("color", "red");
+        $( "ul li:nth-child(2)" ).prepend(spanRemove);
+        
+    }
+       // Validate numbers
+    var numbers = /[0-9]/g;
+    
+ if(numbers.test(inputValue) ) { 
+    console.log("numver case");
+    $( "ul li:nth-child(3) span" ).remove();
+    $( "ul li:nth-child(3)" ).css("color", "green");
+    $( "ul li:nth-child(3)" ).prepend(spanTick);
+    
+   }else{
+   
+    $( "ul li:nth-child(3) span" ).remove();
+    $( "ul li:nth-child(3)" ).css("color", "red");
+    $( "ul li:nth-child(3)" ).prepend(spanRemove);
+    
+}
+
 }
 
 //function to check password equality
