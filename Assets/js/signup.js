@@ -1,5 +1,9 @@
 $( document ).ready(function() {
     
+    $('#cnfpasswordSignUp').bind("cut copy paste", function(e) {
+        e.preventDefault();
+       
+        });
 
  $('[data-toggle="tooltip"]').tooltip(); 
     
