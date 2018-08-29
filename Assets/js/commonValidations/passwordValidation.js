@@ -7,6 +7,33 @@ function passtoTextSignUp() {
     }
 }
 
+function validateShowPswrd(newPswrd) {
+   
+    if (newPswrd.type === "password") {
+        newPswrd.type = "text";
+    } else {
+        newPswrd.type = "password";
+    }
+}
+
+// function to check password strength
+function validatePswrdStrength(pass){
+    if(pass.length<=8){
+      $(".createPwdStrength").html("Weak");
+      $(".createPwdStrength").css("color", "red");
+     
+    }else if(pass.length>8 && pass.length<=12){
+      $(".createPwdStrength").html("Medium");
+      $(".createPwdStrength").css("color", "green");
+     
+    }else if(pass.length>12){
+      $(".createPwdStrength").html("Strong");
+      $(".createPwdStrength").css("color", "green");
+  
+  
+    }
+  }
+
 // function to check password strength
 function checkPasswordStrength(pass){
     if(pass.length<=8){
