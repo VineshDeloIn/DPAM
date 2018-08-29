@@ -58,16 +58,28 @@ function validateEmail(email) {
     }
 }
 
+
 $("#passwordSignUp").keyup(function(){
 
     var passWord=$("#passwordSignUp").val();
 
-    if(!validatePassword(passWord)){
+ /*   if(!validatePassword(passWord)){
   
         $(".invalidPassErr").html("Invalid Password ");
-}
+}*/
      checkPasswordStrength(passWord);
 });
+
+$("#passwordSignUp").on('input',function(e){
+    var passWordChk=$("#passwordSignUp").val();
+    if(!validatePassword(passWordChk)){
+  
+        $(".invalidPassErr").html("Invalid Password ");
+    }else{
+        $(".invalidPassErr").html(" ");
+    }
+ });
+
 
 // function to check password strength
 function checkPasswordStrength(pass){
@@ -92,18 +104,30 @@ function checkPasswordStrength(pass){
 function validatePassword(inputValue){
     console.log(inputValue);
     var lowerCaseLetters = /[a-z]/g;
+    var specialChar = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
      // Validate capital letters
      var upperCaseLetters = /[A-Z]/g;
        // Validate numbers
     var numbers = /[0-9]/g;
    if(lowerCaseLetters.test(inputValue) &&
   upperCaseLetters.test(inputValue) &&
-  numbers.test(inputValue) && inputValue.length >= 8 ) { 
+  numbers.test(inputValue) && specialChar.test(inputValue) && inputValue.length >= 8 ) { 
           console.log("valid Password")
         return true;
    }else{
   return false;
  }   
+}
+
+//function to check password equality
+
+function comparePassword(pass1,pass2){
+
+    if(pass1===pass2){
+        return true;
+    }else{
+        return false;
+    }
 }
 
 // Empty Fields Validation
@@ -112,10 +136,14 @@ function validatePassword(inputValue){
         //getting values from the form
         var emailMob = $("#mailSignUp").val();
         var password = $("#passwordSignUp").val();
-
+        var cnfpassword = $("#cnfpasswordSignUp").val();
+        
         var isEmailMobValid;  
         var isPasswordValid;
-
+        if(!comparePassword(password,cnfpassword)){
+            console.log("not equal");
+            $(".equalCheck").html("Passwords do not match");
+        }
         //Checking if email/mob is not empty
         if(emailMob == "") {
             $(".mailErr").html("Email/MobileNumber Cannot Be Empty!");

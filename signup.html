@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="Assets/css/customFont.css">
     <link rel="stylesheet" href="Assets/css/signup.css">
     <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
+    
    
     <script src="Assets/js/jquery-3.3.2.min.js"></script>
     <script src="Assets/js/popper.min.js"></script>
@@ -19,10 +20,12 @@
 </head>
 
 <body>
+    <article>
     <div class="landingSignUp">
         <!-- <img src="Assets/images/landing.jpg" alt="Chania">  -->
     </div>
-
+  </article>
+  <aside>
     <div class="signup">
         <div class="dpamLogo">
             <img src="Assets/images/dam_logo.svg" alt="Avatar" class="avatar">
@@ -38,22 +41,25 @@
                    
                 </div>
                 <div>
-                <div class="row">
-                    <div class="col-sm-11" data-toggle="tooltip" data-placement="bottom" title="The password must have atleast one Capital letter,
-                     atleast one number and atleast one special character">
-                   <input type="password" id="passwordSignUp" name=""   required> <label style="margin-left:10px">Password </label></div><div class="col-sm-1"> 
-                        <img src="Assets/images/show_pass.png" id="showPassSignUp"> <p class="pwdStrengthSignUp " style="font-size: 12px"></p></div>
+               
+         <div  class="pass-input" data-toggle="tooltip" data-placement="bottom" data-html="true" title="<ul>The password must have 
+                                <li > &#10004; 8-20 Characters</li>
+                             <li>  &#10006;Atleast one capital letter </li>
+                            <li> &#10004; Atleast one number </li>
+                            <li>&#10006; Atleast one special character</li></ul>">
+                       <input type="password" id="passwordSignUp"  name=""   required> <label >Password </label>
+                       <img src="Assets/images/show_pass.png" id="showPassSignUp">
+                        <p class="pwdStrengthSignUp " ></p>
+                    
+                       <p class="pswdErr invalidPassErr"></p>
                    
-                    <p class="pswdErr invalidPassErr"></p>
-                    
-                  
-                    
-                    <br>
-                </div>
-                <div style="margin-top:9%">
+            </div>
+                       
+                   
+                <div style="margin-top:10%">
                     <input type="password" id="cnfpasswordSignUp" name="" required>
                     <label>Confirm Password</label>
-                    <p class="pswdErr "></p>
+                    <p class="cnfPswdErr equalCheck"></p>
                     <br>
                 </div>
                 <div id="signUpText">
@@ -76,7 +82,7 @@
 
     </div>
     </div>
-</body>
+</aside>
 
 <footer class="loginFooter ">
     <div class="footerDiv  row">
@@ -113,5 +119,7 @@
   
 </div>
 </footer>
+
+</body>
 
 </html>
