@@ -1,13 +1,11 @@
 body {
-    margin-bottom: 10%; /* bottom = footer height */
+    margin-bottom: 10%; 
 }
 
 
 .landing {
     width: 66.7%;
-     height: 90vh; 
-    /* height: 655px; */
-    /* border: 2px solid red; */
+    height: 90vh; 
     overflow: hidden;
     float: left;
     background-image: url("../../Assets/images/landing.jpg");
@@ -16,21 +14,16 @@ body {
 }
 
 .login {
-  float: left;
-  overflow: hidden;
-  width: 33.3%;
-  /* right:0;   */
-  /* border: 2px solid blue;  */
-  margin: 0;
-   height: 90vh; 
-  /* height: 90%; */
+    float: left;
+    overflow: hidden;
+    width: 33.3%;
+    margin: 0;
+    height: 90vh; 
 }
 
 #loginFormDiv {
     padding: 0% 9%;
      height: 80vh; 
-     /* border: 2px solid green; */
-    /* height:90%; */
 }
 
 
@@ -54,7 +47,6 @@ body {
     font-stretch: normal;
     letter-spacing: normal;
     color: #243745;
-    /* margin-bottom: 30px; */
 }
 
 
@@ -79,7 +71,6 @@ body {
     left: 0px;
     color: grey;
     font-size: 12px;
-    /* font-weight: bold; */
 }
 
 .login input:focus,
@@ -162,8 +153,6 @@ body {
 }
 
 #loginText {
-    /* margin-top: 1%; */
-    /* margin-left: 9%; */
     font-family: HelveticaNeueMed;
     font-size: 22px;
     font-weight: 500;
@@ -174,12 +163,6 @@ body {
     color: #333f48;
 }
 
-
-
-/* .rememberLogin {
-    margin-top:10%;
-}
-*/
 
 #loginRemembrMeTxt {
     float: left;
@@ -223,14 +206,14 @@ body {
 #noAcntTxt{
     text-align: center;
     margin-top: 8%;
-  font-family: HelveticaNeueLight;
-  font-size: 14px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.5;
-  letter-spacing: normal;
-  color: #585d63;
+    font-family: HelveticaNeueLight;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #585d63;
 }
 
 #signUpText {
@@ -267,13 +250,9 @@ body {
     color: #da291c;
 }
 
-.loginFooter{
-    height: 25vh;
-}
 
 @media screen and (min-width: 300px) and (orientation:potrait) {
     .landing {
-        /* border: 2px solid blue; */
         display: none;
     }
     .login {
@@ -295,7 +274,6 @@ body {
 
 @media screen and (max-width: 480px) {
     .landing {
-        /* border: 2px solid blue; */
         display: none;
     }
     .login {
@@ -316,16 +294,13 @@ body {
 
 @media screen and (max-width: 768px) {
     .landing {
-        /* border: 2px solid blue; */
         display: none;
     }
     .login {
         text-align: center;
         width: 100%;
         overflow-y: scroll;
-        /* height:75vh; */
         height:82vh;
-        /* overflow-y: scroll; */
     }
 
     #loginText{

@@ -63,10 +63,7 @@ $("#passwordSignUp").keyup(function(){
 
     var passWord=$("#passwordSignUp").val();
 
- /*   if(!validatePassword(passWord)){
-  
-        $(".invalidPassErr").html("Invalid Password ");
-}*/
+     changeTooltipColor(passWord);
      checkPasswordStrength(passWord);
 });
 
@@ -112,11 +109,80 @@ function validatePassword(inputValue){
    if(lowerCaseLetters.test(inputValue) &&
   upperCaseLetters.test(inputValue) &&
   numbers.test(inputValue) && specialChar.test(inputValue) && inputValue.length >= 8 ) { 
-          console.log("valid Password")
+         
         return true;
    }else{
   return false;
  }   
+}
+
+
+// function for password tooltip Color Change
+
+
+function changeTooltipColor(inputValue){
+    
+    var lowerCaseLetters = /[a-z]/g;
+    var specialChar = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
+    var numbers = /[0-9]/g;
+    var upperCaseLetters = /[A-Z]/g;
+
+   var spanTick = $("<span>&#10004;</span>");
+   var spanRemove = $("<span>&#10006;</span>");
+   
+  
+ 
+   // later, when your loading is done:
+  
+    if(inputValue.length<=0){
+        
+        $("ul li span" ).remove();
+        $( "ul li" ).prepend(spanRemove);
+        $( "ul li" ).css("color", "red");
+      
+        
+    }
+    if(lowerCaseLetters.test(inputValue) && specialChar.test(inputValue) && upperCaseLetters.test(inputValue) && numbers.test(inputValue) 
+    && inputValue.length>=8 && inputValue.length<=20){
+     
+        $("ul li span" ).remove();
+        $( "ul li" ).css("color", "green");
+        $( "ul li" ).prepend(spanTick);
+    }else{
+        $( "ul li" ).css("color", "red");
+        $("ul li span" ).remove();
+        $( "ul li" ).prepend(spanRemove);
+    if(lowerCaseLetters.test(inputValue) && inputValue.length>=8 && inputValue.length<=20 ){
+       
+        
+         $("ul li:nth-child(1) span" ).remove();
+           $( "ul li:nth-child(1)" ).css("color", "green");
+           $( "ul li:nth-child(1)" ).prepend(spanTick);
+      
+       }
+        if(specialChar.test(inputValue)){
+          
+           $( "ul li:nth-child(4) span" ).remove();
+           $( "ul li:nth-child(4)" ).css("color", "green");
+           $( "ul li:nth-child(4)" ).prepend(spanTick);
+      }
+       if(upperCaseLetters.test(inputValue)){
+           
+           $( "ul li:nth-child(2) span" ).remove();
+           $( "ul li:nth-child(2)" ).css("color", "green");
+           $( "ul li:nth-child(2)" ).prepend(spanTick);
+           
+       }
+        if(numbers.test(inputValue) ) { 
+      
+       $( "ul li:nth-child(3) span" ).remove();
+       $( "ul li:nth-child(3)" ).css("color", "green");
+       $( "ul li:nth-child(3)" ).prepend(spanTick);
+       
+      }
+    }
+   
+
 }
 
 //function to check password equality
@@ -180,6 +246,4 @@ function comparePassword(pass1,pass2){
 
 });
 
-$("#password").hover(function() {
-    $(this).css('cursor','pointer').attr('title', 'titleThe password must have atleast one Capital letter,  atleast one number and atleast one special character');
-});
+
