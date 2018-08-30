@@ -157,10 +157,10 @@ body {
      margin-left: -41px; 
 }
 
-.pass-input { position: relative; width:100%; }
-.pass-input input {  background:#fff; display:block; width: 100%; box-sizing: border-box }
-.pass-input img { position: absolute; top: 2px; right: 5px }
-.pass-input .createPwdStrength{position: absolute; right: 5px }
+.createPswrdinfoinput { position: relative; width:100%; }
+.createPswrdinfo input {  background:#fff; display:block; width: 100%; box-sizing: border-box }
+.createPswrdinfo img { position: absolute; top: 2px; right: 5px }
+.createPswrdinfo .createPwdStrength{position: absolute; right: 5px }
 
 .tooltip-inner ul li{
     color: red; 
