@@ -10,7 +10,9 @@ $(document).ready(function () {
         e.preventDefault();
     });
 
-    $("#sendFrgtPswrdBtn").click(function () {
+    $( "#forgotPswrdForm" ).on('submit',function( event ) {
+
+        event.preventDefault();
         var emailMob = $("#emailMobForgotPswrd").val();
 
 
@@ -29,6 +31,7 @@ $(document).ready(function () {
             alert(emailMob);
         }
 
+       
     });
 
 });

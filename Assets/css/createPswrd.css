@@ -7,7 +7,7 @@ body {
     height: 90vh; 
     overflow: hidden;
     float: left;
-    background-image: url("../images/landing.jpg");
+    background-image: url("../../Assets/images/landing.jpg");
     background-size: 100% 100%;
     
 }
@@ -103,7 +103,8 @@ body {
 }
 
 .newPswrdErr {
-    margin-bottom: 7%;
+     margin-bottom: 7%;
+    text-align: left;
     font-family: HelveticaNeueReg;
     font-size: 12px;
     font-weight: normal;
@@ -114,7 +115,22 @@ body {
     color: #da291c;
 }
 
-#sbmitNewPswrd {
+
+
+.confirmNewPswrdErr {
+    font-family: HelveticaNeueReg;
+    text-align: left;
+    font-size: 12px;
+    left: 0%;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
+    color: #da291c;
+}
+
+#sbmitCreatedPswrd {
     width: 100%;
     margin-top: 8%;
     font-family: HelveticaNeueReg;
@@ -132,10 +148,23 @@ body {
 #showCreatePswrd{
     float: right;
     position: relative;
-    margin-top :-7%;
-    /* margin-left: -41px; */
+    margin-top :-5%;
+    cursor: pointer;
 }
 
+.createPwdStrength{
+    text-align: right;
+     margin-left: -41px; 
+}
+
+.createPswrdinfoinput { position: relative; width:100%; }
+.createPswrdinfo input {  background:#fff; display:block; width: 100%; box-sizing: border-box }
+.createPswrdinfo img { position: absolute; top: 2px; right: 5px }
+.createPswrdinfo .createPwdStrength{position: absolute; right: 5px }
+
+.tooltip-inner ul li{
+    color: red; 
+}
 
 .tooltip-inner {
     background-color: #e7e5e5  !important;
@@ -240,9 +269,16 @@ body {
     #createPswrdTxt{
         text-align: left;
     }
+   
+    
+}
 
-
-     
+@media screen and (min-width: 770px) and  (max-width: 900px) {
+ 
+    #showCreatePswrd{
+        margin-top :-9%;
+      
+    }
     
 }
 

@@ -56,7 +56,9 @@ $("#passwordSignUp").on('input',function(e){
 
 // Empty Fields Validation
 
-    $("#signUpBtn").click(function () {
+$( "#signUpForm" ).on('submit',function( event ) {
+    
+    event.preventDefault();
         //getting values from the form
         var emailMob = $("#mailSignUp").val();
         var password = $("#passwordSignUp").val();

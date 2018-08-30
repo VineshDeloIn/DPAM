@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Forgot Password</title>
 
-    <!-- <link rel="stylesheet" href="Assets/css/forgotPswrd.css">
+   <!-- <link rel="stylesheet" href="Assets/css/forgotPswrd.css">
     <link rel="stylesheet" href="Assets/css/customFont.css">
     <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="Assets/css/footer.css">
@@ -15,9 +15,9 @@
     <script src="Assets/js/login/forgotPswrd.js"></script>
     <script src="Assets/js/commonValidations/emailMobValidation.js"></script>
     <script src="Assets/js/jqueryValidation/jquery.validate.min.js"></script>
-    <script src="Assets/js/bootstrap.min.js"></script> -->
+    <script src="Assets/js/bootstrap.min.js"></script>    -->
 
-    <link rel="stylesheet" href="dist/css/style.css">
+     <link rel="stylesheet" href="dist/css/style.css">
     <script src="dist/js/script.js"></script> 
 
 </head>
@@ -38,14 +38,14 @@
                 <p class="enterEmailMobForgtPswrd">Please enter your registered email or phone number below to resetyour password</p>
                 <br>
                 <br>
-                <form id="forgotPswrdForm" method="POST">
+                <form id="forgotPswrdForm" method="POST" novalidate>
                     <div>
                         <input type="text" id="emailMobForgotPswrd" name="" required>
                         <label id="emailMobForgotPswrdTxt">Email / Mobile Number</label>
                         <p class="emailMobForgtPswrdErr"></p>
                     </div>
                     <br>
-                    <button type="button" class="btn btn-dark" id="sendFrgtPswrdBtn">SEND VERIFICATION CODE</button>
+                    <button type="submit" class="btn btn-dark" id="sendFrgtPswrdBtn">SEND VERIFICATION CODE</button>
                     <br>
                 </form>
                 <p id="noAcntFrgtPswrdTxt">Don't have an account?
