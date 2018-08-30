@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dubai Properties - SignUp</title>
-    
-      <!-- <link rel="stylesheet" href="Assets/css/customFont.css">
+
+    <link rel="stylesheet" href="Assets/css/customFont.css">
     <link rel="stylesheet" href="Assets/css/signup.css">
     <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="Assets/css/footer.css">
@@ -19,104 +19,106 @@
     <script src="Assets/js/commonValidations/emailMobValidation.js"></script>
     <script src="Assets/js/commonValidations/passwordValidation.js"></script>
     <script src="Assets/js/signup.js"></script>
-    <script src="Assets/js/jqueryValidation/jquery.validate.min.js"></script>  -->
+    <script src="Assets/js/jqueryValidation/jquery.validate.min.js"></script>   
 
-  <link rel="stylesheet" href="dist/css/style.css">
-    <script src="dist/js/script.js"></script>   
+    <!-- <link rel="stylesheet" href="dist/css/style.css">
+    <script src="dist/js/script.js"></script> -->
 </head>
 
 <body>
     <article>
-    <div class="landingSignUp">
-    
-    </div>
-  </article>
-  <aside>
-    <div class="signup">
-        <div class="dpamLogo">
-            <img src="Assets/images/dam_logo.svg" alt="Avatar" class="avatar">
+        <div class="landingSignUp">
+
         </div>
-        <h2 id="signUpHeading">Sign Up</h2>
-        <br>
-        <div class="container" id="signUpFormDiv">
-            <form id="signUpForm">
-                <div>
-                    <input type="text" id="mailSignUp" name="" required>
-                    <label>Email/Mobile Number</label>
-                    <p class="mailErr invalidEmailErr"></p>
-                   
-                </div>
-                <div>
-               
-         <div  class="pass-input" data-toggle="tooltip" data-placement="bottom" data-html="true" title="<ul>The password must have 
+    </article>
+    <aside>
+        <div class="signup">
+            <div class="dpamLogo">
+                <img src="Assets/images/dam_logo.svg" alt="Avatar" class="avatar">
+            </div>
+            <h2 id="signUpHeading">Sign Up</h2>
+            <br>
+            <div class="container" id="signUpFormDiv">
+                <form id="signUpForm" novalidate>
+                    <div>
+                        <input type="text" id="mailSignUp" name="" required>
+                        <label>Email/Mobile Number</label>
+                        <p class="mailErr invalidEmailErr"></p>
+
+                    </div>
+                    <div>
+
+                        <div class="pass-input" data-toggle="tooltip" data-placement="bottom" data-html="true" title="<ul>The password must have 
                                 <li> 8-20 Characters</li>
                              <li> Atleast one capital letter </li>
                             <li>  Atleast one number </li>
                             <li> Atleast one special character</li></ul>">
-                       <input type="password" id="passwordSignUp"  name=""   required> <label >Password </label>
-                       <img src="Assets/images/show_pass.png" id="showPassSignUp">
-                        <p class="pwdStrengthSignUp " ></p>
-                    
-                       <p class="pswdErr invalidPassErr"></p>
-                   
-            </div>
-                       
-                   
-                <div style="margin-top:10%">
-                    <input type="password" id="cnfpasswordSignUp" name="" required>
-                    <label>Confirm Password</label>
-                    <p class=" cnfPswdErr equalCheck"></p>
-                    <br>
+                            <input type="password" id="passwordSignUp" name="" required>
+                            <label>Password </label>
+                            <img src="Assets/images/show_pass.png" id="showPassSignUp">
+                            <p class="pwdStrengthSignUp "></p>
+
+                            <p class="pswdErr invalidPassErr"></p>
+
+                        </div>
+
+
+                        <div style="margin-top:10%">
+                            <input type="password" id="cnfpasswordSignUp" name="" required>
+                            <label>Confirm Password</label>
+                            <p class=" cnfPswdErr equalCheck"></p>
+                            <br>
+                        </div>
+                        <div id="signUpTermConText">
+                            By Signing Up you accept the
+                            <a href="#"> terms and conditions </a> of Dubai
+                            <br/> Asset Management.
+                        </div>
+
+
+
+
+                        <button type="submit" class="btn btn-dark btn-lg" id="signUpBtn">SIGNUP</button>
+                        <br>
+
+                </form>
+
+                <p id="signUpTextSec">Already have an account?
+                    <a href="#">LOGIN</a>
+                </p>
                 </div>
-                <div id="signUpTermConText">
-                    By Signing Up you accept the <a href="#"> terms and conditions </a> of Dubai
-                  <br/>  Asset Management.
-                 </div>
 
-                
-
-
-                <button type="button" class="btn btn-dark btn-lg" id="signUpBtn">SIGNUP</button>
-                <br>
-
-            </form>
-            
-            <p id="signUpTextSec">Already have an account?
-                <a href="#">LOGIN</a>
-            </p>
-        </div>
-
-    </div>
-    </div>
-</aside>
-<footer id="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-sm-12 col-md-4 col-lg-4 dubaiColAdj footerTopAdj">
-                &copy; Dubai Asset Management 2018
-            </div>
-
-            <div class="col-6 col-sm-6 col-md-1 col-lg-1 midCols1Adj footerTopAdj">
-                About Us
-            </div>
-            <div class="col-6 col-sm-6 col-md-1 col-lg-1 midCols2Adj footerTopAdj">
-                Contact
-            </div>
-            <div class="col-6 col-sm-6 col-md-1 col-lg-1 midCols1Adj footerTopAdj">
-                Privacy Policy
-            </div>
-            <div class="col-6 col-sm-6 col-md-1 col-lg-1 midCols2Adj footerTopAdj">
-                Terms of use
-            </div>
-            <div class="col-6 col-sm-6 col-md-2 col-lg-2 fbColAdj footerTopAdj">
-                <img src="Assets/images/fb-logo.png" alt="avatar">
-            </div>
-            <div class="col-6 col-sm-6 col-md-2 col-lg-2 instColAdj footerTopAdj">
-                <img src="Assets/images/insta-logo.png" alt="avatar">
             </div>
         </div>
-    </div>
-</footer>
+    </aside>
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 dubaiColAdj footerTopAdj">
+                    &copy; Dubai Asset Management 2018
+                </div>
+
+                <div class="col-6 col-sm-6 col-md-1 col-lg-1 midCols1Adj footerTopAdj">
+                    About Us
+                </div>
+                <div class="col-6 col-sm-6 col-md-1 col-lg-1 midCols2Adj footerTopAdj">
+                    Contact
+                </div>
+                <div class="col-6 col-sm-6 col-md-1 col-lg-1 midCols1Adj footerTopAdj">
+                    Privacy Policy
+                </div>
+                <div class="col-6 col-sm-6 col-md-1 col-lg-1 midCols2Adj footerTopAdj">
+                    Terms of use
+                </div>
+                <div class="col-6 col-sm-6 col-md-2 col-lg-2 fbColAdj footerTopAdj">
+                    <img src="Assets/images/fb-logo.png" alt="avatar">
+                </div>
+                <div class="col-6 col-sm-6 col-md-2 col-lg-2 instColAdj footerTopAdj">
+                    <img src="Assets/images/insta-logo.png" alt="avatar">
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
 

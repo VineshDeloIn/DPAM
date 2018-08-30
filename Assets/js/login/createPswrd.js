@@ -9,7 +9,7 @@ $( document ).ready(function() {
 
     $("input").focus(function() {
         $(".newPswrdErr").html("");
-        $(".newPswrdErr").html("");
+        $(".confirmNewPswrdErr").html("");
         $(".createPwdStrength").html("");
   
 
@@ -45,6 +45,49 @@ $("#newCreatePswrd").on('input',function(e){
 
 
     
+
+// Empty Fields Validation
+
+$( "#createPswrdFormDiv" ).on('submit',function( event ) {
+   
+    event.preventDefault();
+    var password = $("#newCreatePswrd").val();
+    var cnfpassword = $("#confirmCreatedPswrd").val();
+    
+    
+    var isPasswordValid;
+    if(!comparePassword(password,cnfpassword)){
+        console.log("not equal");
+        $(".confirmNewPswrdErr").html("Passwords do not match");
+    }
+   
+
+    //Checking if password is not empty
+    if(password == "") {
+        $(".newPswrdErr").html("Password Cannot Be Empty!");
+        isPasswordValid = false;
+    } else {
+        isPasswordValid = true;
+    }
+
+    
+    
+    if(!validatePassword(password)){
+
+        $(".newPswrdErr").html("Invalid Password ");
+}
+
+if(!validatePassword(cnfpassword)){
+
+    $(".confirmNewPswrdErr").html("Invalid Password ");
+ }
+
+   
+    $('#newCreatePswrd').val('');
+    $('#confirmCreatedPswrd').val('');
+   
+});
+
 
 });
 

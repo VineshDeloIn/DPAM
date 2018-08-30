@@ -5,10 +5,14 @@ $(document).ready(function () {
         $(".pswdErr").html("");
     });
 
-    $("#loginBtn").click(function () {
+    $( "#loginForm" ).on('submit',function( event ) {
+
+        event.preventDefault();
+
         //getting values from the form
         var emailMob = $("#mail").val();
         var password = $("#password").val();
+
 
         
         var isEmailMobValid = validatePhone(emailMob) || validateEmail(emailMob);
@@ -48,7 +52,11 @@ $(document).ready(function () {
             localStorage.checkBoxValidation = '';
         }
 
-        $('#mail').val('');
+     
+        if(emailMob == "" && !isEmailMobValid){
+            $('#mail').val('');
+        }
+        
         $('#password').val('');
         $('#remeberMeCbx').prop('checked', false);
     });
