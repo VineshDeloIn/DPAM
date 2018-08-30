@@ -249,6 +249,7 @@ margin-left: -47px;
 .tooltip-inner ul{
     padding-left: 20px;
     font-size: 13px;
+    list-style-type: none;
 }
 
 .arrow{
