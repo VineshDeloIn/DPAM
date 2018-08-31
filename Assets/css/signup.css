@@ -118,7 +118,6 @@ margin-left: -47px;
 .invalidPassErr {
     color: red;
     margin-left: 0%;
-    text-align:left;
     font-family: HelveticaNeueReg;
     font-size: 12px;
     font-weight: normal;
@@ -129,9 +128,7 @@ margin-left: -47px;
 }
 
 #showPassSignUp{
-    cursor: pointer;
-    margin-top: 3%;
-
+    margin-left: -41px;
 }
 
 
@@ -252,6 +249,7 @@ margin-left: -47px;
 .tooltip-inner ul{
     padding-left: 20px;
     font-size: 13px;
+    list-style-type: none;
 }
 
 .arrow{

@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-    
+    $( ".pass-input ul li" ).css("list-style-type", "none");
     $('#cnfpasswordSignUp').bind("cut copy paste", function(e) {
         e.preventDefault();
        
@@ -36,28 +36,22 @@ if(!validatePhone(email)&&(!validateEmail(email)))
   });
 
 
-$("#passwordSignUp").keyup(function(){
+$("#passwordSignUp").keyup(function(e){
 
     var passWord=$("#passwordSignUp").val();
 
-     changeTooltipColor(passWord);
+     changeTooltipColor(passWord,e);
      checkPasswordStrength(passWord);
 });
 
 $("#passwordSignUp").on('input',function(e){
     var passWordChk=$("#passwordSignUp").val();
     if(!validatePassword(passWordChk)){
-  
         $(".invalidPassErr").html("Invalid Password ");
     }else{
         $(".invalidPassErr").html(" ");
     }
  });
-
-
-
-
-
 
 
 // Empty Fields Validation
