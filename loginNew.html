@@ -38,18 +38,52 @@
                         <label id="loginPswrdTxt">PASSWORD</label>
                         <p class="pswdErr"></p>
                     </div>
-                    <span>
+                    <div class="row">
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 rememberMelogin">
+                                    <!-- <label for="" id="loginRemembrMeTxt">
+                                    <input type="checkbox" id="remeberMeCbx">
+                                    <span id="loginRemembrMeTxt">REMEMBER ME</span>
+                                </label> -->
+                                <label class="loginRemembrMeTxt">REMEMBER ME
+                                        <input type="checkbox" id="remeberMeCbx">
+                                        <span class="rememberMeChck"></span>
+                                      </label>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 forgtPswrdLogin">
+                                        <a href="#">FORGOT PASSWORD?</a>
+                                    </div>        
+                    </div>
+                    <!-- <span>
                         <label for="rememberLogin" id="loginRemembrMeTxt">
                             <input type="checkbox" id="remeberMeCbx"> Remember me</label>
                     </span>
 
                     <span class="forgotPswrd">
                         <a href="#">Forgot Password?</a>
-                    </span>
+                    </span> -->
 
 
-                    <button type="submit" class="btn btn-dark" id="loginBtn">LOGIN</button>
-                    <br>
+                    <button type="submit" class="btn btn-dark loginBtn" id="loginBtn">LOGIN</button>
+                    <p id="orText">OR</p>
+
+                    <button type="button" class="btn btn-outline-secondary" id="uaeLogin">LOGIN USING UAE PASS</button>
+    
+                    <div class="row" id="fbGoogleBtnDiv">
+                        <div class="col">
+                            <button type="button" id="fbLogin" class="btn btn-outline-secondary">
+                                <img src="Assets/images/fbBtn.png" alt="Avatar" class="avatar">
+                            </button>
+                        </div>
+                        <div class="col">
+    
+                            <button type="button" id="googleLogin" class="btn btn-outline-secondary">
+                                <img src="Assets/images/googleBtn.png" alt="Avatar" class="avatar">
+                            </button>
+                        </div>
+                    </div>
+                    <p id="noAcntTxt">Don't have an account?
+                        <a id="signUpText" href="#">SIGN UP</a>
+                    </p>
                 </form>
             </div>
         </div>

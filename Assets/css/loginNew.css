@@ -32,18 +32,19 @@ border: 2px solid red;
     border: none;
     border-bottom: 1px solid #999;
     padding: 4% 0; 
-    font-size: 12px;
-    font-family: HelveticaNeueReg;
+    font-family: HelveticaNeueMed;
+    font-size: 13px;
     font-weight: 500;
     font-style: normal;
     font-stretch: normal;
-    letter-spacing: normal;
-    color: #243745;
+    line-height: 1;
+    letter-spacing: 2.2px;
+    color: #333f48;
 }
 
 .login-top .loginInput label {
     position: absolute;
-    top: 49%;
+    top: 46%;
     color: #999;     
     transition: .5s;
     left: 0%;
@@ -83,4 +84,182 @@ border: 2px solid red;
     line-height: normal;
     letter-spacing: normal;
     color: #333f48;
+}
+
+/* The container */
+.loginRemembrMeTxt {
+    display: block;
+    position: relative;
+    padding-left: 15%;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: HelveticaNeueReg;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.73;
+    letter-spacing: 0.7px;
+    color: #333f48;
+}
+
+/* Hide the browser's default checkbox */
+.loginRemembrMeTxt input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.rememberMeChck {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 17px;
+    background-color:#e4eaec;
+}
+
+/* On mouse-over, add a grey background color */
+.loginRemembrMeTxt:hover input ~ .rememberMeChck {
+    background-color: #ccc;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.rememberMeChck:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.loginRemembrMeTxt input:checked ~ .rememberMeChck:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.loginRemembrMeTxt .rememberMeChck:after {
+    left: 8px;
+    top: 4px;
+    width: 5px;
+    height: 10px;
+    border: solid #030608;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.forgtPswrdLogin {
+    margin-top: 1%;
+    font-family: HelveticaNeueReg;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: right;
+    color: #23527c;
+}
+
+#loginBtn {
+    width: 100%;
+    margin-top: 3%;
+    border-radius: 0 !important;
+    font-family: HelveticaNeueBold;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.83;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #ffffff;
+}
+
+#orText {
+    margin: 1% 0%;
+    text-align: center;
+    font-family: HelveticaNeueReg;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #6f747a;
+}
+
+#uaeLogin {
+    width: 100%;
+    font-family: HelveticaNeueBold;
+    border-radius: 0 !important;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.83;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #585d63;
+}
+
+#uaeLogin:hover, #uaeLogin:focus, #uaeLogin:active {
+    background-color: #F2F2F2;
+    color: #585d63;
+}
+
+
+#fbGoogleBtnDiv {
+    margin-top: 2%;
+}
+
+#fbLogin {
+    float: left;
+    width: 100%; 
+    border-radius: 0 !important; 
+ }
+ 
+ #fbLogin:hover, #fbLogin:focus, #fbLogin:active {
+     background-color: #F2F2F2;
+ }
+ 
+ #googleLogin {
+     float:right;
+     width: 100%; 
+     border-radius: 0 !important; 
+ }
+ 
+ #googleLogin:hover, #googleLogin:focus, #googleLogin:active {
+     background-color: #F2F2F2;
+ }
+
+ #noAcntTxt{
+    text-align: center;
+    margin-top: 8%;
+    font-family: HelveticaNeueReg;
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.62;
+    letter-spacing: normal;
+    text-align: center;
+    color: #585d63;
+}
+
+#signUpText {
+    font-family: HelveticaNeueReg;
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: right;
+    color: #23527c;
 }
