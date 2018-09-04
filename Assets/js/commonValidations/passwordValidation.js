@@ -83,7 +83,7 @@ function changeTooltipColor(inputValue,e){
     var numbers = /[0-9]/g;
     var upperCaseLetters = /[A-Z]/g;
     var numPattern = /^\d+$/;
-    var numChar=/^[a-zA-Z0-9]+$/g;
+    var numChar=/^(?:[0-9]+[a-z]|[a-z]+[0-9])[a-z0-9]*$/i;
    var spanTick = $("<span>&#10004;</span>");
    var spanRemove = $("<span>&#10060;</span>");
  
@@ -178,6 +178,14 @@ function changeTooltipColor(inputValue,e){
         $( "ul li:nth-child(3)" ).prepend(spanTick);
        }
       
+       if(numChar.test(inputValue) ){
+     
+        $("ul li:nth-child(3) span" ).remove();
+           $( "ul li:nth-child(3)" ).css("color", "green");
+           $( "ul li:nth-child(3)" ).prepend(spanTick);
+      
+       }
+       
     }
    
 
