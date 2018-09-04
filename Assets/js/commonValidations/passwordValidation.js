@@ -117,14 +117,22 @@ function changeTooltipColor(inputValue,e){
         $( "ul li:nth-child(EVEN)" ).css("color", "green");
         $( "ul li:nth-child(EVEN)" ).prepend(spanTick);
      }   
+
+     if( numbers.test(inputValue) &&  inputValue.length>=8 ){
+     
+        $("ul li:nth-child(odd) span" ).remove();
+           $( "ul li:nth-child(odd)" ).css("color", "green");
+           $( "ul li:nth-child(odd)" ).prepend(spanTick);
+      
+       }
+
+    
     if(lowerCaseLetters.test(inputValue) && inputValue.length>=8 && inputValue.length<=20 ){
-       
-        
-         $("ul li:nth-child(1) span" ).remove();
+     
+        $("ul li:nth-child(1) span" ).remove();
            $( "ul li:nth-child(1)" ).css("color", "green");
            e.preventDefault();
            $( "ul li:nth-child(1)" ).prepend(spanTick);
-         
       
        }
         if(specialChar.test(inputValue)){

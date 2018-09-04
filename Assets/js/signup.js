@@ -13,6 +13,8 @@ $( document ).ready(function() {
         $(".pswdErr").html("");
         $(".invalidEmailErr").html("");
         $(".invalidPassErr").html("");
+        $(".cnfPswdErr").html("");
+
         $(".pwdStrengthSignUp").html("");
 
         var email = $("#mailSignUp").val();
