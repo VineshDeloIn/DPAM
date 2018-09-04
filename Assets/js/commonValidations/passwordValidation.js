@@ -82,7 +82,8 @@ function changeTooltipColor(inputValue,e){
     var specialChar = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
     var numbers = /[0-9]/g;
     var upperCaseLetters = /[A-Z]/g;
-
+    var numPattern = /^\d+$/;
+    var numChar=/^[a-zA-Z0-9]+$/g;
    var spanTick = $("<span>&#10004;</span>");
    var spanRemove = $("<span>&#10060;</span>");
  
@@ -125,6 +126,14 @@ function changeTooltipColor(inputValue,e){
            $( "ul li:nth-child(odd)" ).prepend(spanTick);
       
        }
+    
+       if( numChar.test(inputValue) &&  inputValue.length>=8 ){
+     
+        $("ul li:nth-child(odd) span" ).remove();
+           $( "ul li:nth-child(odd)" ).css("color", "green");
+           $( "ul li:nth-child(odd)" ).prepend(spanTick);
+      
+       }
 
     
     if(lowerCaseLetters.test(inputValue) && inputValue.length>=8 && inputValue.length<=20 ){
@@ -152,15 +161,22 @@ function changeTooltipColor(inputValue,e){
            
            
        }
+       console.log(inputValue);
         if(numbers.test(inputValue) ) { 
       
        $( "ul li:nth-child(3) span" ).remove();
        $( "ul li:nth-child(3)" ).css("color", "green");
        e.preventDefault();
        $( "ul li:nth-child(3)" ).prepend(spanTick);
-     
-       
       }
+
+      if(numPattern.test(inputValue) ) { 
+      
+        $( "ul li:nth-child(3) span" ).remove();
+        $( "ul li:nth-child(3)" ).css("color", "green");
+        e.preventDefault();
+        $( "ul li:nth-child(3)" ).prepend(spanTick);
+       }
       
     }
    

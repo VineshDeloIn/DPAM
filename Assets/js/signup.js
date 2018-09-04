@@ -6,7 +6,7 @@ $( document ).ready(function() {
         });
 
  $('[data-toggle="tooltip"]').tooltip(); 
-    
+ 
 
     $("input").focus(function() {
         $(".mailErr").html("");
@@ -36,6 +36,12 @@ if(!validatePhone(email)&&(!validateEmail(email)))
     passtoTextSignUp();
   
   });
+
+ $("#mailSignUp").keyup(function(e){
+
+  $(".mailErr").html(" ");
+  $(".invalidEmailErr").html(" ");
+});
 
 
 $("#passwordSignUp").keyup(function(e){
