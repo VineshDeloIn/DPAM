@@ -1,5 +1,6 @@
 $( document ).ready(function() {
-    
+   // alert("here");
+    $( ".createPswrdinfo ul li" ).css("list-style-type", "none");
     $('#confirmNewCreatePswrd').bind("cut copy paste", function (e) {
         e.preventDefault();
     });
@@ -24,11 +25,11 @@ $( document ).ready(function() {
   });
 
 
-$("#newCreatePswrd").keyup(function(){
+$("#newCreatePswrd").keyup(function(e){
 
     var newPswrdVal = $("#newCreatePswrd").val();
 
-     changeTooltipColor(newPswrdVal);
+     changeTooltipColor(newPswrdVal,e);
      validatePswrdStrength(newPswrdVal);
 });
 
