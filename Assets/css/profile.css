@@ -1,7 +1,7 @@
 .profile-header {
     border: 2px solid yellow;
     height: 300px;
-    background-color:  blue;
+    background-color: #84848a;
 }
 
 .user-basic-info {
@@ -18,4 +18,9 @@
 
 .user-img {
     margin-top : -60px;
+}
+.margin-div{
+    margin-left: 7%;
+    font-weight: bold;
+    color: white;
 }
