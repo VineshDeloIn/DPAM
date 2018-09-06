@@ -1,0 +1,113 @@
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.landing {
+    min-height: 85%;
+}
+
+
+.logoTopAdj {
+    margin-top: 20px;
+    /* display: flex;   
+    justify-content:flex-start; */
+}
+.loginBtnAdj {
+    margin-top: 40px;
+    color: white;
+    background-color: transparent;
+}
+
+.singUpBtnAdj {
+    margin-top: 40px;
+    color: white;
+    background-color: transparent;
+}
+
+#loginBtn {
+    color : white;
+}
+
+#SignBtn {
+    color : white;
+}
+
+.landing-image {
+    height: 85vh;
+    float: left;
+    width: 100%;
+    /* overflow: auto; */
+    padding-bottom: 15%;
+    background-image: url("../../Assets/images/landingPageImage.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    -webkit-transition: width 1s ease;
+    -moz-transition: width 1s ease;
+    -o-transition: width 1s ease;
+    transition: width 1s ease;
+
+}
+
+.landing-image.clicked {
+    height: 85vh;
+    width: 66.6%;
+    float: left;
+    /* overflow: auto; */
+    padding-bottom: 15%;
+    background-image: url("../../Assets/images/landingPageImage.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.landing-content {
+    height: 85vh;
+    margin-left: 133.5%;
+    padding-bottom: 15%;
+    position: relative;
+    border: 1px solid red;
+    background-size: 80% 100%;
+    background-repeat: no-repeat;
+    -webkit-transition: background-size 1s ease;
+    -moz-transition: background-size 1s ease;
+    -o-transition: background-size 1s ease;
+    transition: background-size 1s ease;
+}
+
+.landingSideCloseBtn {
+    margin-top: 1%;
+    margin-left: 90%;
+    position: relative;
+}
+
+.landing-content.slideadd {
+    height: 85vh;
+    margin-left: 66.5%;   
+    padding-bottom: 15%;
+    position: absolute;
+    z-index: 1;
+    width: 33.5%;
+    border: 1px solid red;
+    -webkit-transition: margin-left 1s ease;
+    -moz-transition: margin-left 1s ease;
+    -o-transition: margin-left 1s ease;
+    transition: margin-left 1s ease;
+}
+
+
+@media screen and (min-width: 300px) and (orientation:potrait) {
+    
+    
+}
+
+@media screen and (max-width: 480px) {
+    .loginBtnAdj {
+        vertical-align: middle; 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .loginBtnAdj {
+        vertical-align: middle; 
+    }
+}
