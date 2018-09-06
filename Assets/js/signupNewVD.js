@@ -13,7 +13,7 @@ $( document ).ready(function() {
         $(".signup-pswrd-err").html("");
         $(".signup-invalid-mail-err").html("");
         $(".signup-invalid-pswrd-err").html("");
-        $(".cnfPswdErr").html("");
+        $(".signup-cnfpswrd-err").html("");
 
         $(".sign-up-pwd-strength").html("");
 
@@ -32,7 +32,7 @@ if(!validatePhone(email)&&(!validateEmail(email)))
 
 // function to show password
 
-  $('#sign-up-sshow-password').click(function() {
+  $('#sign-up-show-password').click(function() {
     passtoTextSignUp();
   
   });
@@ -47,17 +47,17 @@ if(!validatePhone(email)&&(!validateEmail(email)))
 $("#passwordSignUp").keyup(function(e){
 
     var passWord=$("#passwordSignUp").val();
-
-     changeTooltipColor(passWord,e);
+    
+     changeTooltipColor(passWord);
      checkPasswordStrength(passWord);
 });
 
 $("#passwordSignUp").on('input',function(e){
     var passWordChk=$("#passwordSignUp").val();
     if(!validatePassword(passWordChk)){
-        $(".invalidPassErr").html("Invalid Password ");
+        $(".signup-invalid-pswrd-err").html("Invalid Password ");
     }else{
-        $(".invalidPassErr").html(" ");
+        $(".signup-invalid-pswrd-err").html(" ");
     }
  });
 
@@ -72,8 +72,6 @@ $( "#signupForm" ).on('submit',function( event ) {
         var password = $("#passwordSignUp").val();
         var cnfpassword = $("#cnfpasswordSignUp").val();
         
-        var isEmailMobValid;  
-        var isPasswordValid;
         if(!comparePassword(password,cnfpassword)){
             
             $(".signup-unequal-pswrd-err").html("Passwords do not match");
@@ -104,14 +102,13 @@ $( "#signupForm" ).on('submit',function( event ) {
         if(!validatePassword(password)){
   
             $(".signup-invalid-pswrd-err").html("Invalid Password ");
-    }
-
-    if(!validatePassword(cnfpassword)){
-  
-        $(".signup-cnfpswrd-err").html("Invalid Password ");
      }
+     if(cnfpassword==""){
+      
+            $(".signup-cnfpswrd-err").html("Invalid Password");
+     }
+   
 
-       
         $('#passwordSignUp').val('');
         $('#cnfpasswordSignUp').val('');
        

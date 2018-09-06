@@ -1,10 +1,8 @@
-html , body {
-    height: 100%;
-}
+
 
 .signup-right-pane {
     width: 33.5%;
-    max-height: 85%;
+    height: 85vh;
     background-color: #f3f9ea; 
 }
 
@@ -18,9 +16,9 @@ html , body {
 
 #signupForm {
     background: #ffffff;
-    /* padding: 12.5%; */
+  
     background-color: #f3f9ea;
-      /* border: 2px solid blue;   */
+    
 }
 
 .signup-text {
@@ -96,7 +94,7 @@ html , body {
 }
 
 .signup-main .signup-input input:focus ~ label,
-.signup-main .signup-input input:focus ~ valid
+.signup-main .signup-input input:valid ~ label
  {
     top: -1%;
     left: 0%;
@@ -456,116 +454,11 @@ html , body {
 }
 /*copied from previous css*/
 
-body {
-    margin-bottom: 10%; 
-}
-.signup{
-    
-    float: left;
-    overflow: hidden;
-    width: 33.3%;
-     margin: 0;
-     height: 90vh; 
-   
-}
-
-
 .pass-input { position: relative; width:100%; }
 .pass-input input { border:none; background:#fff; display:block; width: 100%; box-sizing: border-box }
 .pass-input img { position: absolute; top: 30%; right: 5px }
 .pass-input .sign-up-pwd-strength{position: absolute; right: 5px }
 
-.landingSignUp {
-    width: 66.7%;
-    height: 90vh;
-    overflow: hidden;
-    float: left;
-    background-image: url("../../Assets/images/landing.jpg");
-    background-size: 100% 100%;
-    
-}
-
-
-
-.dpamLogo {
-    text-align: center;
-    margin: 24px 0 12px 0;
-}
-
-.signup input {
-    width: 100%;
-    box-sizing: border-box;
-    box-shadow: none;
-    outline: none;
-    border: none;
-    color:#999;
-    border-bottom: 1px solid #999;
-    padding: 5px 0;
-    margin-bottom: 8px;
-    font-size: 16px;
-    font-family: HelveticaNeueReg;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    letter-spacing: normal;
-}
-
-
- .rememberLogin label input{
-    width: 10%;  
-    margin-top:2%;
-     
-} 
-
-.rememberLogin label {
-  
-    width: 40%;
-}
-
-.forgotPswrd {
-    float: right;
- 
-}
-
-
-.signup form div {
-    position: relative;
-}
-.signup form div label {
-    position: absolute;
-    top: 10px;
-    color: #999;     
-    transition: .5s;
-    pointer-events: none;
-}
-
-.signup input:focus ~ label,
-.signup input:valid ~ label
-{
-    top: -9px;
-    left: 0px;
-    color: grey;
-    font-size: 12px;
-   
-}
-#passwordSignUp{
-    width:100%;
-}
-
-
-
-/*password label*/
-#passwordSignUp input:valid ~ label,#passwordSignUp input:valid ~ label {
-    top: -9px;
-    left: 15px;
-    color: grey;
-    font-size: 12px;
-    
-}
-.pswdErr {
-    color: red;
-    margin-left: 0%;
-}
 
 .sign-up-pwd-strength{
 font-size: 12px;
@@ -573,167 +466,59 @@ margin-left: -47px;
  
 }
 
-.invalidPassErr {
-    color: red;
-    margin-left: 0%;
-    font-family: HelveticaNeueReg;
-    font-size: 12px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.75;
-    letter-spacing: normal;
-}
 
 #sign-up-show-password{
     margin-left: -41px;
 }
 
 
-.signup input:focus,
-.signup textarea:focus,
-.signup input:valid{
-   border-bottom: 1px solid grey; 
-}
-
-
-#signUpBtn{
-    width: 100%;
-    margin-top: 8%;
-    font-family: HelveticaNeueReg;
-    font-size: 14px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.57;
-    letter-spacing: 1px; 
-    text-align: center;
-    color: #ffffff;
-    padding: 14px 0;
-}
-#loginBtn {
-    width: 100%;
-    margin-top: 8%;
-}
-
-#uaeLogin {
-    width: 100%;
-}
-
-#fbLogin {
-   text-align: center;
-    width: 100%; 
-}
 
 #orText {
     text-align: center;
     margin-top:2%;
 }
+/* tooltip css*/
 
-
-
-#signUpHeading {
-    margin-top: 5%;
-     margin-left: 9%;
-     font-family: HelveticaNeueMed;
-    font-size: 22px;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #333f48;
-}
-
-#signUpFormDiv {
-    padding: 0% 9%;
-    height: 80vh;
-}
-
-#signUpTermConText{
-    text-align: left;
-    margin-top: 2%;
-    font-size: 14px;
-    font-family: HelveticaNeueLight;
-    font-size: 13px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-}
-
-#signUpTextSec{
-    text-align: center;
-    margin-top: 8%;
-    font-size: 14px;
-}
-
-.equalCheck{
-    color: red; 
-}
 .tooltip-inner ul li{
-    color: red; 
+    color: rgb(120, 114, 114); 
 }
 
-.changeColor{
-    color: green;
-}
-.cnfPswdErr {
-    color: red;
-    font-family: HelveticaNeueReg;
-    font-size: 12px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.75;
-    letter-spacing: normal;
-}
-
-.mailErr {
-    color: red;
-    margin-bottom: 7%;
-}
-.invalidEmailErr {
-    color: red;
-    margin-bottom: 7%;
-    font-family: HelveticaNeueReg;
-    font-size: 12px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.75;
-    letter-spacing: normal;
-}
  
 .tooltip-inner ul{
     padding-left: 20px;
     font-size: 13px;
     list-style-type: none;
 }
+.tooltip .arrow { 
+    width: 20.8rem !important;  
+     
+}
 
 .arrow{
     left: 22px !important;
+    
 }
 .tooltip-inner {
-    background-color: #e7e5e5  !important;
-    /*!important is not necessary if you place custom.css at the end of your css calls. For the purpose of this demo, it seems to be required in SO snippet*/
+    background-color: #f7f7f7  !important;
     color: #031607 !important;
     max-width: 250px !important;
     margin-left: -8%;
     text-align: left !important;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5) !important;
  
   }
 
   .bs-tooltip-auto[x-placement^=top] .arrow::before, .bs-tooltip-top .arrow::before {
     top: 0;
     border-width: 0.5rem 0.5rem 0 !important;
-    border-top-color: #e7e5e5 !important;
+    border-top-color: #f7f7f7 !important;
    
 }
 
 .bs-tooltip-auto[x-placement^=bottom] .arrow::before, .bs-tooltip-bottom .arrow::before {
     bottom: 0;
-    border-width: 0 .5rem .5rem !important;
-    border-bottom-color: #e7e5e5 !important;
+    border-width: 0 .7rem .8rem !important;
+    border-bottom-color: #f7f7f7 !important;
 }
 
 .bs-tooltip-top .arrow {
@@ -742,26 +527,7 @@ margin-left: -47px;
     margin-left: -29px;
 }
   
-  .tooltip.top .tooltip-arrow {
-    border-top-color: #f2d7d9;
-    background-color: #f2d7d9
-  }
   
-  .tooltip.right .tooltip-arrow {
-    border-right-color: #f2d7d9;
-    background-color: #f2d7d9
-  }
-  
-  .tooltip.bottom .tooltip-arrow {
-    border-bottom-color: #f2d7d9;
-    background-color: #f2d7d9
-  }
-  
-  .tooltip.left .tooltip-arrow {
-    border-left-color: #f2d7d9;
-    background-color: #f2d7d9
-  }
-
 
 
 

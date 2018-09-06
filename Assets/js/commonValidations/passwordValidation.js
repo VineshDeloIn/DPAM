@@ -76,9 +76,9 @@ function validatePassword(inputValue){
 // function for password tooltip Color Change
 
 
-var count=0;
 
-function changeTooltipColor(inputValue,e){
+var count=0;
+function changeTooltipColor(inputValue){
     
     var lowerCaseLetters = /[a-z]/g;
     var specialChar = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
@@ -102,8 +102,8 @@ function changeTooltipColor(inputValue,e){
   if(inputValue.length<=0){
         
     $("ul li img#rightImg" ).hide();
-    $( "ul li" ).css("color", "red");
-  
+    $( "ul li" ).css("color", "#909aa1");
+    count=0;
     
 }
 
@@ -116,7 +116,7 @@ if(lowerCaseLetters.test(inputValue) && specialChar.test(inputValue) && upperCas
 }
 
 else{
-    $( "ul li" ).css("color", "red");
+    $( "ul li" ).css("color", "grey");
     $("ul li img#wrongImg" ).show();
     $( "ul li img#rightImg" ).hide();
      
