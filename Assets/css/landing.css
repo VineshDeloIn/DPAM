@@ -96,21 +96,18 @@ html, body {
 
 
 @media screen and (min-width: 300px) and (orientation:potrait) {
-
-    .logoTopAdj {
-        text-align: center;
-    }
+    
     
 }
 
 @media screen and (max-width: 480px) {
-    .logoTopAdj {
-        text-align: center;
+    .loginBtnAdj {
+        margin-top:40%; 
     }
 }
 
 @media screen and (max-width: 768px) {
-    .logoTopAdj {
-        text-align: center;
+    .loginBtnAdj {
+        margin-top:8%; 
     }
 }
