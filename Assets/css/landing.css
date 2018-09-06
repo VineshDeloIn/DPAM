@@ -8,6 +8,12 @@ html, body {
     min-height: 85%;
 }
 
+.conOfRentAdj {
+    width: 60%;
+    margin-left: 15%;
+    margin-top: 12%;
+}
+
 
 .logoTopAdj {
     margin-top: 20px;
@@ -84,6 +90,7 @@ html, body {
     height: 85vh;
     margin-left: 66.5%;   
     padding-bottom: 15%;
+    bottom: 15%;
     position: absolute;
     z-index: 1;
     width: 33.5%;
@@ -96,18 +103,68 @@ html, body {
 
 
 @media screen and (min-width: 300px) and (orientation:potrait) {
-    
+    .logoTopAdj {
+        margin-top: 10px;
+    }
     
 }
 
 @media screen and (max-width: 480px) {
+    body {
+        height: 100%;
+        overflow-y: auto;
+    }
+    /* }
+    .landing {
+        min-height: 77%;
+    } */
+    .conOfRentAdj {
+        display: none;
+    }
     .loginBtnAdj {
+        margin-top: 50%;
         vertical-align: middle; 
     }
+    .logoTopAdj {
+        margin-top: 2%;
+    }
+    .landing-content {
+        height: 65vh;
+    }
+    .landing-content.slideadd {
+        height: 73vh;
+        overflow-y: auto;
+        margin-left: 10%;
+        margin-right: 10%;
+        /* bottom: 20%;    */
+        padding-bottom: 15%;
+        position: absolute;
+        z-index: 1;
+        background-color: azure;
+        width: 80%;
+        border: 1px solid red;
+        -webkit-transition: margin-left 1s ease;
+        -moz-transition: margin-left 1s ease;
+        -o-transition: margin-left 1s ease;
+        transition: margin-left 1s ease;
+    }
+
+    .landing-image.clicked {
+        height: 85vh;
+        width: 100%;
+        float: left;
+        /* overflow: auto; */
+        padding-bottom: 15%;
+        background-image: url("../../Assets/images/landingPageImage.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    
 }
 
 @media screen and (max-width: 768px) {
-    .loginBtnAdj {
-        vertical-align: middle; 
+
+    .logoTopAdj {
+        margin-top: 10px;
     }
 }
