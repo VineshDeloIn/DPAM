@@ -1,143 +1,263 @@
-body {
-    margin-bottom: 10%; 
+/* html , body {
+    height: 100%;
+} */
+
+.login-right-pane {
+    width: 33.5%;
+    height: 85vh;
+    background-color: #f3f9ea; 
 }
 
-
-.landing {
-    width: 66.7%;
-    height: 90vh; 
-    overflow: hidden;
-    float: left;
-    background-image: url("../../Assets/images/landing.jpg");
-    background-size: 100% 100%;
-    
-}
-
-.login {
-    float: left;
-    overflow: hidden;
-    width: 33.3%;
-    margin: 0;
-    height: 90vh; 
-}
-
-#loginFormDiv {
-    padding: 0% 9%;
-     height: 80vh; 
-}
-
-
-.dpamLogo {
-    text-align: center;
-    margin: 24px 0 12px 0;
-}
-
-.login input {
+.login-main {
     width: 100%;
-    box-sizing: border-box;
-    box-shadow: none;
-    outline: none;
-    border: none;
-    border-bottom: 1px solid #999;
-    padding: 5px 0;
-    font-size:16px;
+    background-color: #f3f9ea;
+    padding-left: 10%;
+    padding-right: 5%;
+    padding-top: 8%; 
+}
+
+#loginForm {
+    background: #ffffff;
+    /* padding: 12.5%; */
+    background-color: #f3f9ea;
+      /* border: 2px solid blue;   */
+}
+
+.login-text {
+    font-family: HelveticaNeueMed;
+    font-size: 26px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #333f48;
+}
+.alert{
+    display: none;
+    margin-top: -80px;
+    border-radius: 0 !important;
+  
+}
+
+#signup-success {
+    background-color: #ffffff;
+    border: solid 1px #8bc43e;
+    padding: 0% 4%;
+}
+
+.reg-success-msg {
+    display: inline-block;
     font-family: HelveticaNeueReg;
+    font-size: 14px;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
-    letter-spacing: normal;
-    color: #243745;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    color: #585d63;
+}
+
+.reg-success-tick {
+    float: left;
+    margin-right: 2%;
 }
 
 
-.login form div {
+.login-main .login-input {
     position: relative;
 }
-.login form div label {
+
+.login-main .login-input input {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #f3f9ea;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    border-bottom: 0.5px solid #a7a9ad;
+    padding: 4% 0; 
+    font-family: HelveticaNeueMed;
+    font-size: 13px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: 2.2px;
+    color: #333f48;
+}
+
+.login-main .login-input label {
     position: absolute;
-    top: 10px;
-    color: #999;     
+    top: 46%;    
     transition: .5s;
     left: 0%;
     pointer-events: none;
-    font-family: HelveticaNeueLight;
-    font-size: 16px;
+    font-family: HelveticaNeueMed;
+    font-size: 13px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: 2.2px;
+    color: #333f48;
 }
 
-.login input:focus ~ label,
-.login input:valid ~ label
-{
-    top: -9px;
-    left: 0px;
-    color: grey;
-    font-size: 12px;
+.login-main .login-input input:focus ~ label,
+.login-main .login-input input:focus ~ valid
+ {
+    top: -1%;
+    left: 0%;
+    font-family: HelveticaNeueMed;
+    font-size: 10px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: 1.7px;
+    color: #cbcfd6;
 }
 
-.login input:focus,
-.login textarea:focus,
-.login input:valid{
+.login-main .login-input input:focus,
+.login-main .login-input input:valid {
    border-bottom: 1px solid grey; 
 }
 
+.login-pswrd-err {
+    font-family: HelveticaNeueReg;
+    font-size: 10px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    color: #ff1100;
+    text-align: left;
+    left: 0%;
+    margin-top: 1%;
+
+}
+
+.login-mail-err {
+    font-family: HelveticaNeueReg;
+    font-size: 10px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    color: #ff1100;
+    text-align: left;
+    left: 0%;
+    margin-top: 1%;
+}
+
+.login-remembr-forgot-div {
+    margin: 4% 0%;
+}
+
+/* The container */
+.login-remember-txt {
+    display: block;
+    position: relative;
+    padding-left: 15%;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: HelveticaNeueReg;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.73;
+    letter-spacing: 0.7px;
+    color: #333f48;
+}
+
+/* Hide the browser's default checkbox */
+.login-remember-txt input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.login-remember-chck {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 17px;
+    background-color:#e4eaec;
+}
+
+/* On mouse-over, add a grey background color */
+.login-remember-txt:hover input ~ .login-remember-chck {
+    background-color: #ccc;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.login-remember-chck:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.login-remember-txt input:checked ~ .login-remember-chck:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.login-remember-txt .login-remember-chck:after {
+    left: 8px;
+    top: 4px;
+    width: 5px;
+    height: 10px;
+    border: solid #030608;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.login-forgot-pswrd a{
+    margin-top: 2%;
+    font-family: HelveticaNeueReg;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: right;
+    float: right;
+    color: #23527c;
+}
 
 
 
 #loginBtn {
     width: 100%;
-    margin-top: 8%;
-    font-family: HelveticaNeueReg;
-    font-size: 14px;
+    font-family: HelveticaNeueBold;
+    border-radius: 0 !important;
+    font-size: 12px;
     font-weight: bold;
     font-style: normal;
     font-stretch: normal;
-    line-height: 1.57;
-    letter-spacing: 1px; 
+    line-height: 1.83;
+    letter-spacing: 2px;
     text-align: center;
     color: #ffffff;
-    padding: 14px 0;
+    padding: 3% 3%;
 }
 
-#uaeLogin {
-    width: 100%;
-    font-family: HelveticaNeueMed;
-    font-size: 14px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.57;
-    letter-spacing: 1.2px;
+.login-or-txt {
+    margin: 2% 0%;
     text-align: center;
-    color: #585d63;
-    padding: 14px 0;
-}
-
-#uaeLogin:hover, #uaeLogin:focus, #uaeLogin:active {
-    background-color: #F2F2F2;
-    color: #585d63;
-}
-
- #fbLogin {
-   float: left;
-     width: 100%;  
-}
-
-#fbLogin:hover, #fbLogin:focus, #fbLogin:active {
-    background-color: #F2F2F2;
-}
-
-#googleLogin {
-    float:right;
-       width: 100%;  
-}
-
-#googleLogin:hover, #googleLogin:focus, #googleLogin:active {
-    background-color: #F2F2F2;
-} 
-
-#orText {
-    text-align: center;
-    margin-top:3%;
-    font-family: HelveticaNeueLight;
+    font-family: HelveticaNeueReg;
     font-size: 12px;
     font-weight: normal;
     font-style: normal;
@@ -147,49 +267,95 @@ body {
     color: #6f747a;
 }
 
-
-#fbGoogleBtnDiv {
-    margin-top: 5%;
-}
-
-#loginText {
-    font-family: HelveticaNeueMed;
-    font-size: 22px;
-    font-weight: 500;
+#uaeLogin {
+    width: 100%;
+    font-family: HelveticaNeueBold;
+    border-radius: 0 !important;
+    font-size: 12px;
+    font-weight: bold;
     font-style: normal;
     font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #333f48;
+    line-height: 1.83;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #585d63;
+    padding: 3% 3%;
+    border: 0.5px solid #a7a9ad;
+}
+
+#uaeLogin:hover, #uaeLogin:focus, #uaeLogin:active {
+    background-color: #F2F2F2;
+    color: #585d63;
 }
 
 
-#loginRemembrMeTxt {
+.login-fb-google-div {
+    margin-top: 2%;
+}
+
+.login-fb-txt {
+    font-family: HelveticaNeueBold;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.83;
+    letter-spacing: 2px;
+    color: #585d63;
+}
+
+.login-google-txt {
+    font-family: HelveticaNeueBold;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.83;
+    letter-spacing: 2px;
+    color: #585d63;
+}
+ 
+#fbLogin {
     float: left;
-    width: 30%;
-    margin-top: 4%;
-    position: relative;
-    font-family: HelveticaNeueLight;
+    width: 100%; 
+    border-radius: 0 !important; 
+    border: 0.5px solid #a7a9ad;
+    padding: 5% 3%;
+ }
+ 
+ #fbLogin:hover, #fbLogin:focus, #fbLogin:active {
+     background-color: #F2F2F2;
+ }
+ 
+ #googleLogin {
+     float:right;
+     width: 100%; 
+     border-radius: 0 !important; 
+     border: 0.5px solid #a7a9ad;
+     padding: 5% 3%;
+ }
+ 
+ #googleLogin:hover, #googleLogin:focus, #googleLogin:active {
+     background-color: #F2F2F2;
+ }
+
+ .loginNoAcntTxt{
+    text-align: center;
+    margin-top: 5%;
+    font-family: HelveticaNeueReg;
     font-size: 13px;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
     line-height: 1.62;
-     letter-spacing: normal;
-     color: #585d63;
-     margin-left: 0%;
-  }
+    letter-spacing: normal;
+    text-align: center;
+    color: #585d63;
+    margin-bottom:0%;
+}
 
-  #remeberMeCbx {
-      width: 10%;
-      vertical-align: middle   
-}  
-
-.forgotPswrd {
-    float: right;
-    width: 107px;
-    height: 15px;
-    font-family: HelveticaNeueLight;
+.loginSignUpTxt {
+    font-family: HelveticaNeueReg;
     font-size: 13px;
     font-weight: normal;
     font-style: normal;
@@ -197,138 +363,16 @@ body {
     line-height: normal;
     letter-spacing: normal;
     text-align: right;
-    color: #4ea6f1;
-    margin-top:4.5%; 
+    color: #23527c;
 }
 
-
-
-#noAcntTxt{
-    text-align: center;
-    margin-top: 8%;
-    font-family: HelveticaNeueLight;
-    font-size: 14px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.5;
-    letter-spacing: normal;
-    color: #585d63;
+.login-illustration img {
+    /* border: 2px solid yellow; */
+    width: 100%;
+    height: 100px;
 }
 
-#signUpText {
-    font-family: HelveticaNeueReg;
-    font-size: 14px;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.5;
-    letter-spacing: normal;
-    color: #4ea6f1;
+.login-illustration {
+    padding-bottom: -50%;
+
 }
-
-.pswdErr {
-    font-family: HelveticaNeueReg;
-    font-size: 12px;
-    font-weight: normal;
-    font-style: normal;
-    text-align: left;
-    left: 0%;
-    font-stretch: normal;
-    line-height: 1.75;
-    letter-spacing: normal;
-    color: #da291c;
-}
-
-.mailErr {
-    margin-bottom: 4%;
-    font-family: HelveticaNeueReg;
-    font-size: 12px;
-    text-align: left;
-    left: 0%;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.75;
-    letter-spacing: normal;
-    color: #da291c;
-}
-
-
-@media screen and (min-width: 300px) and (orientation:potrait) {
-    .landing {
-        display: none;
-    }
-    .login {
-        overflow-y: scroll;
-        text-align: center;
-        overflow-x: scroll;
-        width: 100%;
-        height:75vh;
-    }
-
-    #loginText{
-        text-align: left;
-    }
-    #loginRemembrMeTxt {
-        width:40%;
-
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .landing {
-        display: none;
-    }
-    .login {
-        width: 100%;
-        text-align: center;
-        overflow-y: scroll;
-        height:75vh;
-    }
-
-    #loginText{
-        text-align: left;
-    }
-    #loginRemembrMeTxt {
-        width:40%;
-
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .landing {
-        display: none;
-    }
-    .login {
-        text-align: center;
-        width: 100%;
-        overflow-y: scroll;
-        height:82vh;
-    }
-
-    #loginText{
-        text-align: left;
-    }
-
-    #loginRemembrMeTxt {
-        width:40%;
-
-    }
-     
-    
-}
-
-@media screen and (min-width: 770px) and  (max-width: 1500px) {
-    
-    #loginRemembrMeTxt {
-        width:40%;
-
-    }
-    
-}
-
-
-
-
-
