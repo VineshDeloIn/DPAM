@@ -485,19 +485,13 @@ margin-left: -47px;
 
  
 .tooltip-inner ul{
-    padding-left: 20px;
-    font-size: 13px;
+    padding-left: 12px;
+    font-size: 15px;
     list-style-type: none;
-}
-.tooltip .arrow { 
-    width: 20.8rem !important;  
-     
+    font-weight: 600;
 }
 
-.arrow{
-    left: 22px !important;
-    
-}
+
 .tooltip-inner {
     background-color: #f7f7f7  !important;
     color: #031607 !important;
@@ -505,8 +499,32 @@ margin-left: -47px;
     margin-left: -8%;
     text-align: left !important;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5) !important;
- 
-  }
+	position: relative;
+	border: 1px solid #262f34;
+}
+.tooltip-inner:after, .tooltip-inner:before {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.tooltip-inner:after {
+	border-color: rgba(247, 247, 247, 0);
+	border-bottom-color: #f7f7f7;
+	border-width: 23px;
+	margin-left: -72px;
+}
+.tooltip-inner:before {
+	border-color: rgba(194, 225, 245, 0);
+	border-bottom-color: #262f34;
+	border-width: 26px;
+	margin-left: -75px;
+}
 
   .bs-tooltip-auto[x-placement^=top] .arrow::before, .bs-tooltip-top .arrow::before {
     top: 0;
@@ -516,18 +534,11 @@ margin-left: -47px;
 }
 
 .bs-tooltip-auto[x-placement^=bottom] .arrow::before, .bs-tooltip-bottom .arrow::before {
-    bottom: 0;
-    border-width: 0 .7rem .8rem !important;
+   
     border-bottom-color: #f7f7f7 !important;
 }
 
-.bs-tooltip-top .arrow {
-    bottom: 0;
-    background-color: #fdfdfd;
-    margin-left: -29px;
-}
+
   
   
-
-
 
