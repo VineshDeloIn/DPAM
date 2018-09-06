@@ -93,15 +93,16 @@ function changeTooltipColor(inputValue){
 
 
    if(inputValue.length==1 && count==0){
-    count++;
+  
     $( "ul li" ).prepend(spanTick);
     $( "ul li" ).prepend(spanRemove);
+    count++;
    }
  
    
   if(inputValue.length<=0){
         
-    $("ul li img#rightImg" ).hide();
+    $("ul li img" ).remove();
     $( "ul li" ).css("color", "#909aa1");
     count=0;
     

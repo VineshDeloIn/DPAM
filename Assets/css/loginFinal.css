@@ -1,27 +1,152 @@
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.landing {
+    min-height: 85%;
+}
 
 
-.signup-right-pane {
+.logoTopAdj {
+    margin-top: 20px;
+    /* display: flex;   
+    justify-content:flex-start; */
+}
+.loginBtnAdj {
+    margin-top: 40px;
+    color: white;
+    background-color: transparent;
+}
+
+.singUpBtnAdj {
+    margin-top: 40px;
+    color: white;
+    background-color: transparent;
+}
+
+#loginBtn {
+    color : white;
+}
+
+#SignBtn {
+    color : white;
+}
+
+.landing-image {
+    height: 85vh;
+    float: left;
+    width: 100%;
+    /* overflow: auto; */
+    padding-bottom: 15%;
+    background-image: url("../../Assets/images/landingPageImage.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    -webkit-transition: width 1s ease;
+    -moz-transition: width 1s ease;
+    -o-transition: width 1s ease;
+    transition: width 1s ease;
+
+}
+
+.landing-image.clicked {
+    height: 85vh;
+    width: 66.6%;
+    float: left;
+    /* overflow: auto; */
+    padding-bottom: 15%;
+    background-image: url("../../Assets/images/landingPageImage.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.landing-content {
+    height: 85vh;
+    margin-left: 133.5%;
+    padding-bottom: 15%;
+    position: relative;
+    border: 1px solid red;
+    background-size: 80% 100%;
+    background-repeat: no-repeat;
+    -webkit-transition: background-size 1s ease;
+    -moz-transition: background-size 1s ease;
+    -o-transition: background-size 1s ease;
+    transition: background-size 1s ease;
+}
+
+
+
+.landing-content.slideadd {
+    height: 85vh;
+    margin-left: 66.5%;   
+    padding-bottom: 15%;
+    position: absolute;
+    z-index: 1;
+    width: 33.5%;
+    border: 1px solid red;
+    -webkit-transition: margin-left 1s ease;
+    -moz-transition: margin-left 1s ease;
+    -o-transition: margin-left 1s ease;
+    transition: margin-left 1s ease;
+}
+
+
+/* html , body {
+    height: 100%;
+} */
+
+/* .login-right-pane {
     width: 33.5%;
     height: 85vh;
     background-color: #f3f9ea; 
+} */
+
+.landingSideCloseBtn {
+    /* margin-top: 1%; */
+    margin-left: 85%;
+    position: absolute;
+    margin-bottom: -90%;
+    cursor: pointer;
 }
 
-.signup-main {
+.login-main {
     width: 100%;
+    height: 74vh;
     background-color: #f3f9ea;
-    padding-left: 10%;
-    padding-right: 5%;
+    padding-left: 8%;
+    padding-right: 8%;
     padding-top: 8%; 
+    padding-bottom: 5vh;
+    /* border: 2px solid red;  */
 }
 
-#signupForm {
-    background: #ffffff;
-  
+#login-main-id {
+    margin: 0%;
+}
+
+ .login-illustration img {
+   /* border: 2px solid yellow;  */
+    width: 100%;
+    height: 100%;
+} 
+
+.login-illustration {
+    /* padding-bottom: -50%; */
+    height:11vh;
     background-color: #f3f9ea;
-    
+    /* border: 2px solid yellow;  */
+
 }
 
-.signup-text {
+#loginForm {
+    background: #ffffff;
+    margin-top: 5%;
+    /* padding: 12.5%; */
+    background-color: #f3f9ea;
+      /* border: 2px solid blue;   */
+}
+
+.login-text {
     font-family: HelveticaNeueMed;
     font-size: 26px;
     font-weight: 500;
@@ -33,32 +158,46 @@
 }
 .alert{
     display: none;
-    margin-top: -80px;
+    margin-top: -85px;
     border-radius: 0 !important;
   
 }
 
 #signup-success {
     background-color: #ffffff;
-  border: solid 1px #8bc43e;
+    border: solid 1px #8bc43e;
+    padding: 0% 0%;
 }
 
+
 .reg-success-msg {
+    display: inline-block;
     font-family: HelveticaNeueReg;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
     line-height: 1.5;
     letter-spacing: 1px;
     color: #585d63;
+    margin-left: 3%;
 }
 
-.signup-main .signup-input {
+.signup-success-close {
+    margin-right: 5px;
+}
+
+.reg-success-tick {
+    float: left;
+    margin-right: 2%;
+}
+
+
+.login-main .login-input {
     position: relative;
 }
 
-.signup-main .signup-input input {
+.login-main .login-input input {
     width: 100%;
     box-sizing: border-box;
     background-color: #f3f9ea;
@@ -77,7 +216,7 @@
     color: #333f48;
 }
 
-.signup-main .signup-input label {
+.login-main .login-input label {
     position: absolute;
     top: 46%;    
     transition: .5s;
@@ -93,8 +232,8 @@
     color: #333f48;
 }
 
-.signup-main .signup-input input:focus ~ label,
-.signup-main .signup-input input:valid ~ label
+.login-main .login-input input:focus ~ label,
+.login-main .login-input input:focus ~ valid
  {
     top: -1%;
     left: 0%;
@@ -108,8 +247,8 @@
     color: #cbcfd6;
 }
 
-.signup-main .signup-input input:focus,
-.signup-main .signup-input input:valid {
+.login-main .login-input input:focus,
+.login-main .login-input input:valid {
    border-bottom: 1px solid grey; 
 }
 
@@ -128,7 +267,7 @@
 
 }
 
-.signup-mail-err {
+.login-mail-err {
     font-family: HelveticaNeueReg;
     font-size: 10px;
     font-weight: normal;
@@ -142,84 +281,15 @@
     margin-top: 1%;
 }
 
-.signup-invalid-mail-err {
-    font-family: HelveticaNeueReg;
-    font-size: 10px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.2;
-    letter-spacing: 1px;
-    color: #ff1100;
-    text-align: left;
-    left: 0%;
-    margin-top: 1%;
-}
-
-.signup-pswrd-err {
-    font-family: HelveticaNeueReg;
-    font-size: 10px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.2;
-    letter-spacing: 1px;
-    color: #ff1100;
-    text-align: left;
-    left: 0%;
-    margin-top: 1%;
-}
-
-.signup-invalid-pswrd-err {
-    font-family: HelveticaNeueReg;
-    font-size: 10px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.2;
-    letter-spacing: 1px;
-    color: #ff1100;
-    text-align: left;
-    left: 0%;
-    margin-top: 1%;
-}
-
-
-.signup-cnfpswrd-err {
-    font-family: HelveticaNeueReg;
-    font-size: 10px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.2;
-    letter-spacing: 1px;
-    color: #ff1100;
-    text-align: left;
-    left: 0%;
-    margin-top: 1%;
-}
-
-
-.signup-unequal-pswrd-err {
-    font-family: HelveticaNeueReg;
-    font-size: 10px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.2;
-    letter-spacing: 1px;
-    color: #ff1100;
-    text-align: left;
-    left: 0%;
-    margin-top: 1%;
-}
-
-.signup-remembr-forgot-div {
-    margin: 4% 0%;
+.login-remembr-forgot-div {
+    margin-top: 5%;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-bottom:4%;
 }
 
 /* The container */
-.signup-remember-txt {
+.login-remember-txt {
     display: block;
     position: relative;
     padding-left: 15%;
@@ -239,14 +309,14 @@
 }
 
 /* Hide the browser's default checkbox */
-.signup-remember-txt input {
+.login-remember-txt input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
 }
 
 /* Create a custom checkbox */
-.signup-remember-chck {
+.login-remember-chck {
     position: absolute;
     top: 0;
     left: 0;
@@ -256,24 +326,24 @@
 }
 
 /* On mouse-over, add a grey background color */
-.signup-remember-txt:hover input ~ .signup-remember-chck {
+.login-remember-txt:hover input ~ .login-remember-chck {
     background-color: #ccc;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
-.signup-remember-chck:after {
+.login-remember-chck:after {
     content: "";
     position: absolute;
     display: none;
 }
 
 /* Show the checkmark when checked */
-.signup-remember-txt input:checked ~ .signup-remember-chck:after {
+.login-remember-txt input:checked ~ .login-remember-chck:after {
     display: block;
 }
 
 /* Style the checkmark/indicator */
-.signup-remember-txt .signup-remember-chck:after {
+.login-remember-txt .login-remember-chck:after {
     left: 8px;
     top: 4px;
     width: 5px;
@@ -285,8 +355,8 @@
     transform: rotate(45deg);
 }
 
-.signup-forgot-pswrd {
-    margin-top: 1%;
+.login-forgot-pswrd a{
+    margin-top: 2%;
     font-family: HelveticaNeueReg;
     font-size: 12px;
     font-weight: normal;
@@ -295,10 +365,13 @@
     line-height: normal;
     letter-spacing: normal;
     text-align: right;
+    float: right;
     color: #23527c;
 }
 
-#signupBtn {
+
+
+#loginButton {
     width: 100%;
     font-family: HelveticaNeueBold;
     border-radius: 0 !important;
@@ -313,8 +386,8 @@
     padding: 3% 3%;
 }
 
-.signup-or-txt {
-    margin: 2% 0%;
+.login-or-txt {
+    margin: 3% 0%;
     text-align: center;
     font-family: HelveticaNeueReg;
     font-size: 12px;
@@ -326,7 +399,7 @@
     color: #6f747a;
 }
 
-#signup-uaeLogin {
+#uaeLogin {
     width: 100%;
     font-family: HelveticaNeueBold;
     border-radius: 0 !important;
@@ -342,17 +415,17 @@
     border: 0.5px solid #a7a9ad;
 }
 
-#signup-uaeLogin:hover, #signup-uaeLogin:focus, #signup-uaeLogin:active {
+#uaeLogin:hover, #uaeLogin:focus, #uaeLogin:active {
     background-color: #F2F2F2;
     color: #585d63;
 }
 
 
-.signup-fb-google-div {
-    margin-top: 2%;
+.login-fb-google-div {
+    margin-top: 2.5%;
 }
 
-.signup-fb-txt {
+.login-fb-txt {
     font-family: HelveticaNeueBold;
     font-size: 12px;
     font-weight: bold;
@@ -363,7 +436,7 @@
     color: #585d63;
 }
 
-.signup-google-txt {
+.login-google-txt {
     font-family: HelveticaNeueBold;
     font-size: 12px;
     font-weight: bold;
@@ -398,7 +471,7 @@
      background-color: #F2F2F2;
  }
 
- .signupNoAcntTxt{
+ .loginNoAcntTxt{
     text-align: center;
     margin-top: 5%;
     font-family: HelveticaNeueReg;
@@ -413,23 +486,6 @@
     margin-bottom:0%;
 }
 
-
-.termsAndConditionTxt{
-    text-align: center;
-    margin-top: 3%;
-    font-family: HelveticaNeueReg;
-    font-size: 13px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.62;
-    letter-spacing: normal;
-    text-align: center;
-    color: #585d63;
-    margin-bottom:0%;
-    margin-left:7%;
-}
-
 .loginSignUpTxt {
     font-family: HelveticaNeueReg;
     font-size: 13px;
@@ -442,103 +498,21 @@
     color: #23527c;
 }
 
-.signup-illustration img {
-    /* border: 2px solid yellow; */
-    width: 100%;
-    height: 100px;
+
+
+@media screen and (min-width: 300px) and (orientation:potrait) {
+    
+    
 }
 
-.signup-illustration {
-    padding-bottom: -50%;
-
-}
-/*copied from previous css*/
-
-.pass-input { position: relative; width:100%; }
-.pass-input input { border:none; background:#fff; display:block; width: 100%; box-sizing: border-box }
-.pass-input img { position: absolute; top: 30%; right: 5px }
-.pass-input .sign-up-pwd-strength{position: absolute; right: 5px }
-
-
-.sign-up-pwd-strength{
-font-size: 12px;
-margin-left: -47px;
- 
+@media screen and (max-width: 480px) {
+    .loginBtnAdj {
+        vertical-align: middle; 
+    }
 }
 
-
-#sign-up-show-password{
-    margin-left: -41px;
+@media screen and (max-width: 768px) {
+    .loginBtnAdj {
+        vertical-align: middle; 
+    }
 }
-
-
-
-#orText {
-    text-align: center;
-    margin-top:2%;
-}
-/* tooltip css*/
-
-.tooltip-inner ul li{
-    color: rgb(120, 114, 114); 
-}
-
- 
-.tooltip-inner ul{
-    padding-left: 12px;
-    font-size: 15px;
-    list-style-type: none;
-    font-weight: 600;
-}
-
-
-.tooltip-inner {
-    background-color: #f7f7f7  !important;
-    color: #031607 !important;
-    max-width: 250px !important;
-    margin-left: -8%;
-    text-align: left !important;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5) !important;
-	position: relative;
-	border: 1px solid #262f34;
-}
-.tooltip-inner:after, .tooltip-inner:before {
-	bottom: 100%;
-	left: 50%;
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
-}
-
-.tooltip-inner:after {
-	border-color: rgba(247, 247, 247, 0);
-	border-bottom-color: #f7f7f7;
-	border-width: 23px;
-	margin-left: -72px;
-}
-.tooltip-inner:before {
-	border-color: rgba(194, 225, 245, 0);
-	border-bottom-color: #262f34;
-	border-width: 26px;
-	margin-left: -75px;
-}
-
-  .bs-tooltip-auto[x-placement^=top] .arrow::before, .bs-tooltip-top .arrow::before {
-    top: 0;
-    border-width: 0.5rem 0.5rem 0 !important;
-    border-top-color: #f7f7f7 !important;
-   
-}
-
-.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .bs-tooltip-bottom .arrow::before {
-   
-    border-bottom-color: #f7f7f7 !important;
-}
-
-
-  
-  
-
