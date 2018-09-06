@@ -1,12 +1,7 @@
 .profile-header {
     border: 2px solid yellow;
     height: 300px;
-    background-color:  lightyellow;
-}
-
-.modal-content {
-    border: 2px solid green;
-    background-color:  lightgreen;
+    background-color: #84848a;
 }
 
 .user-basic-info {
@@ -28,5 +23,10 @@
 }
 
 .user-img {
-    /* margin-top : -60px; */
+    margin-top : -60px;
+}
+.margin-div{
+    margin-left: 15vh;
+    font-weight: bold;
+    color: white;
 }
