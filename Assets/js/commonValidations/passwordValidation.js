@@ -76,7 +76,9 @@ function validatePassword(inputValue){
 // function for password tooltip Color Change
 
 
-function changeTooltipColor(inputValue,e){
+
+var count=0;
+function changeTooltipColor(inputValue){
     
     var lowerCaseLetters = /[a-z]/g;
     var specialChar = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
@@ -84,110 +86,120 @@ function changeTooltipColor(inputValue,e){
     var upperCaseLetters = /[A-Z]/g;
     var numPattern = /^\d+$/;
     var numChar=/^(?:[0-9]+[a-z]|[a-z]+[0-9])[a-z0-9]*$/i;
-   var spanTick = $("<span>&#10004;</span>");
-   var spanRemove = $("<span>&#10060;</span>");
  
-  
+
+  var spanTick = $("<img  id='rightImg' src='./Assets/images/RightIcon.png'>");
+  var spanRemove = $("<img  id='wrongImg' src='./Assets/images/WrongIcon.png'>");
+
+
+   if(inputValue.length==1 && count==0){
+    count++;
+    $( "ul li" ).prepend(spanTick);
+    $( "ul li" ).prepend(spanRemove);
+   }
  
-   // later, when your loading is done:
-  
-    if(inputValue.length<=0){
-        
-        $("ul li span" ).remove();
-        $( "ul li" ).prepend(spanRemove);
-        $( "ul li" ).css("color", "red");
-      
-        
-    }
-
-    if(lowerCaseLetters.test(inputValue) && specialChar.test(inputValue) && upperCaseLetters.test(inputValue) && numbers.test(inputValue) 
-    && inputValue.length>=8 && inputValue.length<=20){
-     
-        $("ul li span" ).remove();
-        $( "ul li" ).css("color", "green");
-        $( "ul li" ).prepend(spanTick);
-    }
-    
-    else{
-        $( "ul li" ).css("color", "red");
-        $("ul li span" ).remove();
-        $( "ul li" ).prepend(spanRemove);
-      
-     if(specialChar.test(inputValue) &&  upperCaseLetters.test(inputValue)){
-        $("ul li:nth-child(EVEN) span" ).remove();
-        $( "ul li:nth-child(EVEN)" ).css("color", "green");
-        $( "ul li:nth-child(EVEN)" ).prepend(spanTick);
-     }   
-
-     if( numbers.test(inputValue) &&  inputValue.length>=8 ){
-     
-        $("ul li:nth-child(odd) span" ).remove();
-           $( "ul li:nth-child(odd)" ).css("color", "green");
-           $( "ul li:nth-child(odd)" ).prepend(spanTick);
-      
-       }
-    
-       if( numChar.test(inputValue) &&  inputValue.length>=8 ){
-     
-        $("ul li:nth-child(odd) span" ).remove();
-           $( "ul li:nth-child(odd)" ).css("color", "green");
-           $( "ul li:nth-child(odd)" ).prepend(spanTick);
-      
-       }
-
-    
-    if(lowerCaseLetters.test(inputValue) && inputValue.length>=8 && inputValue.length<=20 ){
-     
-        $("ul li:nth-child(1) span" ).remove();
-           $( "ul li:nth-child(1)" ).css("color", "green");
-           e.preventDefault();
-           $( "ul li:nth-child(1)" ).prepend(spanTick);
-      
-       }
-        if(specialChar.test(inputValue)){
-          
-           $( "ul li:nth-child(4) span" ).remove();
-           $( "ul li:nth-child(4)" ).css("color", "green");
-           e.preventDefault();
-           $( "ul li:nth-child(4)" ).prepend(spanTick);
-           
-      }
-       if( upperCaseLetters.test(inputValue)){
-           
-           $( "ul li:nth-child(2) span" ).remove();
-           $( "ul li:nth-child(2)" ).css("color", "green");
-           e.preventDefault();
-           $( "ul li:nth-child(2)" ).prepend(spanTick);
-           
-           
-       }
-       console.log(inputValue);
-        if(numbers.test(inputValue) ) { 
-      
-       $( "ul li:nth-child(3) span" ).remove();
-       $( "ul li:nth-child(3)" ).css("color", "green");
-       e.preventDefault();
-       $( "ul li:nth-child(3)" ).prepend(spanTick);
-      }
-
-      if(numPattern.test(inputValue) ) { 
-      
-        $( "ul li:nth-child(3) span" ).remove();
-        $( "ul li:nth-child(3)" ).css("color", "green");
-        e.preventDefault();
-        $( "ul li:nth-child(3)" ).prepend(spanTick);
-       }
-      
-       if(numChar.test(inputValue) ){
-     
-        $("ul li:nth-child(3) span" ).remove();
-           $( "ul li:nth-child(3)" ).css("color", "green");
-           $( "ul li:nth-child(3)" ).prepend(spanTick);
-      
-       }
-       
-    }
    
+  if(inputValue.length<=0){
+        
+    $("ul li img#rightImg" ).hide();
+    $( "ul li" ).css("color", "#909aa1");
+    count=0;
+    
+}
+
+if(lowerCaseLetters.test(inputValue) && specialChar.test(inputValue) && upperCaseLetters.test(inputValue) && numbers.test(inputValue) 
+&& inputValue.length>=8 && inputValue.length<=20){
+ 
+    $("ul li img#wrongImg" ).hide();
+    $( "ul li" ).css("color", "green");
+    $( "ul li  img#rightImg" ).show();
+}
+
+else{
+    $( "ul li" ).css("color", "grey");
+    $("ul li img#wrongImg" ).show();
+    $( "ul li img#rightImg" ).hide();
+     
+ if(specialChar.test(inputValue) &&  upperCaseLetters.test(inputValue)){
+    $("ul li:nth-child(EVEN) img#wrongImg" ).hide();
+    $( "ul li:nth-child(EVEN)" ).css("color", "green");
+    $( "ul li:nth-child(EVEN) img#rightImg" ).show();
+ }   
+ 
+ if(lowerCaseLetters.test(inputValue) && specialChar.test(inputValue) && upperCaseLetters.test(inputValue) && numbers.test(inputValue) && inputValue.length<=7){
+    $("ul li:nth-child(2) img#wrongImg" ).hide();
+    $("ul li:nth-child(3) img#wrongImg" ).hide();
+    $("ul li:nth-child(4) img#wrongImg" ).hide();
+    $( "ul li:nth-child(2)" ).css("color", "green");
+    $( "ul li:nth-child(3)" ).css("color", "green");
+    $( "ul li:nth-child(4)" ).css("color", "green");
+    $( "ul li:nth-child(2) img#rightImg" ).show();
+    $( "ul li:nth-child(3) img#rightImg" ).show();
+    $( "ul li:nth-child(4) img#rightImg" ).show();
+ }
+ if( numbers.test(inputValue) &&  inputValue.length>=8 ){
+ 
+    $("ul li:nth-child(odd) img#wrongImg" ).hide();
+       $( "ul li:nth-child(odd)" ).css("color", "green");
+       $( "ul li:nth-child(odd) img#rightImg" ).show();
+  
+   }
+
+   if( numChar.test(inputValue) &&  inputValue.length>=8 ){
+ 
+    $("ul li:nth-child(odd) img#wrongImg" ).hide();
+       $( "ul li:nth-child(odd)" ).css("color", "green");
+       $( "ul li:nth-child(odd) img#rightImg" ).show();
+  
+   }
+
+
+if(lowerCaseLetters.test(inputValue) && inputValue.length>=8 && inputValue.length<=20 ){
+ 
+    $("ul li:nth-child(1) img#wrongImg" ).hide();
+       $( "ul li:nth-child(1)" ).css("color", "green");
+       $( "ul li:nth-child(1) img#rightImg" ).show();
+  
+   }
+    if(specialChar.test(inputValue)){
+      
+       $( "ul li:nth-child(4) img#wrongImg" ).hide();
+       $( "ul li:nth-child(4)" ).css("color", "green");
+       $( "ul li:nth-child(4) img#rightImg" ).show();
+       
+  }
+   if( upperCaseLetters.test(inputValue)){
+       
+       $( "ul li:nth-child(2) img#wrongImg" ).hide();
+       $( "ul li:nth-child(2)" ).css("color", "green");
+       $( "ul li:nth-child(2) img#rightImg" ).show();
+       
+       
+   }
+  
+    if(numbers.test(inputValue) ) { 
+  
+   $( "ul li:nth-child(3) img#wrongImg" ).hide();
+   $( "ul li:nth-child(3)" ).css("color", "green");
+   $( "ul li:nth-child(3) img#rightImg" ).show();
+  }
+
+  if(numPattern.test(inputValue) ) { 
+  
+    $( "ul li:nth-child(3) img#wrongImg" ).hide();
+    $( "ul li:nth-child(3)" ).css("color", "green");
+    $( "ul li:nth-child(3) img#rightImg" ).show();
+   }
+  
+   if(numChar.test(inputValue) ){
+ 
+    $("ul li:nth-child(3) img#wrongImg" ).hide();
+       $( "ul li:nth-child(3)" ).css("color", "green");
+       $( "ul li:nth-child(3) img#rightImg" ).show();
+  
+   }
+   
+}
 
 }
 
