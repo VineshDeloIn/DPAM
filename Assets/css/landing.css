@@ -102,12 +102,12 @@ html, body {
 
 @media screen and (max-width: 480px) {
     .loginBtnAdj {
-        margin-top:40%; 
+        vertical-align: middle; 
     }
 }
 
 @media screen and (max-width: 768px) {
     .loginBtnAdj {
-        margin-top:8%; 
+        vertical-align: middle; 
     }
 }
