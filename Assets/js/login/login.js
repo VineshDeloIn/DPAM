@@ -1,8 +1,12 @@
 $(document).ready(function () {
+    $("#uaeLogin").click(function(event){
+        event.preventDefault();
+        $('.alert').show();
+    }) 
 
     $("input").focus(function () {
-        $(".mailErr").html("");
-        $(".pswdErr").html("");
+        $(".login-mail-err").html("");
+        $(".login-pswrd-err").html("");
     });
 
     $( "#loginForm" ).on('submit',function( event ) {
@@ -10,8 +14,8 @@ $(document).ready(function () {
         event.preventDefault();
 
         //getting values from the form
-        var emailMob = $("#mail").val();
-        var password = $("#password").val();
+        var emailMob = $("#loginMail").val();
+        var password = $("#loginPassword").val();
 
 
         
@@ -43,8 +47,8 @@ $(document).ready(function () {
         if ($('#remeberMeCbx').is(':checked') && isEmailMobValid && isPasswordValid) {
             // save username and password
             console.log('Entering!');
-            localStorage.userName = $("#mail").val();
-            localStorage.password = $("#password").val();
+            localStorage.userName = $("#loginMail").val();
+            localStorage.password = $("#loginPassword").val();
             localStorage.checkBoxValidation = $('#remeberMeCbx').val();
         } else {
             localStorage.userName = '';
@@ -54,12 +58,11 @@ $(document).ready(function () {
 
      
         if(emailMob == "" && !isEmailMobValid){
-            $('#mail').val('');
+            $('#loginMail').val('');
         }
         
-        $('#password').val('');
+        $('#loginPassword').val('');
         $('#remeberMeCbx').prop('checked', false);
     });
-
 
 });
