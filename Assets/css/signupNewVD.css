@@ -343,6 +343,23 @@ html , body {
     margin-bottom:0%;
 }
 
+
+.termsAndConditionTxt{
+    text-align: center;
+    margin-top: 3%;
+    font-family: HelveticaNeueReg;
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.62;
+    letter-spacing: normal;
+    text-align: center;
+    color: #585d63;
+    margin-bottom:0%;
+    margin-left:7%;
+}
+
 .loginSignUpTxt {
     font-family: HelveticaNeueReg;
     font-size: 13px;
