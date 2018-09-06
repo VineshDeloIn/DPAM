@@ -74,11 +74,7 @@ html, body {
     transition: background-size 1s ease;
 }
 
-.landingSideCloseBtn {
-    margin-top: 1%;
-    margin-left: 90%;
-    position: relative;
-}
+
 
 .landing-content.slideadd {
     height: 85vh;
@@ -104,6 +100,14 @@ html, body {
     height: 85vh;
     background-color: #f3f9ea; 
 } */
+
+.landingSideCloseBtn {
+    /* margin-top: 1%; */
+    margin-left: 85%;
+    position: absolute;
+    margin-bottom: -90%;
+    cursor: pointer;
+}
 
 .login-main {
     width: 100%;
@@ -162,19 +166,25 @@ html, body {
 #signup-success {
     background-color: #ffffff;
     border: solid 1px #8bc43e;
-    padding: 0% 4%;
+    padding: 0% 0%;
 }
+
 
 .reg-success-msg {
     display: inline-block;
     font-family: HelveticaNeueReg;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
     line-height: 1.5;
     letter-spacing: 1px;
     color: #585d63;
+    margin-left: 3%;
+}
+
+.signup-success-close {
+    margin-right: 5px;
 }
 
 .reg-success-tick {
