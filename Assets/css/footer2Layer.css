@@ -8,12 +8,14 @@
 }
 
 .footer-group-1 {
+    font-family: "HelveticaNeueMed";
     background-color: #333f48;
     height: 63%;
     /* padding-bottom: ; */
 }
 
 .footer-group-2 {
+    font-family: "HelveticaNeueReg";
     background-color: #101820;
     height: 37%;
 }
