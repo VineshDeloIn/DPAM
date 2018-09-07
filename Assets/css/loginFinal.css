@@ -90,7 +90,7 @@ html, body {
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
-.landing-content {
+.login-slide-main {
     height: 85vh;
     margin-left: 133.5%;
     padding-bottom: 15%;
@@ -109,7 +109,7 @@ html, body {
     position: relative;
 } */
 
-.landing-content.slideadd {
+.login-slide-main.slideadd {
     height: 85vh;
     margin-left: 66.5%;   
     padding-bottom: 15%;
@@ -577,7 +577,7 @@ html, body {
         margin-top: 2%;
     }
     
-    .landing-content.slideadd {
+    .login-slide-main.slideadd {
          height: 73vh; 
         overflow: hidden;
         margin-left: 10%;
@@ -620,4 +620,6 @@ html, body {
     .logoTopAdj {
         margin-top: 10px;
     }
+
+
 }

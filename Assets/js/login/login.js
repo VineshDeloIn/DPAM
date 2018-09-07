@@ -2,7 +2,7 @@ $(document).ready(function () {
     $('#loginBtn').on('click',function () {
         // alert('hi')
         $('.landing-image').addClass("clicked");
-        $('.landing-content').addClass("slideadd");
+        $('.login-slide-main').addClass("slideadd");
         $('#loginBtn:visible').hide();
         $('#SignBtn:visible').hide();
     });
@@ -10,14 +10,14 @@ $(document).ready(function () {
     $('#SignBtn').on('click',function () {
         // alert('hi')
         $('.landing-image').addClass("clicked");
-        $('.landing-content').addClass("slideadd");
+        $('.login-slide-main').addClass("slideadd");
         $('#loginBtn:visible').hide();
         $('#SignBtn:visible').hide();
     });
 
     $('#landingSideCloseBtn').on('click',function(){
         $('.landing-image').removeClass("clicked");
-        $('.landing-content').removeClass("slideadd");
+        $('.login-slide-main').removeClass("slideadd");
         $('#loginBtn:hidden').show();
         $('#SignBtn:hidden').show();
     });
