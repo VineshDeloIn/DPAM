@@ -112,12 +112,12 @@ $( ".signupForm" ).on('submit',function( event ) {
             isPasswordValid = false;
      }
     
-     if($(".signupForm").valid() && isEmailMobValid && isPasswordValid) {
+     if(isEmailMobValid && isPasswordValid) {
         $(".signupForm").submit();
         event.preventDefault();
         //alert('sumitted!');
     } else {
-        event.preventDefault();
+       event.preventDefault();
         //alert('not sumitted!');
     }
 
