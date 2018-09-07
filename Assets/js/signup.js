@@ -1,6 +1,6 @@
 $( document ).ready(function() {
     $( ".pass-input ul li" ).css("list-style-type", "none");
-    $('#cnfpasswordSignUp').bind("cut copy paste", function(e) {
+    $('.cnfpasswordSignUp').bind("cut copy paste", function(e) {
         e.preventDefault();
        
         });
@@ -9,21 +9,21 @@ $( document ).ready(function() {
  
 
     $("input").focus(function() {
-        $(".mailErr").html("");
-        $(".pswdErr").html("");
-        $(".invalidEmailErr").html("");
-        $(".invalidPassErr").html("");
-        $(".cnfPswdErr").html("");
+        $(".signup-mail-err").html("");
+        $(".signup-pswrd-err").html("");
+        $(".signup-invalid-mail-err").html("");
+        $(".signup-invalid-pswrd-err").html("");
+        $(".signup-cnfpswrd-err").html("");
 
-        $(".pwdStrengthSignUp").html("");
+        $(".sign-up-pwd-strength").html("");
 
-        var email = $("#mailSignUp").val();
+        var email = $(".mailSignUp").val();
       
   // check for email and mobile number text field
 if(!validatePhone(email)&&(!validateEmail(email)))
 {
   
-        $(".invalidEmailErr").html("Invalid Email/Phone number ");
+        $(".signup-invalid-mail-err").html("Invalid Email/Phone number ");
 }
 
 });
@@ -32,56 +32,54 @@ if(!validatePhone(email)&&(!validateEmail(email)))
 
 // function to show password
 
-  $('#showPassSignUp').click(function() {
+  $('#sign-up-show-password').click(function() {
     passtoTextSignUp();
   
   });
 
- $("#mailSignUp").keyup(function(e){
+ $(".mailSignUp").keyup(function(e){
 
-  $(".mailErr").html(" ");
-  $(".invalidEmailErr").html(" ");
+  $(".signup-mail-err").html(" ");
+  $(".signup-invalid-mail-err").html(" ");
 });
 
 
-$("#passwordSignUp").keyup(function(e){
+$(".passwordSignUp").keyup(function(e){
 
-    var passWord=$("#passwordSignUp").val();
-
-     changeTooltipColor(passWord,e);
+    var passWord=$(".passwordSignUp").val();
+    
+     changeTooltipColor(passWord);
      checkPasswordStrength(passWord);
 });
 
-$("#passwordSignUp").on('input',function(e){
-    var passWordChk=$("#passwordSignUp").val();
+$(".passwordSignUp").on('input',function(e){
+    var passWordChk=$(".passwordSignUp").val();
     if(!validatePassword(passWordChk)){
-        $(".invalidPassErr").html("Invalid Password ");
+        $(".signup-invalid-pswrd-err").html("Invalid Password ");
     }else{
-        $(".invalidPassErr").html(" ");
+        $(".signup-invalid-pswrd-err").html(" ");
     }
  });
 
 
 // Empty Fields Validation
 
-$( "#signUpForm" ).on('submit',function( event ) {
+$( ".signupForm" ).on('submit',function( event ) {
     
     event.preventDefault();
         //getting values from the form
-        var emailMob = $("#mailSignUp").val();
-        var password = $("#passwordSignUp").val();
-        var cnfpassword = $("#cnfpasswordSignUp").val();
+        var emailMob = $(".mailSignUp").val();
+        var password = $(".passwordSignUp").val();
+        var cnfpassword = $(".cnfpasswordSignUp").val();
         
-        var isEmailMobValid;  
-        var isPasswordValid;
         if(!comparePassword(password,cnfpassword)){
-            console.log("not equal");
-            $(".equalCheck").html("Passwords do not match");
+            
+            $(".signup-unequal-pswrd-err").html("Passwords do not match");
         }
         //Checking if email/mob is not empty
         if(emailMob == "") {
-            $(".mailErr").html("Email/MobileNumber Cannot Be Empty!");
-            $('#mailSignUp').val('');
+            $(".signup-mail-err").html("Email/Mobile Number Cannot Be Empty!");
+            $('.mailSignUp').val('');
             isEmailMobValid = false;
         } else  {
             isEmailMobValid = true;
@@ -89,7 +87,7 @@ $( "#signUpForm" ).on('submit',function( event ) {
 
         //Checking if password is not empty
         if(password == "") {
-            $(".pswdErr").html("Password Cannot Be Empty!");
+            $(".signup-pswrd-err").html("Password Cannot Be Empty!");
             isPasswordValid = false;
         } else {
             isPasswordValid = true;
@@ -98,22 +96,18 @@ $( "#signUpForm" ).on('submit',function( event ) {
         if(!validatePhone(emailMob)&&(!validateEmail(emailMob)))
         {
           
-                $(".invalidEmailErr").html("Invalid Email/Phone number ");
+                $(".signup-invalid-mail-err").html("Invalid Email/Phone number ");
         }
         
         if(!validatePassword(password)){
   
-            $(".invalidPassErr").html("Invalid Password ");
-    }
-
-    if(!validatePassword(cnfpassword)){
-  
-        $(".cnfPswdErr").html("Invalid Password ");
+            $(".signup-invalid-pswrd-err").html("Invalid Password ");
      }
-
-       
-        $('#passwordSignUp').val('');
-        $('#cnfpasswordSignUp').val('');
+     if(cnfpassword==""){
+      
+            $(".signup-cnfpswrd-err").html("Invalid Password");
+     }
+   
        
     });
     
