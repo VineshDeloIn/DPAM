@@ -6,7 +6,8 @@ html , body {
     height: 85vh;
     width: 66.5%;
     float: left;
-    width: 100%;
+    border: 2px solid red;
+    /* width: 100%; */
     padding-bottom: 15vh;
     background-image: url("../../Assets/images/landingPageImage.png");
     /* background-size: 100% 100%;
