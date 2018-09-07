@@ -45,10 +45,6 @@ $(document).ready(function () {
         //getting values from the form
         var emailMob = $(".loginMail").val();
         var password = $(".loginPassword").val();
-
-      
-
-        
         var isEmailMobValid = validatePhone(emailMob) || validateEmail(emailMob);
         var isPasswordValid;
 
@@ -86,13 +82,23 @@ $(document).ready(function () {
             localStorage.checkBoxValidation = '';
         }
 
-     
+             
         if(emailMob == "" && !isEmailMobValid){
             $('.loginMail').val('');
-        }
-        
+        }        
         $('.loginPassword').val('');
         $('.remeberMeCbx').prop('checked', false);
+
+        if($(".loginForm").valid() && isEmailMobValid && isPasswordValid) {
+            $(".loginForm").submit();
+            event.preventDefault();
+            //alert('sumitted!');
+        } else {
+            event.preventDefault();
+            //alert('not sumitted!');
+        }
+
+
     });
 
 });
