@@ -48,7 +48,7 @@ $(document).ready(function () {
 
         //Checking if email/mob is not empty
         if (emailMob == "" || !isEmailMobValid) {
-            $(".mailErr").html("Invalid Email / Mobile Number");
+            $(".login-mail-err").html("Invalid Email / Mobile Number");
             isEmailMobValid = false;
         } else {
             isEmailMobValid = true;
@@ -56,7 +56,7 @@ $(document).ready(function () {
 
         //Checking if password is not empty
         if (password == "") {
-            $(".pswdErr").html("Incorrect Password");
+            $(".login-pswrd-err").html("Incorrect Password");
             isPasswordValid = false;
         } else {
             isPasswordValid = true;

@@ -7,14 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dubai Properties - Login</title>
 
-    <link rel="stylesheet" href="Assets/css/customFont.css">
-    <link rel="stylesheet" href="Assets/css/loginFinal.css">
+
     <link rel="stylesheet" href="Assets/css/footer2Layer.css">
     <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Assets/css/customFont.css">
+    <link rel="stylesheet" href="Assets/css/loginFinal.css">
+
     <script src="Assets/js/jquery-3.3.2.min.js"></script>
     <script src="Assets/js/bootstrap.min.js"></script>
     <script src="Assets/js/login/login.js"></script>
     <script src="Assets/js/jqueryValidation/jquery.validate.min.js"></script>
+    <script src="Assets/js/commonValidations/emailMobValidation.js"></script>
     <!-- 
     <link rel="stylesheet" href="dist/css/style.css">
     <script src="dist/js/script.js"></script>  -->
@@ -23,28 +26,29 @@
 <body>
 
     <div class="landing">
-        <div class="landing-image">
-            <div class="container-fluid">
-                <div class="row">
-                    <!-- <div class="rowheightAdj"> -->
-                    <div class="col-sm-12 text-center col-md-12 col-lg-2">
-                        <img src="Assets/images/dpam_logo.svg" alt="Avatar" class="logoTopAdj">
+            <div class="landing-image">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <!-- <div class="rowheightAdj"> -->
+                            <div class="col-sm-12 text-center col-md-12 col-lg-2">
+                                <img src="Assets/images/dpam_logo.svg" alt="Avatar" class="logoTopAdj">
+                            </div>
+                            <div class="col-lg-6">
+                            </div>
+                            <div class="col-sm-8 text-center col-md-8 col-lg-1">
+                                <button type="button" class="btn btn-outline-secondary loginBtnAdj" id="loginBtn">LOGIN</button>
+                            </div>
+                            <div class="col-sm-8 text-center col-md-8 col-lg-1">
+                                <button type="button" class="btn btn-outline-secondary singUpBtnAdj" id="SignBtn">SIGN UP</button>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                        <img src="./Assets/images/ConvinceneOfRent2.png" alt="pathIssue" class="conOfRentAdj">
                     </div>
-                    <div class="col-lg-6">
-                    </div>
-                    <div class="col-sm-8 text-center col-md-8 col-lg-1">
-                        <button type="button" class="btn btn-outline-secondary loginBtnAdj" id="loginBtn">LOGIN</button>
-                    </div>
-                    <div class="col-sm-8 text-center col-md-8 col-lg-1">
-                        <button type="button" class="btn btn-outline-secondary singUpBtnAdj" id="SignBtn">Sign Up</button>
-                    </div>
-                    <!-- </div> -->
                 </div>
-            </div>
-        </div>
 
         <div class="landing-content">
-            <div class="row login-main " id="login-main-id">
+            <div class="row login-main " >
                     <!-- <button id="landingSideCloseBtn" class="landingSideCloseBtn"> -->
                             <img class="landingSideCloseBtn" id="landingSideCloseBtn" src="./Assets/images/crossBtnLanding.svg" alt="path Issue">
                         <!-- </button>   -->
@@ -65,12 +69,12 @@
                         <div class="form-group login-input">
                             <input type="text" id="loginMail" name="" required>
                             <label id="loginEmailMobTxt">EMAIL / MOBILE NUMBER</label>
-                            <p class="login-mail-err">sdfwd</p>
+                            <p class="login-mail-err"></p>
                         </div>
                         <div class="form-group login-input">
                             <input type="password" id="loginPassword" name="" required>
                             <label id="loginPswrdTxt">PASSWORD</label>
-                            <p class="login-pswrd-err">dfsefwe</p>
+                            <p class="login-pswrd-err"></p>
                         </div>
                         <div class="row login-remembr-forgot-div">
                             <div class="col-6 col-sm-6 col-md-6 col-lg-6 rememberMelogin">
@@ -83,21 +87,21 @@
                                 <a href="#">FORGOT PASSWORD?</a>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-dark login-button" id="loginButton">LOGIN</button>
+                        <button type="submit" class="btn btn-dark login-button">LOGIN</button>
                         <p class="login-or-txt">OR</p>
 
-                        <button type="button" class="btn btn-outline-secondary" id="uaeLogin">LOGIN USING UAE PASS</button>
+                        <button type="button" class="btn btn-outline-secondary uaeLogin" >LOGIN USING UAE PASS</button>
                     </form>
                     <div class="row login-fb-google-div">
-                        <div class="col">
-                            <button type="button" id="fbLogin" class="btn btn-outline-secondary">
+                        <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                            <button type="button"  class="btn btn-outline-secondary fbLogin">
                                 <img src="Assets/images/fb.svg">
                                 <span class="login-fb-txt">FACEBOOK</span>
                             </button>
                         </div>
-                        <div class="col">
+                        <div class="col-6 col-sm-6 col-md-6 col-lg-6">
 
-                            <button type="button" id="googleLogin" class="btn btn-outline-secondary">
+                            <button type="button"  class="btn btn-outline-secondary googleLogin">
                                 <img src="Assets/images/google.svg">
                                 <span class="login-google-txt">GOOGLE</span>
                             </button>

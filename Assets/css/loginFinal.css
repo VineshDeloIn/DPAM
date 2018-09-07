@@ -8,6 +8,12 @@ html, body {
     min-height: 85%;
 }
 
+.conOfRentAdj {
+    width: 60%;
+    margin-left: 15%;
+    margin-top: 12%;
+}
+
 
 .logoTopAdj {
     margin-top: 20px;
@@ -28,10 +34,34 @@ html, body {
 
 #loginBtn {
     color : white;
+    width: 100%;
+    font-family: HelveticaNeueBold;
+    border-radius: 0 !important;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.83;
+    letter-spacing: 2px;
+    text-align: center;
+    /* padding: 10% 20%; */
+    border: 0.5px solid #a7a9ad;
 }
 
 #SignBtn {
     color : white;
+    width: 100%;
+    font-family: HelveticaNeueBold;
+    border-radius: 0 !important;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.83;
+    letter-spacing: 2px;
+    text-align: center;
+    /* padding: 10% 20%; */
+    border: 0.5px solid #a7a9ad;
 }
 
 .landing-image {
@@ -65,7 +95,6 @@ html, body {
     margin-left: 133.5%;
     padding-bottom: 15%;
     position: relative;
-    border: 1px solid red;
     background-size: 80% 100%;
     background-repeat: no-repeat;
     -webkit-transition: background-size 1s ease;
@@ -74,21 +103,26 @@ html, body {
     transition: background-size 1s ease;
 }
 
-
+/* .landingSideCloseBtn {
+    margin-top: 1%;
+    margin-left: 90%;
+    position: relative;
+} */
 
 .landing-content.slideadd {
     height: 85vh;
     margin-left: 66.5%;   
     padding-bottom: 15%;
+    bottom: 15%;
     position: absolute;
     z-index: 1;
     width: 33.5%;
-    border: 1px solid red;
     -webkit-transition: margin-left 1s ease;
     -moz-transition: margin-left 1s ease;
     -o-transition: margin-left 1s ease;
     transition: margin-left 1s ease;
 }
+
 
 
 /* html , body {
@@ -103,7 +137,7 @@ html, body {
 
 .landingSideCloseBtn {
     /* margin-top: 1%; */
-    margin-left: 77%;
+    margin-left: 82%;
     position: absolute;
     margin-top: -4%;
     cursor: pointer;
@@ -116,13 +150,11 @@ html, body {
     padding-left: 8%;
     padding-right: 8%;
     padding-top: 8%; 
-    padding-bottom: 5vh;
+    padding-bottom: 5vh; 
+    margin: 0%;
     /* border: 2px solid red;  */
 }
 
-#login-main-id {
-    margin: 0%;
-}
 
  .login-illustration img {
    /* border: 2px solid yellow;  */
@@ -233,7 +265,7 @@ html, body {
 }
 
 .login-main .login-input input:focus ~ label,
-.login-main .login-input input:focus ~ valid
+.login-main .login-input input:valid ~ label
  {
     top: -1%;
     left: 0%;
@@ -282,10 +314,15 @@ html, body {
 }
 
 .login-remembr-forgot-div {
-    margin-top: 5%;
+    margin-top: 8%;
     margin-left: 0%;
     margin-right: 0%;
     margin-bottom:4%;
+}
+
+.rememberMelogin {
+    margin-left: -4%;
+    float-left: 0%;
 }
 
 /* The container */
@@ -320,6 +357,7 @@ html, body {
     position: absolute;
     top: 0;
     left: 0;
+    text-align: left;
     width: 18px;
     height: 17px;
     background-color:#e4eaec;
@@ -355,6 +393,11 @@ html, body {
     transform: rotate(45deg);
 }
 
+.login-forgot-pswrd {
+   padding: 0 !important;
+   margin: 0   !important;
+}
+
 .login-forgot-pswrd a{
     margin-top: 2%;
     font-family: HelveticaNeueReg;
@@ -371,7 +414,7 @@ html, body {
 
 
 
-#loginButton {
+.login-button {
     width: 100%;
     font-family: HelveticaNeueBold;
     border-radius: 0 !important;
@@ -399,7 +442,7 @@ html, body {
     color: #6f747a;
 }
 
-#uaeLogin {
+.uaeLogin {
     width: 100%;
     font-family: HelveticaNeueBold;
     border-radius: 0 !important;
@@ -411,11 +454,11 @@ html, body {
     letter-spacing: 2px;
     text-align: center;
     color: #585d63;
-    padding: 3% 3%;
+    padding: 3% 0%;
     border: 0.5px solid #a7a9ad;
 }
 
-#uaeLogin:hover, #uaeLogin:focus, #uaeLogin:active {
+.uaeLogin:hover, .uaeLogin:focus, .uaeLogin:active {
     background-color: #F2F2F2;
     color: #585d63;
 }
@@ -427,7 +470,7 @@ html, body {
 
 .login-fb-txt {
     font-family: HelveticaNeueBold;
-    font-size: 12px;
+    font-size: 0.8em;
     font-weight: bold;
     font-style: normal;
     font-stretch: normal;
@@ -447,27 +490,27 @@ html, body {
     color: #585d63;
 }
  
-#fbLogin {
+.fbLogin {
     float: left;
-    width: 100%; 
+    width: 105%; 
     border-radius: 0 !important; 
     border: 0.5px solid #a7a9ad;
     padding: 5% 3%;
  }
  
- #fbLogin:hover, #fbLogin:focus, #fbLogin:active {
+ .fbLogin:hover, .fbLogin:focus, .fbLogin:active {
      background-color: #F2F2F2;
  }
  
- #googleLogin {
+ .googleLogin {
      float:right;
-     width: 100%; 
+     width: 105%; 
      border-radius: 0 !important; 
      border: 0.5px solid #a7a9ad;
      padding: 5% 3%;
  }
  
- #googleLogin:hover, #googleLogin:focus, #googleLogin:active {
+ .googleLogin:hover, .googleLogin:focus, .googleLogin:active {
      background-color: #F2F2F2;
  }
 
@@ -499,20 +542,82 @@ html, body {
 }
 
 
-
 @media screen and (min-width: 300px) and (orientation:potrait) {
-    
+    .logoTopAdj {
+        margin-top: 10px;
+    }
     
 }
 
 @media screen and (max-width: 480px) {
+    body {
+        height: 100%;
+        overflow-y: auto;
+    }
+    /* }
+    .landing {
+        min-height: 77%;
+    } */
+
+    .login-main {
+        height: 62vh;
+    } 
+
+    .login-illustration {
+        height: 11vh;
+    }
+    .conOfRentAdj {
+        display: none;
+    }
     .loginBtnAdj {
+        margin-top: 50%;
         vertical-align: middle; 
     }
+    .logoTopAdj {
+        margin-top: 2%;
+    }
+    
+    .landing-content.slideadd {
+         height: 73vh; 
+        overflow: hidden;
+        margin-left: 10%;
+        margin-right: 10%;
+        top:12%;
+        /* bottom: 20%;    */
+        padding-bottom: 15%;
+        position: absolute;
+        z-index: 1;
+        background-color: azure;
+        width: 80%;
+        -webkit-transition: margin-left 1s ease;
+        -moz-transition: margin-left 1s ease;
+        -o-transition: margin-left 1s ease;
+        transition: margin-left 1s ease;
+    }
+
+    
+
+    .landing-image.clicked {
+        height: 85vh;
+        width: 100%;
+        float: left;
+        /* overflow: auto; */
+        padding-bottom: 15%;
+        background-image: url("../../Assets/images/landingPageImage.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+   .login-remember-txt {
+       font-size: 0.6em;
+       /* border:2px solid red; */
+   }
+    
 }
 
 @media screen and (max-width: 768px) {
-    .loginBtnAdj {
-        vertical-align: middle; 
+
+    .logoTopAdj {
+        margin-top: 10px;
     }
 }
