@@ -22,6 +22,14 @@
     letter-spacing: 2px;
 }
 
+.fbSize{
+    height: 15px;
+    width: 15px;
+}
+.instaSize {
+    height: 15px;
+    width: 15px;
+}
 .instColAdj {
     display: flex;
     justify-content: flex-end;
