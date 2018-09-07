@@ -55,7 +55,7 @@ function checkPasswordStrength(pass){
   // function for password Validation
 
 function validatePassword(inputValue){
-    console.log(inputValue);
+    
     var lowerCaseLetters = /[a-z]/g;
     var specialChar = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
      // Validate capital letters

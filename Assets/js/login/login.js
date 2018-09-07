@@ -1,46 +1,47 @@
 $(document).ready(function () {
-    $('#loginBtn').on('click',function () {
+    $('.loginBtnAdj').on('click',function () {
         // alert('hi')
         $('.landing-image').addClass("clicked");
-        $('.login-slide-main').addClass("slideadd");
-        $('#loginBtn:visible').hide();
-        $('#SignBtn:visible').hide();
+        $('.landing-slide-content').addClass("slideadd");
+        $('.loginBtnAdj:visible').hide();
+        $('.singUpBtnAdj:visible').hide();
     });
 
-    $('#SignBtn').on('click',function () {
+    $('.singUpBtnAdj').on('click',function () {
         // alert('hi')
         $('.landing-image').addClass("clicked");
-        $('.login-slide-main').addClass("slideadd");
-        $('#loginBtn:visible').hide();
-        $('#SignBtn:visible').hide();
+        $('.landing-slide-content').addClass("slideadd");
+        $('.loginBtnAdj:visible').hide();
+        $('.singUpBtnAdj:visible').hide();
     });
 
-    $('#landingSideCloseBtn').on('click',function(){
+    $('.landingSideCloseBtn').on('click',function(){
         $('.landing-image').removeClass("clicked");
-        $('.login-slide-main').removeClass("slideadd");
-        $('#loginBtn:hidden').show();
-        $('#SignBtn:hidden').show();
+        $('.landing-slide-content').removeClass("slideadd");
+        $('.loginBtnAdj:hidden').show();
+        $('.singUpBtnAdj:hidden').show();
     });
 
-    $("#uaeLogin").click(function(event){
-        event.preventDefault();
-        $('.alert').show();
-        $(".alert").css("margin-bottom", "0%");
-    }) 
+    // $("#uaeLogin").click(function(event){
+    //     event.preventDefault();
+    //     $('.alert').show();
+    //     $(".alert").css("margin-bottom", "0%");
+    // }) 
 
     $("input").focus(function () {
         $(".login-mail-err").html("");
         $(".login-pswrd-err").html("");
     });
 
-    $( "#loginForm" ).on('submit',function( event ) {
+    $( ".loginForm" ).on('submit',function( event ) {
 
         event.preventDefault();
 
         //getting values from the form
-        var emailMob = $("#loginMail").val();
-        var password = $("#loginPassword").val();
+        var emailMob = $(".loginMail").val();
+        var password = $(".loginPassword").val();
 
+      
 
         
         var isEmailMobValid = validatePhone(emailMob) || validateEmail(emailMob);
@@ -68,12 +69,12 @@ $(document).ready(function () {
 
 
         //added RememberMe functionality of rememberme is checked, Email and password cannot be empty
-        if ($('#remeberMeCbx').is(':checked') && isEmailMobValid && isPasswordValid) {
+        if ($('.remeberMeCbx').is(':checked') && isEmailMobValid && isPasswordValid) {
             // save username and password
             console.log('Entering!');
-            localStorage.userName = $("#loginMail").val();
-            localStorage.password = $("#loginPassword").val();
-            localStorage.checkBoxValidation = $('#remeberMeCbx').val();
+            localStorage.userName = $(".loginMail").val();
+            localStorage.password = $(".loginPassword").val();
+            localStorage.checkBoxValidation = $('.remeberMeCbx').val();
         } else {
             localStorage.userName = '';
             localStorage.password = '';
@@ -82,11 +83,11 @@ $(document).ready(function () {
 
      
         if(emailMob == "" && !isEmailMobValid){
-            $('#loginMail').val('');
+            $('.loginMail').val('');
         }
         
-        $('#loginPassword').val('');
-        $('#remeberMeCbx').prop('checked', false);
+        $('.loginPassword').val('');
+        $('.remeberMeCbx').prop('checked', false);
     });
 
 });
