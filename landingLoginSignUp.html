@@ -10,13 +10,19 @@
     <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="Assets/css/footer2Layer.css">
     <link rel="stylesheet" href="Assets/css/customFont.css">
-    <link rel="stylesheet" href="Assets/css/loginFinal.css">
+  
+    <link rel="stylesheet" href="Assets/css/signup.css">
+    <link rel="stylesheet" href="Assets/css/landingLoginSignUp.css">
+    <link rel="stylesheet" href="Assets/css/login.css">
 
     <script src="Assets/js/jquery-3.3.2.min.js"></script>
+    <script src="Assets/js/popper.min.js"></script>
     <script src="Assets/js/bootstrap.min.js"></script>
-    <script src="Assets/js/jqueryValidation/jquery.validate.min.js"></script>
+     <script src="Assets/js/jqueryValidation/jquery.validate.min.js"></script>
     <script src="Assets/js/commonValidations/emailMobValidation.js"></script>
+    <script src="Assets/js/commonValidations/passwordValidation.js"></script>
     <script src="Assets/js/login/login.js"></script>
+    <script src="Assets/js/signup.js"></script>
     
     
     <!-- 
@@ -47,6 +53,78 @@
                 </div>
 
         <div class="landing-slide-content">
+
+            <div class="row signup-main  signup-main-margin">
+                    <!-- <button id="landingSideCloseBtn" class="landingSideCloseBtn">
+                            <img src="./Assets/images/crossBtnLanding.svg" alt="path Issue"> -->
+                            <img class="landingSideCloseBtn" id="landingSideCloseBtn" src="./Assets/images/crossBtnLanding.svg" alt="path Issue">
+                        <!-- </button> -->
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                    <h2 class="signup-text">Sign Up</h2>
+                    <form class="signupForm" action="" novalidate>
+    
+                        <!-- <div class="alert" id="signup-success" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <span class="reg-success-msg">You have successfully registered with Dubai AM!
+                                <strong>Please login</strong>
+                            </span>
+                        </div> -->
+                        <div class="form-group signup-input">
+                            <input type="text" class="mailSignUp" name="" required>
+                            <label >EMAIL / MOBILE NUMBER</label>
+                            <p class="signup-mail-err signup-invalid-mail-err"></p>
+                        </div>
+                        <div class="form-group signup-input pass-input" data-toggle="tooltip" data-placement="bottom" data-html="true" title="<ul>The password must have 
+                                        <li> 8-20 Characters</li>
+                                     <li> Atleast one capital letter </li>
+                                    <li>  Atleast one number </li>
+                                    <li> Atleast one special character</li></ul>">
+                            <input type="password" class="passwordSignUp" name="" required>
+                            <label >PASSWORD</label>
+                           
+                            <img src="Assets/images/show_pass.png" id="sign-up-show-password">
+                            <p class="sign-up-pwd-strength "></p>
+                            <p class="signup-pswrd-err signup-invalid-pswrd-err"></p>
+                        </div>
+                        <div class="form-group signup-input">
+                            <input type="password" class="cnfpasswordSignUp" name="" required>
+                            <label >CONFIRM PASSWORD</label>
+                            <p class="signup-cnfpswrd-err signup-unequal-pswrd-err"></p>
+                        </div>
+    
+                        <div class="row signup-remembr-forgot-div">
+                            <p class="signup-terms-and-condition">By clicking sign up, you agree to our
+                                <a class="signup-clickable-text" href="#">TERMS OF SERVICE</a>
+                            </p>
+                        </div>
+                        <button type="submit" class="btn btn-dark signup-button signup-main-button">SIGNUP</button>
+                        <p class="signup-or-txt">OR</p>
+    
+                        <button type="button" class="btn btn-outline-secondary signup-uae-login">LOGIN USING UAE PASS</button>
+                    </form>
+                    <div class="row signup-fb-google-div">
+                        <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                            <button type="button"  class="btn btn-outline-secondary signup-fb-login">
+                                <img src="Assets/images/fb.svg">
+                                <span class="signup-fb-txt">FACEBOOK</span>
+                            </button>
+                        </div>
+                        <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+    
+                            <button type="button"  class="btn btn-outline-secondary signup-google-login">
+                                <img src="Assets/images/google.svg">
+                                <span class="signup-google-txt">GOOGLE</span>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="already-account">Already have an account?
+                        <a class="signup-clickable-text" href="#">LOGIN</a>
+                    </p>
+                </div>
+    
+            </div>
             <div class="row login-main " >
                     <!-- <button id="landingSideCloseBtn" class="landingSideCloseBtn"> -->
                             <img class="landingSideCloseBtn" id="landingSideCloseBtn" src="./Assets/images/crossBtnLanding.svg" alt="path Issue">
@@ -112,6 +190,9 @@
                 </div>
 
             </div>
+
+            
+
             <div class="login-illustration">
                 <img class="img-responsive" src="Assets/images/illustration.png" alt="">
             </div>

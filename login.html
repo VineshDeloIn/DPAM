@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dubai Properties - Login</title>
+
+    <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Assets/css/footer2Layer.css">
+    <link rel="stylesheet" href="Assets/css/customFont.css">
+    <link rel="stylesheet" href="Assets/css/login.css">
+
+    <script src="Assets/js/jquery-3.3.2.min.js"></script>
+    <script src="Assets/js/bootstrap.min.js"></script>
+    <script src="Assets/js/jqueryValidation/jquery.validate.min.js"></script>
+    <script src="Assets/js/commonValidations/emailMobValidation.js"></script>
+    <script src="Assets/js/login/login.js"></script>
+    
+    
+    <!-- 
+    <link rel="stylesheet" href="dist/css/style.css">
+    <script src="dist/js/script.js"></script>  -->
+</head>
+
+<body>
+
+    <div class="landing">
+            <div class="landing-image">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-12 text-center col-md-12 col-lg-2">
+                                <img src="Assets/images/dpam_logo.svg" alt="Avatar" class="logoTopAdj">
+                            </div>
+                            <div class="col-lg-6">
+                            </div>
+                            <div class="col-sm-8 text-center col-md-8 col-lg-1">
+                                <button type="button" class="btn btn-outline-secondary loginBtnAdj" >LOGIN</button>
+                            </div>
+                            <div class="col-sm-8 text-center col-md-8 col-lg-1">
+                                <button type="button" class="btn btn-outline-secondary singUpBtnAdj" >SIGN UP</button>
+                            </div>
+                        </div>
+                        <img src="./Assets/images/ConvinceneOfRent2.png" alt="pathIssue" class="conOfRentAdj">
+                    </div>
+                </div>
+
+        <div class="landing-slide-content">
+            <div class="row login-main " >
+                    <!-- <button id="landingSideCloseBtn" class="landingSideCloseBtn"> -->
+                            <img class="landingSideCloseBtn" id="landingSideCloseBtn" src="./Assets/images/crossBtnLanding.svg" alt="path Issue">
+                        <!-- </button>   -->
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                      
+                    <h2 class="login-text">Login</h2>
+                    <form class="loginForm" action="" novalidate>
+
+                        <div class="alert" id="signup-success" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true" class="signup-success-close">&times;</span>
+                            </button>
+                            <p class="reg-success-msg">
+                                <img class="img-responsive reg-success-tick" src="Assets/images/toasterTick.svg" alt=""> You have successfully registered with Dubai AM!
+                                <strong>Please login</strong>
+                            </p>
+                        </div>
+                        <div class="form-group login-input">
+                            <input type="text" class="loginMail" name="" required>
+                            <label class="loginEmailMobTxt">EMAIL / MOBILE NUMBER</label>
+                            <p class="login-mail-err"></p>
+                        </div>
+                        <div class="form-group login-input">
+                            <input type="password" class="loginPassword" name="" required>
+                            <label class="loginPswrdTxt">PASSWORD</label>
+                            <p class="login-pswrd-err"></p>
+                        </div>
+                        <div class="row login-remembr-forgot-div">
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 rememberMelogin">
+                                <label class="login-remember-txt">REMEMBER ME
+                                    <input type="checkbox" class="remeberMeCbx">
+                                    <span class="login-remember-chck"></span>
+                                </label>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 login-forgot-pswrd">
+                                <a href="#">FORGOT PASSWORD?</a>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-dark login-button">LOGIN</button>
+                        <p class="login-or-txt">OR</p>
+
+                        <button type="button" class="btn btn-outline-secondary uaeLogin" >LOGIN USING UAE PASS</button>
+                    </form>
+                    <div class="row login-fb-google-div">
+                        <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                            <button type="button"  class="btn btn-outline-secondary fbLogin">
+                                <img src="Assets/images/fb.svg">
+                                <span class="login-fb-txt">FACEBOOK</span>
+                            </button>
+                        </div>
+                        <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+
+                            <button type="button"  class="btn btn-outline-secondary googleLogin">
+                                <img src="Assets/images/google.svg">
+                                <span class="login-google-txt">GOOGLE</span>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="loginNoAcntTxt">Don't have an account?
+                        <a class="loginSignUpTxt" href="#">SIGN UP</a>
+                    </p>
+                </div>
+
+            </div>
+            
+            <div class="login-illustration">
+                <img class="img-responsive" src="Assets/images/illustration.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+            <div class="container-fluid footer-group-1">
+                <div class="row">
+                    <div class="col-sm-10 col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-7">
+                            </div>
+                            <div class="col-9 col-sm-9 col-md-4 col-lg-4">
+                                <div class="row">
+                                    <div class="col-9 col-sm-6 col-md-6 col-lg-6 midCols1Adj footerTopAdj">
+                                        ABOUT US
+                                    </div>
+                                    <div class="col-9 col-sm-6 col-md-6 col-lg-6 midCols2Adj footerTopAdj">
+                                        TENANT HANDBOOK
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3 col-sm-2 col-md-1 col-lg-1 fbColAdj footerTopAdj">
+                                <img src="./Assets/images/facebook-logo.svg" alt="avatar" class="fbSize">
+                            </div>
+                        </div>
+                    </div>
+    
+    
+                    <div class="col-sm-10 col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-7">
+                            </div>
+                            <div class="col-9 col-sm-9 col-md-4 col-lg-4">
+                                <div class="row">
+                                    <div class="col-9 col-sm-6 col-md-6 col-lg-6 midCols1Adj footerTopAdj">
+                                        CONTACT US
+                                    </div>
+                                    <div class="col-9 col-sm-6 col-md-6 col-lg-6 midCols2Adj footerTopAdj">
+                                        PROPERTY SEARCH
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3 col-sm-2 col-md-1 col-lg-1 instColAdj footerTopAdj">
+                                <img src="./Assets/images/instagram-logo.svg" alt="avatar" class="instaSize">
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+            <div class="container-fluid footer-group-2">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 dubaiColAdj footerTopAdj">
+                        &copy; 2018. DUBAI ASSET MANAGEMENT BY &nbsp;
+                        <b>DUBAI HOLDING</b>.
+                    </div>
+    
+                    <!-- <div class="col-6 col-sm-6 col-md-1 col-lg-1 midCols1Adj footerTopAdj">
+        
+                        </div>
+                        <div class="col-6 col-sm-6 col-md-1 col-lg-1 midCols2Adj footerTopAdj">
+        
+                        </div> -->
+                    <div class="col-6 col-sm-6 col-md-1 col-lg-1 midCols1Adj footerTopAdj">
+    
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-1 col-lg-1 midCols2Adj footerTopAdj">
+    
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-2 col-lg-2 fbColAdj footerTopAdj">
+    
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-2 col-lg-2 instColAdj footerTopAdj">
+                        TERMS AND CONDITIONS
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

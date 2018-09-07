@@ -1,18 +1,23 @@
 $(document).ready(function () {
     $('.loginBtnAdj').on('click',function () {
-        // alert('hi')
+        // alert('hi login');
         $('.landing-image').addClass("clicked");
         $('.landing-slide-content').addClass("slideadd");
         $('.loginBtnAdj:visible').hide();
         $('.singUpBtnAdj:visible').hide();
+        $('.login-main').show();
+        $('.signup-main-margin').hide();
+
     });
 
     $('.singUpBtnAdj').on('click',function () {
-        // alert('hi')
+       // alert('hi signup');
         $('.landing-image').addClass("clicked");
         $('.landing-slide-content').addClass("slideadd");
         $('.loginBtnAdj:visible').hide();
         $('.singUpBtnAdj:visible').hide();
+        $('.signup-main-margin').show();
+        $('.login-main').hide();
     });
 
     $('.landingSideCloseBtn').on('click',function(){
