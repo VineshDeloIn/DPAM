@@ -22,18 +22,25 @@ html, body {
 }
 .loginBtnAdj {
     margin-top: 40px;
-    color: white;
     background-color: transparent;
+    color : white;
+    width: 100%;
+    font-family: HelveticaNeueBold;
+    border-radius: 0 !important;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.83;
+    letter-spacing: 2px;
+    text-align: center;
+    border: 0.5px solid #a7a9ad;
 }
 
 .singUpBtnAdj {
     margin-top: 40px;
     color: white;
     background-color: transparent;
-}
-
-#loginBtn {
-    color : white;
     width: 100%;
     font-family: HelveticaNeueBold;
     border-radius: 0 !important;
@@ -44,25 +51,10 @@ html, body {
     line-height: 1.83;
     letter-spacing: 2px;
     text-align: center;
-    /* padding: 10% 20%; */
     border: 0.5px solid #a7a9ad;
 }
 
-#SignBtn {
-    color : white;
-    width: 100%;
-    font-family: HelveticaNeueBold;
-    border-radius: 0 !important;
-    font-size: 12px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.83;
-    letter-spacing: 2px;
-    text-align: center;
-    /* padding: 10% 20%; */
-    border: 0.5px solid #a7a9ad;
-}
+
 
 .landing-image {
     height: 85vh;
@@ -90,7 +82,7 @@ html, body {
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
-.login-slide-main {
+.landing-slide-content {
     height: 85vh;
     margin-left: 133.5%;
     padding-bottom: 15%;
@@ -109,7 +101,7 @@ html, body {
     position: relative;
 } */
 
-.login-slide-main.slideadd {
+.landing-slide-content.slideadd {
     height: 85vh;
     margin-left: 66.5%;   
     padding-bottom: 15%;
@@ -170,13 +162,10 @@ html, body {
 
 }
 
-#loginForm {
-    background: #ffffff;
+/* .loginForm {
     margin-top: 5%;
-    /* padding: 12.5%; */
     background-color: #f3f9ea;
-      /* border: 2px solid blue;   */
-}
+} */
 
 .login-text {
     font-family: HelveticaNeueMed;
@@ -189,17 +178,19 @@ html, body {
     color: #333f48;
 }
 .alert{
-    display: none;
-    margin-top: -85px;
+    /* display: none; */
+    margin-top: -75px;
     border-radius: 0 !important;
+    background-color: white; 
+    border: solid 1px #8bc43e;
+    padding: 0;
   
 }
 
-#signup-success {
+/* .signup-success {
     background-color: #ffffff;
-    border: solid 1px #8bc43e;
     padding: 0% 0%;
-}
+} */
 
 
 .reg-success-msg {
@@ -577,7 +568,7 @@ html, body {
         margin-top: 2%;
     }
     
-    .login-slide-main.slideadd {
+    .landing-slide-content.slideadd {
          height: 73vh; 
         overflow: hidden;
         margin-left: 10%;

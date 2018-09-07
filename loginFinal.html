@@ -7,17 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dubai Properties - Login</title>
 
-
-    <link rel="stylesheet" href="Assets/css/footer2Layer.css">
     <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Assets/css/footer2Layer.css">
     <link rel="stylesheet" href="Assets/css/customFont.css">
     <link rel="stylesheet" href="Assets/css/loginFinal.css">
 
     <script src="Assets/js/jquery-3.3.2.min.js"></script>
     <script src="Assets/js/bootstrap.min.js"></script>
-    <script src="Assets/js/login/login.js"></script>
     <script src="Assets/js/jqueryValidation/jquery.validate.min.js"></script>
     <script src="Assets/js/commonValidations/emailMobValidation.js"></script>
+    <script src="Assets/js/login/login.js"></script>
+    
+    
     <!-- 
     <link rel="stylesheet" href="dist/css/style.css">
     <script src="dist/js/script.js"></script>  -->
@@ -29,25 +30,23 @@
             <div class="landing-image">
                     <div class="container-fluid">
                         <div class="row">
-                            <!-- <div class="rowheightAdj"> -->
                             <div class="col-sm-12 text-center col-md-12 col-lg-2">
                                 <img src="Assets/images/dpam_logo.svg" alt="Avatar" class="logoTopAdj">
                             </div>
                             <div class="col-lg-6">
                             </div>
                             <div class="col-sm-8 text-center col-md-8 col-lg-1">
-                                <button type="button" class="btn btn-outline-secondary loginBtnAdj" id="loginBtn">LOGIN</button>
+                                <button type="button" class="btn btn-outline-secondary loginBtnAdj" >LOGIN</button>
                             </div>
                             <div class="col-sm-8 text-center col-md-8 col-lg-1">
-                                <button type="button" class="btn btn-outline-secondary singUpBtnAdj" id="SignBtn">SIGN UP</button>
+                                <button type="button" class="btn btn-outline-secondary singUpBtnAdj" >SIGN UP</button>
                             </div>
-                            <!-- </div> -->
                         </div>
                         <img src="./Assets/images/ConvinceneOfRent2.png" alt="pathIssue" class="conOfRentAdj">
                     </div>
                 </div>
 
-        <div class="login-slide-main">
+        <div class="landing-slide-content">
             <div class="row login-main " >
                     <!-- <button id="landingSideCloseBtn" class="landingSideCloseBtn"> -->
                             <img class="landingSideCloseBtn" id="landingSideCloseBtn" src="./Assets/images/crossBtnLanding.svg" alt="path Issue">
@@ -55,7 +54,7 @@
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                       
                     <h2 class="login-text">Login</h2>
-                    <form id="loginForm" action="" novalidate>
+                    <form class="loginForm" action="" novalidate>
 
                         <div class="alert" id="signup-success" role="alert">
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -67,19 +66,19 @@
                             </p>
                         </div>
                         <div class="form-group login-input">
-                            <input type="text" id="loginMail" name="" required>
-                            <label id="loginEmailMobTxt">EMAIL / MOBILE NUMBER</label>
+                            <input type="text" class="loginMail" name="" required>
+                            <label class="loginEmailMobTxt">EMAIL / MOBILE NUMBER</label>
                             <p class="login-mail-err"></p>
                         </div>
                         <div class="form-group login-input">
-                            <input type="password" id="loginPassword" name="" required>
-                            <label id="loginPswrdTxt">PASSWORD</label>
+                            <input type="password" class="loginPassword" name="" required>
+                            <label class="loginPswrdTxt">PASSWORD</label>
                             <p class="login-pswrd-err"></p>
                         </div>
                         <div class="row login-remembr-forgot-div">
                             <div class="col-6 col-sm-6 col-md-6 col-lg-6 rememberMelogin">
                                 <label class="login-remember-txt">REMEMBER ME
-                                    <input type="checkbox" id="remeberMeCbx">
+                                    <input type="checkbox" class="remeberMeCbx">
                                     <span class="login-remember-chck"></span>
                                 </label>
                             </div>
