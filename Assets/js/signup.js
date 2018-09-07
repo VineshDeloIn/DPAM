@@ -75,6 +75,7 @@ $( ".signupForm" ).on('submit',function( event ) {
         if(!comparePassword(password,cnfpassword)){
             
             $(".signup-unequal-pswrd-err").html("Passwords do not match");
+            isPasswordValid = false;
         }
         //Checking if email/mob is not empty
         if(emailMob == "") {
@@ -97,16 +98,29 @@ $( ".signupForm" ).on('submit',function( event ) {
         {
           
                 $(".signup-invalid-mail-err").html("Invalid Email/Phone number ");
+                isEmailMobValid = false;
         }
         
         if(!validatePassword(password)){
   
             $(".signup-invalid-pswrd-err").html("Invalid Password ");
+            isPasswordValid = false;
      }
      if(cnfpassword==""){
       
             $(".signup-cnfpswrd-err").html("Invalid Password");
+            isPasswordValid = false;
      }
+    
+     if($(".signupForm").valid() && isEmailMobValid && isPasswordValid) {
+        $(".signupForm").submit();
+        event.preventDefault();
+        //alert('sumitted!');
+    } else {
+        event.preventDefault();
+        //alert('not sumitted!');
+    }
+
    
        
     });
