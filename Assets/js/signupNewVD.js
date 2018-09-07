@@ -1,6 +1,6 @@
 $( document ).ready(function() {
     $( ".pass-input ul li" ).css("list-style-type", "none");
-    $('#cnfpasswordSignUp').bind("cut copy paste", function(e) {
+    $('.cnfpasswordSignUp').bind("cut copy paste", function(e) {
         e.preventDefault();
        
         });
@@ -17,7 +17,7 @@ $( document ).ready(function() {
 
         $(".sign-up-pwd-strength").html("");
 
-        var email = $("#mailSignUp").val();
+        var email = $(".mailSignUp").val();
       
   // check for email and mobile number text field
 if(!validatePhone(email)&&(!validateEmail(email)))
@@ -37,23 +37,23 @@ if(!validatePhone(email)&&(!validateEmail(email)))
   
   });
 
- $("#mailSignUp").keyup(function(e){
+ $(".mailSignUp").keyup(function(e){
 
   $(".signup-mail-err").html(" ");
   $(".signup-invalid-mail-err").html(" ");
 });
 
 
-$("#passwordSignUp").keyup(function(e){
+$(".passwordSignUp").keyup(function(e){
 
-    var passWord=$("#passwordSignUp").val();
+    var passWord=$(".passwordSignUp").val();
     
      changeTooltipColor(passWord);
      checkPasswordStrength(passWord);
 });
 
-$("#passwordSignUp").on('input',function(e){
-    var passWordChk=$("#passwordSignUp").val();
+$(".passwordSignUp").on('input',function(e){
+    var passWordChk=$(".passwordSignUp").val();
     if(!validatePassword(passWordChk)){
         $(".signup-invalid-pswrd-err").html("Invalid Password ");
     }else{
@@ -64,13 +64,13 @@ $("#passwordSignUp").on('input',function(e){
 
 // Empty Fields Validation
 
-$( "#signupForm" ).on('submit',function( event ) {
+$( ".signupForm" ).on('submit',function( event ) {
     
     event.preventDefault();
         //getting values from the form
-        var emailMob = $("#mailSignUp").val();
-        var password = $("#passwordSignUp").val();
-        var cnfpassword = $("#cnfpasswordSignUp").val();
+        var emailMob = $(".mailSignUp").val();
+        var password = $(".passwordSignUp").val();
+        var cnfpassword = $(".cnfpasswordSignUp").val();
         
         if(!comparePassword(password,cnfpassword)){
             
@@ -79,7 +79,7 @@ $( "#signupForm" ).on('submit',function( event ) {
         //Checking if email/mob is not empty
         if(emailMob == "") {
             $(".signup-mail-err").html("Email/Mobile Number Cannot Be Empty!");
-            $('#mailSignUp').val('');
+            $('.mailSignUp').val('');
             isEmailMobValid = false;
         } else  {
             isEmailMobValid = true;
@@ -109,8 +109,8 @@ $( "#signupForm" ).on('submit',function( event ) {
      }
    
 
-        $('#passwordSignUp').val('');
-        $('#cnfpasswordSignUp').val('');
+        $('.passwordSignUp').val('');
+        $('.cnfpasswordSignUp').val('');
        
     });
     

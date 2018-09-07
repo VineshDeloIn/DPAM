@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dubai Properties - Login</title>
+    <title>Dubai Properties - Signup</title>
 
+    <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="Assets/css/customFont.css">
     <link rel="stylesheet" href="Assets/css/landingSignup.css">
     <link rel="stylesheet" href="Assets/css/footer2Layer.css">
-    <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
+   
     <script src="Assets/js/jquery-3.3.2.min.js"></script>
     <script src="Assets/js/popper.min.js"></script>
     <script src="Assets/js/bootstrap.min.js"></script>
@@ -47,13 +48,13 @@
 
         <div class="landing-content">
           
-                <div class="signup-main row" id="signup-main-margin">
+                <div class="row signup-main  signup-main-margin">
                         <button id="landingSideCloseBtn" class="landingSideCloseBtn">
                                 <img src="./Assets/images/crossBtnLanding.svg" alt="path Issue">
                             </button>
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                         <h2 class="signup-text">Sign Up</h2>
-                        <form id="signupForm" action="" novalidate>
+                        <form class="signupForm" action="" novalidate>
         
                             <div class="alert" id="signup-success" role="alert">
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -64,8 +65,8 @@
                                 </span>
                             </div>
                             <div class="form-group signup-input">
-                                <input type="text" id="mailSignUp" name="" required>
-                                <label id="signupEmailMobTxt">EMAIL / MOBILE NUMBER</label>
+                                <input type="text" class="mailSignUp" name="" required>
+                                <label >EMAIL / MOBILE NUMBER</label>
                                 <p class="signup-mail-err signup-invalid-mail-err"></p>
                             </div>
                             <div class="form-group signup-input pass-input" data-toggle="tooltip" data-placement="bottom" data-html="true" title="<ul>The password must have 
@@ -73,46 +74,46 @@
                                          <li> Atleast one capital letter </li>
                                         <li>  Atleast one number </li>
                                         <li> Atleast one special character</li></ul>">
-                                <input type="password" id="passwordSignUp" name="" required>
-                                <label id="signupPswrdTxt">PASSWORD</label>
+                                <input type="password" class="passwordSignUp" name="" required>
+                                <label >PASSWORD</label>
                                
                                 <img src="Assets/images/show_pass.png" id="sign-up-show-password">
                                 <p class="sign-up-pwd-strength "></p>
                                 <p class="signup-pswrd-err signup-invalid-pswrd-err"></p>
                             </div>
                             <div class="form-group signup-input">
-                                <input type="password" id="cnfpasswordSignUp" name="" required>
-                                <label id="signupPswrdTxt">CONFIRM PASSWORD</label>
+                                <input type="password" class="cnfpasswordSignUp" name="" required>
+                                <label >CONFIRM PASSWORD</label>
                                 <p class="signup-cnfpswrd-err signup-unequal-pswrd-err"></p>
                             </div>
         
                             <div class="row signup-remembr-forgot-div">
-                                <p class="termsAndConditionTxt">By clicking sign up, you agree to our
-                                    <a class="loginSignUpTxt" href="#">TERMS AND CONDITIONS</a>
+                                <p class="signup-terms-and-condition">By clicking sign up, you agree to our
+                                    <a class="signup-clickable-text" href="#">TERMS OF SERVICE</a>
                                 </p>
                             </div>
-                            <button type="submit" class="btn btn-dark signup-button" id="signupBtn">SIGNUP</button>
+                            <button type="submit" class="btn btn-dark signup-button signup-main-button">SIGNUP</button>
                             <p class="signup-or-txt">OR</p>
         
-                            <button type="button" class="btn btn-outline-secondary" id="signup-uaeLogin">LOGIN USING UAE PASS</button>
+                            <button type="button" class="btn btn-outline-secondary signup-uae-login">LOGIN USING UAE PASS</button>
                         </form>
                         <div class="row signup-fb-google-div">
-                            <div class="col">
-                                <button type="button" id="fbLogin" class="btn btn-outline-secondary">
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                                <button type="button"  class="btn btn-outline-secondary signup-fb-login">
                                     <img src="Assets/images/fb.svg">
                                     <span class="signup-fb-txt">FACEBOOK</span>
                                 </button>
                             </div>
-                            <div class="col">
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-6">
         
-                                <button type="button" id="googleLogin" class="btn btn-outline-secondary">
+                                <button type="button"  class="btn btn-outline-secondary signup-google-login">
                                     <img src="Assets/images/google.svg">
                                     <span class="signup-google-txt">GOOGLE</span>
                                 </button>
                             </div>
                         </div>
-                        <p class="signupNoAcntTxt">Already have an account?
-                            <a class="loginSignUpTxt" href="#">LOGIN</a>
+                        <p class="already-account">Already have an account?
+                            <a class="signup-clickable-text" href="#">LOGIN</a>
                         </p>
                     </div>
         

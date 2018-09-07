@@ -90,29 +90,11 @@ html, body {
     position: absolute;
     z-index: 1;
     width: 33.5%;
-    border: 1px solid red;
+    border: 1px solid;
     -webkit-transition: margin-left 1s ease;
     -moz-transition: margin-left 1s ease;
     -o-transition: margin-left 1s ease;
     transition: margin-left 1s ease;
-}
-
-
-@media screen and (min-width: 300px) and (orientation:potrait) {
-    
-    
-}
-
-@media screen and (max-width: 480px) {
-    .loginBtnAdj {
-        vertical-align: middle; 
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .loginBtnAdj {
-        vertical-align: middle; 
-    }
 }
 
 
@@ -127,22 +109,20 @@ html, body {
 .signup-main {
     width: 100%;
     background-color: #f3f9ea;
-    padding-left: 10%;
-    padding-right: 5%;
+    padding-left: 8%;
+    padding-right:8%;
     padding-top: 8%; 
     height: 73vh;
    
 }
 
-#signup-main-margin{
-    margin-left: 1%;
+.signup-main-margin{
+    margin-left: 0%;
 }
 
-#signupForm {
+.signupForm {
     background: #ffffff;
-  
-    background-color: #f3f9ea;
-    
+  background-color: #f3f9ea;
 }
 
 .signup-text {
@@ -422,7 +402,7 @@ html, body {
     color: #23527c;
 }
 
-#signupBtn {
+.signup-main-button {
     width: 100%;
     font-family: HelveticaNeueBold;
     border-radius: 0 !important;
@@ -450,7 +430,7 @@ html, body {
     color: #6f747a;
 }
 
-#signup-uaeLogin {
+.signupBtn {
     width: 100%;
     font-family: HelveticaNeueBold;
     border-radius: 0 !important;
@@ -466,7 +446,23 @@ html, body {
     border: 0.5px solid #a7a9ad;
 }
 
-#signup-uaeLogin:hover, #signup-uaeLogin:focus, #signup-uaeLogin:active {
+.signup-uae-login {
+    width: 100%;
+    font-family: HelveticaNeueBold;
+    border-radius: 0 !important;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.83;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #585d63;
+    padding: 3% 0%;
+    border: 0.5px solid #a7a9ad;
+}
+
+.signup-uae-login:hover, .signup-uae-login:focus, .signup-uae-login:active {
     background-color: #F2F2F2;
     color: #585d63;
 }
@@ -498,7 +494,7 @@ html, body {
     color: #585d63;
 }
  
-#fbLogin {
+.signup-fb-login {
     float: left;
     width: 100%; 
     border-radius: 0 !important; 
@@ -506,11 +502,11 @@ html, body {
     padding: 5% 3%;
  }
  
- #fbLogin:hover, #fbLogin:focus, #fbLogin:active {
+ .signup-fb-login:hover, .signup-fb-login:focus, .signup-fb-login:active {
      background-color: #F2F2F2;
  }
  
- #googleLogin {
+ .signup-google-login {
      float:right;
      width: 100%; 
      border-radius: 0 !important; 
@@ -518,11 +514,11 @@ html, body {
      padding: 5% 3%;
  }
  
- #googleLogin:hover, #googleLogin:focus, #googleLogin:active {
+ .signup-google-login:hover, .signup-google-login:focus, .signup-google-login:active {
      background-color: #F2F2F2;
  }
 
- .signupNoAcntTxt{
+ .already-account{
     text-align: center;
     margin-top: 5%;
     font-family: HelveticaNeueReg;
@@ -538,9 +534,8 @@ html, body {
 }
 
 
-.termsAndConditionTxt{
+.signup-terms-and-condition{
     text-align: center;
-    margin-top: 3%;
     font-family: HelveticaNeueReg;
     font-size: 13px;
     font-weight: normal;
@@ -550,11 +545,12 @@ html, body {
     letter-spacing: normal;
     text-align: center;
     color: #585d63;
-    margin-bottom:0%;
-    margin-left:7%;
+    margin-bottom:-1%;
+    margin-left: 6%;
+  
 }
 
-.loginSignUpTxt {
+.signup-clickable-text {
     font-family: HelveticaNeueReg;
     font-size: 13px;
     font-weight: normal;
@@ -668,6 +664,92 @@ margin-left: -47px;
 .bs-tooltip-auto[x-placement^=bottom] .arrow::before, .bs-tooltip-bottom .arrow::before {
    
     border-bottom-color: #f7f7f7 !important;
+}
+
+
+@media screen and (min-width: 300px) and (orientation:potrait) {
+    
+    .logoTopAdj {
+        margin-top: 10px;
+    }
+    .already-account {
+  
+        margin-top: 2%;
+    }
+    .signup-terms-and-condition {
+        margin-top:-4%;
+       margin-left:2%;
+    }
+    .signup-main-button {
+      margin-top:-3%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    
+    .landing-content.slideadd {
+        height: 73vh; 
+       overflow: hidden;
+       margin-left: 10%;
+       margin-right: 10%;
+       top:12%;
+       /* bottom: 20%;    */
+       padding-bottom: 15%;
+       position: absolute;
+       z-index: 1;
+       background-color: azure;
+       width: 80%;
+       -webkit-transition: margin-left 1s ease;
+       -moz-transition: margin-left 1s ease;
+       -o-transition: margin-left 1s ease;
+       transition: margin-left 1s ease;
+   }
+
+   
+
+   .landing-image.clicked {
+       height: 85vh;
+       width: 100%;
+       float: left;
+       /* overflow: auto; */
+       padding-bottom: 15%;
+       background-image: url("../../Assets/images/landingPageImage.png");
+       background-size: 100% 100%;
+       background-repeat: no-repeat;
+   }
+   .signup-main-button {
+    margin-top:-3%;
+  }
+   .loginBtnAdj {
+    vertical-align: middle; 
+}
+
+.logoTopAdj {
+    margin-top: 2%;
+}
+
+.signup-main {
+    height: 62vh;
+} 
+
+.signup-illustration {
+    height: 11vh;
+}
+.already-account {
+    margin-top: 2%;
+}
+
+.signup-terms-and-condition {
+    margin-top:-4%; 
+    margin-left:2%;
+}
+
+}
+
+@media screen and (max-width: 768px) {
+    .loginBtnAdj {
+        vertical-align: middle; 
+    }
 }
 
 
