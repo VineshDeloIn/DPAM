@@ -517,7 +517,6 @@ margin-left: -47px;
     text-align: left !important;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5) !important;
     position: relative;
-    border: 1px solid #6d7e8a;
     margin-left: -56%;
     margin-top: 3%;
 
@@ -541,7 +540,7 @@ margin-left: -47px;
 }
 .tooltip-inner:before {
 	border-color: rgba(204, 217, 225, 0);
-	border-bottom-color: #6d7e8a;
+	border-bottom-color: #e2e7ea;
 	border-width: 26px;
 	margin-left: -72px;
 }
@@ -575,51 +574,27 @@ margin-left: -47px;
     .signup-main-button {
       margin-top:-3%;
     }
+    .landingSideCloseBtn {
+   
+        margin-left: 91%;
+      }
 }
 
 @media screen and (max-width: 480px) {
     
-    /* .landing-content.slideadd {
-        height: 73vh; 
-       overflow: hidden;
-       margin-left: 10%;
-       margin-right: 10%;
-       top:12%;
-       padding-bottom: 15%;
-       position: absolute;
-       z-index: 1;
-       background-color: azure;
-       width: 80%;
-       -webkit-transition: margin-left 1s ease;
-       -moz-transition: margin-left 1s ease;
-       -o-transition: margin-left 1s ease;
-       transition: margin-left 1s ease;
-   }
-
-   
-
-   .landing-image.clicked {
-       height: 85vh;
-       width: 100%;
-       float: left;
-       padding-bottom: 15%;
-       background-image: url("../../Assets/images/landingPageImage.png");
-       background-size: 100% 100%;
-       background-repeat: no-repeat;
-}
-
-   } */
-   .signup-main-button {
+ .signup-main-button {
     margin-top:-3%;
   }
-   /* .loginBtnAdj {
-    vertical-align: middle; 
-.logoTopAdj {
-    margin-top: 2%;
-} */
+
+  .landingSideCloseBtn {
+   
+    margin-left: 91%;
+  }
 
 .signup-main {
-    height: 62vh;
+    height: 74vh;
+    padding-left: 5%;
+    padding-right: 5%;
 } 
 
 .signup-illustration {

@@ -518,7 +518,7 @@
     } */
 
     .login-main {
-        height: 62vh;
+        height: 85vh;
     } 
 
     .login-illustration {
@@ -536,7 +536,7 @@
     }
     
     .landing-slide-content.slideadd {
-         height: 73vh; 
+         height: 85vh; 
         overflow: hidden;
         margin-left: 10%;
         margin-right: 10%;
