@@ -115,10 +115,10 @@ $( ".signupForm" ).on('submit',function( event ) {
      if($(".signupForm").valid() && isEmailMobValid && isPasswordValid) {
         $(".signupForm").submit();
         event.preventDefault();
-        //alert('sumitted!');
+       
     } else {
         event.preventDefault();
-        //alert('not sumitted!');
+       
     }
 
    
