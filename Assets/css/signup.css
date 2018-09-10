@@ -53,12 +53,12 @@
     letter-spacing: normal;
     color: #333f48;
     margin-top: 8.2%;
-    margin-bottom: 12.8%;
+    margin-bottom: 9.8%;
 }
 
 .signup-main .signup-input {
     position: relative;
-    margin-bottom: 9.9%;
+    margin-bottom: 7.0%;
 }
 
 .signup-main .signup-input input {
@@ -395,7 +395,7 @@
  
 .signup-fb-login {
     float: left;
-    width: 100%; 
+    width: 105%; 
     border-radius: 0 !important; 
     border: 0.5px solid #a7a9ad;
     padding: 5% 3%;
@@ -408,7 +408,7 @@
  
  .signup-google-login {
      float:right;
-     width: 100%; 
+     width: 105%; 
      border-radius: 0 !important; 
      border: 0.5px solid #a7a9ad;
      padding: 5% 3%;
@@ -421,7 +421,7 @@
 
  .already-account{
     text-align: center;
-    margin-top: 38px;
+    margin-top: 4.4%;
     font-family: HelveticaNeueReg;
     font-size: 13px;
     font-weight: normal;
