@@ -24,17 +24,17 @@ html, body {
 .loginBtnAdj {
     margin-top: 40px;
     background-color: transparent;
-    color : white;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #ffffff;
     width: 100%;
     font-family: HelveticaNeueBold;
     border-radius: 0 !important;
-    font-size: 12px;
     font-weight: bold;
     font-style: normal;
     font-stretch: normal;
-    line-height: 1.83;
-    letter-spacing: 2px;
-    text-align: center;
+    line-height: 1.69;
     border: 1px solid #a7a9ad;
 }
 .loginBtnAdj:hover, .loginBtnAdj:focus, .loginBtnAdj:active {
@@ -54,12 +54,12 @@ html, body {
     width: 100%;
     font-family: HelveticaNeueBold;
     border-radius: 0 !important;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: bold;
     font-style: normal;
     font-stretch: normal;
-    line-height: 1.83;
-    letter-spacing: 2px;
+    line-height: 1.69;
+    letter-spacing: 1px;
     text-align: center;
     border: 1px solid #a7a9ad;
 }
