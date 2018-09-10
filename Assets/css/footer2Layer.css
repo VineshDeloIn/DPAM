@@ -20,8 +20,12 @@
     font-family: "HelveticaNeueReg";
     font-size: 12px;
     background-color: #101820;
-    height: 37%;
+    height: 42%;
     letter-spacing: 1.7px;
+}
+
+.rowheightAdj {
+    margin-top: 0.6%;
 }
 
 .TcAdj {
@@ -45,11 +49,13 @@
 .instColAdj {
     display: flex;
     justify-content: flex-end;
+    margin-top: 0.6%;
 }
 
 .fbColAdj {
     display: flex;
     justify-content: flex-end;
+    margin-top: 0.6%;
 }
 
 .midCols1Adj {
@@ -65,7 +71,7 @@
 }
 
 .footerTopAdj {
-    margin-top: 1%;
+    margin-top: 1.2%;
 }
 
 @media screen and (min-width: 300px) and (orientation:potrait) {
@@ -77,12 +83,32 @@
 @media screen and (max-width: 480px) {
     .footer {
         position: relative;
-        height: 23%;
+        height: 28%;
         /* margin-top: 10%; */
         color: whitesmoke;
         font-size: 11px;
         white-space: normal;
         /* overflow-y: auto; */
+    }
+    .TcAdj {
+        letter-spacing: 0px;
+        color: #f3f5f7;
+    }
+    .footer-group-1 {
+        font-family: "HelveticaNeueMed";
+        font-size: 10px;
+        background-color: #333f48;
+        height: 65%;
+        letter-spacing: 1.7px;
+        /* padding-bottom: ; */
+    }
+    
+    .footer-group-2 {
+        font-family: "HelveticaNeueReg";
+        font-size: 12px;
+        background-color: #101820;
+        height: 65%;
+        letter-spacing: 1.7px;
     }
     .midCols1Adj {
         display: flex;
@@ -96,15 +122,17 @@
         justify-content: flex-start;
     }
     .footerTopAdj {
-        margin-top: 1%;
+        margin-top: 4%;
     }
     .instColAdj {
         display: flex;
         justify-content: flex-end;
+        margin-top: -4%;
     }
     .fbColAdj {
         display: flex;
         justify-content: flex-end;
+        margin-top: 2%;
     }
 }
 
