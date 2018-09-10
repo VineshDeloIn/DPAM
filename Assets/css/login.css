@@ -29,7 +29,7 @@
     margin: 0%;
     /* margin-bottom: 11vh; */
     display: none;
-     border: 2px solid red;  
+     /* border: 2px solid red;   */
 }
 
 
@@ -54,6 +54,7 @@
 } */
 
 .login-text {
+    margin-top: 9.4%;
     font-family: HelveticaNeueMed;
     font-size: 26px;
     font-weight: 500;
@@ -65,7 +66,7 @@
 }
 .alert{
     /* display: none; */
-    margin-top: -75px;
+    margin-top: -55px;
     border-radius: 0 !important;
     background-color: white; 
     border: solid 1px #8bc43e;
@@ -107,6 +108,7 @@
 }
 
 .login-main .login-input input {
+    margin-top: 8%;
     width: 100%;
     box-sizing: border-box;
     background-color: #f3f9ea;
@@ -125,9 +127,14 @@
     color: #333f48;
 }
 
+.login-main .login-input  .loginPassword {
+    margin-top: 2%;
+}
+
 .login-main .login-input label {
     position: absolute;
-    top: 46%;    
+    /* top: 46%;     */
+    top: 70%;   
     transition: .5s;
     left: 0%;
     pointer-events: none;
@@ -141,10 +148,14 @@
     color: #333f48;
 }
 
+.login-main .login-input  .loginPswrdTxt {
+    top: 60%;   
+}
+
 .login-main .login-input input:focus ~ label,
 .login-main .login-input input:valid ~ label
  {
-    top: -1%;
+    top: 40%;
     left: 0%;
     font-family: HelveticaNeueMed;
     font-size: 10px;
@@ -156,8 +167,15 @@
     color: #cbcfd6;
 }
 
-.login-main .login-input input:focus,
-.login-main .login-input input:valid {
+.login-main .login-input .loginPassword :focus ~ label,
+.login-main .login-input .loginPassword :valid ~ label
+ {
+    top: 0%;
+ }
+
+
+.login-main .login-input .loginPassword:focus,
+.login-main .login-input .loginPassword:valid {
    border-bottom: 1px solid grey; 
 }
 
@@ -191,10 +209,10 @@
 }
 
 .login-remembr-forgot-div {
-    margin-top: 8%;
+    margin-top: 4%;
     /* margin-left: 0%; */
     margin-right: 0%;
-    margin-bottom:4%;
+    /* margin-bottom:4%; */
 }
 
 
@@ -289,6 +307,7 @@
 
 
 .login-button {
+    margin-top: 8%;
     width: 100%;
     font-family: HelveticaNeueBold;
     border-radius: 0 !important;
@@ -300,7 +319,7 @@
     letter-spacing: 2px;
     text-align: center;
     color: #ffffff;
-    padding: 3% 3%;
+    padding: 4% 3%;
 }
 
 .login-or-txt {
@@ -328,7 +347,7 @@
     letter-spacing: 2px;
     text-align: center;
     color: #585d63;
-    padding: 3% 0%;
+    padding: 4% 0%;
     border: 0.5px solid #a7a9ad;
 }
 
@@ -369,7 +388,7 @@
     width: 105%; 
     border-radius: 0 !important; 
     border: 0.5px solid #a7a9ad;
-    padding: 5% 3%;
+    padding: 6% 3%;
  }
  
  .fbLogin:hover, .fbLogin:focus, .fbLogin:active {
@@ -381,7 +400,7 @@
      width: 105%; 
      border-radius: 0 !important; 
      border: 0.5px solid #a7a9ad;
-     padding: 5% 3%;
+     padding: 6% 3%;
  }
  
  .googleLogin:hover, .googleLogin:focus, .googleLogin:active {
@@ -390,7 +409,7 @@
 
  .loginNoAcntTxt{
     text-align: center;
-    margin-top: 5%;
+    margin-top: 10%;
     font-family: HelveticaNeueReg;
     font-size: 13px;
     font-weight: normal;
