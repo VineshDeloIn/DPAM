@@ -33,6 +33,22 @@ $(document).ready(function () {
     //     $(".alert").css("margin-bottom", "0%");
     // }) 
 
+
+
+    $("body").scroll(function() {
+        // if ($(this).scrollTop() > 0) {
+            
+        //     $('.landing-slide-content').addClass('slideadd').css({
+        //         height: $(".slideadd").height()-+"px"
+        //     });
+        // } else {
+        //     $('#head').removeClass('fixed').css({
+        //         width: $(this).width()
+        //     });
+        
+        // alert('scrolled!');
+    });
+
     $("input").focus(function () {
         $(".login-mail-err").html("");
         $(".login-pswrd-err").html("");
