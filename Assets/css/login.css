@@ -69,11 +69,14 @@
 }
 .alert{
     /* display: none;  */
-    margin-top: -55px;
+    margin-top: -24%;
+    width: 112%;
+    margin-left:-5%;
     border-radius: 0 !important;
     background-color: white; 
     border: solid 1px #8bc43e;
     padding: 0;
+    z-index: 999;
   
 }
 
@@ -110,6 +113,10 @@
     position: relative;
 }
 
+.login-main .pswrd-input {
+    position: relative;
+}
+
 .login-main .login-input input {
     margin-top: 8%;
     width: 100%;
@@ -130,9 +137,29 @@
     color: #333f48;
 }
 
-.login-main .login-input  .loginPassword {
+.login-main .pswrd-input input {
     margin-top: 2%;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #f3f9ea;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    border-bottom: 0.5px solid #a7a9ad;
+    padding: 4% 0; 
+    font-family: HelveticaNeueMed;
+    font-size: 13px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: 2.2px;
+    color: #333f48;
 }
+
+/* .login-main .login-input  .loginPassword {
+    margin-top: 2%;
+} */
 
 .login-main .login-input label {
     position: absolute;
@@ -151,9 +178,26 @@
     color: #333f48;
 }
 
-.login-main .login-input  .loginPswrdTxt {
+.login-main .pswrd-input label {
+    position: absolute;
+    /* top: 46%;     */
     top: 60%;   
+    transition: .5s;
+    left: 0%;
+    pointer-events: none;
+    font-family: HelveticaNeueMed;
+    font-size: 13px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: 2.2px;
+    color: #333f48;
 }
+
+/* .login-main .login-input  .loginPswrdTxt {
+    top: 60%;   
+} */
 
 .login-main .login-input input:focus ~ label,
 .login-main .login-input input:valid ~ label
@@ -168,13 +212,31 @@
     line-height: 1.2;
     letter-spacing: 1.7px;
     color: #cbcfd6;
+    /* border: 2px solid blue; */
 }
 
-.login-main .login-input .loginPassword :focus ~ label,
+.login-main .pswrd-input input:focus ~ label,
+.login-main .pswrd-input input:valid ~ label
+ {
+    top: 19%;
+    left: 0%;
+    font-family: HelveticaNeueMed;
+    font-size: 10px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: 1.7px;
+    color: #cbcfd6;
+    /* border: 2px solid yellow; */
+}
+
+/* .login-main .login-input input :focus ~ label,
 .login-main .login-input .loginPassword :valid ~ label
  {
-    top: 0%;
- }
+    margin-top: -50%;
+    border: 2px solid yellow;
+ } */
 
 
 .login-main .login-input .loginPassword:focus,
