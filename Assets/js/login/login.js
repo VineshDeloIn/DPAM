@@ -50,6 +50,7 @@ $(document).ready(function () {
 
         //Checking if email/mob is not empty
         if (emailMob == "" || !isEmailMobValid) {
+           //alert("here");
             $(".login-mail-err").html("Invalid Email / Mobile Number");
             isEmailMobValid = false;
         } else {
@@ -89,8 +90,9 @@ $(document).ready(function () {
         $('.loginPassword').val('');
         $('.remeberMeCbx').prop('checked', false);
 
-        if($(".loginForm").valid() && isEmailMobValid && isPasswordValid) {
-            $(".loginForm").submit();
+       // if($(".loginForm").valid() && isEmailMobValid && isPasswordValid) {
+            if( isEmailMobValid && isPasswordValid) {
+             $(".loginForm").submit();
             event.preventDefault();
             //alert('sumitted!');
         } else {
