@@ -165,7 +165,7 @@
 .login-main .login-input label {
     position: absolute;
     /* top: 46%;     */
-    top: 70%;   
+    top: 64%;   
     transition: .5s;
     left: 0%;
     pointer-events: none;
