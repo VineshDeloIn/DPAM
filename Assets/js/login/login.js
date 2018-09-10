@@ -1,18 +1,23 @@
 $(document).ready(function () {
     $('.loginBtnAdj').on('click',function () {
-        // alert('hi')
+        // alert('hi login');
         $('.landing-image').addClass("clicked");
         $('.landing-slide-content').addClass("slideadd");
         $('.loginBtnAdj:visible').hide();
         $('.singUpBtnAdj:visible').hide();
+        $('.login-main').show();
+        $('.signup-main-margin').hide();
+
     });
 
     $('.singUpBtnAdj').on('click',function () {
-        // alert('hi')
+       // alert('hi signup');
         $('.landing-image').addClass("clicked");
         $('.landing-slide-content').addClass("slideadd");
         $('.loginBtnAdj:visible').hide();
         $('.singUpBtnAdj:visible').hide();
+        $('.signup-main-margin').show();
+        $('.login-main').hide();
     });
 
     $('.landingSideCloseBtn').on('click',function(){
@@ -45,6 +50,7 @@ $(document).ready(function () {
 
         //Checking if email/mob is not empty
         if (emailMob == "" || !isEmailMobValid) {
+           //alert("here");
             $(".login-mail-err").html("Invalid Email / Mobile Number");
             isEmailMobValid = false;
         } else {
@@ -84,8 +90,9 @@ $(document).ready(function () {
         $('.loginPassword').val('');
         $('.remeberMeCbx').prop('checked', false);
 
-        if($(".loginForm").valid() && isEmailMobValid && isPasswordValid) {
-            $(".loginForm").submit();
+       // if($(".loginForm").valid() && isEmailMobValid && isPasswordValid) {
+            if( isEmailMobValid && isPasswordValid) {
+             $(".loginForm").submit();
             event.preventDefault();
             //alert('sumitted!');
         } else {
