@@ -33,6 +33,10 @@ $(document).ready(function () {
     //     $(".alert").css("margin-bottom", "0%");
     // }) 
 
+
+
+   
+
     $("input").focus(function () {
         $(".login-mail-err").html("");
         $(".login-pswrd-err").html("");
