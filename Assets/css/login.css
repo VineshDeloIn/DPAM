@@ -576,6 +576,17 @@
         transition: margin-left 0.5s ease;
     }
 
+    .landing-image {
+        height: 100vh;
+        float: left;
+        width: 100%;
+        /* overflow: auto; */
+        padding-bottom: 15%;
+        background-image: url("../../Assets/images/img_mobile_bg.jpg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    
+    }
     
 
     .landing-image.clicked {
@@ -584,13 +595,9 @@
         float: left;
         /* overflow: auto; */
         padding-bottom: 15%;
-        background-image: url("../../Assets/images/landingPageImage.png");
+        background-image: url("../../Assets/images/img_mobile_bg.jpg");
         background-size: 100% 100%;
         background-repeat: no-repeat;
-        -webkit-transition: margin-left 0.5s ease;
-        -moz-transition: margin-left 0.5s ease;
-        -o-transition: margin-left 0.5s ease;
-        transition: margin-left 0.5s ease;
     }
 
    .login-remember-txt {

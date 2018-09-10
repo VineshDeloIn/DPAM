@@ -35,19 +35,7 @@ $(document).ready(function () {
 
 
 
-    $("body").scroll(function() {
-        // if ($(this).scrollTop() > 0) {
-            
-        //     $('.landing-slide-content').addClass('slideadd').css({
-        //         height: $(".slideadd").height()-+"px"
-        //     });
-        // } else {
-        //     $('#head').removeClass('fixed').css({
-        //         width: $(this).width()
-        //     });
-        
-        // alert('scrolled!');
-    });
+   
 
     $("input").focus(function () {
         $(".login-mail-err").html("");
