@@ -35,9 +35,18 @@ html, body {
     line-height: 1.83;
     letter-spacing: 2px;
     text-align: center;
-    border: 0.5px solid #a7a9ad;
+    border: 1px solid #a7a9ad;
 }
-
+.loginBtnAdj:hover, .loginBtnAdj:focus, .loginBtnAdj:active {
+    color: red;
+    border: 1px solid red;
+    background-color: transparent;
+}
+.singUpBtnAdj:hover, .singUpBtnAdj:focus, .singUpBtnAdj:active {
+    color: red;
+    border: 1px solid red;
+    background-color: transparent;
+}
 .singUpBtnAdj {
     margin-top: 40px;
     color: white;
@@ -52,7 +61,7 @@ html, body {
     line-height: 1.83;
     letter-spacing: 2px;
     text-align: center;
-    border: 0.5px solid #a7a9ad;
+    border: 1px solid #a7a9ad;
 }
 
 
@@ -72,6 +81,7 @@ html, body {
     transition: width 0.5s ease;
 
 }
+
 
 .landing-image.clicked {
     height: 100vh;
