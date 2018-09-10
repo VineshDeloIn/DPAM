@@ -52,13 +52,13 @@
     line-height: normal;
     letter-spacing: normal;
     color: #333f48;
-    margin-top: 6.2%;
-    margin-bottom: 8.8%;
+    margin-top: 4%;
+    margin-bottom: 4.9%;
 }
 
 .signup-main .signup-input {
     position: relative;
-    margin-bottom: 6.0%;
+    margin-bottom: 5.0%;
 }
 
 .signup-main .signup-input input {
@@ -446,7 +446,7 @@
     letter-spacing: normal;
     text-align: center;
     color: #585d63;
-    margin-bottom:5.4%;
+    margin-bottom:2%;
     margin-left: 1.4%;
   
 }
@@ -606,15 +606,22 @@ margin-left: -47px;
 
 .signup-terms-and-condition {
     margin-top:-4%; 
-    margin-left:2%;
+    /* margin-left:2%; */
+    white-space: nowrap;
+    text-align: left;
+    font-size: 0.7em; 
 }
-.signup-fb-txt{
+
+.signup-clickable-text {
+    font-size: 0.7em; 
+}
+/* .signup-fb-txt{
     font-size: 0.6em; 
 }
 
 .signup-google-txt{
     font-size: 0.6em; 
-}
+} */
 
 }
 

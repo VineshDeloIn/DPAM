@@ -627,6 +627,9 @@
     width: 110%;
     }
 
+    .loginNoAcntTxt {
+        margin-top:8%;
+    }
     /* .login-fb-txt {
         font-size: 0.6em; 
     }
