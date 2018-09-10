@@ -470,7 +470,7 @@
     
 
     .landing-image.clicked {
-        height: 85vh;
+        height: 100vh;
         width: 100%;
         float: left;
         /* overflow: auto; */
