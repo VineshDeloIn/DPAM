@@ -90,6 +90,7 @@ html, body {
     height: 100vh;
     margin-left: 110%;
     padding-bottom: 20%;
+    bottom: 20%;
     position: relative;
     background-size: 80% 100%;
     background-repeat: no-repeat;
