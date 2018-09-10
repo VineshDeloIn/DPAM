@@ -1,11 +1,11 @@
 html, body {
     height: 100%;
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: auto;
 }
 
 .landing {
-    min-height: 85%;
+    min-height: 100%;
 }
 
 .conOfRentAdj {
@@ -41,7 +41,7 @@ html, body {
 }
 
 .landing-image {
-    height: 85vh;
+    height: 100vh;
     float: left;
     width: 100%;
     /* overflow: auto; */
@@ -57,7 +57,7 @@ html, body {
 }
 
 .landing-image.clicked {
-    height: 85vh;
+    height: 100vh;
     width: 66.6%;
     float: left;
     /* overflow: auto; */

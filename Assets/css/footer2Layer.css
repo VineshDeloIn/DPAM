@@ -1,27 +1,37 @@
 .footer {
     position: relative;
-    height: 15%;
-    /* margin-top: 10%; */
-    color: whitesmoke;
+    height: 20%;
+    /* margin-top: 20%; */
+    /* color: #f3f5f7; */
     font-size: 11px;
     white-space: normal;
 }
 
 .footer-group-1 {
     font-family: "HelveticaNeueMed";
+    font-size: 10px;
     background-color: #333f48;
     height: 63%;
+    letter-spacing: 1.7px;
     /* padding-bottom: ; */
 }
 
 .footer-group-2 {
     font-family: "HelveticaNeueReg";
+    font-size: 12px;
     background-color: #101820;
     height: 37%;
+    letter-spacing: 1.7px;
+}
+
+.TcAdj {
+    letter-spacing: 1.7px;
+    color: #f3f5f7;
 }
 
 .dubaiColAdj {
     letter-spacing: 2px;
+    color: #ffffff;
 }
 
 .fbSize{
@@ -43,17 +53,19 @@
 }
 
 .midCols1Adj {
+    color: #e4e6e9;
     display: flex;
     justify-content: flex-end;
 }
 
 .midCols2Adj {
+    color: #e4e6e9;
     display: flex;
     justify-content: flex-end;
 }
 
 .footerTopAdj {
-    margin-top: 0.5%;
+    margin-top: 1%;
 }
 
 @media screen and (min-width: 300px) and (orientation:potrait) {
