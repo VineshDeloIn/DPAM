@@ -17,7 +17,7 @@
     padding-left: 8%;
     padding-right:8%;
     padding-top: 8%; 
-    height: 74vh;
+    height: 89vh;
     padding-bottom: 11vh; 
     display: none;
    
@@ -605,14 +605,14 @@ margin-left: -47px;
        background-image: url("../../Assets/images/landingPageImage.png");
        background-size: 100% 100%;
        background-repeat: no-repeat;
+}
+
    } */
    .signup-main-button {
     margin-top:-3%;
   }
    /* .loginBtnAdj {
     vertical-align: middle; 
-}
-
 .logoTopAdj {
     margin-top: 2%;
 } */
