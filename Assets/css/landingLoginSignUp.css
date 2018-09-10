@@ -110,7 +110,7 @@ html, body {
     margin-left: 66.5%;   
     padding-bottom: 15%;
     bottom: 15%;
-    position: absolute;
+    position: relative;
     z-index: 1;
     width: 33.5%;
     -webkit-transition: margin-left 0.5s ease;

@@ -35,7 +35,8 @@
  .login-illustration img {
    /* border: 2px solid yellow;  */
     width: 100%;
-    height: 100%;
+    height: 140%;
+    margin-top: -33%;
 } 
 
 .login-illustration {
