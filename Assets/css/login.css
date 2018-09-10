@@ -412,7 +412,7 @@
     letter-spacing: 2px;
     text-align: center;
     color: #585d63;
-    padding: 4% 0%;
+    padding: 3% 0%;
     border: 0.5px solid #a7a9ad;
 }
 
@@ -518,7 +518,8 @@
     } */
 
     .login-main {
-        height: 62vh;
+        height: 76vh;
+        overflow-y: scroll;
     } 
 
     .login-illustration {
@@ -536,7 +537,7 @@
     }
     
     .landing-slide-content.slideadd {
-         height: 73vh; 
+         height: 87vh; 
         overflow: hidden;
         margin-left: 10%;
         margin-right: 10%;
@@ -582,7 +583,8 @@
    }
 
    .alert {
-       margin-top: -60px;
+       margin-top: -80px;
+       padding-top:0%;
    }
 
    .reg-success-msg {
