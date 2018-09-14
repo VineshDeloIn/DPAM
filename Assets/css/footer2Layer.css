@@ -1,6 +1,6 @@
 .footer {
     position: relative;
-    height: 20%;
+    height: 25%;
     /* margin-top: 20%; */
     /* color: #f3f5f7; */
     font-size: 11px;
@@ -25,7 +25,7 @@
 }
 
 .rowheightAdj {
-    margin-top: 0.6%;
+    margin-top: 1%;
 }
 
 .TcAdj {
@@ -71,7 +71,7 @@
 }
 
 .footerTopAdj {
-    margin-top: 1.2%;
+    margin-top: 2%;
 }
 
 @media screen and (min-width: 300px) and (orientation:potrait) {
