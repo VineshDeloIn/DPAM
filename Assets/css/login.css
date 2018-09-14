@@ -57,7 +57,7 @@
 } */
 
 .login-text {
-    margin-top: 9.4%;
+    margin-top: 7%;
     font-family: HelveticaNeueMed;
     font-size: 26px;
     font-weight: 500;
@@ -119,7 +119,7 @@
 }
 
 .login-main .login-input input {
-    margin-top: 8%;
+    margin-top: 6%;
     width: 100%;
     box-sizing: border-box;
     background-color: #f3f9ea;
@@ -165,7 +165,7 @@
 .login-main .login-input label {
     position: absolute;
     /* top: 46%;     */
-    top: 70%;   
+    top: 64%;   
     transition: .5s;
     left: 0%;
     pointer-events: none;
@@ -627,6 +627,9 @@
     width: 110%;
     }
 
+    .loginNoAcntTxt {
+        margin-top:8%;
+    }
     /* .login-fb-txt {
         font-size: 0.6em; 
     }

@@ -1,10 +1,91 @@
-body, html { 
+body, html {
     width: 100%;
     /* height: 100%; */
     padding: 0;
     margin: 0;
 }
-.headerBanner {
+
+.homeContent {
+    height: 1730px;
+    ;
+}
+
+.notify__num {
+    background-color: #fa3e3e;
+    border-radius: 8px;
+    color: white;
+   
+    padding: 1px 3px;
+    font-size: 10px;
+    
+    position: absolute; /* Position the badge within the relatively positioned button */
+    top: -3px;
+    right: -1px;
+}
+
+.bodyBanner {
     width: 100%;
     height: 300px;
+    top: 0px;
+    position: absolute;
+}
+
+.homeNavTopAdj {
+    margin: 10px 0px 5px 0px;
+}
+
+.componentsofHome {
+    position: static;
+}
+
+.headerNav {
+    z-index: 10;
+    position: sticky;
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+.navContent {
+    width: 43px;
+    height: 15px;
+    font-family: HelveticaNeueReg;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+.topNav a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 30px 16px 14px 16px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 12px;
+}
+.homeIconAdj{
+    text-align: center;
+    padding: 25px 16px 14px 16px;
+}
+
+.homeIconAdj button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.topNav a:hover {
+    border-bottom: orange solid 1px;
+}
+.iconSizeAdj {
+    height: 15px;
+    width: 15px;
+}
+.headerNavOnScroll {
+    top: 0;
+    height: 80px;
+    background-color: #243745;
 }

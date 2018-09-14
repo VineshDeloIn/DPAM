@@ -8,36 +8,74 @@
 
     <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="Assets/css/footer2Layer.css">
-    <link rel="stylesheet" href="Assets/css/customFont.css">  
+    <link rel="stylesheet" href="Assets/css/customFont.css">
     <link rel="stylesheet" href="Assets/css/homePage.css">
     <script src="Assets/js/jquery-3.3.2.min.js"></script>
     <script src="Assets/js/popper.min.js"></script>
     <script src="Assets/js/bootstrap.min.js"></script>
-     <script src="Assets/js/jqueryValidation/jquery.validate.min.js"></script>
+    <script src="Assets/js/jqueryValidation/jquery.validate.min.js"></script>
+    <script src="Assets/js/homePage/homepage.js"></script>
     <title>Home Page</title>
 </head>
 
 <body>
-    <header>
-        <div class="container-fluid">
-            <div class="row">
-                <img class="headerBanner" src="./Assets/images/img_banner_home.jpg" alt="pathIssue">
+    <div class="headerNav">
+        <div class="row homeNavTopAdj">
+            <div class="col-2 col-sm-12 col-lg-2">
+                <img src="Assets/images/dpam_logo.svg" alt="pathIssue">
+            </div>
+
+            <div class="col-7 col-lg-7 topNav navContent">
+                <a href="#home" class="activeNav">HOME</a>
+                <a href="#service">SERVICES</a>
+                <a href="#aminities">AMENITIES</a>
+                <a href="#events">EVENTS</a>
+                <a href="#payment">PAYMENT HISTORY</a>
+                <a href="#me">ME</a>
+                <a href="#mydocs">MY DOCUMENTS</a>
+            </div>
+            <div class="col-1 col-sm-12 col-lg-1 navContent">
+            </div>
+            <div class="col-2 col-sm-12 col-lg-2 navContent">
+                <div class="row homeIconAdj">
+                    <div class="col col-lg-3">
+                       <button><img class="iconSizeAdj" src="./Assets/images/homeSearchIcon.png" alt=""></button>
+                    </div>
+                    <div class="col col-lg-3">
+                       <button><img class="iconSizeAdj" src="./Assets/images/homeNotificationIcon.png" alt=""><span class="notify__num">2</span></button> 
+                    </div>
+                    <div class="col col-lg-3">
+                       <button><img class="iconSizeAdj" src="./Assets/images/homeSettingIcon.png" alt=""></button>                    </div>
+                    <div class="col col-lg-3">
+                       <button><img class="iconSizeAdj" src="./Assets/images/homeLogoutIcon.png" alt=""></button>
+
+                    </div>
+                </div>
             </div>
         </div>
-    </header>
-    <div class="container">
+    </div>
+    <div class="homeContent">
+        <div class="container-fluid">
+            <div class="row">
+                <img class="bodyBanner" src="./Assets/images/img_banner_home.jpg" alt="pathIssue">
+            </div>
 
-        <div class="row">
-            Hello World!
+            <div class="componentsofHome">
+                <div class="container">
+                    <div class="row">
+                        Hello World!
+                    </div>
+                </div>
+            </div>
+
         </div>
-
     </div>
 
-    <footer class="footer">
+    <div class="footer">
         <div class="container-fluid footer-group-1">
             <div class="row">
                 <div class="col-sm-10 col-lg-12">
-                    <div class="row">
+                    <div class="row rowheightAdj">
                         <div class="col-lg-7">
                         </div>
                         <div class="col-9 col-sm-9 col-md-4 col-lg-4">
@@ -50,7 +88,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-3 col-sm-2 col-md-1 col-lg-1 fbColAdj footerTopAdj">
+                        <div class="col-3 col-sm-2 col-md-1 col-lg-1 fbColAdj">
                             <img src="./Assets/images/fb-logo.png" alt="avatar" class="fbSize">
                         </div>
                     </div>
@@ -58,7 +96,7 @@
 
 
                 <div class="col-sm-10 col-lg-12">
-                    <div class="row">
+                    <div class="row rowheightAdj">
                         <div class="col-lg-7">
                         </div>
                         <div class="col-9 col-sm-9 col-md-4 col-lg-4">
@@ -71,7 +109,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-3 col-sm-2 col-md-1 col-lg-1 instColAdj footerTopAdj">
+                        <div class="col-3 col-sm-2 col-md-1 col-lg-1 instColAdj">
                             <img src="./Assets/images/insta-logo.png" alt="avatar" class="instaSize">
                         </div>
                     </div>
@@ -81,11 +119,10 @@
         </div>
         <div class="container-fluid footer-group-2">
             <div class="row">
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6 dubaiColAdj footerTopAdj">
-                    &copy; 2018. DUBAI ASSET MANAGEMENT BY&nbsp;
+                <div class="col-12 col-sm-8 col-md-6 col-lg-6 dubaiColAdj footerTopAdj">
+                    &copy; 2018. DUBAI ASSET MANAGEMENT BY &nbsp;
                     <b>DUBAI HOLDING</b>.
                 </div>
-
                 <div class="col-6 col-sm-6 col-md-1 col-lg-1 midCols1Adj footerTopAdj">
 
                 </div>
@@ -95,12 +132,12 @@
                 <div class="col-6 col-sm-6 col-md-2 col-lg-2 fbColAdj footerTopAdj">
 
                 </div>
-                <div class="col-6 col-sm-6 col-md-2 col-lg-2 TcAdj footerTopAdj">
+                <div class="col-6 col-sm-8 col-md-2 col-lg-2 footerTopAdj TcAdj">
                     TERMS AND CONDITIONS
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
 </body>
 
 </html>

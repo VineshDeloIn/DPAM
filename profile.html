@@ -6,80 +6,73 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Profile</title>
 
-    <link rel="stylesheet" href="Assets/css/customFont.css">
     <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Assets/css/footer2Layer.css">
+    <link rel="stylesheet" href="Assets/css/customFont.css">
     <link rel="stylesheet" href="Assets/css/profile.css">
-    <script src="Assets/js/popper.min.js"></script>
+   
     <script src="Assets/js/jquery-3.3.2.min.js"></script>
+    <script src="Assets/js/popper.min.js"></script>
     <script src="Assets/js/bootstrap.min.js"></script>
 
 </head>
 <body>
-    <div class="profile-header">
-     <div class="row">
-                
-            <div class="col-2">
-                        <div class="col-12 col-sm-12 col-md-4 col-lg-4">
-                            <img src="./Assets/images/DubaiAsset.png" alt="Avatar" style="width: 150px" >
+        <div class="container-fluid profile-header">
+                <img src="Assets/images/profile-banner.jpg" alt="">
+       </div>
+       <div class="ll">
+        <div class="container profile-summary">
+            <div class="row  mt-4 mb-4 ">
+                <div class="col-3 col-sm-3 col-md-3 col-lg-3 profile-user-pic">
+                    
+                            <img src="Assets/images/profile-pic.png" class="rounded-circle" alt="">
+                   
+                     <span class="cam">
+                            <img src="Assets/images/profile-pic-edit.png"  alt="">
+                    </span> 
+                    
+                    <input class="file-upload" type="file" accept="image/*"/>
+                </div>
+                <div class="col-9 col-sm-9 col-md-9 col-lg-9">
+                    <div class="row mt-5">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                            <p class="profile-user-name">Mr. James Thomas</p>
+                            <p class="profile-fields">Resident of sanushka@deloitte.com</p>
                         </div>
-
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+                                <p class="profile-fields">Mobile Number</p>
+                                <p class="profile-fields-value">971-551647269</p>
+                            </div>
+                            <div class="col-4 col-sm-4  col-md-4 col-md-offset-2 col-lg-4 col-lg-offset-2">
+                                    <p class="profile-fields">Renewal Date</p>
+                                    <p class="profile-fields-value">21/09/2018</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-lg-4"></div>
+                </div>
             </div>
-            <div class="col-8 row">
-                    <div >
-                            Home
-                      </div>
-                      <div class="margin-div">
-                            Services
-                       </div>
-                       <div class="margin-div" >
-                            Amenities
-                       </div>
-                       <div class="margin-div">
-                             Events
-                       </div>
-                       <div class="margin-div">
-                            Payment History
-                       </div>
-                       <div class="margin-div">
-                             Me
-                       </div>
-                       <div class="margin-div">
-                            My Documents
-                       </div>
 
-            </div>
-            <div class="col-2 row">
-                       <div class="col-3 col-sm-3 col-md-3 col-lg-3 ">
-                            <img src="./Assets/images/searchIcon.png" alt="Search"  style="width: 45px">
-                       </div>
-                       <div class="col-3 col-sm-3 col-md-3 col-lg-3 ">
-                             <img src="./Assets/images/searchIcon.png" alt="Search"  style="width: 45px" >
-                       </div>
-                       <div class="col-3 col-sm-3 col-md-3 col-lg-3">
-                            <img src="./Assets/images/searchIcon.png" alt="Search"  style="width: 45px">
-                       </div>
-                       <div class="col-3 col-sm-3 col-md-3 col-lg-3 ">
-                            <img src="./Assets/images/searchIcon.png" alt="Search"  style="width: 45px">
-                       </div>
-
-
-            </div>
-    </div>
-    <div class="row">
-            <img src="./Assets/images/DubaiAsset.png" alt="Avatar" style="width: 150px" >
-     </div>
-     </div>
-    <div class="modal-dialog text-center">
-        <div class="col-sm-9 user-basic-info">
-            <div class="modal-content">
-                <div class="col-12 user-img">
-                        <img src="./Assets/images/userPic.png" alt="Avatar" >
+        </div>
+        <div class="container mt-5 other">
+                <div id="accordion" class="accordion">
+                    <div class="card mb-0">
+                        <div class="card-header collapsed" data-toggle="collapse" href="#collapseOne">
+                            <a class="card-title">
+                                Item 1
+                            </a>
+                        </div>
+                        <div id="collapseOne" class="card-body collapse" data-parent="#accordion" >
+                            <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                                aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
+                                craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </p>
+                        </div>
+                    
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="profile footer">
-        
-    </div>
 </body>
 </html>
