@@ -19,8 +19,8 @@ body, html {
     font-size: 10px;
     
     position: absolute; /* Position the badge within the relatively positioned button */
-    top: -3px;
-    right: -1px;
+    top: 0;
+    right: 0;
 }
 
 .bodyBanner {
