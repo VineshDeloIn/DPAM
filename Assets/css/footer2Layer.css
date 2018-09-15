@@ -24,8 +24,12 @@
     letter-spacing: 1.7px;
 }
 
-.rowheightAdj {
-    margin-top: 0.6%;
+.rowheight1Adj {
+    margin-top: 2%;
+}
+.rowheight2Adj {
+    margin-top: 1%;
+    margin-bottom: 2%;
 }
 
 .TcAdj {
@@ -71,9 +75,12 @@
 }
 
 .footerTopAdj {
-    margin-top: 1.2%;
+    margin-top: 2%;
 }
 
+.footer2topAdj {
+    margin: 1% 0%;;
+}
 @media screen and (min-width: 300px) and (orientation:potrait) {
     .footerTopAdj {
         margin-top: 1%;
