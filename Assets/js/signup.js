@@ -32,7 +32,7 @@ if(!validatePhone(email)&&(!validateEmail(email)))
 
 // function to show password
 
-  $('#sign-up-show-password').click(function() {
+  $('.sign-up-show-password').click(function() {
     passtoTextSignUp();
   
   });
