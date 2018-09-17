@@ -53,12 +53,12 @@
     letter-spacing: normal;
     color: #333f48;
     padding-top: 8%;
-    padding-bottom: 10.9%;
+    padding-bottom: 7.9%;
 }
 
 .signup-main .signup-input {
     position: relative;
-    margin-bottom: 10.0%;
+    margin-bottom: 8.0%;
 }
 
 .signup-main .signup-input input {
@@ -578,6 +578,18 @@ margin-left: -47px;
    
         margin-left: 91%;
       }
+      .signup-text {
+        font-family: HelveticaNeueMed;
+        font-size: 19px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #333f48;
+         padding-top: 1%; 
+        padding-bottom: 7.9%;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -613,13 +625,19 @@ margin-left: -47px;
 .signup-clickable-text {
     font-size: 0.7em; 
 }
-/* .signup-fb-txt{
-    font-size: 0.6em; 
-}
 
-.signup-google-txt{
-    font-size: 0.6em; 
-} */
+.signup-text {
+    font-family: HelveticaNeueMed;
+    font-size: 19px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #333f48;
+     padding-top: 1%; 
+    padding-bottom: 7.9%;
+}
 
 }
 
