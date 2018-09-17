@@ -19,16 +19,17 @@ function validateShowPswrd(newPswrd) {
 // function to check password strength
 function validatePswrdStrength(pass){
     if(pass.length<=8){
-      $(".createPwdStrength").html("Weak");
-      $(".createPwdStrength").css("color", "red");
+
+      $(".sign-up-pwd-strength").html("Weak");
+      $(".sign-up-pwd-strength").css("color", "red");
      
     }else if(pass.length>8 && pass.length<=12){
-      $(".createPwdStrength").html("Medium");
-      $(".createPwdStrength").css("color", "green");
+      $(".sign-up-pwd-strength").html("Medium");
+      $(".sign-up-pwd-strength").css("color", "green");
      
     }else if(pass.length>12){
-      $(".createPwdStrength").html("Strong");
-      $(".createPwdStrength").css("color", "green");
+      $(".sign-up-pwd-strength").html("Strong");
+      $(".sign-up-pwd-strength").css("color", "green");
   
   
     }
@@ -37,16 +38,16 @@ function validatePswrdStrength(pass){
 // function to check password strength
 function checkPasswordStrength(pass){
     if(pass.length<=8){
-      $(".pwdStrengthSignUp").html("Weak");
-      $(".pwdStrengthSignUp").css("color", "red");
+      $(".sign-up-pwd-strength").html("Weak");
+      $(".sign-up-pwd-strength").css("color", "red");
      
     }else if(pass.length>8 && pass.length<=12){
-      $(".pwdStrengthSignUp").html("Medium");
-      $(".pwdStrengthSignUp").css("color", "green");
+      $(".sign-up-pwd-strength").html("Medium");
+      $(".sign-up-pwd-strength").css("color", "green");
      
     }else if(pass.length>12){
-      $(".pwdStrengthSignUp").html("Strong");
-      $(".pwdStrengthSignUp").css("color", "green");
+      $(".sign-up-pwd-strength").html("Strong");
+      $(".sign-up-pwd-strength").css("color", "green");
   
   
     }
