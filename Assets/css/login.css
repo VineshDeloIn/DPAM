@@ -539,8 +539,18 @@
         margin-top: 2%;
     }
 
+    .illustrationAdj {
+        /* bottom: 0px; */
+        height: 130px;
+        width: 100%;
+        position: absolute;
+        /* margin-left: 0; */
+        margin-bottom: 0;
+        bottom:0;
+    }
+
     .landing-slide-content {
-        height: 87vh; 
+        height: 76vh; 
         overflow: hidden;
         margin-left: 110%;
         margin-right: 180%;
@@ -559,7 +569,7 @@
     }
     
     .landing-slide-content.slideadd {
-        height: 87vh; 
+        height: 76vh; 
         overflow: hidden;
         margin-left: 10%;
         margin-right: 10%;
