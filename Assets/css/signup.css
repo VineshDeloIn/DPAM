@@ -8,15 +8,15 @@
 .signup-right-pane {
     width: 33.5%;
     height: 85vh;
-    background-color: #f3f9ea; 
+    background-color: #f7f7f7; 
 }
 
 .signup-main {
     width: 100%;
-    background-color: #f3f9ea;
+    background-color: #f7f7f7;
     padding-left: 8%;
     padding-right:8%;
-    height: 85vh;
+    height: 100vh;
     padding-bottom: 11vh; 
     display: none;
    
@@ -34,13 +34,13 @@
 .signup-illustration {
     
     height: 11vh;
-    background-color: #f3f9ea;
+    background-color: #f7f7f7;
 
 }
 
 .signupForm {
-    background: #ffffff;
-  background-color: #f3f9ea;
+ 
+  background-color: #f7f7f7;
 }
 
 .signup-text {
@@ -52,19 +52,19 @@
     line-height: normal;
     letter-spacing: normal;
     color: #333f48;
-    margin-top: 4%;
-    margin-bottom: 4.9%;
+    padding-top: 8%;
+    padding-bottom: 10.9%;
 }
 
 .signup-main .signup-input {
     position: relative;
-    margin-bottom: 5.0%;
+    margin-bottom: 10.0%;
 }
 
 .signup-main .signup-input input {
     width: 100%;
     box-sizing: border-box;
-    background-color: #f3f9ea;
+    background-color: #f7f7f7;
     box-shadow: none;
     outline: none;
     border: none;

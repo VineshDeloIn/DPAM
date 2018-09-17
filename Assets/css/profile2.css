@@ -1,0 +1,25 @@
+body {
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    }
+    .image-div {
+    height: 300px;
+    width: 100%;
+    background-color: blueviolet;
+    }
+    .detail-div {
+    background-color: rgb(2, 26, 32);
+    height: 600px;
+    width: 100%;
+    }
+    .middle-div { 
+        border: 1px solid black;
+        background: aqua;
+        width: 600px; 
+        top: 10%;
+        height: 300px; 
+        position: absolute;
+    }
+    

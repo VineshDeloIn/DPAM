@@ -216,18 +216,10 @@
     display: none;
 }
 
-.profile-dependent-content-head {
-    border-bottom: none;
-}
-
-.profile-dependent-content-card {
-    border-radius: 0%;
-}
-
 .profile-family-div {
-    border: 1px solid grey;
-    padding-top: 1%;
-    padding-bottom: 2%;
+border: 1px solid grey;
+padding-top: 1%;
+padding-bottom: 2%;
 }
 
 .remove-profile-family {
