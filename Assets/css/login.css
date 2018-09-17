@@ -72,21 +72,21 @@
     border-radius: 0 !important;
     background-color: white;
     border: solid 1px #8bc43e;
-    padding: 0;
+    padding: 10px;
     z-index: 10;
     position: absolute;
 }
 
 .alert-error {
     /* display: none;  */
-    word-wrap: break-word;
+    /* word-wrap: break-word; */
     margin-top: -23%;
     width: 110%;
     margin-left: -8%;
     border-radius: 0 !important;
     background-color: white;
     border: solid 1px red;
-    padding: 0;
+    padding: 10px;
     z-index: 10;
     position: absolute;
 }
