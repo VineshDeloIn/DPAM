@@ -1,5 +1,7 @@
 function passtoTextSignUp() {
-    var x = document.getElementById("passwordSignUp");
+    var firstElement = document.getElementsByClassName("passwordSignUp");
+
+    var x = firstElement[0];
     if (x.type === "password") {
         x.type = "text";
     } else {
