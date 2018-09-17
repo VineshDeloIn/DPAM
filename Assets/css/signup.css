@@ -592,14 +592,12 @@ margin-left: -47px;
   }
 
 .signup-main {
-    height: 76vh;
+    height: 87vh;
     padding-left: 1%;
     padding-right: 1%;
 } 
 
-.signup-illustration {
-    height: 11vh;
-}
+
 .already-account {
     margin-top: 2%;
 }
