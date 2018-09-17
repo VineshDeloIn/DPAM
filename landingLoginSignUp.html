@@ -127,15 +127,25 @@
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
 
                     <h2 class="login-text">Login</h2>
-                    <div class="alert" id="signup-success" role="alert">
+                    <div class="alert alert-error" id="signup-error" role="alert">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true" class="signup-success-close">&times;</span>
                         </button>
-                        <p class="reg-success-msg">
-                            <img class="img-responsive reg-success-tick" src="Assets/images/toasterTick.svg" alt=""> You have successfully registered with Dubai AM!
-                            <strong>Please login</strong>
-                        </p>
+                        <div class="reg-success-msg">
+                            <img class="img-responsive reg-success-img" src="Assets/images/toasterError.svg" alt=""> Generic Error Message!<br/>
+                        </div>
                     </div>
+
+                    <div class="alert" id="signup-error" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true" class="signup-success-close">&times;</span>
+                        </button>
+                        <div class="reg-success-msg">
+                            <img class="img-responsive reg-error-img" src="Assets/images/toasterSuccess.svg" alt=""> You have successfully registered with Dubai AM!
+                            <strong>Please login</strong>
+                        </div>
+                    </div>
+
                     <form class="loginForm" action="" novalidate>
 
 

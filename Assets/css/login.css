@@ -1,5 +1,3 @@
-
-
 /* html , body {
     height: 100%;
 } */
@@ -10,13 +8,13 @@
     background-color: #f3f9ea; 
 } */
 
- .landingSideCloseBtn {
-     /* margin-top: 5%; */
+.landingSideCloseBtn {
+    /* margin-top: 5%; */
     margin-left: 98%;
-     position: relative; 
+    position: relative;
     margin-top: 5%;
     cursor: pointer;
-} 
+}
 
 .login-main {
     width: 100%;
@@ -30,25 +28,22 @@
     margin: 0%;
     /* margin-bottom: 11vh; */
     display: none;
-      /* border: 2px solid red;   */
+    /* border: 2px solid red;   */
 }
 
-
- .login-illustration img {
-   /* border: 2px solid yellow;  */
+.login-illustration img {
+    /* border: 2px solid yellow;  */
     width: 100%;
     height: 100%;
-  
-} 
+}
 
 .login-illustration {
     /* padding-bottom: -50%; */
-    width:100%;
-    height:15vh;
-    position:absolute;
+    width: 100%;
+    height: 15vh;
+    position: absolute;
     /* background-color: #f3f9ea; */
-     /* border: 2px solid yellow;   */
-
+    /* border: 2px solid yellow;   */
 }
 
 /* .loginForm {
@@ -67,25 +62,39 @@
     letter-spacing: normal;
     color: #333f48;
 }
-.alert{
+
+.alert {
     /* display: none;  */
     margin-top: -23%;
+    word-wrap: break-word;
     width: 110%;
-    margin-left:-8%;
+    margin-left: -8%;
     border-radius: 0 !important;
-    background-color: white; 
+    background-color: white;
     border: solid 1px #8bc43e;
     padding: 0;
     z-index: 10;
-    position : absolute;
-  
+    position: absolute;
+}
+
+.alert-error {
+    /* display: none;  */
+    word-wrap: break-word;
+    margin-top: -23%;
+    width: 110%;
+    margin-left: -8%;
+    border-radius: 0 !important;
+    background-color: white;
+    border: solid 1px red;
+    padding: 0;
+    z-index: 10;
+    position: absolute;
 }
 
 /* .signup-success {
     background-color: #ffffff;
     padding: 0% 0%;
 } */
-
 
 .reg-success-msg {
     display: inline-block;
@@ -104,11 +113,15 @@
     margin-right: 5px;
 }
 
-.reg-success-tick {
+.reg-success-img {
     float: left;
     margin-right: 2%;
 }
 
+.reg-error-img {
+    float: left;
+    margin-right: 2%;
+}
 
 .login-main .login-input {
     position: relative;
@@ -127,7 +140,7 @@
     outline: none;
     border: none;
     border-bottom: 0.5px solid #a7a9ad;
-    padding: 4% 0; 
+    padding: 4% 0;
     font-family: HelveticaNeueMed;
     font-size: 13px;
     font-weight: 500;
@@ -147,7 +160,7 @@
     outline: none;
     border: none;
     border-bottom: 0.5px solid #a7a9ad;
-    padding: 4% 0; 
+    padding: 4% 0;
     font-family: HelveticaNeueMed;
     font-size: 13px;
     font-weight: 500;
@@ -165,7 +178,7 @@
 .login-main .login-input label {
     position: absolute;
     /* top: 46%;     */
-    top: 64%;   
+    top: 64%;
     transition: .5s;
     left: 0%;
     pointer-events: none;
@@ -182,7 +195,7 @@
 .login-main .pswrd-input label {
     position: absolute;
     /* top: 46%;     */
-    top: 60%;   
+    top: 60%;
     transition: .5s;
     left: 0%;
     pointer-events: none;
@@ -200,9 +213,7 @@
     top: 60%;   
 } */
 
-.login-main .login-input input:focus ~ label,
-.login-main .login-input input:valid ~ label
- {
+.login-main .login-input input:focus~label, .login-main .login-input input:valid~label {
     top: 40%;
     left: 0%;
     font-family: HelveticaNeueMed;
@@ -216,9 +227,7 @@
     /* border: 2px solid blue; */
 }
 
-.login-main .pswrd-input input:focus ~ label,
-.login-main .pswrd-input input:valid ~ label
- {
+.login-main .pswrd-input input:focus~label, .login-main .pswrd-input input:valid~label {
     top: 19%;
     left: 0%;
     font-family: HelveticaNeueMed;
@@ -239,10 +248,8 @@
     border: 2px solid yellow;
  } */
 
-
-.login-main .login-input .loginPassword:focus,
-.login-main .login-input .loginPassword:valid {
-   border-bottom: 1px solid grey; 
+.login-main .login-input .loginPassword:focus, .login-main .login-input .loginPassword:valid {
+    border-bottom: 1px solid grey;
 }
 
 .login-pswrd-err {
@@ -257,7 +264,6 @@
     text-align: left;
     left: 0%;
     margin-top: 1%;
-
 }
 
 .login-mail-err {
@@ -281,9 +287,8 @@
     /* margin-bottom:4%; */
 }
 
-
-
 /* The container */
+
 .login-remember-txt {
     display: block;
     position: relative;
@@ -304,6 +309,7 @@
 }
 
 /* Hide the browser's default checkbox */
+
 .login-remember-txt input {
     position: absolute;
     opacity: 0;
@@ -311,6 +317,7 @@
 }
 
 /* Create a custom checkbox */
+
 .login-remember-chck {
     position: absolute;
     top: 0;
@@ -318,15 +325,17 @@
     text-align: left;
     width: 18px;
     height: 17px;
-    background-color:#e4eaec;
+    background-color: #e4eaec;
 }
 
 /* On mouse-over, add a grey background color */
-.login-remember-txt:hover input ~ .login-remember-chck {
+
+.login-remember-txt:hover input~.login-remember-chck {
     background-color: #ccc;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
+
 .login-remember-chck:after {
     content: "";
     position: absolute;
@@ -334,11 +343,13 @@
 }
 
 /* Show the checkmark when checked */
-.login-remember-txt input:checked ~ .login-remember-chck:after {
+
+.login-remember-txt input:checked~.login-remember-chck:after {
     display: block;
 }
 
 /* Style the checkmark/indicator */
+
 .login-remember-txt .login-remember-chck:after {
     left: 8px;
     top: 4px;
@@ -352,11 +363,11 @@
 }
 
 .login-forgot-pswrd {
-   padding: 0 !important;
-   margin: 0   !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
-.login-forgot-pswrd a{
+.login-forgot-pswrd a {
     margin-top: 2%;
     font-family: HelveticaNeueReg;
     font-size: 12px;
@@ -369,8 +380,6 @@
     float: right;
     color: #23527c;
 }
-
-
 
 .login-button {
     margin-top: 8%;
@@ -422,7 +431,6 @@
     color: #585d63;
 }
 
-
 .login-fb-google-div {
     margin-top: 2.5%;
 }
@@ -448,32 +456,32 @@
     letter-spacing: 2px;
     color: #585d63;
 }
- 
+
 .fbLogin {
     float: left;
-    width: 105%; 
-    border-radius: 0 !important; 
+    width: 105%;
+    border-radius: 0 !important;
     border: 0.5px solid #a7a9ad;
     padding: 6% 3%;
- }
- 
- .fbLogin:hover, .fbLogin:focus, .fbLogin:active {
-     background-color: #F2F2F2;
- }
- 
- .googleLogin {
-     float:right;
-     width: 105%; 
-     border-radius: 0 !important; 
-     border: 0.5px solid #a7a9ad;
-     padding: 6% 3%;
- }
- 
- .googleLogin:hover, .googleLogin:focus, .googleLogin:active {
-     background-color: #F2F2F2;
- }
+}
 
- .loginNoAcntTxt{
+.fbLogin:hover, .fbLogin:focus, .fbLogin:active {
+    background-color: #F2F2F2;
+}
+
+.googleLogin {
+    float: right;
+    width: 105%;
+    border-radius: 0 !important;
+    border: 0.5px solid #a7a9ad;
+    padding: 6% 3%;
+}
+
+.googleLogin:hover, .googleLogin:focus, .googleLogin:active {
+    background-color: #F2F2F2;
+}
+
+.loginNoAcntTxt {
     text-align: center;
     margin-top: 10%;
     font-family: HelveticaNeueReg;
@@ -485,7 +493,7 @@
     letter-spacing: normal;
     text-align: center;
     color: #585d63;
-    margin-bottom:0%;
+    margin-bottom: 0%;
 }
 
 .loginSignUpTxt {
@@ -500,12 +508,10 @@
     color: #23527c;
 }
 
-
 @media screen and (min-width: 300px) and (orientation:potrait) {
     .logoTopAdj {
         margin-top: 10px;
     }
-    
 }
 
 @media screen and (max-width: 480px) {
@@ -517,14 +523,12 @@
     .landing {
         min-height: 77%;
     } */
-
     .login-main {
         height: 76vh;
         overflow-y: scroll;
         padding-left: 1%;
         padding-right: 1%;
-    } 
-
+    }
     .login-illustration {
         height: 11vh;
     }
@@ -533,12 +537,11 @@
     }
     .loginBtnAdj {
         margin-top: 50%;
-        vertical-align: middle; 
+        vertical-align: middle;
     }
     .logoTopAdj {
         margin-top: 2%;
     }
-
     .illustrationAdj {
         /* bottom: 0px; */
         height: 130px;
@@ -546,18 +549,17 @@
         position: absolute;
         /* margin-left: 0; */
         margin-bottom: 0;
-        bottom:0;
+        bottom: 0;
     }
-
     .landing-slide-content {
-        height: 76vh; 
+        height: 76vh;
         overflow: hidden;
         margin-left: 110%;
         margin-right: 180%;
-        top:12%;
+        top: 12%;
         /* bottom: 20%;    */
         padding-bottom: 15%;
-        position: absolute;        
+        position: absolute;
         background-color: azure;
         width: 80%;
         background-size: 80% 100%;
@@ -567,13 +569,12 @@
         -o-transition: margin-left 0.5s ease;
         transition: margin-left 0.5s ease;
     }
-    
     .landing-slide-content.slideadd {
-        height: 72vh; 
+        height: 72vh;
         overflow: hidden;
         margin-left: 10%;
         margin-right: 10%;
-        top:12%;
+        top: 12%;
         /* bottom: 20%;    */
         padding-bottom: 15%;
         position: absolute;
@@ -585,7 +586,6 @@
         -o-transition: margin-left 0.5s ease;
         transition: margin-left 0.5s ease;
     }
-
     .landing-image {
         height: 100vh;
         float: left;
@@ -595,10 +595,7 @@
         /* background-image: url("../../Assets/images/img_mobile_bg.jpg"); */
         background-size: 100% 100%;
         background-repeat: no-repeat;
-    
     }
-    
-
     .landing-image.clicked {
         height: 100vh;
         width: 100%;
@@ -609,36 +606,34 @@
         background-size: 100% 100%;
         background-repeat: no-repeat;
     }
-
-   .login-remember-txt {
-       white-space: nowrap;
-   }
-
-   
-   .login-forgot-pswrd a{
-    float:left;
-    white-space: nowrap;
-   }
-
-    .alert {
-       margin-top: -30%;
-       margin-left: -4%; 
-       width: 98%;
-   } 
-
-   .reg-success-msg {
-    font-size: 0.8em;
-   }
-
-   .fbLogin {
-       width: 110%;
-   }
-   .googleLogin {
-    width: 110%;
+    .login-remember-txt {
+        white-space: nowrap;
     }
-
+    .login-forgot-pswrd a {
+        float: left;
+        white-space: nowrap;
+    }
+    .alert {
+        margin-top: -30%;
+        margin-left: -4%;
+        width: 98%;
+    }
+    .alert-error {
+        margin-top: -30%;
+        margin-left: -4%;
+        width: 98%;
+    }
+    .reg-success-msg {
+        font-size: 0.8em;
+    }
+    .fbLogin {
+        width: 110%;
+    }
+    .googleLogin {
+        width: 110%;
+    }
     .loginNoAcntTxt {
-        margin-top:8%;
+        margin-top: 8%;
     }
     /* .login-fb-txt {
         font-size: 0.6em; 
@@ -646,21 +641,15 @@
     .login-google-txt {
         font-size: 0.6em; 
     } */
-
     .landingSideCloseBtn {
-       margin-left: 90%;
-        
-       margin-top: 5%;
-       cursor: pointer;
-   } 
-    
+        margin-left: 90%;
+        margin-top: 5%;
+        cursor: pointer;
+    }
 }
 
 @media screen and (max-width: 768px) {
-
     .logoTopAdj {
         margin-top: 10px;
     }
-
-
 }
