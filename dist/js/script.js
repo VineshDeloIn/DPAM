@@ -11863,7 +11863,9 @@ function  validateEmail(email) {
     return  emailReg.test( email );
 } 
 function passtoTextSignUp() {
-    var x = document.getElementById("passwordSignUp");
+    var firstElement = document.getElementsByClassName("passwordSignUp");
+
+    var x = firstElement[0];
     if (x.type === "password") {
         x.type = "text";
     } else {
@@ -11883,16 +11885,17 @@ function validateShowPswrd(newPswrd) {
 // function to check password strength
 function validatePswrdStrength(pass){
     if(pass.length<=8){
-      $(".createPwdStrength").html("Weak");
-      $(".createPwdStrength").css("color", "red");
+
+      $(".sign-up-pwd-strength").html("Weak");
+      $(".sign-up-pwd-strength").css("color", "red");
      
     }else if(pass.length>8 && pass.length<=12){
-      $(".createPwdStrength").html("Medium");
-      $(".createPwdStrength").css("color", "green");
+      $(".sign-up-pwd-strength").html("Medium");
+      $(".sign-up-pwd-strength").css("color", "green");
      
     }else if(pass.length>12){
-      $(".createPwdStrength").html("Strong");
-      $(".createPwdStrength").css("color", "green");
+      $(".sign-up-pwd-strength").html("Strong");
+      $(".sign-up-pwd-strength").css("color", "green");
   
   
     }
@@ -11901,16 +11904,16 @@ function validatePswrdStrength(pass){
 // function to check password strength
 function checkPasswordStrength(pass){
     if(pass.length<=8){
-      $(".pwdStrengthSignUp").html("Weak");
-      $(".pwdStrengthSignUp").css("color", "red");
+      $(".sign-up-pwd-strength").html("Weak");
+      $(".sign-up-pwd-strength").css("color", "red");
      
     }else if(pass.length>8 && pass.length<=12){
-      $(".pwdStrengthSignUp").html("Medium");
-      $(".pwdStrengthSignUp").css("color", "green");
+      $(".sign-up-pwd-strength").html("Medium");
+      $(".sign-up-pwd-strength").css("color", "green");
      
     }else if(pass.length>12){
-      $(".pwdStrengthSignUp").html("Strong");
-      $(".pwdStrengthSignUp").css("color", "green");
+      $(".sign-up-pwd-strength").html("Strong");
+      $(".sign-up-pwd-strength").css("color", "green");
   
   
     }
@@ -12080,6 +12083,15 @@ function comparePassword(pass1,pass2){
 }
 
 
+$(document).ready(function () {
+    $(document).on('scroll', function () {
+        if ($(this).scrollTop() > 1) {
+            $('.headerNav').addClass('headerNavOnScroll');
+        } else {
+            $('.headerNav').removeClass('headerNavOnScroll');
+        }
+    });
+});
 /*!
  * jQuery Validation Plugin v1.17.0
  *
@@ -13409,6 +13421,7 @@ $(document).ready(function () {
         // alert('hi login');
         $('.landing-image').addClass("clicked");
         $('.landing-slide-content').addClass("slideadd");
+        $('.conOfRentAdj').addClass("clicked");
         $('.loginBtnAdj:visible').hide();
         $('.singUpBtnAdj:visible').hide();
         $('.login-main').show();
@@ -13420,6 +13433,7 @@ $(document).ready(function () {
        // alert('hi signup');
         $('.landing-image').addClass("clicked");
         $('.landing-slide-content').addClass("slideadd");
+        $('.conOfRentAdj').addClass("clicked");
         $('.loginBtnAdj:visible').hide();
         $('.singUpBtnAdj:visible').hide();
         $('.signup-main-margin').show();
@@ -13429,6 +13443,7 @@ $(document).ready(function () {
     $('.landingSideCloseBtn').on('click',function(){
         $('.landing-image').removeClass("clicked");
         $('.landing-slide-content').removeClass("slideadd");
+        $('.conOfRentAdj').removeClass("clicked");
         $('.loginBtnAdj:hidden').show();
         $('.singUpBtnAdj:hidden').show();
     });
@@ -13532,6 +13547,55 @@ $(document).ready(function(){
         }
       });
 });
+$(document).ready(function()
+{
+ $('.profile-edit-btn').click(function(e)
+ {
+    e.preventDefault();
+     alert("here");
+     $(".profile-cancel").show();
+     $('.profile-save').show();
+     $('.profile-edit').hide();
+    $("input[name='profile-contact-fields']").removeAttr("readonly");  
+ });
+
+ $('.profile-dpndnt-family-add-btn').click(function(e){
+     alert("family add");
+     var profileFamilyDynamicTxt = ' <div class="container mt-3 mb-3"> <div class="row profile-family-div"> ' +
+     ' <div class="col-lg-3"> ' +
+     ' <p class="mb-0 profile-details-fields">Name</p> ' +
+     ' <input type="text" class="profile-details-fields-value" name="profile-lease-fields" value="Maria" /> ' +
+
+     ' </div> ' +
+     ' <div class="col-lg-3"> ' +
+     '  <p class="mb-0 profile-details-fields">Relationship</p> ' +
+     '  <input type="text" class="profile-details-fields-value" name="profile-lease-fields" value="Wife" /> ' +
+     ' </div> ' +
+     ' <div class="col-lg-3"> ' +
+     '  <p class="mb-0 profile-details-fields">Mail Id</p> ' +
+     '   <input type="text" class="profile-details-fields-value" name="profile-lease-fields" value="maria@gmail.com" /> ' +
+     ' </div> ' +
+     ' <div class="col-lg-2"> ' +
+     '    <p class="mb-0 profile-details-fields">Mobile</p> ' +
+     '    <input type="text" class="profile-details-fields-value" name="profile-lease-fields" value="971-557678854" />  ' +
+     ' </div> ' +
+     '<span class="remove-profile-family"><img  src="Assets/images/profile-edit.svg" alt=""></span>'
+     '</div>'
+     '</div> ';
+     
+     var val = $('.profile-family-dynamic-div:last').before(
+        profileFamilyDynamicTxt
+        );
+
+       
+
+ });
+ 
+ $('.profile-family-group').on('click','.remove-profile-family',function() {
+    $(this).parent().remove();
+});
+
+ });
 $( document ).ready(function() {
     $( ".pass-input ul li" ).css("list-style-type", "none");
     $('.cnfpasswordSignUp').bind("cut copy paste", function(e) {
@@ -13566,7 +13630,7 @@ if(!validatePhone(email)&&(!validateEmail(email)))
 
 // function to show password
 
-  $('#sign-up-show-password').click(function() {
+  $('.sign-up-show-password').click(function() {
     passtoTextSignUp();
   
   });
