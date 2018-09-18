@@ -116,20 +116,6 @@
    border-bottom: 1px solid grey; 
 }
 
-.login-pswrd-err {
-    font-family: HelveticaNeueReg;
-    font-size: 10px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.2;
-    letter-spacing: 1px;
-    color: #ff1100;
-    text-align: left;
-    left: 0%;
-    margin-top: 1%;
-
-}
 
 .signup-mail-err {
     font-family: HelveticaNeueReg;
