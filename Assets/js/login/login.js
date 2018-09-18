@@ -23,6 +23,12 @@ function redirectSignUp() {
 }
 
 window.onload = function () {
+
+    if (emailMob == "" && !isEmailMobValid) {
+        $('.loginMail').val('');
+        }
+        $('.loginPassword').val('');
+        $('.remeberMeCbx').prop('checked', false); 
  
     var getUrlAfterHash = window.location.hash;
     
@@ -94,8 +100,7 @@ $(document).ready(function () {
 
     $(".loginForm").on('submit', function (event) {
 
-        event.preventDefault();
-
+    
         //getting values from the form
         var emailMob = $(".loginMail").val();
         var password = $(".loginPassword").val();
@@ -136,24 +141,10 @@ $(document).ready(function () {
             localStorage.password = '';
             localStorage.checkBoxValidation = '';
         }
-
-
-        if (emailMob == "" && !isEmailMobValid) {
-            $('.loginMail').val('');
-        }
-        $('.loginPassword').val('');
-        $('.remeberMeCbx').prop('checked', false);
-
-        // if($(".loginForm").valid() && isEmailMobValid && isPasswordValid) {
+        
         if (isEmailMobValid && isPasswordValid) {
-            $(".loginForm").submit();
-            event.preventDefault();
-            //alert('sumitted!');
-        } else {
-            event.preventDefault();
-            //alert('not sumitted!');
-        }
-
+            $(".loginForm").submit();            
+        } 
 
     });
 
