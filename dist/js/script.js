@@ -11903,7 +11903,10 @@ function validatePswrdStrength(pass){
 
 // function to check password strength
 function checkPasswordStrength(pass){
-    if(pass.length<=8){
+    if(pass.length<=0){
+        $(".sign-up-pwd-strength").html(" ");
+       
+    }else if(pass.length<=8){
       $(".sign-up-pwd-strength").html("Weak");
       $(".sign-up-pwd-strength").css("color", "red");
      
@@ -13387,14 +13390,12 @@ $(document).ready(function () {
         $(".emailMobForgtPswrdErr").html("");
     });
 
-    $('#confirmNewPswrd').bind("cut copy paste", function (e) {
-        e.preventDefault();
-    });
+   
 
-    $( "#forgotPswrdForm" ).on('submit',function( event ) {
-
+    $( "#forgtPswrdForm" ).on('submit',function( event ) {
+        
         event.preventDefault();
-        var emailMob = $("#emailMobForgotPswrd").val();
+        var emailMob = $("#forgtPswrdMobMail").val();
 
 
         var isEmailMobValid = validatePhone(emailMob) || validateEmail(emailMob);
@@ -13402,7 +13403,7 @@ $(document).ready(function () {
 
         //Checking if email/mob is not empty
         if (emailMob == "" || !isEmailMobValid) {
-            $(".emailMobForgtPswrdErr").html("Invalid Email / Mobile Number");
+            $(".forgtPswrd-mail-err").html("Invalid Email / Mobile Number");
             isEmailMobValid = false;
         } else {
             isEmailMobValid = true;
@@ -13441,6 +13442,12 @@ function redirectSignUp() {
 }
 
 window.onload = function () {
+
+    if (emailMob == "" && !isEmailMobValid) {
+        $('.loginMail').val('');
+        }
+        $('.loginPassword').val('');
+        $('.remeberMeCbx').prop('checked', false); 
  
     var getUrlAfterHash = window.location.hash;
     
@@ -13512,8 +13519,7 @@ $(document).ready(function () {
 
     $(".loginForm").on('submit', function (event) {
 
-        event.preventDefault();
-
+    
         //getting values from the form
         var emailMob = $(".loginMail").val();
         var password = $(".loginPassword").val();
@@ -13554,24 +13560,10 @@ $(document).ready(function () {
             localStorage.password = '';
             localStorage.checkBoxValidation = '';
         }
-
-
-        if (emailMob == "" && !isEmailMobValid) {
-            $('.loginMail').val('');
-        }
-        $('.loginPassword').val('');
-        $('.remeberMeCbx').prop('checked', false);
-
-        // if($(".loginForm").valid() && isEmailMobValid && isPasswordValid) {
+        
         if (isEmailMobValid && isPasswordValid) {
-            $(".loginForm").submit();
-            event.preventDefault();
-            //alert('sumitted!');
-        } else {
-            event.preventDefault();
-            //alert('not sumitted!');
-        }
-
+            $(".loginForm").submit();            
+        } 
 
     });
 
@@ -13660,8 +13652,6 @@ $( document ).ready(function() {
         $(".signup-invalid-pswrd-err").html("");
         $(".signup-cnfpswrd-err").html("");
 
-        $(".sign-up-pwd-strength").html("");
-
         var email = $(".mailSignUp").val();
       
   // check for email and mobile number text field
@@ -13697,21 +13687,20 @@ $(".passwordSignUp").keyup(function(e){
      checkPasswordStrength(passWord);
 });
 
-$(".passwordSignUp").on('input',function(e){
-    var passWordChk=$(".passwordSignUp").val();
-    if(!validatePassword(passWordChk)){
-        $(".signup-invalid-pswrd-err").html("Invalid Password ");
-    }else{
-        $(".signup-invalid-pswrd-err").html(" ");
-    }
- });
+$(".cnfpasswordSignUp").keyup(function(e){
+
+    var passWord=$(".passwordSignUp").val();
+    
+     checkPasswordStrength(passWord);
+});
+
 
 
 // Empty Fields Validation
 
 $( ".signupForm" ).on('submit',function( event ) {
     
-    event.preventDefault();
+    // event.preventDefault();
         //getting values from the form
         var emailMob = $(".mailSignUp").val();
         var password = $(".passwordSignUp").val();
@@ -13759,13 +13748,8 @@ $( ".signupForm" ).on('submit',function( event ) {
     
      if(isEmailMobValid && isPasswordValid) {
         $(".signupForm").submit();
-        event.preventDefault();
-       
-    } else {
-       event.preventDefault();
-        //alert('not sumitted!');
-    }
-
+     } 
+    event.preventDefault();
    
        
     });
