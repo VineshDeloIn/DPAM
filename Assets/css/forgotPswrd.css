@@ -127,7 +127,7 @@
 
 .forgtPswrd-main .forgtPswrd-input label {
     position: absolute;
-    top: 76%;    
+    top: 70%;    
     transition: .5s;
     left: 0%;
     pointer-events: none;
@@ -144,7 +144,7 @@
 .forgtPswrd-main .forgtPswrd-input input:focus ~ label,
 .forgtPswrd-main .forgtPswrd-input input:focus ~ valid
  {
-    top: 50%;
+    top: 46%;
     left: 0%;
     font-family: HelveticaNeueMed;
     font-size: 10px;
@@ -198,6 +198,11 @@
         padding-left: 1%;
         padding-right: 1%;
     }
+
+    .forgtPswrd-main .forgtPswrd-input label {
+        /* margin-top: 70%; */
+    }
+
     .forgtPswrd-left-side {
         width: 100%;
     }
@@ -217,9 +222,10 @@
         position: absolute;
         height: 72vh;
         overflow: hidden;
-        margin-left: 10%;
         top: 12%;
-        width: 75%;
+        width: 90%;
+        padding: 0%;
+        margin-left: 5%;
     }
    
     .forgtPswrd-illustration {
@@ -230,7 +236,13 @@
         margin-bottom: 0;
         bottom: 0;
     }
+
+    .forgtPswrd-main .forgtPswrd-input label {
+        top: 65%;
+    }
 }
+
+
 
 
 
