@@ -24,9 +24,9 @@ function redirectSignUp() {
 
 window.onload = function () {
  
-    var x = window.location.hash;
+    var getUrlAfterHash = window.location.hash;
     
-    if (x == "#login") {
+    if (getUrlAfterHash == "#login") {
 
         $('.landing-image').addClass("clicked");
         $('.landing-slide-content').addClass("slideadd");
