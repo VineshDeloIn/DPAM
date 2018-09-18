@@ -1,10 +1,12 @@
 
 .forgtPswrdContainer {
     height: 100vh;
+    width: 100%;
     /* width: 100vw; */
 }
 
 .forgtPswrd-left-side{
+     
     height: 100vh;
     width: 66.5%;
     float: left;
@@ -13,14 +15,20 @@
    
 }
 
+.frgtPswrdDpamLogo {
+    padding-top: 2%;
+}
+
 .frgtPswrd-convinience {
     width: 100%;
     object-fit: cover;
+    padding-top: 12%;
+    padding-left: 10%;
+    padding-right: 10%;
     
 }
 
 .forgtPswrd-illustration {
-    /* height: 50vh; */
      width: 100%;
      bottom: 0%;
      position: absolute;    
@@ -34,12 +42,14 @@
     max-width: 100%;
 } */
 
-.frgt-footer {
+/* .frgt-footer {
     position: relative;
     height: 20vh;
-}
+} */
 
 .forgtPswrd-right-side {
+    z-index: 1;
+    position: relative;
     float: left;
     width: 33.5%;
     height: 100vh;
@@ -57,16 +67,7 @@
      /* border:2px solid blue;  */
 }
 
-/* .forgtPswrd-illustration img {
-    width: 100%;
-    height: 100%;
-}
 
-.forgtPswrd-illustration {
-    height:20vh;
-    background-color: #f3f9ea;
-    border:2px solid green;
-} */
 
 #forgtPswrdForm {
     background: #ffffff;
@@ -194,21 +195,37 @@
 @media screen and (max-width: 480px) {
 
     .forgtPswrdContainer {
-        background-image: url("../../Assets/images/landingPageImage.png");
-        border:2px solid red;
+        /* background-image: url("../../Assets/images/landingPageImage.png"); */
+        /* border:2px solid red; */
+       padding-top: 25%;
+       background-image: url("../../Assets/images/final-illustrations-black-blue-mob.png"); 
+       /* padding-left: 5%;
+       padding-right: 5%; */
     }
 
     .forgtPswrd-left-side{
         display: none;
     }
 
-    .forgtPswrd-right-side {
+    .forgtPswrd-main {
         width: 100%;
-        margin-top: 20%;
-        margin-bottom: 20%;
-        margin-left: 5%;
-        margin-right: 5%;
+        height: 72vh;
+        background-color: #f7f7f7;
+        padding-left: 11%;
+        padding-right: 11%;
+        margin-left: 0%;
     }
+
+    .forgtPswrd-right-side {
+        z-index: 1;
+    position: absolute;
+    /* float: left/; */
+    width: 100%;
+    /* width: 33.5%; */
+    height: 72vh;
+    background-color: #f7f7f7;
+    }
+
 }
 
 

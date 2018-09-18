@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dubai Properties - Login</title>
 
-    <!--<link rel="stylesheet" href="Assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="Assets/css/footer2Layer.css">
     <link rel="stylesheet" href="Assets/css/customFont.css">
 
@@ -22,12 +22,12 @@
     <script src="Assets/js/commonValidations/emailMobValidation.js"></script>
     <script src="Assets/js/commonValidations/passwordValidation.js"></script>
     <script src="Assets/js/login/login.js"></script>
-    <script src="Assets/js/signup.js"></script> -->
+    <script src="Assets/js/signup.js"></script>
 
 
-        
-     <link rel="stylesheet" href="dist/css/style.css">
-    <script src="dist/js/script.js"></script>  
+
+    <!-- <link rel="stylesheet" href="dist/css/style.css">
+    <script src="dist/js/script.js"></script> -->
 </head>
 
 <body>
@@ -60,140 +60,140 @@
         </div>
 
         <div class="landing-slide-content">
+            <div class="container"></div>
+                <div class="row signup-main  signup-main-margin">
+                    <img class="landingSideCloseBtn" id="landingSideCloseBtn" src="./Assets/images/crossBtnLanding.svg" alt="path Issue">
 
-            <div class="row signup-main  signup-main-margin">
-                <img class="landingSideCloseBtn" id="landingSideCloseBtn" src="./Assets/images/crossBtnLanding.svg" alt="path Issue">
-
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                    <h2 class="signup-text">Sign Up</h2>
-                    <form class="signupForm" action="" novalidate>
-                        <div class="form-group signup-input">
-                            <input type="text" class="mailSignUp" name="" required>
-                            <label>EMAIL / MOBILE NUMBER</label>
-                            <p class="signup-mail-err signup-invalid-mail-err"></p>
-                        </div>
-                        <div class="form-group signup-input pass-input">
-                            <input type="password" class="passwordSignUp" name="" required>
-                            <label>PASSWORD</label>
-
-                            <img src="Assets/images/show_pass.png" class="sign-up-show-password">
-                            <p class="sign-up-pwd-strength "></p>
-                            <p class="signup-pswrd-err signup-invalid-pswrd-err"></p>
-                        </div>
-                        <div class="form-group signup-input">
-                            <input type="password" class="cnfpasswordSignUp" name="" required>
-                            <label>CONFIRM PASSWORD</label>
-                            <p class="signup-cnfpswrd-err signup-unequal-pswrd-err"></p>
-                        </div>
-
-                        <div class="row signup-remembr-forgot-div">
-                            <p class="signup-terms-and-condition">By clicking sign up, you agree to our
-                                <a class="signup-clickable-text" href="#">TERMS OF SERVICE</a>
-                            </p>
-                        </div>
-                        <button type="submit" class="btn btn-dark signup-button signup-main-button">SIGNUP</button>
-                        <p class="signup-or-txt">OR</p>
-
-                        <button type="button" class="btn btn-outline-secondary signup-uae-login">LOGIN USING UAE PASS</button>
-                    </form>
-                    <div class="row signup-fb-google-div">
-                        <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-                            <button type="button" class="btn btn-outline-secondary signup-fb-login">
-                                <img src="Assets/images/fb.svg">
-                                <span class="signup-fb-txt">FACEBOOK</span>
-                            </button>
-                        </div>
-                        <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-
-                            <button type="button" class="btn btn-outline-secondary signup-google-login">
-                                <img src="Assets/images/google.svg">
-                                <span class="signup-google-txt">GOOGLE</span>
-                            </button>
-                        </div>
-                    </div>
-                    <p class="already-account">Already have an account?
-                        <a class="signup-clickable-text" href="#" onclick="redirectLogin()">LOGIN</a>
-                    </p>
-                </div>
-
-            </div>
-            <div class="row login-main ">
-                <img class="landingSideCloseBtn" id="landingSideCloseBtn" src="./Assets/images/crossBtnLanding.svg" alt="path Issue">
-
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-
-                    <h2 class="login-text">Login</h2>
-                    <div class="alert alert-error" id="signup-error" role="alert">
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true" class="signup-success-close">&times;</span>
-                        </button>
-                        <div class="reg-error-msg">
-                            <img class="img-responsive reg-success-img" src="Assets/images/toasterError.svg" alt="">
-                            <span>Generic Error Message!</span> 
-                        </div>
-                    </div>
-
-                    <div class="alert" id="signup-error" role="alert">
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true" class="signup-success-close">&times;</span>
-                        </button>
-                        <div class="reg-success-msg">
-                            <img class="img-responsive reg-error-img" src="Assets/images/toasterSuccess.svg" alt=""> You have successfully registered with Dubai AM!
-                            <strong>Please login</strong>
-                        </div>
-                    </div>
-
-                    <form class="loginForm" action="" novalidate>
-
-
-                        <div class="form-group login-input">
-                            <input type="text" class="loginMail" name="" required>
-                            <label class="loginEmailMobTxt">EMAIL / MOBILE NUMBER</label>
-                            <p class="login-mail-err"></p>
-                        </div>
-                        <div class="form-group login-input">
-                            <input type="password" class="loginPassword" name="" required>
-                            <label class="loginPswrdTxt">PASSWORD</label>
-                            <p class="login-pswrd-err"></p>
-                        </div>
-                        <div class="row login-remembr-forgot-div">
-                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 rememberMelogin">
-                                <label class="login-remember-txt">REMEMBER ME
-                                    <input type="checkbox" class="remeberMeCbx">
-                                    <span class="login-remember-chck"></span>
-                                </label>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <h2 class="signup-text">Sign Up</h2>
+                        <form class="signupForm" action="" novalidate>
+                            <div class="form-group signup-input">
+                                <input type="text" class="mailSignUp" name="" required>
+                                <label>EMAIL / MOBILE NUMBER</label>
+                                <p class="signup-mail-err signup-invalid-mail-err"></p>
                             </div>
-                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 login-forgot-pswrd">
-                                <a href="#">FORGOT PASSWORD?</a>
+                            <div class="form-group signup-input pass-input">
+                                <input type="password" class="passwordSignUp" name="" required>
+                                <label>PASSWORD</label>
+
+                                <img src="Assets/images/show_pass.png" class="sign-up-show-password">
+                                <p class="sign-up-pwd-strength "></p>
+                                <p class="signup-pswrd-err signup-invalid-pswrd-err"></p>
+                            </div>
+                            <div class="form-group signup-input">
+                                <input type="password" class="cnfpasswordSignUp" name="" required>
+                                <label>CONFIRM PASSWORD</label>
+                                <p class="signup-cnfpswrd-err signup-unequal-pswrd-err"></p>
+                            </div>
+
+                            <div class="row signup-remembr-forgot-div">
+                                <p class="signup-terms-and-condition">By clicking sign up, you agree to our
+                                    <a class="signup-clickable-text" href="#">TERMS OF SERVICE</a>
+                                </p>
+                            </div>
+                            <button type="submit" class="btn btn-dark signup-button signup-main-button">SIGNUP</button>
+                            <p class="signup-or-txt">OR</p>
+
+                            <button type="button" class="btn btn-outline-secondary signup-uae-login">LOGIN USING UAE PASS</button>
+                        </form>
+                        <div class="row signup-fb-google-div">
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                                <button type="button" class="btn btn-outline-secondary signup-fb-login">
+                                    <img src="Assets/images/fb.svg">
+                                    <span class="signup-fb-txt">FACEBOOK</span>
+                                </button>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+
+                                <button type="button" class="btn btn-outline-secondary signup-google-login">
+                                    <img src="Assets/images/google.svg">
+                                    <span class="signup-google-txt">GOOGLE</span>
+                                </button>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-dark login-button">LOGIN</button>
-                        <p class="login-or-txt">OR</p>
-
-                        <button type="button" class="btn btn-outline-secondary uaeLogin">LOGIN USING UAE PASS</button>
-                    </form>
-                    <div class="row login-fb-google-div">
-                        <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-                            <button type="button" class="btn btn-outline-secondary fbLogin">
-                                <img src="Assets/images/fb.svg">
-                                <span class="login-fb-txt">FACEBOOK</span>
-                            </button>
-                        </div>
-                        <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-
-                            <button type="button" class="btn btn-outline-secondary googleLogin">
-                                <img src="Assets/images/google.svg">
-                                <span class="login-google-txt">GOOGLE</span>
-                            </button>
-                        </div>
+                        <p class="already-account">Already have an account?
+                            <a class="signup-clickable-text" href="#" onclick="redirectLogin()">LOGIN</a>
+                        </p>
                     </div>
-                    <p class="loginNoAcntTxt">Don't have an account?
-                        <a class="loginSignUpTxt" href="#" onclick="redirectSignUp()">SIGN UP</a>
-                    </p>
+
                 </div>
+                <div class="row login-main ">
+                    <img class="landingSideCloseBtn" id="landingSideCloseBtn" src="./Assets/images/crossBtnLanding.svg" alt="path Issue">
 
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+
+                        <h2 class="login-text">Login</h2>
+                        <div class="alert alert-error" id="signup-error" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true" class="signup-success-close">&times;</span>
+                            </button>
+                            <div class="reg-error-msg">
+                                <img class="img-responsive reg-success-img" src="Assets/images/toasterError.svg" alt="">
+                                <span>Generic Error Message!</span>
+                            </div>
+                        </div>
+
+                        <div class="alert" id="signup-error" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true" class="signup-success-close">&times;</span>
+                            </button>
+                            <div class="reg-success-msg">
+                                <img class="img-responsive reg-error-img" src="Assets/images/toasterSuccess.svg" alt=""> You have successfully registered with Dubai AM!
+                                <strong>Please login</strong>
+                            </div>
+                        </div>
+
+                        <form class="loginForm" action="" novalidate>
+
+
+                            <div class="form-group login-input">
+                                <input type="text" class="loginMail" name="" required>
+                                <label class="loginEmailMobTxt">EMAIL / MOBILE NUMBER</label>
+                                <p class="login-mail-err"></p>
+                            </div>
+                            <div class="form-group login-input">
+                                <input type="password" class="loginPassword" name="" required>
+                                <label class="loginPswrdTxt">PASSWORD</label>
+                                <p class="login-pswrd-err"></p>
+                            </div>
+                            <div class="row login-remembr-forgot-div">
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 rememberMelogin">
+                                    <label class="login-remember-txt">REMEMBER ME
+                                        <input type="checkbox" class="remeberMeCbx">
+                                        <span class="login-remember-chck"></span>
+                                    </label>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 login-forgot-pswrd">
+                                    <a href="#">FORGOT PASSWORD?</a>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-dark login-button">LOGIN</button>
+                            <p class="login-or-txt">OR</p>
+
+                            <button type="button" class="btn btn-outline-secondary uaeLogin">LOGIN USING UAE PASS</button>
+                        </form>
+                        <div class="row login-fb-google-div">
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                                <button type="button" class="btn btn-outline-secondary fbLogin">
+                                    <img src="Assets/images/fb.svg">
+                                    <span class="login-fb-txt">FACEBOOK</span>
+                                </button>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+
+                                <button type="button" class="btn btn-outline-secondary googleLogin">
+                                    <img src="Assets/images/google.svg">
+                                    <span class="login-google-txt">GOOGLE</span>
+                                </button>
+                            </div>
+                        </div>
+                        <p class="loginNoAcntTxt">Don't have an account?
+                            <a class="loginSignUpTxt" href="#" onclick="redirectSignUp()">SIGN UP</a>
+                        </p>
+                    </div>
+
+                </div>
             </div>
-
 
         </div>
     </div>
