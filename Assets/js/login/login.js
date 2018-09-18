@@ -1,5 +1,5 @@
-function redirectLogin () {
-   
+function redirectLogin() {
+
     $('.landing-image').addClass("clicked");
     $('.landing-slide-content').addClass("slideadd");
     $('.conOfRentAdj').addClass("clicked");
@@ -10,8 +10,8 @@ function redirectLogin () {
 
 }
 
-function redirectSignUp () {
-   
+function redirectSignUp() {
+
     $('.landing-image').addClass("clicked");
     $('.landing-slide-content').addClass("slideadd");
     $('.conOfRentAdj').addClass("clicked");
@@ -22,11 +22,28 @@ function redirectSignUp () {
 
 }
 
+window.onload = function () {
+ 
+    var x = window.location.hash;
+    
+    if (x == "#login") {
+
+        $('.landing-image').addClass("clicked");
+        $('.landing-slide-content').addClass("slideadd");
+        $('.conOfRentAdj').addClass("clicked");
+        $('.loginBtnAdj:visible').hide();
+        $('.singUpBtnAdj:visible').hide();
+        $('.login-main').show();
+        $('.signup-main-margin').hide();
+    }
+}
+
+
 $(document).ready(function () {
 
-    
-    
-    $('.loginBtnAdj').on('click',function () {
+
+
+    $('.loginBtnAdj').on('click', function () {
         // alert('hi login');
         $('.landing-image').addClass("clicked");
         $('.landing-slide-content').addClass("slideadd");
@@ -38,11 +55,11 @@ $(document).ready(function () {
 
     });
 
-   
-    
 
-    $('.singUpBtnAdj').on('click',function () {
-       // alert('hi signup');
+
+
+    $('.singUpBtnAdj').on('click', function () {
+        // alert('hi signup');
         $('.landing-image').addClass("clicked");
         $('.landing-slide-content').addClass("slideadd");
         $('.conOfRentAdj').addClass("clicked");
@@ -52,7 +69,7 @@ $(document).ready(function () {
         $('.login-main').hide();
     });
 
-    $('.landingSideCloseBtn').on('click',function(){
+    $('.landingSideCloseBtn').on('click', function () {
         $('.landing-image').removeClass("clicked");
         $('.landing-slide-content').removeClass("slideadd");
         $('.conOfRentAdj').removeClass("clicked");
@@ -68,14 +85,14 @@ $(document).ready(function () {
 
 
 
-   
+
 
     $("input").focus(function () {
         $(".login-mail-err").html("");
         $(".login-pswrd-err").html("");
     });
 
-    $( ".loginForm" ).on('submit',function( event ) {
+    $(".loginForm").on('submit', function (event) {
 
         event.preventDefault();
 
@@ -87,7 +104,7 @@ $(document).ready(function () {
 
         //Checking if email/mob is not empty
         if (emailMob == "" || !isEmailMobValid) {
-           //alert("here");
+            //alert("here");
             $(".login-mail-err").html("Invalid Email / Mobile Number");
             isEmailMobValid = false;
         } else {
@@ -120,16 +137,16 @@ $(document).ready(function () {
             localStorage.checkBoxValidation = '';
         }
 
-             
-        if(emailMob == "" && !isEmailMobValid){
+
+        if (emailMob == "" && !isEmailMobValid) {
             $('.loginMail').val('');
-        }        
+        }
         $('.loginPassword').val('');
         $('.remeberMeCbx').prop('checked', false);
 
-       // if($(".loginForm").valid() && isEmailMobValid && isPasswordValid) {
-            if( isEmailMobValid && isPasswordValid) {
-             $(".loginForm").submit();
+        // if($(".loginForm").valid() && isEmailMobValid && isPasswordValid) {
+        if (isEmailMobValid && isPasswordValid) {
+            $(".loginForm").submit();
             event.preventDefault();
             //alert('sumitted!');
         } else {
