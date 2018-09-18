@@ -39,7 +39,10 @@ function validatePswrdStrength(pass){
 
 // function to check password strength
 function checkPasswordStrength(pass){
-    if(pass.length<=8){
+    if(pass.length<=0){
+        $(".sign-up-pwd-strength").html(" ");
+       
+    }else if(pass.length<=8){
       $(".sign-up-pwd-strength").html("Weak");
       $(".sign-up-pwd-strength").css("color", "red");
      
