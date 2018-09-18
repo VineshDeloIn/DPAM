@@ -15,8 +15,6 @@ $( document ).ready(function() {
         $(".signup-invalid-pswrd-err").html("");
         $(".signup-cnfpswrd-err").html("");
 
-        $(".sign-up-pwd-strength").html("");
-
         var email = $(".mailSignUp").val();
       
   // check for email and mobile number text field
@@ -52,14 +50,13 @@ $(".passwordSignUp").keyup(function(e){
      checkPasswordStrength(passWord);
 });
 
-$(".passwordSignUp").on('input',function(e){
-    var passWordChk=$(".passwordSignUp").val();
-    if(!validatePassword(passWordChk)){
-        $(".signup-invalid-pswrd-err").html("Invalid Password ");
-    }else{
-        $(".signup-invalid-pswrd-err").html(" ");
-    }
- });
+$(".cnfpasswordSignUp").keyup(function(e){
+
+    var passWord=$(".passwordSignUp").val();
+    
+     checkPasswordStrength(passWord);
+});
+
 
 
 // Empty Fields Validation
