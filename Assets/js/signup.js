@@ -66,7 +66,7 @@ $(".passwordSignUp").on('input',function(e){
 
 $( ".signupForm" ).on('submit',function( event ) {
     
-    event.preventDefault();
+    // event.preventDefault();
         //getting values from the form
         var emailMob = $(".mailSignUp").val();
         var password = $(".passwordSignUp").val();
@@ -114,13 +114,8 @@ $( ".signupForm" ).on('submit',function( event ) {
     
      if(isEmailMobValid && isPasswordValid) {
         $(".signupForm").submit();
-        event.preventDefault();
-       
-    } else {
-       event.preventDefault();
-        //alert('not sumitted!');
-    }
-
+     } 
+    event.preventDefault();
    
        
     });
