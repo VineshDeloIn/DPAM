@@ -8,18 +8,31 @@
     height: 100vh;
     width: 66.5%;
     float: left;
-    margin-bottom: 20vh;
+    /* margin-bottom: 50vh; */
     /* background-image: url("../../Assets/images/landingPageImage.png"); */
    
 }
 
+.frgtPswrd-convinience {
+    width: 100%;
+    object-fit: cover;
+    
+}
+
+.forgtPswrd-illustration {
+    /* height: 50vh; */
+     width: 100%;
+     bottom: 0%;
+     position: absolute;    
+     object-fit: cover;
+}
     
     
-.forgtPswrd-left-side img {
+/* .forgtPswrd-left-side img {
     width: 100%;
     height: 100vh;
     max-width: 100%;
-}
+} */
 
 .frgt-footer {
     position: relative;
@@ -30,18 +43,18 @@
     float: left;
     width: 33.5%;
     height: 100vh;
-    background-color: #f3f9ea; 
+    background-color: #f7f7f7;
 }
 
 .forgtPswrd-main {
     width: 100%;
     height: 100vh;
-    background-color: #f3f9ea;
+    background-color: #f7f7f7;
     padding-left: 11%;
     padding-right: 11%;
     /* padding-top: 8%;  */
     margin-left: 0%;
-     border:2px solid blue; 
+     /* border:2px solid blue;  */
 }
 
 /* .forgtPswrd-illustration img {
@@ -57,7 +70,7 @@
 
 #forgtPswrdForm {
     background: #ffffff;
-    background-color: #f3f9ea;
+    background-color: #f7f7f7;
 }
 
 
@@ -94,7 +107,7 @@
 .forgtPswrd-main .forgtPswrd-input input {
     width: 100%;
     box-sizing: border-box;
-    background-color: #f3f9ea;
+    background-color: #f7f7f7;
     box-shadow: none;
     outline: none;
     border: none;
@@ -108,11 +121,12 @@
     line-height: 1;
     letter-spacing: 2.2px;
     color: #333f48;
+    margin-top:15%;
 }
 
 .forgtPswrd-main .forgtPswrd-input label {
     position: absolute;
-    top: 46%;    
+    top: 76%;    
     transition: .5s;
     left: 0%;
     pointer-events: none;
@@ -129,7 +143,7 @@
 .forgtPswrd-main .forgtPswrd-input input:focus ~ label,
 .forgtPswrd-main .forgtPswrd-input input:focus ~ valid
  {
-    top: -1%;
+    top: 50%;
     left: 0%;
     font-family: HelveticaNeueMed;
     font-size: 10px;
@@ -174,6 +188,27 @@
     text-align: center;
     color: #ffffff;
     padding: 3% 3%;
+    margin-top: 10%;
+}
+
+@media screen and (max-width: 480px) {
+
+    .forgtPswrdContainer {
+        background-image: url("../../Assets/images/landingPageImage.png");
+        border:2px solid red;
+    }
+
+    .forgtPswrd-left-side{
+        display: none;
+    }
+
+    .forgtPswrd-right-side {
+        width: 100%;
+        margin-top: 20%;
+        margin-bottom: 20%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
 }
 
 
