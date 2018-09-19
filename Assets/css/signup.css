@@ -129,9 +129,11 @@
     text-align: left;
     left: 0%;
     margin-top: 1%;
+    position: absolute;
 }
 
 .signup-invalid-mail-err {
+    position: absolute;
     font-family: HelveticaNeueReg;
     font-size: 10px;
     font-weight: normal;
@@ -146,6 +148,7 @@
 }
 
 .signup-pswrd-err {
+    position: absolute;
     font-family: HelveticaNeueReg;
     font-size: 10px;
     font-weight: normal;
@@ -160,6 +163,7 @@
 }
 
 .signup-invalid-pswrd-err {
+    position: absolute;
     font-family: HelveticaNeueReg;
     font-size: 10px;
     font-weight: normal;
@@ -175,6 +179,7 @@
 
 
 .signup-cnfpswrd-err {
+    position: absolute;
     font-family: HelveticaNeueReg;
     font-size: 10px;
     font-weight: normal;
@@ -190,6 +195,7 @@
 
 
 .signup-unequal-pswrd-err {
+    position: absolute;
     font-family: HelveticaNeueReg;
     font-size: 10px;
     font-weight: normal;
@@ -300,7 +306,7 @@
     letter-spacing: 2px;
     text-align: center;
     color: #ffffff;
-    padding: 3% 3%;
+    padding: 4% 3%;
 }
 
 .signup-or-txt {
@@ -344,7 +350,7 @@
     letter-spacing: 2px;
     text-align: center;
     color: #585d63;
-    padding: 3% 0%;
+    padding: 4% 3%;
     border: 0.5px solid #a7a9ad;
 }
 
@@ -385,7 +391,7 @@
     width: 105%; 
     border-radius: 0 !important; 
     border: 0.5px solid #a7a9ad;
-    padding: 5% 3%;
+    padding: 4% 3%;
     margin-top:1.1%;
  }
  
@@ -398,7 +404,7 @@
      width: 105%; 
      border-radius: 0 !important; 
      border: 0.5px solid #a7a9ad;
-     padding: 5% 3%;
+     padding: 4% 3%;
      margin-top:1.1%;
  }
  
