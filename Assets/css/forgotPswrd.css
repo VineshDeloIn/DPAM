@@ -17,6 +17,7 @@
 
 .frgtPswrdDpamLogo {
     padding-top: 2%;
+    padding-left: 2%;
 }
 
 .frgtPswrd-convinience {
@@ -199,16 +200,13 @@
         padding-right: 1%;
     }
 
-    .forgtPswrd-main .forgtPswrd-input label {
-        /* margin-top: 70%; */
-    }
-
     .forgtPswrd-left-side {
         width: 100%;
     }
 
     .frgtPswrdDpamLogo { 
-        margin-left: 28%;
+        margin: 0 auto;
+        display: block;
     }
 
     .frgtPswrd-convinience {
