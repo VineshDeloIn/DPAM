@@ -98,12 +98,16 @@
     line-height: 1.83;
     letter-spacing: 2px;
     text-align: center;
-    color: white;
+    color: black;
     padding: 3% 3%;
     margin-top: 10%;
 }
 
-
+.emailVerifySbmit:hover, .emailVerifySbmit:focus, .emailVerifySbmit:active {
+    color: red !important;
+    border: 1px solid red;
+    background-color: transparent;
+}
 
 @media screen and (max-width: 480px) {
 
