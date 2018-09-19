@@ -437,7 +437,7 @@
     letter-spacing: 2px;
     text-align: center;
     color: #585d63;
-    padding: 3% 0%;
+    padding: 4% 3%;
     border: 0.5px solid #a7a9ad;
 }
 
@@ -478,7 +478,7 @@
     width: 105%;
     border-radius: 0 !important;
     border: 0.5px solid #a7a9ad;
-    padding: 6% 3%;
+    padding: 4% 3%;
 }
 
 .fbLogin:hover, .fbLogin:focus, .fbLogin:active,.fbLogin:visited {
@@ -495,7 +495,7 @@
     width: 105%;
     border-radius: 0 !important;
     border: 0.5px solid #a7a9ad;
-    padding: 6% 3%;
+    padding: 4% 3%;
 }
 
 .googleLogin:hover, .googleLogin:focus, .googleLogin:active, .googleLogin:visited {
