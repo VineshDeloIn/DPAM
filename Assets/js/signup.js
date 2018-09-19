@@ -1,7 +1,8 @@
 $( document ).ready(function() {
     $( ".pass-input ul li" ).css("list-style-type", "none");
+    $('.sign-up-show-password').css('display','none');
     $('.cnfpasswordSignUp').bind("cut copy paste", function(e) {
-        e.preventDefault();
+        // e.preventDefault();
        
         });
 
@@ -30,8 +31,16 @@ if(!validatePhone(email)&&(!validateEmail(email)))
 
 // function to show password
 
+  $('.sign-up-hide-password').click(function() {
+    passtoTextSignUp();
+    $('.sign-up-hide-password').css('display','none');
+    $('.sign-up-show-password').css('display','block');
+  
+  });
   $('.sign-up-show-password').click(function() {
     passtoTextSignUp();
+    $('.sign-up-show-password').css('display','none');
+    $('.sign-up-hide-password').css('display','block');
   
   });
 
@@ -112,9 +121,8 @@ $( ".signupForm" ).on('submit',function( event ) {
      if(isEmailMobValid && isPasswordValid) {
         $(".signupForm").submit();
      } 
-    event.preventDefault();
-   
-       
+    // event.preventDefault();
+         
     });
     
 
