@@ -103,7 +103,7 @@
     margin-top: 10%;
 }
 
-.emailVerifySbmit:hover, .emailVerifySbmit:focus, .emailVerifySbmit:active {
+.emailVerifySbmit:hover, .emailVerifySbmit:focus, .emailVerifySbmit:active, .emailVerifySbmit:visited {
     color: red !important;
     border: 1px solid red;
     background-color: transparent;
