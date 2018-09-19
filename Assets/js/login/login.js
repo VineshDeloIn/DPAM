@@ -1,7 +1,6 @@
 
 
 window.onload = function () {
-    alert("here");
     // if (emailMob == "" && !isEmailMobValid) {
     //     $('.loginMail').val('');
     //     }
@@ -19,6 +18,17 @@ window.onload = function () {
         $('.singUpBtnAdj:visible').hide();
         $('.login-main').show();
         $('.signup-main-margin').hide();
+    }
+    else  if (getUrlAfterHash == "#signup") {
+
+        $('.landing-image').addClass("clicked");
+        $('.landing-slide-content').addClass("slideadd");
+        $('.conOfRentAdj').addClass("clicked");
+        $('.loginBtnAdj:visible').hide();
+        $('.singUpBtnAdj:visible').hide();
+        $('.signup-main-margin').show();
+        $('.login-main').hide();
+    
     }
 }
 
