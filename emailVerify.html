@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Forgot Password</title>
+    <title>Email Verify</title>
 
     <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="Assets/css/customFont.css">
-    <link rel="stylesheet" href="Assets/css/forgotPswrd.css">
+    <link rel="stylesheet" href="Assets/css/emailVerify.css">
     <link rel="stylesheet" href="Assets/css/footer2Layer.css">
     <script src="Assets/js/popper.min.js"></script>
     <script src="Assets/js/jquery-3.3.2.min.js"></script>
     <script src="Assets/js/bootstrap.min.js"></script>
-    <script src="Assets/js/login/forgotPswrd.js"></script> 
+    <script src="Assets/js/emailVerify/emailVerifyPage.js"></script> 
     <script src="Assets/js/jqueryValidation/jquery.validate.min.js"></script>
     <script src="Assets/js/commonValidations/emailMobValidation.js"></script>
     <script src="Assets/js/commonValidations/passwordValidation.js"></script>
@@ -22,35 +22,27 @@
 
 <body>
 
-    <div class="forgtPswrdContainer">
-        <div class=" container forgtPswrd-left-side">
-                <img src="Assets/images/dpamLogo.png" alt="Avatar" class="frgtPswrdDpamLogo">
-            <img src="./Assets/images/convincenceOfRentNew.png" alt="pathIssue" class="frgtPswrd-convinience">
-            <img src="./Assets/images/final-illustrations-black-blue-demo.png" alt="" class="forgtPswrd-illustration">
+    <div class="emailVerifyContainer">
+        <div class=" container emailVerify-left-side">
+                <img src="Assets/images/dpamLogo.png" alt="Avatar" class="emailVerifyDpamLogo">
+            <img src="./Assets/images/convincenceOfRentNew.png" alt="pathIssue" class="emailVerify-convinience">
+            <img src="./Assets/images/final-illustrations-black-blue-demo.png" alt="" class="emailVerify-illustration">
 
 
         </div>
-        <div class="forgtPswrd-right-side">
-            <div class="forgtPswrd-main row">
+        <div class="emailVerify-right-side">
+            <div class="emailVerify-main row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                    <p class="forgtPswrd-text">Forgot Password?</p>
-                    <p class="forgtPswrd-reg-text">Please enter your registered email or phone number below to reset your password.</p>
-                    <form class="forgtPswrdForm" action="" novalidate>
-
-                        <div class="form-group forgtPswrd-input">
-                            <input type="text" class="forgtPswrdMobMail" name="" required>
-                            <label class="forgtPswrdEmailMobTxt">EMAIL / MOBILE NUMBER</label>
-                            <p class="forgtPswrd-mail-err"></p>
-                        </div>
-
-                        <button type="submit" class="btn btn-dark login-button forgtPswrdSbmit">SEND OTP</button>
+                    <p class="emailVerify-text">Verify your email</p>
+                    <p class="emailVerify-sent-text">An email verification link has been sent to your email address <strong class="mail-for-email-verfy">jinnie@gmail.com</strong> .Please click on the 
+                        link to complete registration
+                    </p>
+                    <form id="emailVerifyForm" action="" novalidate>
+                        <button type="submit" class="btn btn-dark login-button emailVerifySbmit" >GMAIL</button>
                     </form>
 
                 </div>
             </div>
-            <!-- <div class="forgtPswrd-illustration">
-            <img class="img-responsive" src="Assets/images/illustration.png" alt="">
-        </div>  -->
         </div>
     </div>
     <div class="footer">
