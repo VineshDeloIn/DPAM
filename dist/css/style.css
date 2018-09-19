@@ -11494,9 +11494,11 @@ html, body {
     text-align: left;
     left: 0%;
     margin-top: 1%;
+    position: absolute;
 }
 
 .create-password-submit-text {
+    margin-top: 8%;
     width: 100%;
     font-family: HelveticaNeueBold;
     border-radius: 0 !important;
@@ -11508,8 +11510,7 @@ html, body {
     letter-spacing: 2px;
     text-align: center;
     color: #ffffff;
-    padding: 3% 3%;
-    margin-top: 10%;
+    padding: 4% 3%;
 }
 
 .dpam-image img {
@@ -11590,6 +11591,7 @@ html, body {
     text-align: left;
     left: 0%;
     margin-top: 1%;
+    position: absolute;
 }
 
 .create-invalid-pswrd-err {
@@ -11604,6 +11606,7 @@ html, body {
     text-align: left;
     left: 0%;
     margin-top: 1%;
+    position: absolute;
 }
 
 
@@ -11619,6 +11622,7 @@ html, body {
     text-align: left;
     left: 0%;
     margin-top: 1%;
+    position: absolute;
 }
 
 
@@ -11634,6 +11638,7 @@ html, body {
     text-align: left;
     left: 0%;
     margin-top: 1%;
+    position: absolute;
 }
 
 
@@ -11858,12 +11863,16 @@ html, body {
     line-height: 1.83;
     letter-spacing: 2px;
     text-align: center;
-    color: white;
+    color: black;
     padding: 3% 3%;
     margin-top: 10%;
 }
 
-
+.emailVerifySbmit:hover, .emailVerifySbmit:focus, .emailVerifySbmit:active, .emailVerifySbmit:visited {
+    color: red !important;
+    border: 1px solid red;
+    background-color: transparent;
+}
 
 @media screen and (max-width: 480px) {
 
@@ -12246,6 +12255,7 @@ html, body {
     text-align: left;
     left: 0%;
     margin-top: 2%;
+    position: absolute;
 }
 
 
@@ -12416,13 +12426,9 @@ html, body {
     overflow-y: auto;
 }
 
-.button1Adj {
-    display: flex;
-    justify-content: flex-end;
-}
-.button2Adj {
-    display: flex;
-    justify-content: flex-start;
+.buttonAdj {
+    float: right;
+    margin-right:10px; 
 }
 
 
@@ -12432,26 +12438,33 @@ html, body {
 }
 
 .conOfRentAdj {
-    width: 60%;
-    margin-left: 15%;
-    margin-top: 8%;
+    width: 100%;
+    /* margin-left: 15%; */
+    margin-top: 10%;
+    padding-left: 15%;
+    padding-right: 15%;
+    text-align: center;
 }
 
 .conOfRentAdj.clicked {
-    width: 60%;
-    margin-left: 15%;
-    margin-top: 18%;
+    width: 100%;
+    padding-left: 15%;
+    padding-right: 15%;
+    margin-top: 20%;
+    text-align: center;
 }
 
 
 .logoTopAdj {
-    margin-top: 10%;
+    margin-top: 2%;
     margin-left: 4%;
+    position: absolute;
     /* display: flex;   
     justify-content:flex-start; */
 }
 .loginBtnAdj {
-    margin-top: 40px;
+    margin-top: 22%;
+    margin-right: 10px;
     background-color: transparent;
     font-size: 13px;
     letter-spacing: 1px;
@@ -12477,7 +12490,7 @@ html, body {
     background-color: transparent;
 }
 .singUpBtnAdj {
-    margin-top: 40px;
+    margin-top: 22%;
     color: black;
     background-color: transparent;
     width: 90px;
@@ -12652,7 +12665,8 @@ html, body {
     color: #333f48;
 }
 
-.alert {
+
+.login-toaster-div {
     /* display: none;  */
     margin-top: -23%;
     word-wrap: break-word;
@@ -12661,30 +12675,20 @@ html, body {
     border-radius: 0 !important;
     background-color: white;
     border: solid 1px #8bc43e;
-    padding-top: 10px;
-    padding-bottom:18px;
-    padding-left: 10px;
-    padding-right:10px;
+    padding-top: 0%;
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-bottom: 4%;
     z-index: 10;
     position: absolute;
+
 }
 
-.alert-error {
-    /* display: none;  */
-    /* word-wrap: break-word; */
-    margin-top: -23%;
-    width: 110%;
-    margin-left: -8%;
-    border-radius: 0 !important;
-    background-color: white;
+.login-sign-err {
     border: solid 1px red;
-    padding-top: 10px;
-    padding-bottom:18px;
-    padding-left: 10px;
-    padding-right:10px;
-    z-index: 10;
-    position: absolute;
 }
+
+
 
 
 /* .signup-success {
@@ -12702,7 +12706,8 @@ html, body {
     line-height: 1.5;
     letter-spacing: 1px;
     color: #585d63;
-    margin-left: 3%;
+    padding-left: 4%;
+    padding-right: 4%;
 }
 .reg-error-msg {
     display: inline-block;
@@ -12876,6 +12881,7 @@ html, body {
     text-align: left;
     left: 0%;
     margin-top: 1%;
+    position: absolute;
 }
 
 .login-mail-err {
@@ -12890,6 +12896,7 @@ html, body {
     text-align: left;
     left: 0%;
     margin-top: 1%;
+    position: absolute;
 }
 
 .login-remembr-forgot-div {
@@ -13034,11 +13041,11 @@ html, body {
     letter-spacing: 2px;
     text-align: center;
     color: #585d63;
-    padding: 3% 0%;
+    padding: 4% 3%;
     border: 0.5px solid #a7a9ad;
 }
 
-.uaeLogin:hover, .uaeLogin:focus, .uaeLogin:active {
+.uaeLogin:hover, .uaeLogin:focus, .uaeLogin:active, .uaeLogin:visited {
     color: red;
     border: 1px solid red;
     background-color: transparent;
@@ -13075,14 +13082,14 @@ html, body {
     width: 105%;
     border-radius: 0 !important;
     border: 0.5px solid #a7a9ad;
-    padding: 6% 3%;
+    padding: 4% 3%;
 }
 
-.fbLogin:hover, .fbLogin:focus, .fbLogin:active {
+.fbLogin:hover, .fbLogin:focus, .fbLogin:active,.fbLogin:visited {
     border: 1px solid red;
     background-color: transparent;
 }
-.fbLogin:hover .login-fb-txt, .fbLogin:focus .login-fb-txt, .fbLogin:active .login-fb-txt {
+.fbLogin:hover .login-fb-txt, .fbLogin:focus .login-fb-txt, .fbLogin:active .login-fb-txt,.fbLogin:visited  .login-fb-txt  {
     color: red !important;
    
 }
@@ -13092,15 +13099,15 @@ html, body {
     width: 105%;
     border-radius: 0 !important;
     border: 0.5px solid #a7a9ad;
-    padding: 6% 3%;
+    padding: 4% 3%;
 }
 
-.googleLogin:hover, .googleLogin:focus, .googleLogin:active {
+.googleLogin:hover, .googleLogin:focus, .googleLogin:active, .googleLogin:visited {
   
     border: 1px solid red;
     background-color: transparent;
 }
-.googleLogin:hover .login-google-txt, .googleLogin:focus .login-google-txt, .googleLogin:active .login-google-txt {
+.googleLogin:hover .login-google-txt, .googleLogin:focus .login-google-txt, .googleLogin:active .login-google-txt, .googleLogin:visited .login-google-txt {
     color: red !important; 
     
 }
@@ -13236,16 +13243,17 @@ html, body {
         float: left;
         white-space: nowrap;
     }
-    .alert {
+    .login-toaster-div {
+        margin-top: -25%;
+        margin-left: -4%;
+        width: 98%;
+        padding: 0%;
+    }
+    /* .alert-error {
         margin-top: -30%;
         margin-left: -4%;
         width: 98%;
-    }
-    .alert-error {
-        margin-top: -30%;
-        margin-left: -4%;
-        width: 98%;
-    }
+    } */
     .reg-success-msg {
         font-size: 0.8em;
     }
@@ -13452,6 +13460,7 @@ html, body {
     text-align: left;
     left: 0%;
     margin-top: 2%;
+    position: absolute;
 }
 
 .otpSbmit {
@@ -14127,6 +14136,7 @@ html, body {
 }
 
 .reset-password-mail-err {
+    position: absolute;
     font-family: HelveticaNeueReg;
     font-size: 10px;
     font-weight: normal;
@@ -14141,6 +14151,7 @@ html, body {
 }
 
 .reset-password-submit-text {
+    margin-top: 8%;
     width: 100%;
     font-family: HelveticaNeueBold;
     border-radius: 0 !important;
@@ -14152,8 +14163,7 @@ html, body {
     letter-spacing: 2px;
     text-align: center;
     color: #ffffff;
-    padding: 3% 3%;
-    margin-top: 10%;
+    padding: 4% 3%;
 }
 
 .dpam-image img {
@@ -14230,6 +14240,7 @@ html, body {
 
 
 .reset-password-error {
+    position: absolute;
     font-family: HelveticaNeueReg;
     font-size: 10px;
     font-weight: normal;
@@ -14244,6 +14255,7 @@ html, body {
 }
 
 .reset-invalid-password-error {
+    position: absolute;
     font-family: HelveticaNeueReg;
     font-size: 10px;
     font-weight: normal;
@@ -14259,6 +14271,7 @@ html, body {
 
 
 .reset-confirm--password-error {
+    position: absolute;
     font-family: HelveticaNeueReg;
     font-size: 10px;
     font-weight: normal;
@@ -14273,6 +14286,7 @@ html, body {
 }
 
 .reset-old-password-error{
+    position: absolute;
     font-family: HelveticaNeueReg;
     font-size: 10px;
     font-weight: normal;
@@ -14286,6 +14300,7 @@ html, body {
     margin-top: 1%;
 }
 .reset-unequal-password-error {
+    position: absolute;
     font-family: HelveticaNeueReg;
     font-size: 10px;
     font-weight: normal;
@@ -14517,9 +14532,11 @@ html, body {
     text-align: left;
     left: 0%;
     margin-top: 1%;
+    position: absolute;
 }
 
 .signup-invalid-mail-err {
+    position: absolute;
     font-family: HelveticaNeueReg;
     font-size: 10px;
     font-weight: normal;
@@ -14534,6 +14551,7 @@ html, body {
 }
 
 .signup-pswrd-err {
+    position: absolute;
     font-family: HelveticaNeueReg;
     font-size: 10px;
     font-weight: normal;
@@ -14548,6 +14566,7 @@ html, body {
 }
 
 .signup-invalid-pswrd-err {
+    position: absolute;
     font-family: HelveticaNeueReg;
     font-size: 10px;
     font-weight: normal;
@@ -14563,6 +14582,7 @@ html, body {
 
 
 .signup-cnfpswrd-err {
+    position: absolute;
     font-family: HelveticaNeueReg;
     font-size: 10px;
     font-weight: normal;
@@ -14578,6 +14598,7 @@ html, body {
 
 
 .signup-unequal-pswrd-err {
+    position: absolute;
     font-family: HelveticaNeueReg;
     font-size: 10px;
     font-weight: normal;
@@ -14688,7 +14709,7 @@ html, body {
     letter-spacing: 2px;
     text-align: center;
     color: #ffffff;
-    padding: 3% 3%;
+    padding: 4% 3%;
 }
 
 .signup-or-txt {
@@ -14732,7 +14753,7 @@ html, body {
     letter-spacing: 2px;
     text-align: center;
     color: #585d63;
-    padding: 3% 0%;
+    padding: 4% 3%;
     border: 0.5px solid #a7a9ad;
 }
 
@@ -14773,7 +14794,7 @@ html, body {
     width: 105%; 
     border-radius: 0 !important; 
     border: 0.5px solid #a7a9ad;
-    padding: 5% 3%;
+    padding: 4% 3%;
     margin-top:1.1%;
  }
  
@@ -14786,7 +14807,7 @@ html, body {
      width: 105%; 
      border-radius: 0 !important; 
      border: 0.5px solid #a7a9ad;
-     padding: 5% 3%;
+     padding: 4% 3%;
      margin-top:1.1%;
  }
  
@@ -14932,28 +14953,30 @@ margin-left: -47px;
     border-bottom-color: #f7f7f7 !important;
 }
 
-.signup-uae-login:hover, .signup-uae-login:focus, .signup-uae-login:active {
+.signup-uae-login:hover, .signup-uae-login:focus, .signup-uae-login:active, .signup-uae-login:visited
+ {
     color: red !important;
     border: 1px solid red;
     background-color: transparent;
 }
-.signup-fb-login:hover , .signup-fb-login:focus  , .signup-fb-login:active {
+.signup-fb-login:hover , .signup-fb-login:focus  , .signup-fb-login:active, .signup-fb-login:visited
+ {
    
     border: 1px solid red;
     background-color: transparent;
 }
 
-.signup-fb-login:hover .signup-fb-txt, .signup-fb-login:focus  .signup-fb-txt, .signup-fb-login:active  .signup-fb-txt{
+.signup-fb-login:hover .signup-fb-txt, .signup-fb-login:focus  .signup-fb-txt, .signup-fb-login:active  .signup-fb-txt, .signup-fb-login:visited  .signup-fb-txt{
     color: red !important;
    
 }
 
-.signup-google-login:hover, .signup-google-login:focus, .signup-google-login:active {
+.signup-google-login:hover, .signup-google-login:focus, .signup-google-login:active, .signup-google-login:visited {
    
     border: 1px solid red;
     background-color: transparent;
 }
-.signup-google-login:hover .signup-google-txt, .signup-google-login:focus .signup-google-txt, .signup-google-login:active .signup-google-txt {
+.signup-google-login:hover .signup-google-txt, .signup-google-login:focus .signup-google-txt, .signup-google-login:active .signup-google-txt, .signup-google-login:visited .signup-google-txt {
    
     color: red !important;
 }

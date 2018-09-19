@@ -129,9 +129,11 @@
     text-align: left;
     left: 0%;
     margin-top: 1%;
+    position: absolute;
 }
 
 .signup-invalid-mail-err {
+    position: absolute;
     font-family: HelveticaNeueReg;
     font-size: 10px;
     font-weight: normal;
@@ -146,6 +148,7 @@
 }
 
 .signup-pswrd-err {
+    position: absolute;
     font-family: HelveticaNeueReg;
     font-size: 10px;
     font-weight: normal;
@@ -160,6 +163,7 @@
 }
 
 .signup-invalid-pswrd-err {
+    position: absolute;
     font-family: HelveticaNeueReg;
     font-size: 10px;
     font-weight: normal;
@@ -175,6 +179,7 @@
 
 
 .signup-cnfpswrd-err {
+    position: absolute;
     font-family: HelveticaNeueReg;
     font-size: 10px;
     font-weight: normal;
@@ -190,6 +195,7 @@
 
 
 .signup-unequal-pswrd-err {
+    position: absolute;
     font-family: HelveticaNeueReg;
     font-size: 10px;
     font-weight: normal;
