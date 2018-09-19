@@ -4,7 +4,15 @@ $( document ).ready(function() {
         e.preventDefault();
        
         });
-    
+  $("input").focus(function() {
+
+    $(".create-unequal-pswrd-err").html(" ");
+    $(".create-pswrd-err").html(" ");
+    $(".create-invalid-pswrd-err").html(" ");
+    $(".create-cnfpswrd-err").html(" ");
+
+ });
+
   $('.create-show-password').click(function() {
     passtoTextCreate();
   
@@ -13,14 +21,14 @@ $( document ).ready(function() {
 
 $(".password-create").keyup(function(e){
 
-    var passWord=$(".create-show-password").val();
+    var passWord=$(".password-create").val();
     
     checkPasswordStrengthCreate(passWord);
 });
 
 $(".confirm-password-create").keyup(function(e){
 
-    var passWord=$(".create-show-password").val();
+    var passWord=$(".password-create").val();
     
     checkPasswordStrengthCreate(passWord);
 });
