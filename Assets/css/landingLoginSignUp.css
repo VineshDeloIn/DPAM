@@ -5,9 +5,10 @@ html, body {
 }
 
 .buttonAdj {
-    display: flex;
-    justify-content: flex-start;
+    float: right;
+    margin-right:10px; 
 }
+
 
 .landing {
     min-height: 100%;
@@ -15,26 +16,33 @@ html, body {
 }
 
 .conOfRentAdj {
-    width: 60%;
-    margin-left: 15%;
-    margin-top: 8%;
+    width: 100%;
+    /* margin-left: 15%; */
+    margin-top: 10%;
+    padding-left: 15%;
+    padding-right: 15%;
+    text-align: center;
 }
 
 .conOfRentAdj.clicked {
-    width: 60%;
-    margin-left: 15%;
-    margin-top: 18%;
+    width: 100%;
+    padding-left: 15%;
+    padding-right: 15%;
+    margin-top: 20%;
+    text-align: center;
 }
 
 
 .logoTopAdj {
-    margin-top: 10%;
+    margin-top: 2%;
     margin-left: 4%;
+    position: absolute;
     /* display: flex;   
     justify-content:flex-start; */
 }
 .loginBtnAdj {
-    margin-top: 40px;
+    margin-top: 22%;
+    margin-right: 10px;
     background-color: transparent;
     font-size: 13px;
     letter-spacing: 1px;
@@ -60,7 +68,7 @@ html, body {
     background-color: transparent;
 }
 .singUpBtnAdj {
-    margin-top: 40px;
+    margin-top: 22%;
     color: black;
     background-color: transparent;
     width: 90px;

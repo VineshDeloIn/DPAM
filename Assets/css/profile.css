@@ -28,11 +28,6 @@
     background-repeat: no-repeat;
 }
 
-.profile-content-main{
-
-}
-
-
 
  .file-upload {
     display: none;
@@ -243,7 +238,7 @@
     border: 0;
     outline: 0;
     background: transparent;
-    border-bottom: 1px solid black;
+    /* border-bottom: 1px solid black; */
   }
 
 .profile-dependent-form input{
@@ -259,6 +254,7 @@
     background: transparent;
   }
 
+
   .profile-edit-txt {
     font-family: HelveticaNeueBold;
     font-size: 12px;
@@ -270,25 +266,71 @@
     color: #253746;
   }
 
+  .profile-cancel-txt {
+    font-family: HelveticaNeueBold;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 2px;
+    color: #253746;
+  }
+
+  .profile-save-txt {
+    font-family: HelveticaNeueBold;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.83;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #ffffff;
+  }
+
   .profile-edit-btn {
-    border-radius: 0 !important; 
-    /* float:right; */
+    border-radius: 0 !important;
+    border: solid 1px #333f48;
+    /* float: right; */
+    padding: 8px 22px;
+    width: 110px;
   }
 
   .profile-edit-btn:hover, .profile-edit-btn:focus, .profile-edit-btn:active {
     background-color: #F2F2F2;
 }
 
-.profile-save {
+  .profile-save-btn {
+    border-radius: 0 !important; 
+    padding: 8px 22px;
+    width: 110px;
+    /* width: 100%;
+    padding: 4% 3%; */
+  }
+
+  .profile-cancel-btn {
+    border-radius: 0 !important; 
+    border: solid 1px #333f48;
+    padding: 8px 22px;
+    width: 110px;
+  }
+
+  .profile-cancel-btn:hover, .profile-cancel-btn:focus, .profile-cancel-btn:active {
+    background-color: #F2F2F2;
+}
+
+.profile-contact-save {
     display: none;
 }
 
-.profile-cancel {
+.profile-contact-cancel {
     display: none;
 }
 
 .profile-dependent-content-head {
     border-bottom: none;
+    background-color: white;
 }
 
 .profile-dependent-content-card {
@@ -296,15 +338,26 @@
 }
 
 .profile-family-div {
-    border: 1px solid grey;
+    /* border: 1px solid grey; */
     padding-top: 1%;
     padding-bottom: 2%;
 }
+
+.profile-family-input input {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid black; 
+}
+
+
 
 .remove-profile-family {
     margin-left: 5%;
     margin-top: 2%;
 }
+
+
 
 
 
