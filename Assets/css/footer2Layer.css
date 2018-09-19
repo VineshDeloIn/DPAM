@@ -44,7 +44,7 @@
 
 .fbSize{
     height: 15px;
-    width: 10px;
+    /* width: 10px; */
 }
 .instaSize {
     height: 15px;
@@ -52,26 +52,26 @@
 }
 .instColAdj {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     margin-top: 0.6%;
 }
 
 .fbColAdj {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     margin-top: 0.6%;
 }
 
 .midCols1Adj {
     color: #e4e6e9;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 
 .midCols2Adj {
     color: #e4e6e9;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 
 .footerTopAdj {
