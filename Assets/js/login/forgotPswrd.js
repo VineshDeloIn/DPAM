@@ -25,6 +25,7 @@ $(document).ready(function () {
         }
 
         if (isEmailMobValid) {
+            // event.preventDefault();
             $(".forgtPswrdForm").submit();    
         }
 

@@ -66,7 +66,7 @@
 
 .login-toaster-div {
     /* display: none;  */
-    margin-top: -20%;
+    margin-top: -23%;
     word-wrap: break-word;
     width: 110%;
     margin-left: -8%;
@@ -279,6 +279,7 @@
     text-align: left;
     left: 0%;
     margin-top: 1%;
+    position: absolute;
 }
 
 .login-mail-err {
@@ -293,6 +294,7 @@
     text-align: left;
     left: 0%;
     margin-top: 1%;
+    position: absolute;
 }
 
 .login-remembr-forgot-div {
