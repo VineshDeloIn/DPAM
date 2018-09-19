@@ -11440,12 +11440,11 @@ html, body {
 
 .create-dpam-logo {
     padding-top: 2%;
-    padding-left: 2%;
+    padding-left: 4%;
 }
 
 .create-rent-convinience {
     width: 100%;
-    object-fit: cover;
     padding-top: 12%;
     padding-left: 10%;
     padding-right: 10%;
@@ -11455,7 +11454,7 @@ html, body {
     width: 100%;
     bottom: 0%;
     position: absolute;
-    object-fit: cover;
+    display: block;
 }
 
 .create-password-text {
@@ -11693,6 +11692,7 @@ html, body {
         position: absolute;
         margin-bottom: 0;
         bottom: 0;
+        display: block;
     }
 
     .create-password-right-side {
@@ -11774,12 +11774,11 @@ html, body {
 
 .emailVerifyDpamLogo {
     padding-top: 2%;
-    padding-left: 2%;
+    padding-left: 4%;
 }
 
 .emailVerify-convinience {
     width: 100%;
-    object-fit: cover;
     padding-top: 12%;
     padding-left: 10%;
     padding-right: 10%;
@@ -11789,8 +11788,9 @@ html, body {
 .emailVerify-illustration {
      width: 100%;
      bottom: 0%;
-     position: absolute;    
-     object-fit: cover;
+     position: absolute;
+        
+     display: block;
 }
  
 .emailVerify-right-side {
@@ -11858,10 +11858,12 @@ html, body {
     line-height: 1.83;
     letter-spacing: 2px;
     text-align: center;
-    color: black;
+    color: white;
     padding: 3% 3%;
     margin-top: 10%;
 }
+
+
 
 @media screen and (max-width: 480px) {
 
@@ -11883,6 +11885,8 @@ html, body {
         display: none;
     }
 
+    
+
     .emailVerify-right-side {
         z-index: 1;
         position: absolute;
@@ -11901,6 +11905,7 @@ html, body {
         position: absolute;
         margin-bottom: 0;
         bottom: 0;
+        display: block;
     }
 
    
@@ -11920,7 +11925,7 @@ html, body {
 
 .footer {
     position: relative;
-    height: 20%;
+    height: 30%;
     /* margin-top: 20%; */
     /* color: #f3f5f7; */
     font-size: 11px;
@@ -11933,6 +11938,7 @@ html, body {
     background-color: #333f48;
     height: 63%;
     letter-spacing: 1.7px;
+    
     /* padding-bottom: ; */
 }
 
@@ -11945,11 +11951,11 @@ html, body {
 }
 
 .rowheight1Adj {
-    margin-top: 1%;
+    margin-top: 2%;
 }
 .rowheight2Adj {
     /* margin-top: 1%; */
-    margin-bottom: 2%;
+    margin-top: 0.7%;
 }
 
 .TcAdj {
@@ -11964,7 +11970,7 @@ html, body {
 
 .fbSize{
     height: 15px;
-    width: 10px;
+    /* width: 10px; */
 }
 .instaSize {
     height: 15px;
@@ -11972,26 +11978,26 @@ html, body {
 }
 .instColAdj {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     margin-top: 0.6%;
 }
 
 .fbColAdj {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     margin-top: 0.6%;
 }
 
 .midCols1Adj {
     color: #e4e6e9;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 
 .midCols2Adj {
     color: #e4e6e9;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 
 .footerTopAdj {
@@ -11999,7 +12005,7 @@ html, body {
 }
 
 .footer2topAdj {
-    margin: 1% 0%;;
+    margin-top: 2%;
 }
 @media screen and (min-width: 300px) and (orientation:potrait) {
     .footerTopAdj {
@@ -12032,9 +12038,9 @@ html, body {
     
     .footer-group-2 {
         font-family: "HelveticaNeueReg";
-        font-size: 12px;
+        font-size: 10px;
         background-color: #101820;
-        height: 65%;
+        height: 50%;
         letter-spacing: 1.7px;
     }
     .midCols1Adj {
@@ -12084,12 +12090,11 @@ html, body {
 
 .frgtPswrdDpamLogo {
     padding-top: 2%;
-    padding-left: 2%;
+    padding-left: 4%;
 }
 
 .frgtPswrd-convinience {
     width: 100%;
-    object-fit: cover;
     padding-top: 12%;
     padding-left: 10%;
     padding-right: 10%;
@@ -12099,8 +12104,8 @@ html, body {
 .forgtPswrd-illustration {
      width: 100%;
      bottom: 0%;
-     position: absolute;    
-     object-fit: cover;
+     position: absolute;
+     display: block;
 }
     
     
@@ -12300,6 +12305,7 @@ html, body {
         position: absolute;
         margin-bottom: 0;
         bottom: 0;
+        display: block;
     }
 
     .forgtPswrd-main .forgtPswrd-input label {
@@ -12410,6 +12416,16 @@ html, body {
     overflow-y: auto;
 }
 
+.button1Adj {
+    display: flex;
+    justify-content: flex-end;
+}
+.button2Adj {
+    display: flex;
+    justify-content: flex-start;
+}
+
+
 .landing {
     min-height: 100%;
     position: relative;
@@ -12429,7 +12445,8 @@ html, body {
 
 
 .logoTopAdj {
-    margin-top: 20px;
+    margin-top: 10%;
+    margin-left: 4%;
     /* display: flex;   
     justify-content:flex-start; */
 }
@@ -12500,6 +12517,7 @@ html, body {
     position: absolute;
     bottom:0%;
     left:0%;
+    display: block;
     /* margin-left: 0; */
     /* margin-bottom: 0; */
     /* top:-20%; */
@@ -12510,6 +12528,10 @@ html, body {
     height: 350px;
     width: 66.6%;
     position: relative;
+    
+    display: block;
+    
+
     /* margin-left: 0;
     margin-bottom: 0; */
     top:-20%;
@@ -13017,8 +13039,9 @@ html, body {
 }
 
 .uaeLogin:hover, .uaeLogin:focus, .uaeLogin:active {
-    background-color: #F2F2F2;
-    color: #585d63;
+    color: red;
+    border: 1px solid red;
+    background-color: transparent;
 }
 
 .login-fb-google-div {
@@ -13056,7 +13079,12 @@ html, body {
 }
 
 .fbLogin:hover, .fbLogin:focus, .fbLogin:active {
-    background-color: #F2F2F2;
+    border: 1px solid red;
+    background-color: transparent;
+}
+.fbLogin:hover .login-fb-txt, .fbLogin:focus .login-fb-txt, .fbLogin:active .login-fb-txt {
+    color: red !important;
+   
 }
 
 .googleLogin {
@@ -13068,7 +13096,13 @@ html, body {
 }
 
 .googleLogin:hover, .googleLogin:focus, .googleLogin:active {
-    background-color: #F2F2F2;
+  
+    border: 1px solid red;
+    background-color: transparent;
+}
+.googleLogin:hover .login-google-txt, .googleLogin:focus .login-google-txt, .googleLogin:active .login-google-txt {
+    color: red !important; 
+    
 }
 
 .loginNoAcntTxt {
@@ -13259,12 +13293,11 @@ html, body {
 
 .otpDpamLogo {
     padding-top: 2%;
-    padding-left: 2%;
+    padding-left: 4%;
 }
 
 .otp-convinience {
     width: 100%;
-    object-fit: cover;
     padding-top: 12%;
     padding-left: 10%;
     padding-right: 10%;
@@ -13274,7 +13307,7 @@ html, body {
     width: 100%;
     bottom: 0%;
     position: absolute;
-    object-fit: cover;
+    display: block;
 }
 
 /* .otp-left-side img {
@@ -13469,6 +13502,7 @@ html, body {
         position: absolute;
         margin-bottom: 0;
         bottom: 0;
+        display: block;
     }
     .otp-main .otp-input label {
         top: 65%;
@@ -13503,11 +13537,6 @@ html, body {
     height: 32vw;
     background-repeat: no-repeat;
 }
-
-.profile-content-main{
-
-}
-
 
 
  .file-upload {
@@ -13719,7 +13748,7 @@ html, body {
     border: 0;
     outline: 0;
     background: transparent;
-    border-bottom: 1px solid black;
+    /* border-bottom: 1px solid black; */
   }
 
 .profile-dependent-form input{
@@ -13735,6 +13764,7 @@ html, body {
     background: transparent;
   }
 
+
   .profile-edit-txt {
     font-family: HelveticaNeueBold;
     font-size: 12px;
@@ -13746,25 +13776,71 @@ html, body {
     color: #253746;
   }
 
+  .profile-cancel-txt {
+    font-family: HelveticaNeueBold;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 2px;
+    color: #253746;
+  }
+
+  .profile-save-txt {
+    font-family: HelveticaNeueBold;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.83;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #ffffff;
+  }
+
   .profile-edit-btn {
-    border-radius: 0 !important; 
-    /* float:right; */
+    border-radius: 0 !important;
+    border: solid 1px #333f48;
+    /* float: right; */
+    padding: 8px 22px;
+    width: 110px;
   }
 
   .profile-edit-btn:hover, .profile-edit-btn:focus, .profile-edit-btn:active {
     background-color: #F2F2F2;
 }
 
-.profile-save {
+  .profile-save-btn {
+    border-radius: 0 !important; 
+    padding: 8px 22px;
+    width: 110px;
+    /* width: 100%;
+    padding: 4% 3%; */
+  }
+
+  .profile-cancel-btn {
+    border-radius: 0 !important; 
+    border: solid 1px #333f48;
+    padding: 8px 22px;
+    width: 110px;
+  }
+
+  .profile-cancel-btn:hover, .profile-cancel-btn:focus, .profile-cancel-btn:active {
+    background-color: #F2F2F2;
+}
+
+.profile-contact-save {
     display: none;
 }
 
-.profile-cancel {
+.profile-contact-cancel {
     display: none;
 }
 
 .profile-dependent-content-head {
     border-bottom: none;
+    background-color: white;
 }
 
 .profile-dependent-content-card {
@@ -13772,15 +13848,26 @@ html, body {
 }
 
 .profile-family-div {
-    border: 1px solid grey;
+    /* border: 1px solid grey; */
     padding-top: 1%;
     padding-bottom: 2%;
 }
+
+.profile-family-input input {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid black; 
+}
+
+
 
 .remove-profile-family {
     margin-left: 5%;
     margin-top: 2%;
 }
+
+
 
 
 
@@ -13993,12 +14080,11 @@ html, body {
 
 .reset-dpam-logo {
     padding-top: 2%;
-    padding-left: 2%;
+    padding-left: 4%;
 }
 
 .reset-rent-convinience {
     width: 100%;
-    object-fit: cover;
     padding-top: 12%;
     padding-left: 10%;
     padding-right: 10%;
@@ -14008,7 +14094,7 @@ html, body {
     width: 100%;
     bottom: 0%;
     position: absolute;
-    object-fit: cover;
+    display: block;
 }
 
 .reset-pass-input { position: relative; width:100%; }
@@ -14268,6 +14354,7 @@ html, body {
         position: absolute;
         margin-bottom: 0;
         bottom: 0;
+        display: block;
     }
 
     .reset-password-right-side {
@@ -14507,6 +14594,7 @@ html, body {
 .signup-remembr-forgot-div {
     margin: 4% 0%;
 }
+
 
 /* The container */
 .signup-remember-txt {
@@ -14844,6 +14932,31 @@ margin-left: -47px;
     border-bottom-color: #f7f7f7 !important;
 }
 
+.signup-uae-login:hover, .signup-uae-login:focus, .signup-uae-login:active {
+    color: red !important;
+    border: 1px solid red;
+    background-color: transparent;
+}
+.signup-fb-login:hover , .signup-fb-login:focus  , .signup-fb-login:active {
+   
+    border: 1px solid red;
+    background-color: transparent;
+}
+
+.signup-fb-login:hover .signup-fb-txt, .signup-fb-login:focus  .signup-fb-txt, .signup-fb-login:active  .signup-fb-txt{
+    color: red !important;
+   
+}
+
+.signup-google-login:hover, .signup-google-login:focus, .signup-google-login:active {
+   
+    border: 1px solid red;
+    background-color: transparent;
+}
+.signup-google-login:hover .signup-google-txt, .signup-google-login:focus .signup-google-txt, .signup-google-login:active .signup-google-txt {
+   
+    color: red !important;
+}
 
 @media screen and (min-width: 300px) and (orientation:potrait) {
     

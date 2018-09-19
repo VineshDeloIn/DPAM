@@ -14,12 +14,11 @@
 
 .emailVerifyDpamLogo {
     padding-top: 2%;
-    padding-left: 2%;
+    padding-left: 4%;
 }
 
 .emailVerify-convinience {
     width: 100%;
-    object-fit: cover;
     padding-top: 12%;
     padding-left: 10%;
     padding-right: 10%;
@@ -29,8 +28,9 @@
 .emailVerify-illustration {
      width: 100%;
      bottom: 0%;
-     position: absolute;    
-     object-fit: cover;
+     position: absolute;
+        
+     display: block;
 }
  
 .emailVerify-right-side {
@@ -98,12 +98,16 @@
     line-height: 1.83;
     letter-spacing: 2px;
     text-align: center;
-    color: white;
+    color: black;
     padding: 3% 3%;
     margin-top: 10%;
 }
 
-
+.emailVerifySbmit:hover, .emailVerifySbmit:focus, .emailVerifySbmit:active {
+    color: red !important;
+    border: 1px solid red;
+    background-color: transparent;
+}
 
 @media screen and (max-width: 480px) {
 
@@ -145,6 +149,7 @@
         position: absolute;
         margin-bottom: 0;
         bottom: 0;
+        display: block;
     }
 
    
