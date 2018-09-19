@@ -208,24 +208,6 @@
 }
 
 
-.signup-uae-login:hover, .signup-uae-login:focus, .signup-uae-login:active {
-    color: red;
-    border: 1px solid red;
-    background-color: transparent;
-}
-
-
-.signup-fb-login:hover, .signup-fb-login:focus, .signup-fb-login:active {
-    color: red;
-    border: 1px solid red;
-    background-color: transparent;
-}
-
-.signup-google-login:hover, .signup-google-login:focus, .signup-google-login:active {
-    color: red;
-    border: 1px solid red;
-    background-color: transparent;
-}
 /* The container */
 .signup-remember-txt {
     display: block;
@@ -562,6 +544,31 @@ margin-left: -47px;
     border-bottom-color: #f7f7f7 !important;
 }
 
+.signup-uae-login:hover, .signup-uae-login:focus, .signup-uae-login:active {
+    color: red !important;
+    border: 1px solid red;
+    background-color: transparent;
+}
+.signup-fb-login:hover , .signup-fb-login:focus  , .signup-fb-login:active {
+   
+    border: 1px solid red;
+    background-color: transparent;
+}
+
+.signup-fb-login:hover .signup-fb-txt, .signup-fb-login:focus  .signup-fb-txt, .signup-fb-login:active  .signup-fb-txt{
+    color: red !important;
+   
+}
+
+.signup-google-login:hover, .signup-google-login:focus, .signup-google-login:active {
+   
+    border: 1px solid red;
+    background-color: transparent;
+}
+.signup-google-login:hover .signup-google-txt, .signup-google-login:focus .signup-google-txt, .signup-google-login:active .signup-google-txt {
+   
+    color: red !important;
+}
 
 @media screen and (min-width: 300px) and (orientation:potrait) {
     

@@ -490,9 +490,12 @@
 }
 
 .fbLogin:hover, .fbLogin:focus, .fbLogin:active {
-    color: red;
     border: 1px solid red;
     background-color: transparent;
+}
+.fbLogin:hover .login-fb-txt, .fbLogin:focus .login-fb-txt, .fbLogin:active .login-fb-txt {
+    color: red !important;
+   
 }
 
 .googleLogin {
@@ -504,9 +507,13 @@
 }
 
 .googleLogin:hover, .googleLogin:focus, .googleLogin:active {
-    color: red;
+  
     border: 1px solid red;
     background-color: transparent;
+}
+.googleLogin:hover .login-google-txt, .googleLogin:focus .login-google-txt, .googleLogin:active .login-google-txt {
+    color: red !important; 
+    
 }
 
 .loginNoAcntTxt {
