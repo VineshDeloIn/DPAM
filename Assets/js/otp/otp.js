@@ -4,17 +4,21 @@ $(document).ready(function(){
         $(".otp-err").html("");
     });
 
-    var isOtpValid;
+    var isOtpValid=false;
     $(".otpForm").on('submit',function( event ) {
-        var emailMobOtp = $('.otpLabelTxt').val();
-        // event.preventDefault();
+        var emailMobOtp = $('.otpInputTxt').val();
         
         if(emailMobOtp == '') {
           $('.otp-err').html('Invalid OTP');
-          //$('p.emailPhOtpErr').slideDown(5000);
           isOtpValid = false;
         }
+        if(emailMobOtp != '') {
+            isOtpValid = true;
+        }
+        if (isOtpValid) {
+            $(".otpForm").submit();
+        }
 
-        
+
       });
 });

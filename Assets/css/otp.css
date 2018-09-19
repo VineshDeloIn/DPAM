@@ -145,7 +145,7 @@
     color: #333f48;
 }
 
-.otp-main .otp-input input:focus~label, .otp-main .otp-input input:focus~valid {
+.otp-main .otp-input input:focus~label, .otp-main .otp-input input:valid~label {
     top: 46%;
     left: 0%;
     font-family: HelveticaNeueMed;

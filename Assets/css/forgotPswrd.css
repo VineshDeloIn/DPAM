@@ -143,7 +143,7 @@
 }
 
 .forgtPswrd-main .forgtPswrd-input input:focus ~ label,
-.forgtPswrd-main .forgtPswrd-input input:focus ~ valid
+.forgtPswrd-main .forgtPswrd-input input:valid ~ label
  {
     top: 46%;
     left: 0%;

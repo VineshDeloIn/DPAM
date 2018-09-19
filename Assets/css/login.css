@@ -234,7 +234,7 @@
 } */
 
 .login-main .login-input input:focus~label, .login-main .login-input input:valid~label {
-    top: 40%;
+    top: 33%;
     left: 0%;
     font-family: HelveticaNeueMed;
     font-size: 10px;

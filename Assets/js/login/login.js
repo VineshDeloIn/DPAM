@@ -6,9 +6,9 @@ window.onload = function () {
     //     }
     //     $('.loginPassword').val('');
     //     $('.remeberMeCbx').prop('checked', false); 
- 
+
     var getUrlAfterHash = window.location.hash;
-    
+
     if (getUrlAfterHash == "#login") {
 
         $('.landing-image').addClass("clicked");
@@ -19,7 +19,7 @@ window.onload = function () {
         $('.login-main').show();
         $('.signup-main-margin').hide();
     }
-    else  if (getUrlAfterHash == "#signup") {
+    else if (getUrlAfterHash == "#signup") {
 
         $('.landing-image').addClass("clicked");
         $('.landing-slide-content').addClass("slideadd");
@@ -28,12 +28,25 @@ window.onload = function () {
         $('.singUpBtnAdj:visible').hide();
         $('.signup-main-margin').show();
         $('.login-main').hide();
-    
+
     }
 }
 
 
 $(document).ready(function () {
+
+    //getting values from the form
+    var emailMob = $(".loginMail").val();
+    var password = $(".loginPassword").val();
+
+    var isEmailMobValid;
+
+    if (emailMob == "" && !isEmailMobValid) {
+        $('.loginMail').val('');
+    }
+    $('.loginPassword').val('');
+    $('.remeberMeCbx').prop('checked', false);
+
 
     $('.loginSignUpTxt').on('click', function () {
 
@@ -44,9 +57,9 @@ $(document).ready(function () {
         $('.singUpBtnAdj:visible').hide();
         $('.signup-main-margin').show();
         $('.login-main').hide();
-    
+
     });
-   
+
     $('.signup-clickable-text').on('click', function () {
 
         $('.landing-image').addClass("clicked");
@@ -56,10 +69,10 @@ $(document).ready(function () {
         $('.singUpBtnAdj:visible').hide();
         $('.login-main').show();
         $('.signup-main-margin').hide();
-    
+
     });
-    
-    
+
+
 
     $('.loginBtnAdj').on('click', function () {
         // alert('hi login');
@@ -95,7 +108,7 @@ $(document).ready(function () {
         $('.singUpBtnAdj:hidden').show();
     });
 
-  
+
     $("input").focus(function () {
         $(".login-mail-err").html("");
         $(".login-pswrd-err").html("");
@@ -103,12 +116,10 @@ $(document).ready(function () {
 
     $(".loginForm").on('submit', function (event) {
 
-    
-        //getting values from the form
         var emailMob = $(".loginMail").val();
         var password = $(".loginPassword").val();
-        var isEmailMobValid = validatePhone(emailMob) || validateEmail(emailMob);
-        var isPasswordValid;
+        isEmailMobValid = validatePhone(emailMob) || validateEmail(emailMob);
+        var isPasswordValid = false;
 
         //Checking if email/mob is not empty
         if (emailMob == "" || !isEmailMobValid) {
@@ -127,10 +138,6 @@ $(document).ready(function () {
             isPasswordValid = true;
         }
 
-        if (isEmailMobValid && isPasswordValid) {
-            alert(emailMob + " " + password);
-        }
-
 
         //added RememberMe functionality of rememberme is checked, Email and password cannot be empty
         if ($('.remeberMeCbx').is(':checked') && isEmailMobValid && isPasswordValid) {
@@ -144,11 +151,11 @@ $(document).ready(function () {
             localStorage.password = '';
             localStorage.checkBoxValidation = '';
         }
-        
+
         if (isEmailMobValid && isPasswordValid) {
-            $(".loginForm").submit();            
-        } 
-        ev.preventDefault();
+            $(".loginForm").submit();
+        }
+        
     });
 
 });
