@@ -1,43 +1,38 @@
-
-.forgtPswrdContainer {
+.otpContainer {
     height: 100vh;
     width: 100%;
     /* width: 100vw; */
 }
 
-.forgtPswrd-left-side{
-     
+.otp-left-side {
     height: 100vh;
     width: 66.5%;
     float: left;
     /* margin-bottom: 50vh; */
     /* background-image: url("../../Assets/images/landingPageImage.png"); */
-   
 }
 
-.frgtPswrdDpamLogo {
+.otpDpamLogo {
     padding-top: 2%;
     padding-left: 2%;
 }
 
-.frgtPswrd-convinience {
+.otp-convinience {
     width: 100%;
     object-fit: cover;
     padding-top: 12%;
     padding-left: 10%;
     padding-right: 10%;
-    
 }
 
-.forgtPswrd-illustration {
-     width: 100%;
-     bottom: 0%;
-     position: absolute;    
-     object-fit: cover;
+.otp-illustration {
+    width: 100%;
+    bottom: 0%;
+    position: absolute;
+    object-fit: cover;
 }
-    
-    
-/* .forgtPswrd-left-side img {
+
+/* .otp-left-side img {
     width: 100%;
     height: 100vh;
     max-width: 100%;
@@ -48,7 +43,7 @@
     height: 20vh;
 } */
 
-.forgtPswrd-right-side {
+.otp-right-side {
     z-index: 1;
     position: relative;
     float: left;
@@ -57,7 +52,7 @@
     background-color: #f7f7f7;
 }
 
-.forgtPswrd-main {
+.otp-main {
     width: 100%;
     height: 100vh;
     background-color: #f7f7f7;
@@ -65,19 +60,28 @@
     padding-right: 11%;
     /* padding-top: 8%;  */
     margin-left: 0%;
-     /* border:2px solid blue;  */
+    /* border:2px solid blue;  */
 }
 
+.otp-resend-txt {    
+    margin-top: 10%;
+    text-align: center;
+    font-family: HelveticaNeueReg;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    color: #585d63;
+}
 
-
-.forgtPswrdForm {
+.otpForm {
     background: #ffffff;
     background-color: #f7f7f7;
 }
 
-
-
-.forgtPswrd-text {
+.otp-text {
     margin-top: 15%;
     font-family: HelveticaNeueMed;
     font-size: 26px;
@@ -89,8 +93,7 @@
     color: #333f48;
 }
 
-
-.forgtPswrd-reg-text {
+.otp-reg-text {
     margin-top: 12%;
     font-family: HelveticaNeueReg;
     font-size: 16px;
@@ -102,11 +105,11 @@
     color: #585d63;
 }
 
-.forgtPswrd-main .forgtPswrd-input {
+.otp-main .otp-input {
     position: relative;
 }
 
-.forgtPswrd-main .forgtPswrd-input input {
+.otp-main .otp-input input {
     width: 100%;
     box-sizing: border-box;
     background-color: #f7f7f7;
@@ -114,7 +117,7 @@
     outline: none;
     border: none;
     border-bottom: 0.5px solid #a7a9ad;
-    padding: 4% 0; 
+    padding: 4% 0;
     font-family: HelveticaNeueMed;
     font-size: 13px;
     font-weight: 500;
@@ -123,12 +126,12 @@
     line-height: 1;
     letter-spacing: 2.2px;
     color: #333f48;
-    margin-top:15%;
+    margin-top: 15%;
 }
 
-.forgtPswrd-main .forgtPswrd-input label {
+.otp-main .otp-input label {
     position: absolute;
-    top: 70%;    
+    top: 70%;
     transition: .5s;
     left: 0%;
     pointer-events: none;
@@ -142,9 +145,7 @@
     color: #333f48;
 }
 
-.forgtPswrd-main .forgtPswrd-input input:focus ~ label,
-.forgtPswrd-main .forgtPswrd-input input:valid ~ label
- {
+.otp-main .otp-input input:focus~label, .otp-main .otp-input input:valid~label {
     top: 46%;
     left: 0%;
     font-family: HelveticaNeueMed;
@@ -157,12 +158,11 @@
     color: #cbcfd6;
 }
 
-.forgtPswrd-main .forgtPswrd-input input:focus,
-.forgtPswrd-main .forgtPswrd-input input:valid {
-   border-bottom: 1px solid grey; 
+.otp-main .otp-input input:focus, .otp-main .otp-input input:valid {
+    border-bottom: 1px solid grey;
 }
 
-.forgtPswrd-mail-err {
+.otp-err {
     font-family: HelveticaNeueReg;
     font-size: 10px;
     font-weight: normal;
@@ -176,8 +176,7 @@
     margin-top: 2%;
 }
 
-
-.forgtPswrdSbmit {
+.otpSbmit {
     width: 100%;
     font-family: HelveticaNeueBold;
     border-radius: 0 !important;
@@ -194,28 +193,21 @@
 }
 
 @media screen and (max-width: 480px) {
-
-    .forgtPswrd-main {
+    .otp-main {
         padding-left: 1%;
         padding-right: 1%;
     }
-
-    .forgtPswrd-left-side {
+    .otp-left-side {
         width: 100%;
     }
-
-    .frgtPswrdDpamLogo { 
+    .otpDpamLogo {
         margin: 0 auto;
         display: block;
     }
-
-    .frgtPswrd-convinience {
+    .otp-convinience {
         display: none;
     }
-
-    
-
-    .forgtPswrd-right-side {
+    .otp-right-side {
         z-index: 1;
         position: absolute;
         height: 72vh;
@@ -225,8 +217,7 @@
         padding: 0%;
         margin-left: 5%;
     }
-   
-    .forgtPswrd-illustration {
+    .otp-illustration {
         left: 0%;
         height: 130px;
         width: 100%;
@@ -234,15 +225,7 @@
         margin-bottom: 0;
         bottom: 0;
     }
-
-    .forgtPswrd-main .forgtPswrd-input label {
+    .otp-main .otp-input label {
         top: 65%;
     }
 }
-
-
-
-
-
-
-

@@ -1,18 +1,24 @@
 $(document).ready(function(){
    
     $("input").focus(function() {
-        $(".emailPhOtpErr").html("");
+        $(".otp-err").html("");
     });
 
-    var isOtpValid;
-    $( "#OtpForm" ).on('submit',function( event ) {
-        var emailMobOtp = $('#otpNumber').val();
-        event.preventDefault();
+    var isOtpValid=false;
+    $(".otpForm").on('submit',function( event ) {
+        var emailMobOtp = $('.otpInputTxt').val();
         
         if(emailMobOtp == '') {
-          $('.emailPhOtpErr').html('Invalid OTP');
-          //$('p.emailPhOtpErr').slideDown(5000);
+          $('.otp-err').html('Invalid OTP');
           isOtpValid = false;
         }
+        if(emailMobOtp != '') {
+            isOtpValid = true;
+        }
+        if (isOtpValid) {
+            $(".otpForm").submit();
+        }
+
+
       });
 });
