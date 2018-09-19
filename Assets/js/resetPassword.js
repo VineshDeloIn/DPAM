@@ -1,7 +1,7 @@
 $( document ).ready(function() {
-  
+    $('.reset-show-password').css('display','none');
     $('.reset-confirm-password').bind("cut copy paste", function(e) {
-        // e.preventDefault();
+       
        
         });
 
@@ -14,13 +14,21 @@ $( document ).ready(function() {
             $(".reset-password-error").html(" ");
         
          });
-    
-  $('.reset-show-password').click(function() {
-    passtoTextReset();
+   
+         
+         $('.reset-hide-password').click(function() {
+            passtoTextReset();
+            $('.reset-hide-password').css('display','none');
+            $('.reset-show-password').css('display','block');
+          
+          });
+          $('.reset-show-password').click(function() {
+            passtoTextReset();
+            $('.reset-show-password').css('display','none');
+            $('.reset-hide-password').css('display','block');
+          
+          });      
   
-  });
-
-
 $(".reset-new-password").keyup(function(e){
 
     var passWord=$(".reset-new-password").val();
@@ -81,7 +89,7 @@ $( ".reset-password-form" ).on('submit',function( event ) {
      if(isPasswordValid) {
         $(".reset-password-form").submit();
      } 
-    // event.preventDefault();
+   
    
        
     });

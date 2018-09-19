@@ -103,6 +103,12 @@
     margin-top: 10%;
 }
 
+.emailVerifySbmit:hover, .emailVerifySbmit:focus, .emailVerifySbmit:active {
+    color: red !important;
+    border: 1px solid red;
+    background-color: transparent;
+}
+
 @media screen and (max-width: 480px) {
 
     .emailVerify-main {
@@ -122,6 +128,8 @@
     .emailVerify-convinience {
         display: none;
     }
+
+    
 
     .emailVerify-right-side {
         z-index: 1;

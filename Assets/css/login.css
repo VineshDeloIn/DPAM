@@ -450,8 +450,9 @@
 }
 
 .uaeLogin:hover, .uaeLogin:focus, .uaeLogin:active {
-    background-color: #F2F2F2;
-    color: #585d63;
+    color: red;
+    border: 1px solid red;
+    background-color: transparent;
 }
 
 .login-fb-google-div {
@@ -489,7 +490,12 @@
 }
 
 .fbLogin:hover, .fbLogin:focus, .fbLogin:active {
-    background-color: #F2F2F2;
+    border: 1px solid red;
+    background-color: transparent;
+}
+.fbLogin:hover .login-fb-txt, .fbLogin:focus .login-fb-txt, .fbLogin:active .login-fb-txt {
+    color: red !important;
+   
 }
 
 .googleLogin {
@@ -501,7 +507,13 @@
 }
 
 .googleLogin:hover, .googleLogin:focus, .googleLogin:active {
-    background-color: #F2F2F2;
+  
+    border: 1px solid red;
+    background-color: transparent;
+}
+.googleLogin:hover .login-google-txt, .googleLogin:focus .login-google-txt, .googleLogin:active .login-google-txt {
+    color: red !important; 
+    
 }
 
 .loginNoAcntTxt {
