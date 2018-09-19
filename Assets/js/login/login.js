@@ -138,7 +138,7 @@ $(document).ready(function () {
         if (isEmailMobValid && isPasswordValid) {
             $(".loginForm").submit();            
         } 
-
+        ev.preventDefault();
     });
 
 });
