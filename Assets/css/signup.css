@@ -207,6 +207,25 @@
     margin: 4% 0%;
 }
 
+
+.signup-uae-login:hover, .signup-uae-login:focus, .signup-uae-login:active {
+    color: red;
+    border: 1px solid red;
+    background-color: transparent;
+}
+
+
+.signup-fb-login:hover, .signup-fb-login:focus, .signup-fb-login:active {
+    color: red;
+    border: 1px solid red;
+    background-color: transparent;
+}
+
+.signup-google-login:hover, .signup-google-login:focus, .signup-google-login:active {
+    color: red;
+    border: 1px solid red;
+    background-color: transparent;
+}
 /* The container */
 .signup-remember-txt {
     display: block;

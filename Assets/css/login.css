@@ -450,8 +450,9 @@
 }
 
 .uaeLogin:hover, .uaeLogin:focus, .uaeLogin:active {
-    background-color: #F2F2F2;
-    color: #585d63;
+    color: red;
+    border: 1px solid red;
+    background-color: transparent;
 }
 
 .login-fb-google-div {
@@ -489,7 +490,9 @@
 }
 
 .fbLogin:hover, .fbLogin:focus, .fbLogin:active {
-    background-color: #F2F2F2;
+    color: red;
+    border: 1px solid red;
+    background-color: transparent;
 }
 
 .googleLogin {
@@ -501,7 +504,9 @@
 }
 
 .googleLogin:hover, .googleLogin:focus, .googleLogin:active {
-    background-color: #F2F2F2;
+    color: red;
+    border: 1px solid red;
+    background-color: transparent;
 }
 
 .loginNoAcntTxt {

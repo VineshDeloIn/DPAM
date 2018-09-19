@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-  
+    $('.create-show-password').css('display','none');
     $('.confirm-password-create').bind("cut copy paste", function(e) {
         // e.preventDefault();
        
@@ -13,8 +13,18 @@ $( document ).ready(function() {
 
  });
 
+  
+
+  $('.create-hide-password').click(function() {
+    passtoTextCreate();
+    $('.create-hide-password').css('display','none');
+    $('.create-show-password').css('display','block');
+  
+  });
   $('.create-show-password').click(function() {
     passtoTextCreate();
+    $('.create-show-password').css('display','none');
+    $('.create-hide-password').css('display','block');
   
   });
 
