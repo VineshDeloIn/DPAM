@@ -15,12 +15,11 @@
 
 .otpDpamLogo {
     padding-top: 2%;
-    padding-left: 2%;
+    padding-left: 4%;
 }
 
 .otp-convinience {
     width: 100%;
-    object-fit: cover;
     padding-top: 12%;
     padding-left: 10%;
     padding-right: 10%;
@@ -30,7 +29,7 @@
     width: 100%;
     bottom: 0%;
     position: absolute;
-    object-fit: cover;
+    display: block;
 }
 
 /* .otp-left-side img {
@@ -225,6 +224,7 @@
         position: absolute;
         margin-bottom: 0;
         bottom: 0;
+        display: block;
     }
     .otp-main .otp-input label {
         top: 65%;
