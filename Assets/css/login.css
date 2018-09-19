@@ -368,12 +368,12 @@
 /* Style the checkmark/indicator */
 
 .login-remember-txt .login-remember-chck:after {
-    left: 8px;
-    top: 4px;
+    left: 6px;
+    top: 2px;
     width: 5px;
     height: 10px;
     border: solid #030608;
-    border-width: 0 3px 3px 0;
+    border-width: 0 2px 2px 0;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
@@ -413,7 +413,9 @@
     color: #ffffff;
     padding: 4% 3%;
 }
-
+.login-button:hover,.login-button :visited{
+background-color:#DA291C;
+}
 .login-or-txt {
     margin: 3% 0%;
     text-align: center;
@@ -480,7 +482,7 @@
     width: 105%;
     border-radius: 0 !important;
     border: 0.5px solid #a7a9ad;
-    padding: 4% 3%;
+    padding: 7% 3%;
 }
 
 .fbLogin:hover, .fbLogin:focus, .fbLogin:active,.fbLogin:visited {
@@ -497,7 +499,7 @@
     width: 105%;
     border-radius: 0 !important;
     border: 0.5px solid #a7a9ad;
-    padding: 4% 3%;
+    padding: 7% 3%;
 }
 
 .googleLogin:hover, .googleLogin:focus, .googleLogin:active, .googleLogin:visited {

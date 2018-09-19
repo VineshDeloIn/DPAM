@@ -190,8 +190,12 @@
     letter-spacing: 2px;
     text-align: center;
     color: #ffffff;
-    padding: 3% 3%;
+    padding: 4% 3%;
     margin-top: 10%;
+}
+
+.forgtPswrdSbmit:hover,.forgtPswrdSbmit:visited{
+    background-color: #DA291C;
 }
 
 @media screen and (max-width: 480px) {
