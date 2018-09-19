@@ -1,7 +1,7 @@
 $( document ).ready(function() {
     $( ".pass-input ul li" ).css("list-style-type", "none");
     $('.cnfpasswordSignUp').bind("cut copy paste", function(e) {
-        e.preventDefault();
+        // e.preventDefault();
        
         });
 
@@ -112,9 +112,8 @@ $( ".signupForm" ).on('submit',function( event ) {
      if(isEmailMobValid && isPasswordValid) {
         $(".signupForm").submit();
      } 
-    event.preventDefault();
-   
-       
+    // event.preventDefault();
+         
     });
     
 

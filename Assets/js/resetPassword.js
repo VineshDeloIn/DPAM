@@ -1,7 +1,7 @@
 $( document ).ready(function() {
   
     $('.reset-confirm-password').bind("cut copy paste", function(e) {
-        e.preventDefault();
+        // e.preventDefault();
        
         });
 
@@ -81,7 +81,7 @@ $( ".reset-password-form" ).on('submit',function( event ) {
      if(isPasswordValid) {
         $(".reset-password-form").submit();
      } 
-    event.preventDefault();
+    // event.preventDefault();
    
        
     });

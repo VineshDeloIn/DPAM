@@ -11873,6 +11873,28 @@ function passtoTextSignUp() {
     }
 }
 
+function passtoTextCreate() {
+    var firstElement = document.getElementsByClassName("password-create");
+
+    var x = firstElement[0];
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+}
+
+function passtoTextReset() {
+    var firstElement = document.getElementsByClassName("reset-new-password");
+
+    var x = firstElement[0];
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+}
+
 function validateShowPswrd(newPswrd) {
    
     if (newPswrd.type === "password") {
@@ -11919,6 +11941,44 @@ function checkPasswordStrength(pass){
       $(".sign-up-pwd-strength").css("color", "green");
   
   
+    }
+  }
+
+
+  function checkPasswordStrengthCreate(pass){
+    if(pass.length<=0){
+        $(".create-password-strength").html(" ");
+       
+    }else if(pass.length<=8){
+      $(".create-password-strength").html("Weak");
+      $(".create-password-strength").css("color", "red");
+     
+    }else if(pass.length>8 && pass.length<=12){
+      $(".create-password-strength").html("Medium");
+      $(".create-password-strength").css("color", "green");
+     
+    }else if(pass.length>12){
+      $(".create-password-strength").html("Strong");
+      $(".create-password-strength").css("color", "green");
+    }
+  }
+
+
+  function checkPasswordStrengthReset(pass){
+    if(pass.length<=0){
+        $(".reset-password-strength").html(" ");
+       
+    }else if(pass.length<=8){
+      $(".reset-password-strength").html("Weak");
+      $(".reset-password-strength").css("color", "red");
+     
+    }else if(pass.length>8 && pass.length<=12){
+      $(".reset-password-strength").html("Medium");
+      $(".reset-password-strength").css("color", "green");
+     
+    }else if(pass.length>12){
+      $(".reset-password-strength").html("Strong");
+      $(".reset-password-strength").css("color", "green");
     }
   }
 
@@ -12084,6 +12144,92 @@ function comparePassword(pass1,pass2){
         return false;
     }
 }
+
+$( document ).ready(function() {
+  
+    $('.confirm-password-create').bind("cut copy paste", function(e) {
+        // e.preventDefault();
+       
+        });
+  $("input").focus(function() {
+
+    $(".create-unequal-pswrd-err").html(" ");
+    $(".create-pswrd-err").html(" ");
+    $(".create-invalid-pswrd-err").html(" ");
+    $(".create-cnfpswrd-err").html(" ");
+
+ });
+
+  $('.create-show-password').click(function() {
+    passtoTextCreate();
+  
+  });
+
+
+$(".password-create").keyup(function(e){
+
+    var passWord=$(".password-create").val();
+    
+    checkPasswordStrengthCreate(passWord);
+});
+
+$(".confirm-password-create").keyup(function(e){
+
+    var passWord=$(".password-create").val();
+    
+    checkPasswordStrengthCreate(passWord);
+});
+
+
+
+
+
+$( ".create-password-form" ).on('submit',function( event ) {
+    
+    
+        var passwordCreate = $(".password-create").val();
+        var cnfpasswordCreate = $(".confirm-password-create").val();
+        
+        if(!comparePassword(passwordCreate,cnfpasswordCreate)){
+            
+            $(".create-unequal-pswrd-err").html("Passwords do not match");
+            isPasswordValid = false;
+        }
+       
+
+        //Checking if password is not empty
+        if(passwordCreate == "") {
+            $(".create-pswrd-err").html("Password Cannot Be Empty!");
+            isPasswordValid = false;
+        } else {
+            isPasswordValid = true;
+        }
+
+       
+        
+        if(!validatePassword(passwordCreate)){
+  
+            $(".create-invalid-pswrd-err").html("Invalid Password ");
+            isPasswordValid = false;
+     }
+     if(cnfpasswordCreate==""){
+      
+            $(".create-cnfpswrd-err").html("Invalid Password");
+            isPasswordValid = false;
+     }
+    
+     if(isPasswordValid) {
+        $(".create-password-form").submit();
+     } 
+    // event.preventDefault();
+   
+       
+    });
+    
+
+});
+
+
 
 
 $(document).ready(function () {
@@ -13286,102 +13432,6 @@ $(document).ready(function(){
         $('#SignBtn:hidden').show();
     });
 });
-$( document ).ready(function() {
-   // alert("here");
-    $( ".createPswrdinfo ul li" ).css("list-style-type", "none");
-    $('#confirmNewCreatePswrd').bind("cut copy paste", function (e) {
-        e.preventDefault();
-    });
-
- $('[data-toggle="tooltip"]').tooltip(); 
-    
-
-    $("input").focus(function() {
-        $(".newPswrdErr").html("");
-        $(".confirmNewPswrdErr").html("");
-        $(".createPwdStrength").html("");
-  
-
-});
-
-// function to show password
-
-  $('#showCreatePswrd').click(function() {
-    var newPswrd = document.getElementById("newCreatePswrd");
-    validateShowPswrd(newPswrd);
-  
-  });
-
-
-$("#newCreatePswrd").keyup(function(e){
-
-    var newPswrdVal = $("#newCreatePswrd").val();
-
-     changeTooltipColor(newPswrdVal,e);
-     validatePswrdStrength(newPswrdVal);
-});
-
-$("#newCreatePswrd").on('input',function(e){
-
-    var newPswrdVal=$("#newCreatePswrd").val();
-    if(!validatePassword(newPswrdVal)){
-  
-        $(".newPswrdErr").html("Invalid Password ");
-    }else{
-        $(".newPswrdErr").html(" ");
-    }
- });
-
-
-    
-
-// Empty Fields Validation
-
-$( "#createPswrdFormDiv" ).on('submit',function( event ) {
-   
-    event.preventDefault();
-    var password = $("#newCreatePswrd").val();
-    var cnfpassword = $("#confirmCreatedPswrd").val();
-    
-    
-    var isPasswordValid;
-    if(!comparePassword(password,cnfpassword)){
-        console.log("not equal");
-        $(".confirmNewPswrdErr").html("Passwords do not match");
-    }
-   
-
-    //Checking if password is not empty
-    if(password == "") {
-        $(".newPswrdErr").html("Password Cannot Be Empty!");
-        isPasswordValid = false;
-    } else {
-        isPasswordValid = true;
-    }
-
-    
-    
-    if(!validatePassword(password)){
-
-        $(".newPswrdErr").html("Invalid Password ");
-}
-
-if(!validatePassword(cnfpassword)){
-
-    $(".confirmNewPswrdErr").html("Invalid Password ");
- }
-
-   
-    $('#newCreatePswrd').val('');
-    $('#confirmCreatedPswrd').val('');
-   
-});
-
-
-});
-
-
-
 $(document).ready(function () {
 
 
@@ -13392,9 +13442,8 @@ $(document).ready(function () {
 
    
 
-    $( "#forgtPswrdForm" ).on('submit',function( event ) {
-        
-        event.preventDefault();
+    $( ".forgtPswrdForm" ).on('submit',function( event ) {        
+        // event.preventDefault();
         var emailMob = $("#forgtPswrdMobMail").val();
 
 
@@ -13410,47 +13459,25 @@ $(document).ready(function () {
         }
 
         if (isEmailMobValid) {
-            alert(emailMob);
+            $(".forgtPswrdForm").submit();    
         }
 
        
     });
-
+    
+    // event.preventDefault();
 });
-function redirectLogin() {
 
-    $('.landing-image').addClass("clicked");
-    $('.landing-slide-content').addClass("slideadd");
-    $('.conOfRentAdj').addClass("clicked");
-    $('.loginBtnAdj:visible').hide();
-    $('.singUpBtnAdj:visible').hide();
-    $('.login-main').show();
-    $('.signup-main-margin').hide();
-
-}
-
-function redirectSignUp() {
-
-    $('.landing-image').addClass("clicked");
-    $('.landing-slide-content').addClass("slideadd");
-    $('.conOfRentAdj').addClass("clicked");
-    $('.loginBtnAdj:visible').hide();
-    $('.singUpBtnAdj:visible').hide();
-    $('.signup-main-margin').show();
-    $('.login-main').hide();
-
-}
 
 window.onload = function () {
+    // if (emailMob == "" && !isEmailMobValid) {
+    //     $('.loginMail').val('');
+    //     }
+    //     $('.loginPassword').val('');
+    //     $('.remeberMeCbx').prop('checked', false); 
 
-    if (emailMob == "" && !isEmailMobValid) {
-        $('.loginMail').val('');
-        }
-        $('.loginPassword').val('');
-        $('.remeberMeCbx').prop('checked', false); 
- 
     var getUrlAfterHash = window.location.hash;
-    
+
     if (getUrlAfterHash == "#login") {
 
         $('.landing-image').addClass("clicked");
@@ -13461,10 +13488,58 @@ window.onload = function () {
         $('.login-main').show();
         $('.signup-main-margin').hide();
     }
+    else if (getUrlAfterHash == "#signup") {
+
+        $('.landing-image').addClass("clicked");
+        $('.landing-slide-content').addClass("slideadd");
+        $('.conOfRentAdj').addClass("clicked");
+        $('.loginBtnAdj:visible').hide();
+        $('.singUpBtnAdj:visible').hide();
+        $('.signup-main-margin').show();
+        $('.login-main').hide();
+
+    }
 }
 
 
 $(document).ready(function () {
+
+    //getting values from the form
+    var emailMob = $(".loginMail").val();
+    var password = $(".loginPassword").val();
+
+    var isEmailMobValid;
+
+    if (emailMob == "" && !isEmailMobValid) {
+        $('.loginMail').val('');
+    }
+    $('.loginPassword').val('');
+    $('.remeberMeCbx').prop('checked', false);
+
+
+    $('.loginSignUpTxt').on('click', function () {
+
+        $('.landing-image').addClass("clicked");
+        $('.landing-slide-content').addClass("slideadd");
+        $('.conOfRentAdj').addClass("clicked");
+        $('.loginBtnAdj:visible').hide();
+        $('.singUpBtnAdj:visible').hide();
+        $('.signup-main-margin').show();
+        $('.login-main').hide();
+
+    });
+
+    $('.signup-clickable-text').on('click', function () {
+
+        $('.landing-image').addClass("clicked");
+        $('.landing-slide-content').addClass("slideadd");
+        $('.conOfRentAdj').addClass("clicked");
+        $('.loginBtnAdj:visible').hide();
+        $('.singUpBtnAdj:visible').hide();
+        $('.login-main').show();
+        $('.signup-main-margin').hide();
+
+    });
 
 
 
@@ -13502,15 +13577,6 @@ $(document).ready(function () {
         $('.singUpBtnAdj:hidden').show();
     });
 
-    // $("#uaeLogin").click(function(event){
-    //     event.preventDefault();
-    //     $('.alert').show();
-    //     $(".alert").css("margin-bottom", "0%");
-    // }) 
-
-
-
-
 
     $("input").focus(function () {
         $(".login-mail-err").html("");
@@ -13519,12 +13585,10 @@ $(document).ready(function () {
 
     $(".loginForm").on('submit', function (event) {
 
-    
-        //getting values from the form
         var emailMob = $(".loginMail").val();
         var password = $(".loginPassword").val();
-        var isEmailMobValid = validatePhone(emailMob) || validateEmail(emailMob);
-        var isPasswordValid;
+        isEmailMobValid = validatePhone(emailMob) || validateEmail(emailMob);
+        var isPasswordValid = false;
 
         //Checking if email/mob is not empty
         if (emailMob == "" || !isEmailMobValid) {
@@ -13543,10 +13607,6 @@ $(document).ready(function () {
             isPasswordValid = true;
         }
 
-        if (isEmailMobValid && isPasswordValid) {
-            alert(emailMob + " " + password);
-        }
-
 
         //added RememberMe functionality of rememberme is checked, Email and password cannot be empty
         if ($('.remeberMeCbx').is(':checked') && isEmailMobValid && isPasswordValid) {
@@ -13560,30 +13620,36 @@ $(document).ready(function () {
             localStorage.password = '';
             localStorage.checkBoxValidation = '';
         }
-        
-        if (isEmailMobValid && isPasswordValid) {
-            $(".loginForm").submit();            
-        } 
 
+        if (isEmailMobValid && isPasswordValid) {
+            $(".loginForm").submit();
+        }
+        
     });
 
 });
 $(document).ready(function(){
    
     $("input").focus(function() {
-        $(".emailPhOtpErr").html("");
+        $(".otp-err").html("");
     });
 
-    var isOtpValid;
-    $( "#OtpForm" ).on('submit',function( event ) {
-        var emailMobOtp = $('#otpNumber').val();
-        event.preventDefault();
+    var isOtpValid=false;
+    $(".otpForm").on('submit',function( event ) {
+        var emailMobOtp = $('.otpInputTxt').val();
         
         if(emailMobOtp == '') {
-          $('.emailPhOtpErr').html('Invalid OTP');
-          //$('p.emailPhOtpErr').slideDown(5000);
+          $('.otp-err').html('Invalid OTP');
           isOtpValid = false;
         }
+        if(emailMobOtp != '') {
+            isOtpValid = true;
+        }
+        if (isOtpValid) {
+            $(".otpForm").submit();
+        }
+
+
       });
 });
 $(document).ready(function()
@@ -13636,9 +13702,102 @@ $(document).ready(function()
 
  });
 $( document ).ready(function() {
+  
+    $('.reset-confirm-password').bind("cut copy paste", function(e) {
+        // e.preventDefault();
+       
+        });
+
+        $("input").focus(function() {
+
+            $(".reset-unequal-password-error").html(" ");
+            $(".reset-old-password-error").html(" ");
+            $(".reset-confirm-password-error").html(" ");
+            $(".reset-invalid-password-error").html(" ");
+            $(".reset-password-error").html(" ");
+        
+         });
+    
+  $('.reset-show-password').click(function() {
+    passtoTextReset();
+  
+  });
+
+
+$(".reset-new-password").keyup(function(e){
+
+    var passWord=$(".reset-new-password").val();
+    
+    checkPasswordStrengthReset(passWord);
+});
+
+$(".reset-confirm-password").keyup(function(e){
+
+    var passWord=$(".reset-new-password").val();
+    
+    checkPasswordStrengthReset(passWord);
+});
+
+
+
+
+
+$( ".reset-password-form" ).on('submit',function( event ) {
+    
+    var oldpasswordCreate = $(".reset-old-password").val();
+        var passwordCreate = $(".reset-new-password").val();
+        var cnfpasswordCreate = $(".reset-confirm-password").val();
+        
+        if(!comparePassword(passwordCreate,cnfpasswordCreate)){
+            
+            $(".reset-unequal-password-error").html("Passwords do not match");
+            isPasswordValid = false;
+        }
+        if(oldpasswordCreate == "") {
+            $(".reset-old-password-error").html("Password Cannot Be Empty!");
+            isPasswordValid = false;
+        } else {
+            isPasswordValid = true;
+        }
+
+        //Checking if password is not empty
+        if(passwordCreate == "") {
+            $(".reset-password-error").html("Password Cannot Be Empty!");
+            isPasswordValid = false;
+        } else {
+            isPasswordValid = true;
+        }
+
+       
+        
+        if(!validatePassword(passwordCreate)){
+  
+            $(".reset-invalid-password-error").html("Invalid Password ");
+            isPasswordValid = false;
+     }
+     if(cnfpasswordCreate==""){
+      
+            $(".reset-confirm-password-error").html("Invalid Password");
+            isPasswordValid = false;
+     }
+    
+     if(isPasswordValid) {
+        $(".reset-password-form").submit();
+     } 
+    // event.preventDefault();
+   
+       
+    });
+    
+
+});
+
+
+
+$( document ).ready(function() {
     $( ".pass-input ul li" ).css("list-style-type", "none");
     $('.cnfpasswordSignUp').bind("cut copy paste", function(e) {
-        e.preventDefault();
+        // e.preventDefault();
        
         });
 
@@ -13749,9 +13908,8 @@ $( ".signupForm" ).on('submit',function( event ) {
      if(isEmailMobValid && isPasswordValid) {
         $(".signupForm").submit();
      } 
-    event.preventDefault();
-   
-       
+    // event.preventDefault();
+         
     });
     
 

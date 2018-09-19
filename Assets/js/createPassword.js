@@ -1,7 +1,7 @@
 $( document ).ready(function() {
   
     $('.confirm-password-create').bind("cut copy paste", function(e) {
-        e.preventDefault();
+        // e.preventDefault();
        
         });
   $("input").focus(function() {
@@ -74,7 +74,7 @@ $( ".create-password-form" ).on('submit',function( event ) {
      if(isPasswordValid) {
         $(".create-password-form").submit();
      } 
-    event.preventDefault();
+    // event.preventDefault();
    
        
     });
