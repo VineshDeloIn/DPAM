@@ -449,7 +449,7 @@
     border: 0.5px solid #a7a9ad;
 }
 
-.uaeLogin:hover, .uaeLogin:focus, .uaeLogin:active {
+.uaeLogin:hover, .uaeLogin:focus, .uaeLogin:active, .uaeLogin:clicked {
     color: red;
     border: 1px solid red;
     background-color: transparent;
@@ -489,11 +489,11 @@
     padding: 6% 3%;
 }
 
-.fbLogin:hover, .fbLogin:focus, .fbLogin:active {
+.fbLogin:hover, .fbLogin:focus, .fbLogin:active,.fbLogin:clicked {
     border: 1px solid red;
     background-color: transparent;
 }
-.fbLogin:hover .login-fb-txt, .fbLogin:focus .login-fb-txt, .fbLogin:active .login-fb-txt {
+.fbLogin:hover .login-fb-txt, .fbLogin:focus .login-fb-txt, .fbLogin:active .login-fb-txt,.fbLogin:clicked  .login-fb-txt  {
     color: red !important;
    
 }
@@ -506,12 +506,12 @@
     padding: 6% 3%;
 }
 
-.googleLogin:hover, .googleLogin:focus, .googleLogin:active {
+.googleLogin:hover, .googleLogin:focus, .googleLogin:active, .googleLogin:clicked {
   
     border: 1px solid red;
     background-color: transparent;
 }
-.googleLogin:hover .login-google-txt, .googleLogin:focus .login-google-txt, .googleLogin:active .login-google-txt {
+.googleLogin:hover .login-google-txt, .googleLogin:focus .login-google-txt, .googleLogin:active .login-google-txt, .googleLogin:clicked .login-google-txt {
     color: red !important; 
     
 }
