@@ -1,0 +1,153 @@
+
+.emailVerifyContainer {
+    height: 100vh;
+    width: 100%;
+}
+
+.emailVerify-left-side{
+     
+    height: 100vh;
+    width: 66.5%;
+    float: left;   
+}
+
+.emailVerifyDpamLogo {
+    padding-top: 2%;
+    padding-left: 2%;
+}
+
+.emailVerify-convinience {
+    width: 100%;
+    object-fit: cover;
+    padding-top: 12%;
+    padding-left: 10%;
+    padding-right: 10%;
+    
+}
+
+.emailVerify-illustration {
+     width: 100%;
+     bottom: 0%;
+     position: absolute;    
+     object-fit: cover;
+}
+ 
+.emailVerify-right-side {
+    z-index: 1;
+    position: relative;
+    float: left;
+    width: 33.5%;
+    height: 100vh;
+    background-color: #f7f7f7;
+}
+
+.emailVerify-main {
+    width: 100%;
+    height: 100vh;
+    background-color: #f7f7f7;
+    padding-left: 11%;
+    padding-right: 11%;
+    margin-left: 0%;
+}
+
+
+
+#emailVerifyForm {
+    background: #ffffff;
+    background-color: #f7f7f7;
+}
+
+
+
+.emailVerify-text {
+    margin-top: 15%;
+    font-family: HelveticaNeueMed;
+    font-size: 26px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #333f48;
+}
+
+
+.emailVerify-sent-text {
+    margin-top: 12%;
+    font-family: HelveticaNeueReg;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    color: #585d63;
+}
+
+
+
+.emailVerifySbmit {
+    width: 100%;
+    font-family: HelveticaNeueBold;
+    border-radius: 0 !important;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.83;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #ffffff;
+    padding: 3% 3%;
+    margin-top: 10%;
+}
+
+@media screen and (max-width: 480px) {
+
+    .emailVerify-main {
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+    .emailVerify-left-side {
+        width: 100%;
+    }
+
+    .emailVerifyDpamLogo { 
+        margin: 0 auto;
+        display: block;
+    }
+
+    .emailVerify-convinience {
+        display: none;
+    }
+
+    .emailVerify-right-side {
+        z-index: 1;
+        position: absolute;
+        height: 72vh;
+        overflow: hidden;
+        top: 12%;
+        width: 90%;
+        padding: 0%;
+        margin-left: 5%;
+    }
+   
+    .emailVerify-illustration {
+        left: 0%;
+        height: 130px;
+        width: 100%;
+        position: absolute;
+        margin-bottom: 0;
+        bottom: 0;
+    }
+
+   
+}
+
+
+
+
+
+
+
