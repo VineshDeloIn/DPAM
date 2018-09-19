@@ -20,6 +20,17 @@ function passtoTextCreate() {
     }
 }
 
+function passtoTextReset() {
+    var firstElement = document.getElementsByClassName("reset-new-password");
+
+    var x = firstElement[0];
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+}
+
 function validateShowPswrd(newPswrd) {
    
     if (newPswrd.type === "password") {
@@ -85,8 +96,25 @@ function checkPasswordStrength(pass){
     }else if(pass.length>12){
       $(".create-password-strength").html("Strong");
       $(".create-password-strength").css("color", "green");
-  
-  
+    }
+  }
+
+
+  function checkPasswordStrengthReset(pass){
+    if(pass.length<=0){
+        $(".reset-password-strength").html(" ");
+       
+    }else if(pass.length<=8){
+      $(".reset-password-strength").html("Weak");
+      $(".reset-password-strength").css("color", "red");
+     
+    }else if(pass.length>8 && pass.length<=12){
+      $(".reset-password-strength").html("Medium");
+      $(".reset-password-strength").css("color", "green");
+     
+    }else if(pass.length>12){
+      $(".reset-password-strength").html("Strong");
+      $(".reset-password-strength").css("color", "green");
     }
   }
 
