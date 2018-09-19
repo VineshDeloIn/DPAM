@@ -542,10 +542,9 @@
         height: 100%;
         overflow-y: auto;
     }
-    /* }
-    .landing {
-        min-height: 77%;
-    } */
+    .login-text {
+        margin-top: 2%;
+    }
     .login-main {
         height: 76vh;
         overflow-y: scroll;

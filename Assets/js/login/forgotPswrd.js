@@ -6,14 +6,12 @@ $(document).ready(function () {
         $(".emailMobForgtPswrdErr").html("");
     });
 
-    $('#confirmNewPswrd').bind("cut copy paste", function (e) {
-        e.preventDefault();
-    });
+   
 
-    $( "#forgotPswrdForm" ).on('submit',function( event ) {
-
-        event.preventDefault();
-        var emailMob = $("#emailMobForgotPswrd").val();
+    $( "#forgtPswrdForm" ).on('submit',function( event ) {
+        
+        // event.preventDefault();
+        var emailMob = $("#forgtPswrdMobMail").val();
 
 
         var isEmailMobValid = validatePhone(emailMob) || validateEmail(emailMob);
@@ -21,7 +19,7 @@ $(document).ready(function () {
 
         //Checking if email/mob is not empty
         if (emailMob == "" || !isEmailMobValid) {
-            $(".emailMobForgtPswrdErr").html("Invalid Email / Mobile Number");
+            $(".forgtPswrd-mail-err").html("Invalid Email / Mobile Number");
             isEmailMobValid = false;
         } else {
             isEmailMobValid = true;
@@ -29,6 +27,7 @@ $(document).ready(function () {
 
         if (isEmailMobValid) {
             alert(emailMob);
+            $(".forgtPswrdForm").submit();    
         }
 
        
