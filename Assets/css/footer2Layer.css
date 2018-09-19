@@ -1,6 +1,6 @@
 .footer {
     position: relative;
-    height: 20%;
+    height: 30%;
     /* margin-top: 20%; */
     /* color: #f3f5f7; */
     font-size: 11px;
@@ -13,6 +13,7 @@
     background-color: #333f48;
     height: 63%;
     letter-spacing: 1.7px;
+    
     /* padding-bottom: ; */
 }
 
@@ -25,11 +26,11 @@
 }
 
 .rowheight1Adj {
-    margin-top: 1%;
+    margin-top: 2%;
 }
 .rowheight2Adj {
     /* margin-top: 1%; */
-    margin-bottom: 2%;
+    margin-top: 0.7%;
 }
 
 .TcAdj {
@@ -79,7 +80,7 @@
 }
 
 .footer2topAdj {
-    margin: 1% 0%;;
+    margin-top: 2%;
 }
 @media screen and (min-width: 300px) and (orientation:potrait) {
     .footerTopAdj {
@@ -112,9 +113,9 @@
     
     .footer-group-2 {
         font-family: "HelveticaNeueReg";
-        font-size: 12px;
+        font-size: 10px;
         background-color: #101820;
-        height: 65%;
+        height: 50%;
         letter-spacing: 1.7px;
     }
     .midCols1Adj {

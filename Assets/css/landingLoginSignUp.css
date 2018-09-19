@@ -4,6 +4,11 @@ html, body {
     overflow-y: auto;
 }
 
+.buttonAdj {
+    display: flex;
+    justify-content: flex-start;
+}
+
 .landing {
     min-height: 100%;
     position: relative;
@@ -23,7 +28,7 @@ html, body {
 
 
 .logoTopAdj {
-    margin-top: 2%;
+    margin-top: 10%;
     margin-left: 4%;
     /* display: flex;   
     justify-content:flex-start; */

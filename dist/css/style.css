@@ -11863,6 +11863,12 @@ html, body {
     margin-top: 10%;
 }
 
+.emailVerifySbmit:hover, .emailVerifySbmit:focus, .emailVerifySbmit:active {
+    color: red !important;
+    border: 1px solid red;
+    background-color: transparent;
+}
+
 @media screen and (max-width: 480px) {
 
     .emailVerify-main {
@@ -11882,6 +11888,8 @@ html, body {
     .emailVerify-convinience {
         display: none;
     }
+
+    
 
     .emailVerify-right-side {
         z-index: 1;
@@ -11921,7 +11929,7 @@ html, body {
 
 .footer {
     position: relative;
-    height: 20%;
+    height: 30%;
     /* margin-top: 20%; */
     /* color: #f3f5f7; */
     font-size: 11px;
@@ -11934,6 +11942,7 @@ html, body {
     background-color: #333f48;
     height: 63%;
     letter-spacing: 1.7px;
+    
     /* padding-bottom: ; */
 }
 
@@ -11946,11 +11955,11 @@ html, body {
 }
 
 .rowheight1Adj {
-    margin-top: 1%;
+    margin-top: 2%;
 }
 .rowheight2Adj {
     /* margin-top: 1%; */
-    margin-bottom: 2%;
+    margin-top: 0.7%;
 }
 
 .TcAdj {
@@ -12000,7 +12009,7 @@ html, body {
 }
 
 .footer2topAdj {
-    margin: 1% 0%;;
+    margin-top: 2%;
 }
 @media screen and (min-width: 300px) and (orientation:potrait) {
     .footerTopAdj {
@@ -12033,9 +12042,9 @@ html, body {
     
     .footer-group-2 {
         font-family: "HelveticaNeueReg";
-        font-size: 12px;
+        font-size: 10px;
         background-color: #101820;
-        height: 65%;
+        height: 50%;
         letter-spacing: 1.7px;
     }
     .midCols1Adj {
@@ -12411,6 +12420,11 @@ html, body {
     overflow-y: auto;
 }
 
+.buttonAdj {
+    display: flex;
+    justify-content: flex-start;
+}
+
 .landing {
     min-height: 100%;
     position: relative;
@@ -12430,7 +12444,7 @@ html, body {
 
 
 .logoTopAdj {
-    margin-top: 2%;
+    margin-top: 10%;
     margin-left: 4%;
     /* display: flex;   
     justify-content:flex-start; */
@@ -13024,8 +13038,9 @@ html, body {
 }
 
 .uaeLogin:hover, .uaeLogin:focus, .uaeLogin:active {
-    background-color: #F2F2F2;
-    color: #585d63;
+    color: red;
+    border: 1px solid red;
+    background-color: transparent;
 }
 
 .login-fb-google-div {
@@ -13063,7 +13078,12 @@ html, body {
 }
 
 .fbLogin:hover, .fbLogin:focus, .fbLogin:active {
-    background-color: #F2F2F2;
+    border: 1px solid red;
+    background-color: transparent;
+}
+.fbLogin:hover .login-fb-txt, .fbLogin:focus .login-fb-txt, .fbLogin:active .login-fb-txt {
+    color: red !important;
+   
 }
 
 .googleLogin {
@@ -13075,7 +13095,13 @@ html, body {
 }
 
 .googleLogin:hover, .googleLogin:focus, .googleLogin:active {
-    background-color: #F2F2F2;
+  
+    border: 1px solid red;
+    background-color: transparent;
+}
+.googleLogin:hover .login-google-txt, .googleLogin:focus .login-google-txt, .googleLogin:active .login-google-txt {
+    color: red !important; 
+    
 }
 
 .loginNoAcntTxt {
@@ -14515,6 +14541,7 @@ html, body {
     margin: 4% 0%;
 }
 
+
 /* The container */
 .signup-remember-txt {
     display: block;
@@ -14851,6 +14878,31 @@ margin-left: -47px;
     border-bottom-color: #f7f7f7 !important;
 }
 
+.signup-uae-login:hover, .signup-uae-login:focus, .signup-uae-login:active {
+    color: red !important;
+    border: 1px solid red;
+    background-color: transparent;
+}
+.signup-fb-login:hover , .signup-fb-login:focus  , .signup-fb-login:active {
+   
+    border: 1px solid red;
+    background-color: transparent;
+}
+
+.signup-fb-login:hover .signup-fb-txt, .signup-fb-login:focus  .signup-fb-txt, .signup-fb-login:active  .signup-fb-txt{
+    color: red !important;
+   
+}
+
+.signup-google-login:hover, .signup-google-login:focus, .signup-google-login:active {
+   
+    border: 1px solid red;
+    background-color: transparent;
+}
+.signup-google-login:hover .signup-google-txt, .signup-google-login:focus .signup-google-txt, .signup-google-login:active .signup-google-txt {
+   
+    color: red !important;
+}
 
 @media screen and (min-width: 300px) and (orientation:potrait) {
     
