@@ -415,6 +415,7 @@
 }
 .login-button:hover,.login-button :visited{
 background-color:#DA291C;
+border: none;
 }
 .login-or-txt {
     margin: 3% 0%;

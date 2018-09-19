@@ -311,6 +311,7 @@
 
 .signup-main-button:hover,.signup-main-button:visited{
     background-color: #DA291C;
+    border: none;
 }
 
 .signup-or-txt {
