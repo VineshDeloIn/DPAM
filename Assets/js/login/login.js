@@ -1,34 +1,12 @@
-function redirectLogin() {
 
-    $('.landing-image').addClass("clicked");
-    $('.landing-slide-content').addClass("slideadd");
-    $('.conOfRentAdj').addClass("clicked");
-    $('.loginBtnAdj:visible').hide();
-    $('.singUpBtnAdj:visible').hide();
-    $('.login-main').show();
-    $('.signup-main-margin').hide();
-
-}
-
-function redirectSignUp() {
-
-    $('.landing-image').addClass("clicked");
-    $('.landing-slide-content').addClass("slideadd");
-    $('.conOfRentAdj').addClass("clicked");
-    $('.loginBtnAdj:visible').hide();
-    $('.singUpBtnAdj:visible').hide();
-    $('.signup-main-margin').show();
-    $('.login-main').hide();
-
-}
 
 window.onload = function () {
-
-    if (emailMob == "" && !isEmailMobValid) {
-        $('.loginMail').val('');
-        }
-        $('.loginPassword').val('');
-        $('.remeberMeCbx').prop('checked', false); 
+    alert("here");
+    // if (emailMob == "" && !isEmailMobValid) {
+    //     $('.loginMail').val('');
+    //     }
+    //     $('.loginPassword').val('');
+    //     $('.remeberMeCbx').prop('checked', false); 
  
     var getUrlAfterHash = window.location.hash;
     
@@ -47,7 +25,31 @@ window.onload = function () {
 
 $(document).ready(function () {
 
+    $('.loginSignUpTxt').on('click', function () {
 
+        $('.landing-image').addClass("clicked");
+        $('.landing-slide-content').addClass("slideadd");
+        $('.conOfRentAdj').addClass("clicked");
+        $('.loginBtnAdj:visible').hide();
+        $('.singUpBtnAdj:visible').hide();
+        $('.signup-main-margin').show();
+        $('.login-main').hide();
+    
+    });
+   
+    $('.signup-clickable-text').on('click', function () {
+
+        $('.landing-image').addClass("clicked");
+        $('.landing-slide-content').addClass("slideadd");
+        $('.conOfRentAdj').addClass("clicked");
+        $('.loginBtnAdj:visible').hide();
+        $('.singUpBtnAdj:visible').hide();
+        $('.login-main').show();
+        $('.signup-main-margin').hide();
+    
+    });
+    
+    
 
     $('.loginBtnAdj').on('click', function () {
         // alert('hi login');
@@ -83,16 +85,7 @@ $(document).ready(function () {
         $('.singUpBtnAdj:hidden').show();
     });
 
-    // $("#uaeLogin").click(function(event){
-    //     event.preventDefault();
-    //     $('.alert').show();
-    //     $(".alert").css("margin-bottom", "0%");
-    // }) 
-
-
-
-
-
+  
     $("input").focus(function () {
         $(".login-mail-err").html("");
         $(".login-pswrd-err").html("");

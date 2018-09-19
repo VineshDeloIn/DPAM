@@ -106,7 +106,7 @@
 
 
 .card-header.profile-card-head:after {
-      content: url("../../Assets/images/RightIcon.png");
+      content: url("../../Assets/images/upArrow.svg");
       margin-top: 1%;  
       float: right;  
       cursor: pointer;    
@@ -114,11 +114,11 @@
 }
 
 .card-header.profile-card-head.collapsed:after {
-     content: url("../../Assets/images/WrongIcon.png");
+     content: url("../../Assets/images/downArrow.svg");
 }
 
 .card-header.profile-depend-card-head:after {
-    content: url("../../Assets/images/RightIcon.png");
+    content: url("../../Assets/images/upArrow.svg");
     margin-top: 1%;  
     float: right;  
     cursor: pointer;    
@@ -126,7 +126,7 @@
 }
 
 .card-header.profile-depend-card-head.collapsed:after {
-   content: url("../../Assets/images/WrongIcon.png");
+   content: url("../../Assets/images/downArrow.svg");
 }
 
 .profile-dpndnt-family-add-btn {
