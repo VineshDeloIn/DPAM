@@ -69,7 +69,7 @@
 
 
 
-#forgtPswrdForm {
+.forgtPswrdForm {
     background: #ffffff;
     background-color: #f7f7f7;
 }
@@ -176,7 +176,7 @@
 }
 
 
-#forgtPswrdSbmit {
+.forgtPswrdSbmit {
     width: 100%;
     font-family: HelveticaNeueBold;
     border-radius: 0 !important;
@@ -199,9 +199,6 @@
         padding-right: 1%;
     }
 
-    .forgtPswrd-main .forgtPswrd-input label {
-        /* margin-top: 70%; */
-    }
 
     .forgtPswrd-left-side {
         width: 100%;
