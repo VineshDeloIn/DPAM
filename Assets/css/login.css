@@ -298,7 +298,7 @@
 }
 
 .login-remembr-forgot-div {
-    margin-top: 4%;
+    margin-top: 6%;
     /* margin-left: 0%; */
     margin-right: 0%;
     /* margin-bottom:4%; */
@@ -399,7 +399,7 @@
 }
 
 .login-button {
-    margin-top: 8%;
+    margin-top: 4%;
     width: 100%;
     font-family: HelveticaNeueBold;
     border-radius: 0 !important;
