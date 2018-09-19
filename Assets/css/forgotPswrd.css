@@ -196,6 +196,7 @@
 
 .forgtPswrdSbmit:hover,.forgtPswrdSbmit:visited{
     background-color: #DA291C;
+    border:none;
 }
 
 @media screen and (max-width: 480px) {
