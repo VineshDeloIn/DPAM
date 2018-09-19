@@ -10,7 +10,7 @@ $(document).ready(function () {
 
     $( "#forgtPswrdForm" ).on('submit',function( event ) {
         
-        event.preventDefault();
+        // event.preventDefault();
         var emailMob = $("#forgtPswrdMobMail").val();
 
 
@@ -27,6 +27,7 @@ $(document).ready(function () {
 
         if (isEmailMobValid) {
             alert(emailMob);
+            $(".forgtPswrdForm").submit();    
         }
 
        
