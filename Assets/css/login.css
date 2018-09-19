@@ -413,7 +413,9 @@
     color: #ffffff;
     padding: 4% 3%;
 }
-
+.login-button:hover,.login-button :visited{
+background-color:#DA291C;
+}
 .login-or-txt {
     margin: 3% 0%;
     text-align: center;
@@ -480,7 +482,7 @@
     width: 105%;
     border-radius: 0 !important;
     border: 0.5px solid #a7a9ad;
-    padding: 4% 3%;
+    padding: 7% 3%;
 }
 
 .fbLogin:hover, .fbLogin:focus, .fbLogin:active,.fbLogin:visited {
@@ -497,7 +499,7 @@
     width: 105%;
     border-radius: 0 !important;
     border: 0.5px solid #a7a9ad;
-    padding: 4% 3%;
+    padding: 7% 3%;
 }
 
 .googleLogin:hover, .googleLogin:focus, .googleLogin:active, .googleLogin:visited {
