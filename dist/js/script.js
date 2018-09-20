@@ -13453,7 +13453,7 @@ $(document).ready(function () {
    
 
     $( ".forgtPswrdForm" ).on('submit',function( event ) {        
-        // event.preventDefault();
+         event.preventDefault();
         var emailMob = $("#forgtPswrdMobMail").val();
 
 
@@ -13527,6 +13527,14 @@ $(document).ready(function () {
     $('.loginPassword').val('');
     $('.remeberMeCbx').prop('checked', false);
 
+   
+    $('.sign-scs-close-toast').on('click', function () {
+         $('.login-sign-sucs').hide();
+    });
+    $('.sign-err-close-toast').on('click', function () {
+         $('.login-sign-err').hide();
+    });
+   
 
     $('.loginSignUpTxt').on('click', function () {
 
@@ -13595,7 +13603,7 @@ $(document).ready(function () {
     });
 
     $(".loginForm").on('submit', function (event) {
-
+event.preventDefault();
         var emailMob = $(".loginMail").val();
         var password = $(".loginPassword").val();
         isEmailMobValid = validatePhone(emailMob) || validateEmail(emailMob);
