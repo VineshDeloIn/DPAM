@@ -112,13 +112,13 @@
 .sign-scs-close-toast{
     float:right;
     margin-right: 10px;
-    
+    cursor: pointer;  
 }
 
 .sign-err-close-toast{
     float:right;
     margin-right: 10px;
-    
+    cursor: pointer;
 }
 
 .login-main .login-input {
