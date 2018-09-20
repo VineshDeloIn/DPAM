@@ -400,7 +400,7 @@
 }
 .login-button:hover,.login-button :visited{
 background-color:#DA291C;
-border: none;
+border: 1px solid #DA291C;
 }
 .login-or-txt {
     margin: 3% 0%;
@@ -433,7 +433,7 @@ border: none;
 
 .uaeLogin:hover, .uaeLogin:focus, .uaeLogin:active, .uaeLogin:visited {
     color: red;
-    border: 1px solid red;
+    border: 0.5px solid red;
     background-color: transparent;
 }
 
@@ -472,7 +472,7 @@ border: none;
 }
 
 .fbLogin:hover, .fbLogin:focus, .fbLogin:active,.fbLogin:visited {
-    border: 1px solid red;
+    border: 0.5px solid red;
     background-color: transparent;
 }
 .fbLogin:hover .login-fb-txt, .fbLogin:focus .login-fb-txt, .fbLogin:active .login-fb-txt,.fbLogin:visited  .login-fb-txt  {
@@ -490,7 +490,7 @@ border: none;
 
 .googleLogin:hover, .googleLogin:focus, .googleLogin:active, .googleLogin:visited {
   
-    border: 1px solid red;
+    border: 0.5px solid red;
     background-color: transparent;
 }
 .googleLogin:hover .login-google-txt, .googleLogin:focus .login-google-txt, .googleLogin:active .login-google-txt, .googleLogin:visited .login-google-txt {

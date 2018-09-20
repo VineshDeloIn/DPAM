@@ -194,7 +194,7 @@
 }
 .otpSbmit:hover,.otpSbmit:visited{
     background-color: #DA291C;
-    border:none;
+    border: 1px solid #DA291C;
 }
 
 @media screen and (max-width: 480px) {
