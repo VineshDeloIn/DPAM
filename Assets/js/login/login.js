@@ -1,14 +1,16 @@
 
 
 window.onload = function () {
-    if ($('#showLogin').val() !== '') {
+    if ($('#showLogin').val() !== '' && $('#showLogin').val() !== undefined) {
 
         window.location.hash = "login";
     }
 
-    if ($('#showSignup').val() !== '') {
+    if ($('#showSignup').val() !== '' && $('#showSignup').val() !== undefined) {
+
         window.location.hash = "signup";
     }
+
 
     var getUrlAfterHash = window.location.hash;
 
@@ -50,14 +52,14 @@ $(document).ready(function () {
     $('.loginPassword').val('');
     $('.remeberMeCbx').prop('checked', false);
 
-   
+
     $('.sign-scs-close-toast').on('click', function () {
-         $('.login-sign-sucs').hide();
+        $('.login-sign-sucs').hide();
     });
     $('.sign-err-close-toast').on('click', function () {
-         $('.login-sign-err').hide();
+        $('.login-sign-err').hide();
     });
-   
+
 
     $('.loginSignUpTxt').on('click', function () {
 
@@ -126,7 +128,7 @@ $(document).ready(function () {
     });
 
     $(".loginForm").on('submit', function (event) {
-event.preventDefault();
+        event.preventDefault();
         var emailMob = $(".loginMail").val();
         var password = $(".loginPassword").val();
         isEmailMobValid = validatePhone(emailMob) || validateEmail(emailMob);
@@ -166,7 +168,7 @@ event.preventDefault();
         if (isEmailMobValid && isPasswordValid) {
             $(".loginForm").submit();
         }
-        
+
     });
 
 });
