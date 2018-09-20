@@ -455,6 +455,7 @@ box-shadow: 0 0 0 0rem rgba(52,58,64,0.5) !important;
     color: #585d63;
 }
 
+
 .login-google-txt {
     font-family: HelveticaNeueBold;
     font-size: 12px;
@@ -549,6 +550,35 @@ box-shadow: 0 0 0 0rem rgba(52,58,64,0.5) !important;
         overflow-y: scroll;
         padding-left: 1%;
         padding-right: 1%;
+    }
+    .logoTopAdj {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    .buttonAdj {
+        position: absolute;
+        top:20%;
+        width: 90%;
+        /* margin-left: 10%; */
+    }
+    .loginBtnAdj{
+        width: 100%;
+        display: block;
+    }
+    .singUpBtnAdj {
+        width: 100%;
+        display: block;
+    }
+    .loginBtnAdj:hover, .loginBtnAdj:focus, .loginBtnAdj:active {
+        color: red;
+        border: 1px solid red;
+        background-color: transparent;
+    }
+    .singUpBtnAdj:hover, .singUpBtnAdj:focus, .singUpBtnAdj:active {
+        color: red;
+        border: 1px solid red;
+        background-color: transparent;
     }
     .login-illustration {
         height: 11vh;
@@ -661,7 +691,10 @@ box-shadow: 0 0 0 0rem rgba(52,58,64,0.5) !important;
 }
 
 @media screen and (max-width: 768px) {
+    
     .logoTopAdj {
-        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
     }
 }

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>OTP</title>
 
-     <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
+     <!-- <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="Assets/css/customFont.css">
     <link rel="stylesheet" href="Assets/css/otp.css">
     <link rel="stylesheet" href="Assets/css/footer2Layer.css">
@@ -17,10 +17,10 @@
     <script src="Assets/js/otp/otp.js"></script>
     <script src="Assets/js/jqueryValidation/jquery.validate.min.js"></script>
     <script src="Assets/js/commonValidations/emailMobValidation.js"></script>
-    <script src="Assets/js/commonValidations/passwordValidation.js"></script>
+    <script src="Assets/js/commonValidations/passwordValidation.js"></script> -->
 
-    <!-- <link rel="stylesheet" href="dist/css/style.css">
-    <script src="dist/js/script.js"></script> -->
+    <link rel="stylesheet" href="dist/css/style.css">
+    <script src="dist/js/script.js"></script>
 </head>
 
 <body>
@@ -29,7 +29,11 @@
         <div class="otp-left-side">
             <img src="Assets/images/dpamLogo.png" alt="Avatar" class="otpDpamLogo">
             <img src="./Assets/images/convincenceOfRentNew.png" alt="pathIssue" class="otp-convinience">
-            <img src="./Assets/images/final-illustrations-black-blue-demo.png" alt="" class="otp-illustration">
+            <picture class="otp-illustration">
+                <source media="(max-width: 480px)" srcset="./Assets/images/final-illustrations-black-blue-mob.png">
+                <!-- <source media="(min-width: 465px)" srcset="img_white_flower.jpg"> -->
+                <img src="./Assets/images/final-illustrations-black-blue-demo.png" alt="pathIssue" class="otp-illustration">
+            </picture>
 
 
         </div>

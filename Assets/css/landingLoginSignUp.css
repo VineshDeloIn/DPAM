@@ -36,7 +36,7 @@ html, body {
 .logoTopAdj {
     margin-top: 2%;
     margin-left: 4%;
-    position: absolute;
+    /* position: absolute; */
     /* display: flex;   
     justify-content:flex-start; */
 }

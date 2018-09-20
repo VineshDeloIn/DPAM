@@ -11466,7 +11466,7 @@ html, body {
     font-style: normal;
     font-stretch: normal;
     line-height: normal;
-    letter-spacing: normal;
+    letter-spacing: 1px;
     color: #585d63;;
 }
 
@@ -11511,6 +11511,12 @@ html, body {
     text-align: center;
     color: #ffffff;
     padding: 4% 3%;
+}
+
+.create-password-submit-text:hover,.create-password-submit-text:visited,.create-password-submit-text:focus{
+    background-color: #DA291C;
+    border: 1px solid #DA291C;
+   
 }
 
 .dpam-image img {
@@ -11683,6 +11689,12 @@ html, body {
         float: left;
     }
 
+    .create-password-main {
+       
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
     .create-dpam-logo {
         margin: 0 auto;
         display: block;
@@ -11705,10 +11717,9 @@ html, body {
         position: absolute;
         height: 72vh;
         overflow: hidden;
-        margin-left: 10%;
-        margin-right: 10%;
+        margin-left: 5%;
         top: 12%;
-        width: 80%;
+        width: 90%;
     }
     
     .create-password-main-text {
@@ -11973,6 +11984,7 @@ html, body {
 }
 
 .dubaiColAdj {
+    font-size:12px;
     letter-spacing: 2px;
     color: #ffffff;
 }
@@ -12033,7 +12045,7 @@ html, body {
         /* overflow-y: auto; */
     }
     .TcAdj {
-        letter-spacing: 0px;
+        letter-spacing: 1px;
         color: #f3f5f7;
     }
     .footer-group-1 {
@@ -12271,8 +12283,13 @@ html, body {
     letter-spacing: 2px;
     text-align: center;
     color: #ffffff;
-    padding: 3% 3%;
+    padding: 4% 3%;
     margin-top: 10%;
+}
+
+.forgtPswrdSbmit:hover,.forgtPswrdSbmit:visited{
+    background-color: #DA291C;
+    border: 1px solid #DA291C;
 }
 
 @media screen and (max-width: 480px) {
@@ -12458,19 +12475,20 @@ html, body {
 .logoTopAdj {
     margin-top: 2%;
     margin-left: 4%;
-    position: absolute;
+    /* position: absolute; */
     /* display: flex;   
     justify-content:flex-start; */
 }
 .loginBtnAdj {
     margin-top: 22%;
     margin-right: 10px;
+    padding: 4% 0%;
     background-color: transparent;
     font-size: 13px;
     letter-spacing: 1px;
     text-align: center;
     color: black;
-    width: 80px;
+    width: 110px;
     font-family: HelveticaNeueBold;
     border-radius: 0 !important;
     font-weight: bold;
@@ -12493,7 +12511,8 @@ html, body {
     margin-top: 22%;
     color: black;
     background-color: transparent;
-    width: 90px;
+    padding: 4% 0%;
+    width: 110px;
     font-family: HelveticaNeueBold;
     border-radius: 0 !important;
     font-size: 13px;
@@ -12644,14 +12663,9 @@ html, body {
     width: 100%;
     height: 15vh;
     position: absolute;
-    /* background-color: #f3f9ea; */
-    /* border: 2px solid yellow;   */
 }
 
-/* .loginForm {
-    margin-top: 5%;
-    background-color: #f3f9ea;
-} */
+
 
 .login-text {
     margin-top: 7%;
@@ -12667,74 +12681,65 @@ html, body {
 
 
 .login-toaster-div {
-    /* display: none;  */
     margin-top: -23%;
-    word-wrap: break-word;
     width: 110%;
     margin-left: -8%;
     border-radius: 0 !important;
     background-color: white;
     border: solid 1px #8bc43e;
-    padding-top: 0%;
-    padding-left: 0%;
-    padding-right: 0%;
-    padding-bottom: 4%;
     z-index: 10;
     position: absolute;
 
 }
+
+
+.login-toaster-content div {
+    font-family: HelveticaNeueReg;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    color: #585d63;
+    display: inline-block;
+}
+.login-toaster-content {
+    width: 100%;
+    padding: 4%;
+    /* position: relative; */
+}
+
+.login-toaster-content img {
+    display: block;
+}
+
+.login-toaster-content i,
+.login-toaster-content span {
+    display:table-cell;
+    vertical-align:middle;
+}
+
+.login-toaster-content span {
+    padding-left: 15px;
+}
+
 
 .login-sign-err {
     border: solid 1px red;
 }
 
 
-
-
-/* .signup-success {
-    background-color: #ffffff;
-    padding: 0% 0%;
-} */
-
-.reg-success-msg {
-    display: inline-block;
-    font-family: HelveticaNeueReg;
-    font-size: 16px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.5;
-    letter-spacing: 1px;
-    color: #585d63;
-    padding-left: 4%;
-    padding-right: 4%;
-}
-.reg-error-msg {
-    display: inline-block;
-    font-family: HelveticaNeueReg;
-    font-size: 16px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.5;
-    letter-spacing: 1px;
-    color: #585d63;
-    margin-left: 3%;
-    width: 100%;
+.sign-scs-close-toast{
+    float:right;
+    margin-right: 10px;
+    cursor: pointer;  
 }
 
-.signup-success-close {
-    margin-right: 5px;
-}
-
-.reg-success-img {
-    float: left;
-    margin-right: 2%;
-}
-
-.reg-error-img {
-    float: left;
-    margin-right: 2%;
+.sign-err-close-toast{
+    float:right;
+    margin-right: 10px;
+    cursor: pointer;
 }
 
 .login-main .login-input {
@@ -12900,7 +12905,7 @@ html, body {
 }
 
 .login-remembr-forgot-div {
-    margin-top: 4%;
+    margin-top: 6%;
     /* margin-left: 0%; */
     margin-right: 0%;
     /* margin-bottom:4%; */
@@ -12970,20 +12975,20 @@ html, body {
 /* Style the checkmark/indicator */
 
 .login-remember-txt .login-remember-chck:after {
-    left: 8px;
-    top: 4px;
+    left: 6px;
+    top: 2px;
     width: 5px;
     height: 10px;
     border: solid #030608;
-    border-width: 0 3px 3px 0;
+    border-width: 0 2px 2px 0;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
 
 .login-forgot-pswrd {
-    padding: 0 !important;
-    margin: 0 !important;
+    padding: 0%;
+    margin: 0%;
 }
 
 .login-forgot-pswrd a {
@@ -13001,7 +13006,7 @@ html, body {
 }
 
 .login-button {
-    margin-top: 8%;
+    margin-top: 4%;
     width: 100%;
     font-family: HelveticaNeueBold;
     border-radius: 0 !important;
@@ -13015,7 +13020,10 @@ html, body {
     color: #ffffff;
     padding: 4% 3%;
 }
-
+.login-button:hover,.login-button :visited{
+background-color:#DA291C;
+border: 1px solid #DA291C;
+}
 .login-or-txt {
     margin: 3% 0%;
     text-align: center;
@@ -13047,7 +13055,7 @@ html, body {
 
 .uaeLogin:hover, .uaeLogin:focus, .uaeLogin:active, .uaeLogin:visited {
     color: red;
-    border: 1px solid red;
+    border: 0.5px solid red;
     background-color: transparent;
 }
 
@@ -13066,6 +13074,7 @@ html, body {
     color: #585d63;
 }
 
+
 .login-google-txt {
     font-family: HelveticaNeueBold;
     font-size: 12px;
@@ -13082,11 +13091,11 @@ html, body {
     width: 105%;
     border-radius: 0 !important;
     border: 0.5px solid #a7a9ad;
-    padding: 4% 3%;
+    padding: 7% 3%;
 }
 
 .fbLogin:hover, .fbLogin:focus, .fbLogin:active,.fbLogin:visited {
-    border: 1px solid red;
+    border: 0.5px solid red;
     background-color: transparent;
 }
 .fbLogin:hover .login-fb-txt, .fbLogin:focus .login-fb-txt, .fbLogin:active .login-fb-txt,.fbLogin:visited  .login-fb-txt  {
@@ -13099,12 +13108,12 @@ html, body {
     width: 105%;
     border-radius: 0 !important;
     border: 0.5px solid #a7a9ad;
-    padding: 4% 3%;
+    padding: 7% 3%;
 }
 
 .googleLogin:hover, .googleLogin:focus, .googleLogin:active, .googleLogin:visited {
   
-    border: 1px solid red;
+    border: 0.5px solid red;
     background-color: transparent;
 }
 .googleLogin:hover .login-google-txt, .googleLogin:focus .login-google-txt, .googleLogin:active .login-google-txt, .googleLogin:visited .login-google-txt {
@@ -13151,7 +13160,7 @@ html, body {
         overflow-y: auto;
     }
     .login-text {
-        margin-top: 2%;
+        margin-top: 0%;
     }
     .login-main {
         height: 76vh;
@@ -13159,16 +13168,42 @@ html, body {
         padding-left: 1%;
         padding-right: 1%;
     }
+    .logoTopAdj {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    .buttonAdj {
+        position: absolute;
+        top:20%;
+        width: 90%;
+        /* margin-left: 10%; */
+    }
+    .loginBtnAdj{
+        width: 100%;
+        display: block;
+    }
+    .singUpBtnAdj {
+        width: 100%;
+        display: block;
+    }
+    .loginBtnAdj:hover, .loginBtnAdj:focus, .loginBtnAdj:active {
+        color: red;
+        border: 1px solid red;
+        background-color: transparent;
+    }
+    .singUpBtnAdj:hover, .singUpBtnAdj:focus, .singUpBtnAdj:active {
+        color: red;
+        border: 1px solid red;
+        background-color: transparent;
+    }
     .login-illustration {
         height: 11vh;
     }
     .conOfRentAdj {
         display: none;
     }
-    .loginBtnAdj {
-        margin-top: 50%;
-        vertical-align: middle;
-    }
+    
     .logoTopAdj {
         margin-top: 2%;
     }
@@ -13202,15 +13237,15 @@ html, body {
     .landing-slide-content.slideadd {
         height: 72vh;
         overflow: hidden;
-        margin-left: 10%;
-        margin-right: 10%;
+        margin-left: 3%;
+        margin-right: 3%;
         top: 12%;
         /* bottom: 20%;    */
         padding-bottom: 15%;
         position: absolute;
         z-index: 1;
         background-color: azure;
-        width: 80%;
+        width: 94%;
         -webkit-transition: margin-left 0.5s ease;
         -moz-transition: margin-left 0.5s ease;
         -o-transition: margin-left 0.5s ease;
@@ -13240,20 +13275,15 @@ html, body {
         white-space: nowrap;
     }
     .login-forgot-pswrd a {
-        float: left;
         white-space: nowrap;
     }
     .login-toaster-div {
-        margin-top: -25%;
+        margin-top: -20%;
         margin-left: -4%;
         width: 98%;
         padding: 0%;
     }
-    /* .alert-error {
-        margin-top: -30%;
-        margin-left: -4%;
-        width: 98%;
-    } */
+    
     .reg-success-msg {
         font-size: 0.8em;
     }
@@ -13264,14 +13294,12 @@ html, body {
         width: 110%;
     }
     .loginNoAcntTxt {
-        margin-top: 8%;
+        margin-top: 3%;
     }
-    /* .login-fb-txt {
-        font-size: 0.6em; 
+    .login-main .login-input input {
+        margin-top: 2%;
+
     }
-    .login-google-txt {
-        font-size: 0.6em; 
-    } */
     .landingSideCloseBtn {
         margin-left: 90%;
         margin-top: 5%;
@@ -13280,8 +13308,11 @@ html, body {
 }
 
 @media screen and (max-width: 768px) {
+    
     .logoTopAdj {
-        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
     }
 }
 .otpContainer {
@@ -13475,8 +13506,12 @@ html, body {
     letter-spacing: 2px;
     text-align: center;
     color: #ffffff;
-    padding: 3% 3%;
+    padding: 4% 3%;
     margin-top: 10%;
+}
+.otpSbmit:hover,.otpSbmit:visited{
+    background-color: #DA291C;
+    border: 1px solid #DA291C;
 }
 
 @media screen and (max-width: 480px) {
@@ -14166,6 +14201,11 @@ html, body {
     padding: 4% 3%;
 }
 
+.reset-password-submit-text:hover,.reset-password-submit-text:visited{
+    background-color: #DA291C;
+    border: 1px solid #DA291C;
+}
+
 .dpam-image img {
     width: 100%;
     /* height: 8vh; */
@@ -14349,6 +14389,13 @@ html, body {
 }
 
 @media screen and (max-width: 480px) {
+
+    .reset-password-main {
+       
+        padding-left: 1%;
+        padding-right: 1%;
+       
+    }
     .reset-password-left-side {
         /* height: 100vh; */
         width: 100%;
@@ -14362,30 +14409,21 @@ html, body {
     .reset-rent-convinience {
         display: none;
     }
-    .reset-illustration-image {
-        left: 0%;
-        height: 130px;
-        width: 100%;
-        position: absolute;
-        margin-bottom: 0;
-        bottom: 0;
-        display: block;
-    }
-
+    
     .reset-password-right-side {
         z-index: 1;
         position: absolute;
         height: 72vh;
         overflow: hidden;
-        margin-left: 10%;
-        margin-right: 10%;
+        margin-left: 5%;
         top: 12%;
-        width: 80%;
+        width: 90%;
     }
    
     .reset-password-main-text {
         font-family: HelveticaNeueMed;
         font-size: 16px;
+        padding-bottom: 5%
     }
     
 }
@@ -14712,6 +14750,11 @@ html, body {
     padding: 4% 3%;
 }
 
+.signup-main-button:hover,.signup-main-button:visited{
+    background-color: #DA291C;
+    border: 1px solid #DA291C;
+}
+
 .signup-or-txt {
     margin: 2% 0%;
     text-align: center;
@@ -14760,6 +14803,7 @@ html, body {
 .signup-uae-login:hover, .signup-uae-login:focus, .signup-uae-login:active {
     background-color: #F2F2F2;
     color: #585d63;
+    border: 1px solid #DA291C;
 }
 
 
@@ -14794,7 +14838,7 @@ html, body {
     width: 105%; 
     border-radius: 0 !important; 
     border: 0.5px solid #a7a9ad;
-    padding: 4% 3%;
+    padding: 7% 3%;
     margin-top:1.1%;
  }
  
@@ -14807,7 +14851,7 @@ html, body {
      width: 105%; 
      border-radius: 0 !important; 
      border: 0.5px solid #a7a9ad;
-     padding: 4% 3%;
+     padding: 7% 3%;
      margin-top:1.1%;
  }
  
@@ -14956,14 +15000,15 @@ margin-left: -47px;
 .signup-uae-login:hover, .signup-uae-login:focus, .signup-uae-login:active, .signup-uae-login:visited
  {
     color: red !important;
-    border: 1px solid red;
+    border: 0.5px solid red;
     background-color: transparent;
 }
 .signup-fb-login:hover , .signup-fb-login:focus  , .signup-fb-login:active, .signup-fb-login:visited
  {
    
-    border: 1px solid red;
+    
     background-color: transparent;
+    border: 0.5px solid #DA291C;
 }
 
 .signup-fb-login:hover .signup-fb-txt, .signup-fb-login:focus  .signup-fb-txt, .signup-fb-login:active  .signup-fb-txt, .signup-fb-login:visited  .signup-fb-txt{
@@ -14973,7 +15018,7 @@ margin-left: -47px;
 
 .signup-google-login:hover, .signup-google-login:focus, .signup-google-login:active, .signup-google-login:visited {
    
-    border: 1px solid red;
+    border: 0.5px solid #DA291C;
     background-color: transparent;
 }
 .signup-google-login:hover .signup-google-txt, .signup-google-login:focus .signup-google-txt, .signup-google-login:active .signup-google-txt, .signup-google-login:visited .signup-google-txt {
@@ -15058,10 +15103,14 @@ margin-left: -47px;
     line-height: normal;
     letter-spacing: normal;
     color: #333f48;
-     padding-top: 1%; 
-    padding-bottom: 7.9%;
+     padding-top: 0%; 
+    padding-bottom: 0.9%;
+    margin-top: -3%;
 }
 
+.signup-main .signup-input input {
+    padding: 3% 0;
+  }
 }
 
 @media screen and (max-width: 768px) {
