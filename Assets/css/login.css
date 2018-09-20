@@ -399,9 +399,10 @@
     color: #ffffff;
     padding: 4% 3%;
 }
-.login-button:hover,.login-button :visited{
+.login-button:hover,.login-button :visited,.login-button :focus{
 background-color:#DA291C;
 border: 1px solid #DA291C;
+box-shadow: 0 0 0 0rem rgba(52,58,64,0.5) !important;
 }
 .login-or-txt {
     margin: 3% 0%;
@@ -436,6 +437,7 @@ border: 1px solid #DA291C;
     color: red;
     border: 0.5px solid red;
     background-color: transparent;
+    box-shadow: 0 0 0 0rem rgba(52,58,64,0.5) !important;
 }
 
 .login-fb-google-div {
@@ -475,6 +477,7 @@ border: 1px solid #DA291C;
 .fbLogin:hover, .fbLogin:focus, .fbLogin:active,.fbLogin:visited {
     border: 0.5px solid red;
     background-color: transparent;
+    box-shadow: 0 0 0 0rem rgba(52,58,64,0.5) !important;
 }
 .fbLogin:hover .login-fb-txt, .fbLogin:focus .login-fb-txt, .fbLogin:active .login-fb-txt,.fbLogin:visited  .login-fb-txt  {
     color: red !important;
@@ -493,6 +496,7 @@ border: 1px solid #DA291C;
   
     border: 0.5px solid red;
     background-color: transparent;
+    box-shadow: 0 0 0 0rem rgba(52,58,64,0.5) !important;
 }
 .googleLogin:hover .login-google-txt, .googleLogin:focus .login-google-txt, .googleLogin:active .login-google-txt, .googleLogin:visited .login-google-txt {
     color: red !important; 
