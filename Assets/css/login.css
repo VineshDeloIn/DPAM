@@ -444,7 +444,7 @@ border: 1px solid #DA291C;
 
 .login-fb-txt {
     font-family: HelveticaNeueBold;
-    font-size: 0.8em;
+    font-size: 12px;
     font-weight: bold;
     font-style: normal;
     font-stretch: normal;
@@ -540,6 +540,7 @@ border: 1px solid #DA291C;
     }
     .login-text {
         margin-top: 0%;
+        font-size: 16px;
     }
     .login-main {
         height: 76vh;
