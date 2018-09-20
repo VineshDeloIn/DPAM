@@ -552,9 +552,12 @@ border: 1px solid #DA291C;
     .conOfRentAdj {
         display: none;
     }
-    .loginBtnAdj {
+    .buttonAdj {
         margin-top: 50%;
-        vertical-align: middle;
+        margin-left:0%;
+    }
+    .loginBtnAdj {
+        width:100%;
     }
     .logoTopAdj {
         margin-top: 2%;
