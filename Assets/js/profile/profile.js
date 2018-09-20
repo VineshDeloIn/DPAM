@@ -1,5 +1,12 @@
 $(document).ready(function()
 {
+   
+        $("input[name='profile-contact-fields']").change(function(){
+            alert("The text has been changed.");
+        });
+  
+    
+   
  $('.profile-edit-btn').click(function(e)
  {
     e.preventDefault();
