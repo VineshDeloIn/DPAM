@@ -1,11 +1,14 @@
 
 
 window.onload = function () {
-    // if (emailMob == "" && !isEmailMobValid) {
-    //     $('.loginMail').val('');
-    //     }
-    //     $('.loginPassword').val('');
-    //     $('.remeberMeCbx').prop('checked', false); 
+    if ($('#showLogin').val() !== '') {
+
+        window.location.hash = "login";
+    }
+
+    if ($('#showSignup').val() !== '') {
+        window.location.hash = "signup";
+    }
 
     var getUrlAfterHash = window.location.hash;
 
