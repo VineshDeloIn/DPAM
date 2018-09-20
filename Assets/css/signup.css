@@ -311,7 +311,7 @@
 
 .signup-main-button:hover,.signup-main-button:visited{
     background-color: #DA291C;
-    border: none;
+    border: 1px solid #DA291C;
 }
 
 .signup-or-txt {
@@ -362,6 +362,7 @@
 .signup-uae-login:hover, .signup-uae-login:focus, .signup-uae-login:active {
     background-color: #F2F2F2;
     color: #585d63;
+    border: 1px solid #DA291C;
 }
 
 
@@ -558,14 +559,15 @@ margin-left: -47px;
 .signup-uae-login:hover, .signup-uae-login:focus, .signup-uae-login:active, .signup-uae-login:visited
  {
     color: red !important;
-    border: 1px solid red;
+    border: 0.5px solid red;
     background-color: transparent;
 }
 .signup-fb-login:hover , .signup-fb-login:focus  , .signup-fb-login:active, .signup-fb-login:visited
  {
    
-    border: 1px solid red;
+    
     background-color: transparent;
+    border: 0.5px solid #DA291C;
 }
 
 .signup-fb-login:hover .signup-fb-txt, .signup-fb-login:focus  .signup-fb-txt, .signup-fb-login:active  .signup-fb-txt, .signup-fb-login:visited  .signup-fb-txt{
@@ -575,7 +577,7 @@ margin-left: -47px;
 
 .signup-google-login:hover, .signup-google-login:focus, .signup-google-login:active, .signup-google-login:visited {
    
-    border: 1px solid red;
+    border: 0.5px solid #DA291C;
     background-color: transparent;
 }
 .signup-google-login:hover .signup-google-txt, .signup-google-login:focus .signup-google-txt, .signup-google-login:active .signup-google-txt, .signup-google-login:visited .signup-google-txt {
