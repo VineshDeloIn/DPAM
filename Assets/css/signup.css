@@ -662,10 +662,14 @@ margin-left: -47px;
     line-height: normal;
     letter-spacing: normal;
     color: #333f48;
-     padding-top: 1%; 
-    padding-bottom: 7.9%;
+     padding-top: 0%; 
+    padding-bottom: 0.9%;
+    margin-top: -3%;
 }
 
+.signup-main .signup-input input {
+    padding: 3% 0;
+  }
 }
 
 @media screen and (max-width: 768px) {
