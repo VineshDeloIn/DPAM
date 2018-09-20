@@ -61,8 +61,8 @@
     width: 100%;
     height: 100vh;
     background-color: #f7f7f7;
-    padding-left: 11%;
-    padding-right: 11%;
+    padding-left: 8%;
+    padding-right: 8%;
     /* padding-top: 8%;  */
     margin-left: 0%;
      /* border:2px solid blue;  */
@@ -123,7 +123,7 @@
     line-height: 1;
     letter-spacing: 2.2px;
     color: #333f48;
-    margin-top:15%;
+    margin-top:10%;
 }
 
 .forgtPswrd-main .forgtPswrd-input label {
@@ -194,9 +194,11 @@
     margin-top: 10%;
 }
 
-.forgtPswrdSbmit:hover,.forgtPswrdSbmit:visited{
+.forgtPswrdSbmit:hover,.forgtPswrdSbmit:visited,.forgtPswrdSbmit:focus{
     background-color: #DA291C;
     border: 1px solid #DA291C;
+    box-shadow: 0 0 0 0rem rgba(52,58,64,0.5) !important;
+
 }
 
 @media screen and (max-width: 480px) {

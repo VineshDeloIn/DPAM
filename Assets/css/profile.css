@@ -1,5 +1,5 @@
 .profile-header img {
-    width: 100%;
+    width: 60%;
     height: auto;
     max-width: 100%;
 }
@@ -153,6 +153,7 @@
     text-decoration: none;
     color: #ffffff;
     font-size: 12px;
+    letter-spacing: 2px;
 }
 
 .middle-navigation-alignment {
@@ -350,14 +351,17 @@
     border-bottom: 1px solid black; 
 }
 
-
-
 .remove-profile-family {
     margin-left: 5%;
     margin-top: 2%;
 }
 
 
+@media screen and (max-width: 480px) {
+    .maxDiv{
+        display: none;
+    }
+}
 
 
 
