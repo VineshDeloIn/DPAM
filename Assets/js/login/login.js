@@ -128,7 +128,7 @@ $(document).ready(function () {
     });
 
     $(".loginForm").on('submit', function (event) {
-        event.preventDefault();
+        // event.preventDefault();
         var emailMob = $(".loginMail").val();
         var password = $(".loginPassword").val();
         isEmailMobValid = validatePhone(emailMob) || validateEmail(emailMob);
