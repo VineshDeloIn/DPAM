@@ -67,72 +67,57 @@
 .login-toaster-div {
     /* display: none;  */
     margin-top: -23%;
-    word-wrap: break-word;
     width: 110%;
     margin-left: -8%;
     border-radius: 0 !important;
     background-color: white;
     border: solid 1px #8bc43e;
-    padding-top: 0%;
-    padding-left: 0%;
-    padding-right: 0%;
-    padding-bottom: 4%;
     z-index: 10;
     position: absolute;
 
 }
+
+
+.login-toaster-content div {
+    font-family: HelveticaNeueReg;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    color: #585d63;
+    display: inline-block;
+}
+.login-toaster-content {
+    width: 100%;
+    padding: 4%;
+    position: relative;
+}
+
+.login-toaster-content img {
+    display: block;
+}
+
+.login-toaster-content i,
+.login-toaster-content span {
+    display:table-cell;
+    vertical-align:middle;
+}
+
+.login-toaster-content span {
+    padding-left: 15px;
+}
+
 
 .login-sign-err {
     border: solid 1px red;
 }
 
 
-
-
-/* .signup-success {
-    background-color: #ffffff;
-    padding: 0% 0%;
-} */
-
-.reg-success-msg {
-    display: inline-block;
-    font-family: HelveticaNeueReg;
-    font-size: 16px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.5;
-    letter-spacing: 1px;
-    color: #585d63;
-    padding-left: 4%;
-    padding-right: 4%;
-}
-.reg-error-msg {
-    display: inline-block;
-    font-family: HelveticaNeueReg;
-    font-size: 16px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.5;
-    letter-spacing: 1px;
-    color: #585d63;
-    margin-left: 3%;
-    width: 100%;
-}
-
-.signup-success-close {
-    margin-right: 5px;
-}
-
-.reg-success-img {
-    float: left;
-    margin-right: 2%;
-}
-
-.reg-error-img {
-    float: left;
-    margin-right: 2%;
+.sign-scs-close-toast{
+    /* float:right; */
+    
 }
 
 .login-main .login-input {
