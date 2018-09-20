@@ -309,9 +309,10 @@
     padding: 4% 3%;
 }
 
-.signup-main-button:hover,.signup-main-button:visited{
+.signup-main-button:hover,.signup-main-button:visited,.signup-main-button:focus{
     background-color: #DA291C;
     border: 1px solid #DA291C;
+    box-shadow: 0 0 0 0rem rgba(52,58,64,0.5) !important;
 }
 
 .signup-or-txt {
@@ -446,8 +447,7 @@
     text-align: center;
     color: #585d63;
     margin-bottom:2%;
-    margin-left: 1.4%;
-  
+    
 }
 
 .signup-clickable-text {
@@ -472,7 +472,7 @@
 
 .pass-input { position: relative; width:100%; }
 .pass-input input { border:none; background:#fff; display:block; width: 100%; box-sizing: border-box }
-.pass-input img { position: absolute; top: 30%; right: 5px }
+.pass-input img { position: absolute; top: 30%; right: 5px;cursor: pointer; }
 .pass-input .sign-up-pwd-strength{position: absolute; right: 5px }
 
 
@@ -561,6 +561,7 @@ margin-left: -47px;
     color: red !important;
     border: 0.5px solid red;
     background-color: transparent;
+    box-shadow: 0 0 0 0rem rgba(52,58,64,0.5) !important;
 }
 .signup-fb-login:hover , .signup-fb-login:focus  , .signup-fb-login:active, .signup-fb-login:visited
  {
@@ -568,6 +569,7 @@ margin-left: -47px;
     
     background-color: transparent;
     border: 0.5px solid #DA291C;
+    box-shadow: 0 0 0 0rem rgba(52,58,64,0.5) !important;
 }
 
 .signup-fb-login:hover .signup-fb-txt, .signup-fb-login:focus  .signup-fb-txt, .signup-fb-login:active  .signup-fb-txt, .signup-fb-login:visited  .signup-fb-txt{
@@ -579,6 +581,7 @@ margin-left: -47px;
    
     border: 0.5px solid #DA291C;
     background-color: transparent;
+    box-shadow: 0 0 0 0rem rgba(52,58,64,0.5) !important;
 }
 .signup-google-login:hover .signup-google-txt, .signup-google-login:focus .signup-google-txt, .signup-google-login:active .signup-google-txt, .signup-google-login:visited .signup-google-txt {
    
@@ -643,14 +646,14 @@ margin-left: -47px;
 
 .signup-terms-and-condition {
     margin-top:-4%; 
-    /* margin-left:2%; */
+     margin-left:0%;
     white-space: nowrap;
     text-align: left;
     font-size: 0.7em; 
 }
 
 .signup-clickable-text {
-    font-size: 0.7em; 
+    font-size: 0.9em;
 }
 
 .signup-text {

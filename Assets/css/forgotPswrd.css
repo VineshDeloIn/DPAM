@@ -194,9 +194,11 @@
     margin-top: 10%;
 }
 
-.forgtPswrdSbmit:hover,.forgtPswrdSbmit:visited{
+.forgtPswrdSbmit:hover,.forgtPswrdSbmit:visited,.forgtPswrdSbmit:focus{
     background-color: #DA291C;
     border: 1px solid #DA291C;
+    box-shadow: 0 0 0 0rem rgba(52,58,64,0.5) !important;
+
 }
 
 @media screen and (max-width: 480px) {
