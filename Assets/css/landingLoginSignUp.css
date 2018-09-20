@@ -43,12 +43,13 @@ html, body {
 .loginBtnAdj {
     margin-top: 22%;
     margin-right: 10px;
+    padding: 4% 0%;
     background-color: transparent;
     font-size: 13px;
     letter-spacing: 1px;
     text-align: center;
     color: black;
-    width: 80px;
+    width: 110px;
     font-family: HelveticaNeueBold;
     border-radius: 0 !important;
     font-weight: bold;
@@ -71,7 +72,8 @@ html, body {
     margin-top: 22%;
     color: black;
     background-color: transparent;
-    width: 90px;
+    padding: 4% 0%;
+    width: 110px;
     font-family: HelveticaNeueBold;
     border-radius: 0 !important;
     font-size: 13px;
