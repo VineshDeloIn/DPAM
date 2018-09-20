@@ -47,16 +47,14 @@ $(document).ready(function () {
     $('.loginPassword').val('');
     $('.remeberMeCbx').prop('checked', false);
 
-    $('.sign-scs-close-toast').css("float","right");
+   
     $('.sign-scs-close-toast').on('click', function () {
-        alert("here");
-        
          $('.login-sign-sucs').hide();
     });
-
-    // $('.sign-error-close-toast').on('click', function () {
-    //     $('.login-sign-err').hide();
-    // });
+    $('.sign-err-close-toast').on('click', function () {
+         $('.login-sign-err').hide();
+    });
+   
 
     $('.loginSignUpTxt').on('click', function () {
 
