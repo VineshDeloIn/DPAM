@@ -9,7 +9,7 @@ $(document).ready(function () {
    
 
     $( ".forgtPswrdForm" ).on('submit',function( event ) {        
-         
+        //  event.preventDefault();
         var emailMob = $("#forgtPswrdMobMail").val();
 
 

@@ -56,8 +56,8 @@
     width: 100%;
     height: 100vh;
     background-color: #f7f7f7;
-    padding-left: 11%;
-    padding-right: 11%;
+    padding-left: 8%;
+    padding-right: 8%;
     /* padding-top: 8%;  */
     margin-left: 0%;
     /* border:2px solid blue;  */
@@ -65,15 +65,28 @@
 
 .otp-resend-txt {    
     margin-top: 10%;
-    text-align: center;
     font-family: HelveticaNeueReg;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
-    line-height: 1.5;
-    letter-spacing: 1px;
+    line-height: 1.62;
+    letter-spacing: normal;
+    text-align: center;
     color: #585d63;
+    margin-bottom: 0%;
+}
+
+.otp-resend-txt a {
+    font-family: HelveticaNeueReg;
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: right;
+    color: #23527c;
 }
 
 .otpForm {
@@ -126,7 +139,7 @@
     line-height: 1;
     letter-spacing: 2.2px;
     color: #333f48;
-    margin-top: 15%;
+    margin-top: 10%;
 }
 
 .otp-main .otp-input label {
