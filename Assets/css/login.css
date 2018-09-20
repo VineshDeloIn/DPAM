@@ -42,14 +42,9 @@
     width: 100%;
     height: 15vh;
     position: absolute;
-    /* background-color: #f3f9ea; */
-    /* border: 2px solid yellow;   */
 }
 
-/* .loginForm {
-    margin-top: 5%;
-    background-color: #f3f9ea;
-} */
+
 
 .login-text {
     margin-top: 7%;
@@ -65,7 +60,6 @@
 
 
 .login-toaster-div {
-    /* display: none;  */
     margin-top: -23%;
     width: 110%;
     margin-left: -8%;
@@ -92,7 +86,7 @@
 .login-toaster-content {
     width: 100%;
     padding: 4%;
-    position: relative;
+    /* position: relative; */
 }
 
 .login-toaster-content img {
@@ -116,7 +110,14 @@
 
 
 .sign-scs-close-toast{
-    /* float:right; */
+    float:right;
+    margin-right: 10px;
+    
+}
+
+.sign-err-close-toast{
+    float:right;
+    margin-right: 10px;
     
 }
 
@@ -538,7 +539,7 @@ border: 1px solid #DA291C;
         overflow-y: auto;
     }
     .login-text {
-        margin-top: 2%;
+        margin-top: 0%;
     }
     .login-main {
         height: 76vh;
@@ -552,10 +553,7 @@ border: 1px solid #DA291C;
     .conOfRentAdj {
         display: none;
     }
-    .loginBtnAdj {
-        margin-top: 50%;
-        vertical-align: middle;
-    }
+    
     .logoTopAdj {
         margin-top: 2%;
     }
@@ -589,15 +587,15 @@ border: 1px solid #DA291C;
     .landing-slide-content.slideadd {
         height: 72vh;
         overflow: hidden;
-        margin-left: 10%;
-        margin-right: 10%;
+        margin-left: 3%;
+        margin-right: 3%;
         top: 12%;
         /* bottom: 20%;    */
         padding-bottom: 15%;
         position: absolute;
         z-index: 1;
         background-color: azure;
-        width: 80%;
+        width: 94%;
         -webkit-transition: margin-left 0.5s ease;
         -moz-transition: margin-left 0.5s ease;
         -o-transition: margin-left 0.5s ease;
@@ -631,16 +629,12 @@ border: 1px solid #DA291C;
         white-space: nowrap;
     }
     .login-toaster-div {
-        margin-top: -25%;
+        margin-top: -20%;
         margin-left: -4%;
         width: 98%;
         padding: 0%;
     }
-    /* .alert-error {
-        margin-top: -30%;
-        margin-left: -4%;
-        width: 98%;
-    } */
+    
     .reg-success-msg {
         font-size: 0.8em;
     }
@@ -651,14 +645,12 @@ border: 1px solid #DA291C;
         width: 110%;
     }
     .loginNoAcntTxt {
-        margin-top: 8%;
+        margin-top: 3%;
     }
-    /* .login-fb-txt {
-        font-size: 0.6em; 
+    .login-main .login-input input {
+        margin-top: 2%;
+
     }
-    .login-google-txt {
-        font-size: 0.6em; 
-    } */
     .landingSideCloseBtn {
         margin-left: 90%;
         margin-top: 5%;
