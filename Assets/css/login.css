@@ -119,6 +119,7 @@
     color: #585d63;
     margin-left: 3%;
     width: 100%;
+    vertical-align: baseline;
 }
 
 .signup-success-close {
@@ -127,12 +128,19 @@
 
 .reg-success-img {
     float: left;
+    /* top:50%;
+    bottom:50%; */
+    height: 100%;
     margin-right: 2%;
+    vertical-align: middle;
 }
 
 .reg-error-img {
     float: left;
+    top:50%;
+    bottom:50%;
     margin-right: 2%;
+    vertical-align: middle;
 }
 
 .login-main .login-input {
@@ -415,6 +423,7 @@
 }
 .login-button:hover,.login-button :visited{
 background-color:#DA291C;
+border: 1px solid #DA291C;
 }
 .login-or-txt {
     margin: 3% 0%;
@@ -447,7 +456,7 @@ background-color:#DA291C;
 
 .uaeLogin:hover, .uaeLogin:focus, .uaeLogin:active, .uaeLogin:visited {
     color: red;
-    border: 1px solid red;
+    border: 0.5px solid red;
     background-color: transparent;
 }
 
@@ -486,7 +495,7 @@ background-color:#DA291C;
 }
 
 .fbLogin:hover, .fbLogin:focus, .fbLogin:active,.fbLogin:visited {
-    border: 1px solid red;
+    border: 0.5px solid red;
     background-color: transparent;
 }
 .fbLogin:hover .login-fb-txt, .fbLogin:focus .login-fb-txt, .fbLogin:active .login-fb-txt,.fbLogin:visited  .login-fb-txt  {
@@ -504,7 +513,7 @@ background-color:#DA291C;
 
 .googleLogin:hover, .googleLogin:focus, .googleLogin:active, .googleLogin:visited {
   
-    border: 1px solid red;
+    border: 0.5px solid red;
     background-color: transparent;
 }
 .googleLogin:hover .login-google-txt, .googleLogin:focus .login-google-txt, .googleLogin:active .login-google-txt, .googleLogin:visited .login-google-txt {
