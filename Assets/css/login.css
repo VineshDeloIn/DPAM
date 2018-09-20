@@ -112,13 +112,13 @@
 .sign-scs-close-toast{
     float:right;
     margin-right: 10px;
-    
+    cursor: pointer;  
 }
 
 .sign-err-close-toast{
     float:right;
     margin-right: 10px;
-    
+    cursor: pointer;
 }
 
 .login-main .login-input {
@@ -366,8 +366,8 @@
 }
 
 .login-forgot-pswrd {
-    padding: 0 !important;
-    margin: 0 !important;
+    padding: 0%;
+    margin: 0%;
 }
 
 .login-forgot-pswrd a {
@@ -654,7 +654,6 @@ border: 1px solid #DA291C;
         white-space: nowrap;
     }
     .login-forgot-pswrd a {
-        float: left;
         white-space: nowrap;
     }
     .login-toaster-div {
