@@ -384,9 +384,43 @@
 
 
 @media screen and (max-width: 480px) {
-    .maxDiv{
+    /* .maxDiv{
         display: none;
     }
+
+    .profile-user-name {
+        font-size: 20px;
+    }
+
+    .profile-fields {
+        font-size: 12px;
+    }
+
+    .profile-fields-value {
+        font-size: 14px;
+    }
+    
+    .profile-details-fields {
+        font-size: 12px;
+    }
+    .profile-details-fields-value {
+        font-size: 14px;
+    }
+    .profile-details-title {
+        font-size: 16px;
+    }
+
+    .profile-input input {
+        font-size: 14px;
+    }
+    .profile-input label {
+        font-size: 12px;
+    }
+
+    .profile-input input:focus~label,  .profile-input input:valid~label {
+        font-size: 10px;
+    } */
+
 }
 
 
