@@ -92,8 +92,12 @@
   }
 
   .profile-details {
-      padding-left: 0%;
-      padding-right: 0%;
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+ 
+  .profile-illustration{
+    margin-left: -15%;
   }
 
   .profile-details-title {
