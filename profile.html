@@ -75,41 +75,10 @@
     <div class="container-fluid profile-contents">
         <div class="container profile-summary">
 
-            <!-- Modal -->
-            <div class="modal fade profileOptions" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <!--Content-->
-                    <div class="modal-content form-elegant">
-                        <!--Body-->
-                        <div class="modal-body mx-4">
-                            <!--Body-->
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            <div class="container profileOptionTopAdj">
-                                <div class="optionsModel">
-                                    <div class="uploadOption">
-                                        <img src="Assets/images/uploadProfilephoto.png" alt="uploadphotopathIssue">
-                                        <p class="uploadPhotoTxt">Upload Photo</p>
-                                    </div>
-                                    <div class="removeOption">
-                                        <img src="Assets/images/removeProfilePhoto.png" alt="removePhotopathIssue">
-                                        <p class="removePhotoTxt">Remove Photo</p>
-                                    </div>
-                                </div>
-                                <p class="profileInstTxt">The image format must be jpg,bmp or png
-                                    <br/> The file size should not be more than 5 MB.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Modal -->
-
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-3 col-lg-3">
                     <img src="Assets/images/profile-pic.png" class="rounded-circle profile-pic" alt="">
-                    <div data-toggle="modal" data-target=".profileOptions">
+                    <div data-toggle="modal" data-target=".otpModel">
                         <img src="Assets/images/profileOptions.png" class="profileOption" alt="pathIssue">
                     </div>
 
@@ -118,7 +87,9 @@
                     <div class="row mt-4">
                         <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                             <p class="mb-2 profile-user-name">Mr. James Thomas</p>
-                            <p class="profile-fields">Resident of <span class="profile-address-text">Al Khail Gate Building #56 , Unit #2</span></p>
+                            <p class="profile-fields">Resident of
+                                <span class="profile-address-text">Al Khail Gate Building #56 , Unit #2</span>
+                            </p>
                         </div>
                         <div class="col-6 col-sm-12 col-md-12 col-lg-6">
                             <p class="mb-2 profile-fields">Mobile Number</p>
@@ -292,7 +263,7 @@
                                     </span>
                                     <div class="profile-family-group">
                                         <div class="profile-family-dynamic-div">
-                                               
+
                                         </div>
                                     </div>
                                 </div>
@@ -345,9 +316,77 @@
                 </div>
             </div>
         </div>
+
         <div>
             <img src="Assets/images/final-illustrations-black-blue-demo.png" class="profileIllustratonAdj" alt="pathIssue">
         </div>
+        <!-- Modal Profile Options start -->
+        <div class="modal fade profileOptions" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog profileOptionsModelBox" role="document">
+                <!--Content-->
+                <div class="modal-content form-elegant profileOptionsModelContent">
+                    <!--Body-->
+                    <div class="modal-body profileOptionsModelBody">
+                        <!--Body-->
+                        <button type="button" class="close profileOptionsModelClose" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <div class="profileOptionTopAdj">
+                            <div class="row optionsModel">
+                                <div class="col-1 col-lg-1">
+
+                                </div>
+                                <div class="col-5 col-lg-5 uploadOption">
+                                    <img src="Assets/images/uploadProfilephoto.png" alt="uploadphotopathIssue">
+                                    <p class="uploadPhotoTxt">Upload Photo</p>
+                                </div>
+                                <div class="col-5 col-lg-5 removeOption">
+                                    <img src="Assets/images/removeProfilePhoto.png" alt="removePhotopathIssue">
+                                    <p class="removePhotoTxt">Remove Photo</p>
+                                </div>
+                                <div class="col-1 col-lg-1">
+                                </div>
+                            </div>
+                            <p class="profileInstTxt">The image format must be jpg,bmp or png
+                                <br/> The file size should not be more than 5 MB.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Profile Options End -->
+
+        <!-- Modal OTP Enter start -->
+        <div class="modal fade otpModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog otpModelBox" role="document">
+                <!--Content-->
+                <div class="modal-content form-elegant otpModelContent">
+                    <!--Body-->
+                    <div class="modal-body otpModelBody">
+                        <!--Body-->
+                        <button type="button" class="close otpModelClose" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <div class="container otpTopAdj">
+                                <p class="model-otp-text">Enter OTP</p>
+                                <p class="model-otp-reg-text">OTP sent to the new mobile number to validate</p>
+                                <form class="modelOtpForm" action="" novalidate>
+            
+                                    <div class="form-group profile-input">
+                                        <input type="password" maxlength="4" class="" name="" required>
+                                        <label class="">ENTER OTP</label>
+                                        <p class="error-msg"></p>
+                                    </div>
+            
+                                    <button type="submit" class="btn btn-dark primary-button">SUBMIT</button>
+                                </form>
+                                <p class="model-otp-resend-txt">Did not recieve OTP yet? <a href="#resend">RESEND</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal OTP Enter End -->
 </body>
 
 </html>

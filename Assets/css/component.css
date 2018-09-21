@@ -17,7 +17,7 @@
     color: red;
     border: 0.5px solid red;
     background-color: transparent;
-    box-shadow: 0 0 0 0rem rgba(52,58,64,0.5) !important;
+    box-shadow: 0 0 0 0rem rgba(52, 58, 64, 0.5) !important;
 }
 
 .primary-button {
@@ -34,11 +34,11 @@
     color: #ffffff;
 }
 
-.primary-button-button:hover,.primary-button:visited,.primary-button:focus{
-    background-color:#DA291C;
+.primary-button:hover, .primary-button:visited, .primary-button:focus {
+    background-color: #DA291C;
     border: 1px solid #DA291C;
-    box-shadow: 0 0 0 0rem rgba(52,58,64,0.5) !important;
-    }
+    box-shadow: 0 0 0 0rem rgba(52, 58, 64, 0.5) !important;
+}
 
 .error-msg {
     font-family: HelveticaNeueReg;
@@ -54,3 +54,76 @@
     position: absolute;
 }
 
+/* model profile Options start */
+
+.profileOptionTopAdj {
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.modal.show {
+    display: flex!important;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: flex-start;
+}
+
+.profileOptionsModelBox {
+    width: 370px;
+    height: 220px;
+    /* transform: translate(-10%,-10%);     */
+}
+
+.profileOptionsModelContent {
+    border-radius: 0%;
+}
+
+.profileOptionsModelBody {
+    padding: 0%;
+}
+
+.profileOptionsModelClose {
+    margin-right: 10px;
+    color: #909aa1;
+}
+
+.profileOption {
+    cursor: pointer;
+    position: relative;
+    margin-left: 120px;
+    margin-top: -50px;
+}
+
+/* model profile Options end */
+
+/* model OTP start */
+
+.otpTopAdj {
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+
+.modal.show {
+    display: flex!important;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: flex-start;
+}
+.otpModelContent {
+    border-radius: 0%;
+}
+
+.otpModelBody {
+    padding: 0%;
+}
+
+.otpModelClose {
+    margin-right: 10px;
+    color: #909aa1;
+}
+
+
+/* model OTP end */
