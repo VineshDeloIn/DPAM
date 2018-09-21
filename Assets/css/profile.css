@@ -14,7 +14,7 @@
 
 
 .profile-summary {
-    background-color: #f3f9ea;
+    background-color: #ffffff;;
     padding: 4%;
 }
 
@@ -133,8 +133,10 @@
    content: url("../../Assets/images/downArrow.svg");
 }
 
-.profile-dpndnt-family-add-btn {
+.profile-add-btn {
     float: right;
+    cursor: pointer;
+    padding-top: 4px;
 }
 
  .profile-card {
@@ -220,6 +222,17 @@
      padding-bottom: 5%;
  }
 
+ .profile-address-text {
+    font-family: HelveticaNeueReg;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.17;
+    letter-spacing: normal;
+    color: #333f48;
+ }
+
   .profile-details-fields {
     font-family: HelveticaNeueReg;
     font-size: 14px;
@@ -265,44 +278,18 @@
   }
 
 
-  .profile-edit-txt {
-    font-family: HelveticaNeueBold;
-    font-size: 12px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: 2px;
-    color: #253746;
+
+.profile-secondary-btn {
+    padding: 10px 30px;
   }
 
-  .profile-cancel-txt {
-    font-family: HelveticaNeueBold;
-    font-size: 12px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: 2px;
-    color: #253746;
+.profile-primary-btn {
+    padding: 10px 40px;
   }
 
-  .profile-save-txt {
-    font-family: HelveticaNeueBold;
-    font-size: 12px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.83;
-    letter-spacing: 2px;
-    text-align: center;
-    color: #ffffff;
+  .profile-dependent-cancel ,.profile-dependent-save {
+      display: inline-block;
   }
-
- 
-  
-
-
 
 .profile-contact-save {
     display: none;
@@ -318,26 +305,82 @@
 }
 
 .profile-dependent-content-card {
-    border-radius: 0%;
+    border: none;
 }
 
-.profile-family-div {
-    /* border: 1px solid grey; */
-    padding-top: 1%;
+.dynamic-profile-div {
+    padding-top: 3%;
     padding-bottom: 2%;
 }
 
-.profile-family-input input {
-    border: 0;
-    outline: 0;
-    background: transparent;
-    border-bottom: 1px solid black; 
+.profile-delete {
+    padding-left: 4.8%;
+    margin-top: 1%;
+    cursor: pointer;
 }
 
-.remove-profile-family {
-    margin-left: 5%;
-    margin-top: 2%;
+ .profile-input {
+    position: relative;
 }
+
+
+
+.profile-input input {
+    margin-top: 6%;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid  #a7a9ad;
+    padding: 4% 0;
+    font-family: HelveticaNeueReg;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.31;
+    letter-spacing: normal;
+    color: #333f48;
+}
+
+
+
+ .profile-input label {
+    position: absolute;
+    /* top: 46%;     */
+    top: 35%;
+    transition: .5s;
+    pointer-events: none;
+    font-family: HelveticaNeueReg;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.31;
+    letter-spacing: normal;
+    color: #333f48;
+}
+
+
+ .profile-input input:focus~label,  .profile-input input:valid~label {
+    top: -6%;
+    font-family: HelveticaNeueReg;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #909aa1;
+    /* border: 2px solid blue; */
+}
+
+
+ .profile-input :focus, .profile-input :valid {
+    border-bottom: 1px solid  #a7a9ad;
+}
+
 
 
 @media screen and (max-width: 480px) {

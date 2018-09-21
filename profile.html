@@ -18,7 +18,11 @@
     <script src="Assets/js/jquery-3.3.2.min.js"></script>
     <script src="Assets/js/popper.min.js"></script>
     <script src="Assets/js/bootstrap.min.js"></script>
+    <script src="Assets/js/jqueryValidation/jquery.validate.min.js"></script>
+    <script src="Assets/js/commonValidations/emailMobValidation.js"></script>
+    <script src="Assets/js/commonValidations/passwordValidation.js"></script>
     <script src="Assets/js/profile/profile.js"></script>
+
 
 </head>
 
@@ -77,15 +81,15 @@
                 <div class="col-12 col-sm-12 col-md-9 col-lg-9">
                     <div class="row mt-4">
                         <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                            <p class="mb-1 profile-user-name">Mr. James Thomas</p>
-                            <p class="profile-fields">Resident of sanushka@deloitte.com</p>
+                            <p class="mb-2 profile-user-name">Mr. James Thomas</p>
+                            <p class="profile-fields">Resident of <span class="profile-address-text">Al Khail Gate Building #56 , Unit #2</span></p>
                         </div>
                         <div class="col-6 col-sm-12 col-md-12 col-lg-6">
-                            <p class="mb-1 profile-fields">Mobile Number</p>
+                            <p class="mb-2 profile-fields">Mobile Number</p>
                             <p class="profile-fields-value">971-551647269</p>
                         </div>
                         <div class="col-12 col-sm-12 col-md-12 col-lg-6">
-                            <p class="mb-1 profile-fields">Renewal Date</p>
+                            <p class="mb-2 profile-fields">Renewal Date</p>
                             <p class="profile-fields-value">21/09/2018</p>
                         </div>
                     </div>
@@ -106,13 +110,14 @@
                             <div class="container">
                                 <div class="row mt-5">
                                     <div class="col-md-4 col-lg-4">
-                                        <p class="mb-0 profile-details-fields">Mobile Number *</p>
+                                        <p class="mb-0 profile-details-fields profile-contact-mobile">Mobile Number *</p>
                                         <input type="text" class="profile-details-fields-value" name="profile-contact-mobile" value="971-551647269" readonly />
-                                        <!-- <p style="position:absolute;">Mbile Error</p> -->
+                                        <p class="error-msg profile-contact-mob-err"></p>
                                     </div>
                                     <div class="col-md-4 col-lg-4">
-                                        <p class="mb-0 profile-details-fields">Email ID *</p>
+                                        <p class="mb-0 profile-details-fields profile-contact-email">Email ID *</p>
                                         <input type="text" class="profile-details-fields-value" name="profile-contact-email" value="thomas@gmail.com" readonly/>
+                                        <p class="error-msg profile-contact-mail-err"></p>
                                     </div>
                                     <div class="col-md-4 col-lg-4">
                                         <p class="mb-0 profile-details-fields">Alternate Contact Number</p>
@@ -149,18 +154,19 @@
                                 </div>
                                 <div class="row mt-5 justify-content-end float-right">
                                     <div class="col-lg-12">
-                                        <span class=" profile-contact-cancel">
-                                            <button type="submit" class="btn btn-outline-secondary secondary-button profile-cancel-btn">
+                                        <span class="profile-contact-cancel">
+                                            <button type="submit" class="btn btn-outline-secondary secondary-button profile-secondary-btn profile-cancel-btn">
                                                 <span class="profile-cancel-txt">CANCEL</span>
                                             </button>
                                         </span>
+                                        &nbsp;
                                         <span class="profile-contact-save">
-                                            <button type="submit" class="btn btn-dark primary-button profile-save-btn">
+                                            <button type="submit" class="btn btn-dark primary-button profile-primary-btn profile-save-btn">
                                                 <span class="profile-save-txt">SAVE</span>
                                             </button>
                                         </span>
                                         <span class="profile-contact-edit">
-                                            <button type="submit" class="btn btn-outline-secondary secondary-button profile-edit-btn">
+                                            <button type="submit" class="btn btn-outline-secondary secondary-button profile-secondary-btn profile-edit-btn">
                                                 <img src="Assets/images/profile-edit.svg">
                                                 <span class="profile-edit-txt">EDIT</span>
                                             </button>
@@ -242,16 +248,16 @@
                     <div id="collapseProfileDetails" class="card-body collapse profile-card-body" data-parent="#accordion">
 
                         <div class="container profile-dependent-content">
-                            <div class="card mb-3 profile-dependent-content-card">
+                            <div class="card mt-4 mb-3 profile-dependent-content-card">
                                 <div class="card-header profile-details-title profile-dependent-content-head">
                                     Family :
                                     <span class="profile-details-fields">Add your family members and their details</span>
                                     <span>
-                                        <img class="profile-dpndnt-family-add-btn" src="Assets/images/addIcon.svg" alt="">
+                                        <img class="profile-add-btn profile-dpndnt-family-add-btn" src="Assets/images/addIcon.svg" alt="">
                                     </span>
-                                    <div class=" profile-family-group">
+                                    <div class="profile-family-group">
                                         <div class="profile-family-dynamic-div">
-
+                                               
                                         </div>
                                     </div>
                                 </div>
@@ -262,7 +268,7 @@
                                     House Help :
                                     <span class="profile-details-fields">Add details of your house help like cook,driver or gardener living with you</span>
                                     <span>
-                                        <img class="profile-dpndnt-family-add-btn" src="Assets/images/addIcon.svg" alt="">
+                                        <img class="profile-add-btn profile-dpndnt-houseHelp-add-btn" src="Assets/images/addIcon.svg" alt="">
                                     </span>
                                     <div class="profile-house-help-group">
                                         <div class="profile-house-help-dynamic-div">
@@ -276,7 +282,7 @@
                                     Pets:
                                     <span class="profile-details-fields">Add details of your pet</span>
                                     <span>
-                                        <img class="profile-dpndnt-family-add-btn" src="Assets/images/addIcon.svg" alt="">
+                                        <img class="profile-add-btn profile-dpndnt-pet-add-btn" src="Assets/images/addIcon.svg" alt="">
                                     </span>
                                     <div class="profile-pet-group">
                                         <div class="profile-pet-dynamic-div">
@@ -284,6 +290,21 @@
                                     </div>
                                 </div>
 
+                            </div>
+                            <div class="row mt-5 justify-content-end float-right">
+                                <div class="col-lg-12">
+                                    <span class="profile-dependent-cancel">
+                                        <button type="submit" class="btn btn-outline-secondary secondary-button profile-secondary-btn profile-dpndnt-cancel-btn">
+                                            <span>CANCEL</span>
+                                        </button>
+                                    </span>
+                                    &nbsp;
+                                    <span class="profile-dependent-save">
+                                        <button type="submit" class="btn btn-dark primary-button profile-primary-btn profile-dpndnt-save-btn">
+                                            <span>SAVE</span>
+                                        </button>
+                                    </span>
+                                </div>
                             </div>
                         </div>
 
