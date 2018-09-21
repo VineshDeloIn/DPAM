@@ -8,6 +8,28 @@
     width: 100%;
 }
 
+.uploadPhotoTxt {
+    font-family: HelveticaNeueReg;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #333f48;
+}
+
+.removePhotoTxt {
+    font-family: HelveticaNeueReg;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #333f48;
+}
+
 .profile-contents {
     top: 35%;
     /* z-index: 1; */
@@ -20,30 +42,36 @@
     background-color: #f3f9ea;
     padding: 4%;
 }
-.optionsModel{
+
+.optionsModel {
     display: flex;
     flex-direction: row;
     /* float: right; */
 }
-.uploadOption{
+
+.uploadOption {
     display: block;
-    width: 50%; 
+    width: 50%;
     /* float: right; */
     text-align: center;
 }
-.profileOptionTopAdj{
-    margin-top:10%;
+
+.profileOptionTopAdj {
+    margin-top: 10%;
 }
+
 .profileInstTxt {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
-.removeOption{
+
+.removeOption {
     display: block;
     /* float: right; */
     text-align: center;
 }
+
 .profileOption {
     position: relative;
     margin-left: 120px;
