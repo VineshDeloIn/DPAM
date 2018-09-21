@@ -1,22 +1,62 @@
 $(document).ready(function()
 {
+
+    var isContactMobileChange = false;
+    var isContactEmailChange = false;
+
+    $('.profile-edit-btn').click(function(e)
+    {
+       e.preventDefault();
+        alert("here");
+        $(".profile-contact-cancel").show();
+        $('.profile-contact-save').show();
+        $('.profile-contact-edit').hide();
+       $(".profile-contact-details-form input").removeAttr("readonly");  
+       $(".profile-contact-details-form input").css("border-bottom", "1px solid black");
+    });
    
-        $("input[name='profile-contact-fields']").change(function(){
-            alert("The text has been changed.");
+        $("input[name='profile-contact-mobile']").keyup(function(){
+            alert("mobile changed.");
+            $("input[name='profile-contact-email']").attr('readonly', true); 
+            $("input[name='profile-contact-email']").css("border-bottom", "none");
+            $("input[name='profile-contact-other']").attr('readonly', true); 
+            $("input[name='profile-contact-other']").css("border-bottom", "none");
+            isContactMobileChange = true;
         });
-  
+
+        $("input[name='profile-contact-email']").keyup(function(){
+            alert("emil changed.");
+            $("input[name='profile-contact-mobile']").attr('readonly', true); 
+            $("input[name='profile-contact-mobile']").css("border-bottom", "none");
+            $("input[name='profile-contact-other']").attr('readonly', true); 
+            $("input[name='profile-contact-other']").css("border-bottom", "none");
+            isContactEmailChange = true;
+        });
+
+        $("input[name='profile-contact-other']").keyup(function(){
+            alert("other changed.");
+            $("input[name='profile-contact-mobile']").attr('readonly', true); 
+            $("input[name='profile-contact-mobile']").css("border-bottom", "none");
+            $("input[name='profile-contact-email']").attr('readonly', true); 
+            $("input[name='profile-contact-email']").css("border-bottom", "none");
+        });
+      
+        $('.profile-save-btn').click(function(e)
+        {
+           e.preventDefault();
+            alert("here save");
+            if(isContactEmailChange){
+                alert("here email change");
+            }else if(isContactMobileChange) {
+                alert("here mobile change");
+            }
+
+
+        });
+       
     
    
- $('.profile-edit-btn').click(function(e)
- {
-    e.preventDefault();
-     alert("here");
-     $(".profile-contact-cancel").show();
-     $('.profile-contact-save').show();
-     $('.profile-contact-edit').hide();
-    $("input[name='profile-contact-fields']").removeAttr("readonly");  
-    $("input[name='profile-contact-fields']").css("border-bottom", "1px solid black");
- });
+
 
  $('.profile-dpndnt-family-add-btn').click(function(e){
      alert("family add");
