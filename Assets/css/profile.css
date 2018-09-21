@@ -2,6 +2,7 @@
     width: 90%;
     height: auto;
     max-width: 100%;
+    margin-top: -10%;
 }
 
 .profile-contents {
@@ -419,6 +420,8 @@ body {
     text-decoration: none;
     color: #ffffff;
     font-size: 12px;
+    font-weight: normal;
+    letter-spacing: 1px;
   }
   
   .header li a:hover,
@@ -432,6 +435,16 @@ body {
     margin-right: 5%;
   }
   
+  
+.headerNavOnScroll {
+    
+    background:none;
+}
+
+.headerNavOnScroll .header{
+    
+    background-color:black;
+}
   
   .header .logo {
     display: block;
