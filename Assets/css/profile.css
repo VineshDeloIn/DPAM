@@ -4,36 +4,65 @@
     max-width: 100%;
 }
 
-.profile-contents {
-    top: 35%; 
-    /* z-index: 1; */
-     position: absolute; 
-     left: 0;
-    right: 0;
+.profileIllustratonAdj {
+    width: 100%;
 }
 
+.profile-contents {
+    top: 35%;
+    /* z-index: 1; */
+    position: absolute;
+    left: 0;
+    right: 0;
+}
 
 .profile-summary {
     background-color: #f3f9ea;
     padding: 4%;
 }
-
-.profile-summary img {
-    display:table-cell;
-    vertical-align:middle;
+.optionsModel{
+    display: flex;
+    flex-direction: row;
+    /* float: right; */
+}
+.uploadOption{
+    display: block;
+    width: 50%; 
+    /* float: right; */
+    text-align: center;
+}
+.profileOptionTopAdj{
+    margin-top:10%;
+}
+.profileInstTxt {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.removeOption{
+    display: block;
+    /* float: right; */
+    text-align: center;
+}
+.profileOption {
+    position: relative;
+    margin-left: 120px;
+    margin-top: -50px;
 }
 
+.profile-summary img {
+    display: table-cell;
+    vertical-align: middle;
+}
 
-
-.profile-header{
+.profile-header {
     background: url(../images/profile-banner.jpg);
     background-size: 100%;
     height: 32vw;
     background-repeat: no-repeat;
 }
 
-
- .file-upload {
+.file-upload {
     display: none;
 }
 
@@ -48,12 +77,12 @@
     height: 50px;
 } */
 
-.profile-pic-edit img{
+.profile-pic-edit img {
     position: absolute;
     top: 60%;
     right: 0%;
     transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
-  }
+}
 
 .profile-user-name {
     font-family: HelveticaNeueBold;
@@ -88,14 +117,14 @@
     line-height: 1.17;
     letter-spacing: 1px;
     color: #333f48;
-  }
+}
 
-  .profile-details {
-      padding-left: 0%;
-      padding-right: 0%;
-  }
+.profile-details {
+    padding-left: 0%;
+    padding-right: 0%;
+}
 
-  .profile-details-title {
+.profile-details-title {
     font-family: HelveticaNeueReg;
     font-size: 24px;
     font-weight: normal;
@@ -104,46 +133,42 @@
     line-height: normal;
     letter-spacing: normal;
     color: #333f48;
-    padding-left: 1%; 
-  }
-
-
+    padding-left: 1%;
+}
 
 .card-header.profile-card-head:after {
-      content: url("../../Assets/images/upArrow.svg");
-      margin-top: 1%;  
-      float: right;  
-      cursor: pointer;    
-    
+    content: url("../../Assets/images/upArrow.svg");
+    margin-top: 1%;
+    float: right;
+    cursor: pointer;
 }
 
 .card-header.profile-card-head.collapsed:after {
-     content: url("../../Assets/images/downArrow.svg");
+    content: url("../../Assets/images/downArrow.svg");
 }
 
 .card-header.profile-depend-card-head:after {
     content: url("../../Assets/images/upArrow.svg");
-    margin-top: 1%;  
-    float: right;  
-    cursor: pointer;    
-  
+    margin-top: 1%;
+    float: right;
+    cursor: pointer;
 }
 
 .card-header.profile-depend-card-head.collapsed:after {
-   content: url("../../Assets/images/downArrow.svg");
+    content: url("../../Assets/images/downArrow.svg");
 }
 
 .profile-dpndnt-family-add-btn {
     float: right;
 }
 
- .profile-card {
+.profile-card {
     border-radius: 0%;
     border: none;
-    background-color: white; 
- }
+    background-color: white;
+}
 
- .profile-header-main {
+.profile-header-main {
     z-index: 10;
     position: sticky;
     position: -webkit-sticky;
@@ -178,7 +203,7 @@
     color: #ffffff;
 }
 
-.right-icon-bar{
+.right-icon-bar {
     text-align: center;
     padding: 25px 16px 14px 16px;
 }
@@ -198,29 +223,28 @@
     background-color: #fa3e3e;
     border-radius: 8px;
     color: white;
-   
     padding: 1px 3px;
     font-size: 10px;
-    
     position: absolute;
     top: 0;
     right: 0;
 }
-.left-navigation-image img{
+
+.left-navigation-image img {
     width: 70%;
 }
 
- .profile-card-head {
+.profile-card-head {
     padding: 3% 1.7%;
     border-bottom: 3px solid #f7f7f7;
-    background-color: white; 
- }
+    background-color: white;
+}
 
- .profile-card-body {
-     padding-bottom: 5%;
- }
+.profile-card-body {
+    padding-bottom: 5%;
+}
 
-  .profile-details-fields {
+.profile-details-fields {
     font-family: HelveticaNeueReg;
     font-size: 14px;
     font-weight: normal;
@@ -229,11 +253,9 @@
     line-height: 1.5;
     letter-spacing: normal;
     color: #909aa1;
-  }
+}
 
-
-
-  .profile-details-fields-value {
+.profile-details-fields-value {
     font-family: HelveticaNeueReg;
     font-size: 16px;
     font-weight: normal;
@@ -242,30 +264,29 @@
     line-height: 1.31;
     letter-spacing: normal;
     color: #333f48;
-  }
+}
 
 .profile-contact-details-form input {
     border: 0;
     outline: 0;
     background: transparent;
     /* border-bottom: 1px solid black; */
-  }
+}
 
-.profile-dependent-form input{
+.profile-dependent-form input {
     border: 0;
     outline: 0;
     background: transparent;
-    border-bottom: 1px solid black;  
+    border-bottom: 1px solid black;
 }
 
 .profile-lease-details-form input {
     border: 0;
     outline: 0;
     background: transparent;
-  }
+}
 
-
-  .profile-edit-txt {
+.profile-edit-txt {
     font-family: HelveticaNeueBold;
     font-size: 12px;
     font-weight: bold;
@@ -274,9 +295,9 @@
     line-height: normal;
     letter-spacing: 2px;
     color: #253746;
-  }
+}
 
-  .profile-cancel-txt {
+.profile-cancel-txt {
     font-family: HelveticaNeueBold;
     font-size: 12px;
     font-weight: bold;
@@ -285,9 +306,9 @@
     line-height: normal;
     letter-spacing: 2px;
     color: #253746;
-  }
+}
 
-  .profile-save-txt {
+.profile-save-txt {
     font-family: HelveticaNeueBold;
     font-size: 12px;
     font-weight: bold;
@@ -297,12 +318,7 @@
     letter-spacing: 2px;
     text-align: center;
     color: #ffffff;
-  }
-
- 
-  
-
-
+}
 
 .profile-contact-save {
     display: none;
@@ -331,7 +347,7 @@
     border: 0;
     outline: 0;
     background: transparent;
-    border-bottom: 1px solid black; 
+    border-bottom: 1px solid black;
 }
 
 .remove-profile-family {
@@ -339,12 +355,8 @@
     margin-top: 2%;
 }
 
-
 @media screen and (max-width: 480px) {
-    .maxDiv{
+    .maxDiv {
         display: none;
     }
 }
-
-
-
