@@ -68,8 +68,9 @@ $(document).ready(function () {
         // alert("here save");
         var profileContactMobile = $(".profile-contact-mob").val();
         var profileContactEmail = $(".profile-contact-mail").val();
-        
+        alert(profileContactMobile);
         isMobileValid = validatePhone(profileContactMobile);
+        alert(isMobileValid);
         isEmailValid = validateEmail(profileContactEmail);
 
         if (isContactEmailChange) {
@@ -198,6 +199,8 @@ $(document).ready(function () {
 
 
     });
+
+
 
     $('.profile-pet-dynamic-div').on('click', '.remove-profile-pet', function () {
         $(this).parent().remove();

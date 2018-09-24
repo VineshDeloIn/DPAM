@@ -1,6 +1,6 @@
 function  validatePhone(txtPhone) {
-//   alert("valid");
-    var  filter  =  /^(?:\+971|00971|0)?(?:50|51|52|55|56|54|57)\d{7}$/;
+  alert(txtPhone+"txtPhone");
+    var  filter  =  /^(?:\+971|971|00971|0)?(-)?(?:50|51|52|55|56|54|57)\d{7}$/;
     if  (filter.test(txtPhone)) {
         // alert("if");
         // if (txtPhone.length == 10) {
