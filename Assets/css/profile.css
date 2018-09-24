@@ -784,6 +784,9 @@ a {
     letter-spacing: 1px;
     color: #ffffff;
   }
+.header li a:hover {
+    border-bottom: #da291c solid 1px;
+}
 
 .footer-group-1 {
   height: 9vw;
