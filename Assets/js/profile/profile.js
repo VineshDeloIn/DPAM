@@ -183,6 +183,41 @@ $(document).ready(function () {
         $(this).parent().remove();
     });
 
+    $(".uploadOption img").click(function() {
+        // alert("upload pic");
+        $(".uploadProfilePicFile").click();
+
+        $('.uploadProfilePicFile').bind('change', function(event) {
+            alert("change happened");
+            event.preventDefault();
+            var profilePicPath = URL.createObjectURL(event.target.files[0])
+            // var v = $('.uploadProfilePicFile').val();
+            // alert("change happened" + v);
+           
+
+            var ext = $('.uploadProfilePicFile').val().split('.').pop().toLowerCase();
+            if ($.inArray(ext, ['bmp','png','jpeg']) == -1){
+                alert("iage of not right format");
+                $(".uploadProfileErr").html(" !Image is not of format bmp , png pr jpeg. Please use any of that");
+                }else{
+                var picsize = (this.files[0].size);
+                if (picsize > 5000000){
+               alert("File is not of proper size");
+               $(".uploadProfileErr").html(" !Image size is more that 5MB");
+                }else {
+                    $('.profile-pic').attr('src', profilePicPath);
+                }
+                
+            }
+            
+
+        });
+    });
+
+    $(".removeOption img").click(function() {
+        $('.profile-pic').attr('src', "");
+    });
+
 
 
 });
