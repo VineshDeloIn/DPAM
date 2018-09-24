@@ -15,7 +15,7 @@
 
 .secondary-button:hover, .secondary-button:focus, .secondary-button:active {
     color: red;
-    border: 0.5px solid red;
+    border: 1px solid red;
     background-color: transparent;
     box-shadow: 0 0 0 0rem rgba(52, 58, 64, 0.5) !important;
 }
@@ -102,6 +102,8 @@
 .otpTopAdj {
     margin-top: 5%;
     margin-bottom: 10%;
+    margin-left: 57px;
+    margin-right: 57px;
 }
 
 

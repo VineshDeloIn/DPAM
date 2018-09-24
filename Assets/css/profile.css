@@ -17,11 +17,19 @@
 }
 
 .otpModelBox {
-    width: 459px;
-    height: 396px;
+    width: 550px;
+    height: 480px;
+    /* padding: 57px; */
+}
+
+.otp-common-padding {
+    padding: 25px 0px 10px;
+}
+.otp-resend-href {
+    color: #23527c;
 }
 .model-otp-resend-txt{
-    text-align: center;
+    text-align: center;    
 }
 .uploadPhotoTxt {
     font-family: HelveticaNeueReg;
@@ -128,7 +136,7 @@
 }
 
 .model-otp-text {
-    margin-top: 10%;
+    /* margin-top: 10%; */
     font-family: HelveticaNeueMed;
     font-size: 26px;
     font-weight: 500;
@@ -174,12 +182,6 @@
     color: #333f48;
 }
 
-<<<<<<< HEAD
-.profile-details {
-    padding-left: 0%;
-    padding-right: 0%;
-}
-=======
   .profile-details {
     padding-left: 12%;
     padding-right: 12%;
@@ -188,7 +190,6 @@
   .profile-illustration{
     margin-left: -15%;
   }
->>>>>>> 4152c3e44066946a89e9d21189a433a208539037
 
 .profile-details-title {
     font-family: HelveticaNeueReg;
@@ -293,12 +294,8 @@
     color: white;
     padding: 1px 3px;
     font-size: 10px;
-<<<<<<< HEAD
-    position: absolute;
-=======
     
     position: relative;
->>>>>>> 4152c3e44066946a89e9d21189a433a208539037
     top: 0;
     right: 0;
 }
@@ -371,16 +368,52 @@
 }
 
 .profile-secondary-btn {
-    padding: 10px 30px;
+    padding: 10px 0px;
+    width:100%;
+    font-family: HelveticaNeueBold;
+    border-radius: 0 !important;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.83;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #585d63;
+    border: 1px solid #333f48;
+  }
+
+  .profile-secondary-btn:hover, .profile-secondary-btn:focus, .profile-secondary-btn:active {
+    color: red;
+    border: 0.5px solid red;
+    background-color: transparent;
+    box-shadow: 0 0 0 0rem rgba(52,58,64,0.5) !important;
 }
 
 .profile-primary-btn {
-    padding: 10px 40px;
-}
+    padding: 10px 0px;
+    width: 100%;
+    font-family: HelveticaNeueBold;
+    border-radius: 0 !important;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.83;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #ffffff;
+  }
 
-.profile-dependent-cancel, .profile-dependent-save {
-    display: inline-block;
-}
+  .profile-primary-btn:hover,.profile-primary-btn:visited,.profile-primary-btn:focus{
+    background-color:#DA291C;
+    border: 1px solid #DA291C;
+    box-shadow: 0 0 0 0rem rgba(52,58,64,0.5) !important;
+    }
+
+  .profile-dependent-cancel ,.profile-dependent-save {
+      display: inline-block;
+  }
 
 .profile-contact-save {
     display: none;
@@ -433,6 +466,26 @@
     color: #333f48;
 }
 
+
+.model-input-otp {
+    /* margin-top: 6%; */
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #a7a9ad;
+    /* padding: 4% 0; */
+    font-family: HelveticaNeueReg;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.31;
+    letter-spacing: normal;
+    color: #333f48;
+}
+
 .profile-input label {
     position: absolute;
     /* top: 46%;     */
@@ -464,6 +517,10 @@
 
 .profile-input :focus, .profile-input :valid {
     border-bottom: 1px solid #a7a9ad;
+}
+
+.profileHeaderAdj {
+    margin-top: 3%;
 }
 
 
@@ -637,6 +694,45 @@ body {
   
 
 @media screen and (max-width: 480px) {
+     .maxDiv{
+        display: none;
+    }
+
+    .profile-user-name {
+        font-size: 20px;
+    }
+
+    .profile-fields {
+        font-size: 12px;
+    }
+
+    .profile-fields-value {
+        font-size: 14px;
+    }
+    
+    .profile-details-fields {
+        font-size: 12px;
+    }
+    .profile-details-fields-value {
+        font-size: 14px;
+    }
+    .profile-details-title {
+        font-size: 16px;
+    }
+
+    .profile-input input {
+        font-size: 14px;
+    }
+    .profile-input label {
+        font-size: 12px;
+        top:55%;
+    }
+
+    .profile-input input:focus~label,  .profile-input input:valid~label {
+        font-size: 10px;
+        top:10%;
+    } 
+
     .profile-header .logo img {
       
         margin-left: 63%;
@@ -654,6 +750,10 @@ body {
   
       .header .myicons .hideMobile{
         display: none;
+      }
+
+      .profile-edit-btn {
+          text-align: center;
       }
   
 }

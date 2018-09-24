@@ -14,10 +14,10 @@ $(document).ready(function () {
     $('.profile-edit-btn').click(function (e) {
         e.preventDefault();
         alert("here");
-        // $('.bbb').css("display","inline");
         $(".profile-contact-cancel").css("display","inline-block");
         $('.profile-contact-save').css("display","inline-block");
-        
+        // $('.profile-contact-cancel').show();
+        // $('.profile-contact-save').show();
         $('.profile-contact-edit').hide();
         $(".profile-contact-details-form input").removeAttr("readonly");
         $(".profile-contact-details-form input").css("border-bottom", "1px solid black");
