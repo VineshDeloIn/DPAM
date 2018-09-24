@@ -13744,11 +13744,13 @@ $(document).ready(function () {
         $("input[name='profile-contact-email']").css("border-bottom", "none");
         $("input[name='profile-contact-other']").attr('readonly', true);
         $("input[name='profile-contact-other']").css("border-bottom", "none");
+        $(".profile-contact-mail-err").html("");
+        $(".profile-contact-mob-err").html("");
     });
     $('.profile-save-btn').click(function (e) {
         e.preventDefault();
         
-        // alert("here save");
+       //  alert("here save");
         var profileContactMobile = $(".profile-contact-mob").val();
         var profileContactEmail = $(".profile-contact-mail").val();
         alert(profileContactMobile);
@@ -13767,7 +13769,7 @@ $(document).ready(function () {
             }
         } else if (isContactMobileChange) {
             // alert("here mobile change");
-            // alert(isMobileValid);
+             alert(isMobileValid);
             if (isMobileValid) {
             //    alert("saved mobile");
                $('.otpModel').modal('show'); 

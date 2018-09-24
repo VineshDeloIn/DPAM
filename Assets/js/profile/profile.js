@@ -70,9 +70,9 @@ $(document).ready(function () {
        //  alert("here save");
         var profileContactMobile = $(".profile-contact-mob").val();
         var profileContactEmail = $(".profile-contact-mail").val();
-        alert(profileContactMobile);
+        // alert(profileContactMobile);
         isMobileValid = validatePhone(profileContactMobile);
-        alert(isMobileValid);
+        // alert(isMobileValid);
         isEmailValid = validateEmail(profileContactEmail);
 
         if (isContactEmailChange) {
