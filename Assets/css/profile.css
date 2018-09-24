@@ -89,24 +89,6 @@
     text-align: center;
 }
 
-.uploadProfileErr {
-    font-family: HelveticaNeueReg;
-    font-size: 10px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.2;
-    letter-spacing: normal;
-    color: #ff1100;
-    text-align: center;
-    margin-top: 1%;
-    position: relative;
-}
-
-.uploadOption img {
-    cursor: pointer;
-}
-
 .profileInstTxt {
     font-family: HelveticaNeueReg;
     font-size: 14px;
@@ -123,10 +105,6 @@
     /* display: block; */
     /* float: right; */
     text-align: center;
-}
-
-.removeOption img {
-    cursor: pointer;
 }
 
 .profile-summary img {
@@ -620,12 +598,13 @@ a {
 
 /* header */
 
+
 .header {
     background-color: transparent;
     position: fixed;
     width: 100%;
-    z-index: 3;
-}
+    z-index: 0;
+  }
 
 .header ul {
     margin: 0;
@@ -690,7 +669,7 @@ a {
 }
 
 .header .menu-icon .navicon {
-    background: #333;
+    background: rgb(252, 250, 250);
     display: block;
     height: 2px;
     position: relative;
@@ -699,7 +678,7 @@ a {
 }
 
 .header .menu-icon .navicon:before, .header .menu-icon .navicon:after {
-    background: #333;
+    background: rgb(252, 250, 250);;
     content: '';
     display: block;
     height: 100%;
@@ -744,6 +723,75 @@ a {
     top: 0;
 }
 
+
+/*added for header footer*/
+.profile-header{
+    background: url(../images/profile-banner.jpg);
+    background-size: 100%;
+    height: 32vw;
+    background-repeat: no-repeat;
+    position: sticky;
+   
+  }
+
+  .right-side{
+    
+    right:0;
+      width: 20%;
+     position: fixed;
+     padding-top: 1%;
+     
+  }
+  .image-size{
+      width:100%;
+  }
+  .header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color:transparent;
+    color: white;
+  }
+  
+  .headerNavOnScroll {
+      
+    background:none;
+    z-index: 10;
+    position: sticky;
+  }
+  
+  .headerNavOnScroll .header{
+    
+    background-color:black;
+  } 
+  
+  
+  .headerNavOnScroll .change-color{
+    
+    background-color:black;
+  } 
+  
+  .header li a {
+    display: block;
+    text-decoration: none;
+    font-family: HelveticaNeueReg;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1px;
+    color: #ffffff;
+  }
+
+.footer-group-1 {
+  height: 9vw;
+}
+
+.footer-group-2 {
+   height: 5vw;
+}
 /* 48em = 768px */
 
 @media screen and (min-width: 768px) {
@@ -813,4 +861,51 @@ a {
     .profile-edit-btn {
         text-align: center;
     }
+
+    .hide-div{
+        display: none;
+     }
+    .profile-header {
+         background: url(../images/profile-banner.jpg);
+         background-size: 200%;
+         height: 58vw;
+         background-repeat: no-repeat;
+         position: sticky;
+     }
+     .profile-contents {
+         top: 22%;
+         /* z-index: 1; */
+         position: absolute;
+         left: 20px;
+         right: 20px;
+     }
+ 
+     .headerNavOnScroll {
+       
+         background:none;
+         z-index: 10;
+         position: sticky;
+       }
+ 
+       .profile-details {
+         padding-left: 0%;
+         padding-right: 0%;
+     }
+      
+     .footer-group-1 {
+       height: 35vw;
+    }
+ 
+   .footer-group-2 {
+    height: 20vw;
+  }
+  .footer{
+    margin-right: -5%;
+    margin-left: -5%;
+  }
+  .right-side{
+      
+    width: 30%;
+    padding-top: 3%;
+}
 }
