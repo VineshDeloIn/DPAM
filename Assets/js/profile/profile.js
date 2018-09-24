@@ -81,7 +81,7 @@ $(document).ready(function () {
         if (isContactEmailChange) {
          //   alert("here email change");
             if (isEmailValid) {
-                alert("saved email");
+                // alert("saved email");
                 $('.emailVerPopupModel').modal('show'); 
                  
             }else {
@@ -89,7 +89,7 @@ $(document).ready(function () {
             }
         } else if (isContactMobileChange) {
             // alert("here mobile change");
-             alert(isMobileValid);
+            //  alert(isMobileValid);
             if (isMobileValid) {
             //    alert("saved mobile");
                $('.otpModel').modal('show'); 
