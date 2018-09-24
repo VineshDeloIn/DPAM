@@ -64,6 +64,8 @@ $(document).ready(function () {
         $(".profile-contact-mail-err").html("");
         $(".profile-contact-mob-err").html("");
         $('.profile-contact-edit').show();
+        $('.profile-contact-cancel').hide();
+        $('.profile-contact-save').hide();
     });
     $('.profile-save-btn').click(function (e) {
         e.preventDefault();
