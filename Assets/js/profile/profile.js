@@ -14,7 +14,7 @@ $(document).ready(function () {
 
     $('.profile-edit-btn').click(function (e) {
         e.preventDefault();
-        alert("here");
+     //   alert("here");
        
         $(".profile-contact-cancel").css("display","inline-block");
         $('.profile-contact-save').css("display","inline-block");
@@ -35,7 +35,7 @@ $(document).ready(function () {
     });
 
     $("input[name='profile-contact-email']").keyup(function () {
-        alert("emil changed.");
+     //  alert("emil changed.");
         $("input[name='profile-contact-mobile']").attr('readonly', true);
         $("input[name='profile-contact-mobile']").css("border-bottom", "none");
         $("input[name='profile-contact-other']").attr('readonly', true);
@@ -44,7 +44,7 @@ $(document).ready(function () {
     });
 
     $("input[name='profile-contact-other']").keyup(function () {
-        alert("other changed.");
+    //    alert("other changed.");
         $("input[name='profile-contact-mobile']").attr('readonly', true);
         $("input[name='profile-contact-mobile']").css("border-bottom", "none");
         $("input[name='profile-contact-email']").attr('readonly', true);
@@ -63,7 +63,7 @@ $(document).ready(function () {
         isEmailValid = validateEmail(profileContactEmail);
 
         if (isContactEmailChange) {
-            alert("here email change");
+         //   alert("here email change");
             if (isEmailValid) {
                 alert("saved email");
                 $('.emailVerPopupModel').modal('show'); 
@@ -90,7 +90,7 @@ $(document).ready(function () {
 
 
     $('.profile-dpndnt-family-add-btn').click(function (e) {
-        alert("family add");
+      //  alert("family add");
         var profileFamilyDynamicTxt = '<form class="profileFamilyForm" action="" novalidate> ' +
             '  <div class="row dynamic-profile-div"> ' +
             ' <div class="col-lg-2 profile-input"> ' +
@@ -129,7 +129,7 @@ $(document).ready(function () {
 
 
     $('.profile-dpndnt-houseHelp-add-btn').click(function (e) {
-        alert("house help add");
+        //alert("house help add");
         var houseHelpDynamicTxt = '<form class="houseHelpForm" action="" novalidate> ' +
             '  <div class="row dynamic-profile-div"> ' +
             ' <div class="col-lg-2 profile-input"> ' +
@@ -160,7 +160,7 @@ $(document).ready(function () {
 
 
     $('.profile-dpndnt-pet-add-btn').click(function (e) {
-        alert("pet add");
+        //alert("pet add");
         var addPetDynamicTxt = '<form class="profilePetForm" action="" novalidate> ' +
             '  <div class="row dynamic-profile-div"> ' +
             ' <div class="col-lg-2 profile-input"> ' +
@@ -198,7 +198,7 @@ $(document).ready(function () {
         $(".uploadProfilePicFile").click();
 
         $('.uploadProfilePicFile').bind('change', function(event) {
-            alert("change happened");
+            //alert("change happened");
             event.preventDefault();
             var profilePicPath = URL.createObjectURL(event.target.files[0]);
             // var v = $('.uploadProfilePicFile').val();
@@ -207,12 +207,12 @@ $(document).ready(function () {
 
             var ext = $('.uploadProfilePicFile').val().split('.').pop().toLowerCase();
             if ($.inArray(ext, ['bmp','png','jpeg']) == -1){
-                alert("iage of not right format");
+                //alert("iage of not right format");
                 $(".uploadProfileErr").html(" !Image is not of format bmp , png pr jpeg. Please use any of that");
                 }else{
                 var picsize = (this.files[0].size);
                 if (picsize > 5000000){
-               alert("File is not of proper size");
+              // alert("File is not of proper size");
                $(".uploadProfileErr").html(" !Image size is more that 5MB");
                 }else {
                     $('.profile-pic').attr('src', profilePicPath);
