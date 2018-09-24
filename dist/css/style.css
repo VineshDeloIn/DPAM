@@ -13781,19 +13781,14 @@ box-shadow: 0 0 0 0rem rgba(52,58,64,0.5) !important;
 
 .profile-summary {
     background-color: #ffffff;
-    ;
     padding: 4%;
 }
 
 .optionsModel {
     margin-bottom: 5%;
-    /* float: right; */
 }
 
 .uploadOption {
-    /* display: block; */
-    /* width: 50%; */
-    /* float: right; */
     text-align: center;
 }
 
@@ -13819,8 +13814,6 @@ box-shadow: 0 0 0 0rem rgba(52,58,64,0.5) !important;
 }
 
 .removeOption {
-    /* display: block; */
-    /* float: right; */
     text-align: center;
 }
 
@@ -13830,7 +13823,7 @@ box-shadow: 0 0 0 0rem rgba(52,58,64,0.5) !important;
 }
 
 .profile-header {
-    background: url(../images/profile-banner.jpg);
+    background: url("../../Assets/images/profile-banner.jpg");
     background-size: 100%;
     height: 32vw;
     background-repeat: no-repeat;
@@ -13979,8 +13972,8 @@ box-shadow: 0 0 0 0rem rgba(52,58,64,0.5) !important;
 }
 
 .profile-details {
-    padding-left: 12%;
-    padding-right: 12%;
+    padding-left: 0%;
+    padding-right: 0%;
 }
 
 .profile-illustration {
@@ -14459,7 +14452,7 @@ a {
 /*added for header footer*/
 
 .profile-header {
-    background: url(../images/profile-banner.jpg);
+    background: url("../../Assets/images/profile-banner.jpg");
     background-size: 100%;
     height: 32vw;
     background-repeat: no-repeat;
@@ -14517,13 +14510,13 @@ a {
     border-bottom: #da291c solid 1px;
 }
 
-.footer-group-1 {
+/* .footer-group-1 {
     height: 9vw;
 }
 
 .footer-group-2 {
     height: 5vw;
-}
+} */
 
 /* 48em = 768px */
 
@@ -14598,7 +14591,7 @@ a {
         display: none;
     }
     .profile-header {
-        background: url(../images/profile-banner.jpg);
+        background: url("../../Assets/images/profile-banner.jpg");
         background-size: 200%;
         height: 58vw;
         background-repeat: no-repeat;
@@ -14620,12 +14613,12 @@ a {
         padding-left: 0%;
         padding-right: 0%;
     }
-    .footer-group-1 {
-        height: 35vw;
-    }
+
+    /* .footer-group-1 {
+            }
     .footer-group-2 {
         height: 20vw;
-    }
+    } */
     .footer {
         margin-right: -5%;
         margin-left: -5%;
