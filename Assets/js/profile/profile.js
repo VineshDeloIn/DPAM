@@ -63,6 +63,7 @@ $(document).ready(function () {
         $("input[name='profile-contact-other']").css("border-bottom", "none");
         $(".profile-contact-mail-err").html("");
         $(".profile-contact-mob-err").html("");
+        $('.profile-contact-edit').show();
     });
     $('.profile-save-btn').click(function (e) {
         e.preventDefault();
