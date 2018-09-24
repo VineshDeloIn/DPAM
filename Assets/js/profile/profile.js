@@ -11,6 +11,7 @@ $(document).ready(function () {
     var isContactMobileChange = false;
     var isContactEmailChange = false;
     var isOtherContactChange = false;
+    var inValid = false;
 
     $('.profile-edit-btn').click(function (e) {
         e.preventDefault();
@@ -85,6 +86,7 @@ $(document).ready(function () {
                 $('.emailVerPopupModel').modal('show'); 
                  
             }else {
+                inValid = true;
                 $(".profile-contact-mail-err").html("Invalid Email");
             }
         } else if (isContactMobileChange) {
@@ -94,13 +96,16 @@ $(document).ready(function () {
             //    alert("saved mobile");
                $('.otpModel').modal('show'); 
             }else {
+                inValid = true;
                 $(".profile-contact-mob-err").html("Invalid Mobile Number");
             }
         }else if (isOtherContactChange) {
             $('.confirmChangesModel').modal('show'); 
         }
 
-
+        if(!inValid) {
+            $('.profile-contact-details-form').submit();
+        }
     });
 
 
@@ -247,13 +252,25 @@ $(document).ready(function () {
     });
 
     $(".cancelOtpEntPopup").click(function() {
-        $('.otpModel').modal('hide'); 
+        $('.popup-err-msg-otp').html("");
+        // $('.otpModel').modal('hide'); 
     });
 
     $(".submitOtpEntPopUp").click(function(event) {
         event.preventDefault();
-        $('.otpModel').modal('hide'); 
-        $('.otpConfirmModel').modal('show'); 
+        var popUpInput = $(".model-otp-input").val();
+        // alert(popUpInput);
+        var  otpRegex  =  /^\d{4}$/;
+        if(otpRegex.test(popUpInput)){
+            // alert('enteringregex');
+            $('.otpModel').modal('hide'); 
+            $('.otpConfirmModel').modal('show');
+            //commenting this to prevent the next popup from popping up
+            // $('.modelOtpEntForm').submit();
+        } else  {
+            $('.popup-err-msg-otp').html("Invalid OTP!");
+        }
+         
     });
 
     $(".cancelOtpCfmPopup").click(function() {
@@ -289,16 +306,6 @@ $(document).ready(function () {
         $('.confirmChangesModel').modal('hide'); 
         $('.successfulUpdateModel').modal('show'); 
     });
-
-    
-     
-
-     
-     
-
-    
-    
-
 
 });
 

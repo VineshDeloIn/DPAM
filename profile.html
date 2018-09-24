@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Profile</title>
 
-    <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="Assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="Assets/css/footer2Layer.css">
     <link rel="stylesheet" href="Assets/css/customFont.css">
@@ -22,10 +22,10 @@
     <script src="Assets/js/jqueryValidation/jquery.validate.min.js"></script>
     <script src="Assets/js/commonValidations/emailMobValidation.js"></script>
     <script src="Assets/js/commonValidations/passwordValidation.js"></script>
-    <script src="Assets/js/profile/profile.js"></script>
-<!-- 
+    <script src="Assets/js/profile/profile.js"></script>-->
+
     <link rel="stylesheet" href="dist/css/style.css">
-    <script src="dist/js/script.js"></script> -->
+    <script src="dist/js/script.js"></script>
 </head>
 
 <body style="background-color: #f7f7f7;">
@@ -463,12 +463,12 @@
                         <div class="otpTopAdj">
                             <p class="model-otp-text">Enter OTP</p>
                             <p class="model-otp-reg-text">OTP sent to the new mobile number to validate</p>
-                            <form class="modelOtpForm" action="" novalidate>
+                            <form class="modelOtpEntForm" action="" novalidate>
 
                                 <div class="form-group profile-input">
                                     <input type="password" maxlength="4" class="model-otp-input" name="" required>
                                     <label class="">ENTER OTP</label>
-                                    <p class="error-msg"></p>
+                                    <p class="error-msg popup-err-msg-otp"></p>
                                 </div>
 
                                 <div class="row otp-common-padding">
@@ -610,9 +610,6 @@
                                     <button type="submit" class="btn btn-dark primary-button okEmailVerPopup">OK</button>
                                 </div>
                             </div>
-
-
-
                         </div>
                     </div>
                 </div>
