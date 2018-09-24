@@ -208,7 +208,7 @@ $(document).ready(function () {
         $(".uploadProfilePicFile").click();
 
         $('.uploadProfilePicFile').bind('change', function(event) {
-            //alert("change happened");
+            // alert("change happened");
             event.preventDefault();
             var profilePicPath = URL.createObjectURL(event.target.files[0]);
             // var v = $('.uploadProfilePicFile').val();
