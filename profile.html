@@ -132,7 +132,7 @@
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-3 col-lg-3">
                     <img src="Assets/images/profile-pic.png" class="rounded-circle profile-pic" alt="">
-                    <div data-toggle="modal" data-target=".profileOptions">
+                    <div data-toggle="modal" data-target=".successPopupModel">
                         <img src="Assets/images/profileOptions.png" class="profileOption" alt="pathIssue">
                     </div>
 
@@ -455,6 +455,80 @@
             </div>
         </div>
         <!-- Modal OTP Enter End -->
+
+        <!-- Modal OTP Confirm start -->
+        <div class="modal fade otpConfirmModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog otpConfirmModelBox" role="document">
+                <!--Content-->
+                <div class="modal-content form-elegant otpModelContent">
+                    <!--Body-->
+                    <div class="modal-body otpModelBody">
+                        <!--Body-->
+                        <button type="button" class="close otpModelClose" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <div class="otpTopAdj">
+                            <p class="model-otp-text">Enter OTP</p>
+                            <p class="model-otp-reg-text">Are you sure you want to make this change?</p>
+                            <form class="modelOtpForm" action="" novalidate>
+
+                                <div class="row otp-common-padding">
+                                    <div class="col-6">
+                                        <button type="button" class="btn btn-outline-secondary secondary-button">CANCEL</button>
+                                    </div>
+                                    <div class="col-6">
+                                        <button type="submit" class="btn btn-dark primary-button">SAVE</button>
+                                    </div>
+                                </div>
+                            </form>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal OTP Confirm End -->
+
+        <!-- Modal Success Pop start -->
+        <div class="modal fade successPopupModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog successPopupModelBox" role="document">
+                <!--Content-->
+                <div class="modal-content form-elegant otpModelContent">
+                    <!--Body-->
+                    <div class="modal-body otpModelBody">
+                        <!--Body-->
+                        <button type="button" class="close otpModelClose" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <div class="otpTopAdj">
+                            <div class="row">
+                                <div class="col-2 successPopupImg">
+                                    <img src="Assets/images/toasterSuccess.svg" alt="">
+                                </div>
+                                <div class="col-10 successPopUpHeader">
+                                    <p class="model-otp-text successPopupHeaderAlign">Success</p>
+                                </div>
+                            </div>
+                            <p class="model-otp-reg-text">Congratulations! You have successfully authenticated your new mobile number.</p>
+                            <form class="modelOtpForm" action="" novalidate>
+
+                                <div class="row otp-common-padding">
+                                    <div class="col-3"></div>
+
+                                    <div class="col-6">
+                                        <button type="submit" class="btn btn-dark primary-button">OK</button>
+                                    </div>
+                                </div>
+                            </form>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Success Pop Up End -->
 </body>
 
 </html>
