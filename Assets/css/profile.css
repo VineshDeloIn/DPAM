@@ -3,7 +3,7 @@
     height: auto;
     max-width: 100%;
     margin-top: -10%;
-}
+} 
 
 .profileIllustratonAdj {
     width: 100%;
@@ -318,41 +318,6 @@
     background-color: white;
 }
 
-.profile-header-main {
-    z-index: 10;
-    position: sticky;
-    position: -webkit-sticky;
-    position: sticky;
-}
-
-.profile-header-margin {
-    margin: 10px 0px 5px 0px;
-}
-
-.middle-navigation-bar a {
-    float: left;
-    display: block;
-    text-align: center;
-    padding: 30px 16px 14px 16px;
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 12px;
-    letter-spacing: 2px;
-}
-
-.middle-navigation-alignment {
-    width: 43px;
-    height: 15px;
-    font-family: HelveticaNeueReg;
-    font-size: 12px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: 1px;
-    color: #ffffff;
-}
-
 .right-icon-bar {
     text-align: center;
     padding: 25px 16px 14px 16px;
@@ -364,10 +329,6 @@
     cursor: pointer;
 }
 
-.icon-adjust {
-    height: 15px;
-    width: 15px;
-}
 
 .notification_count {
     background-color: #fa3e3e;
@@ -380,9 +341,7 @@
     right: 0;
 }
 
-.left-navigation-image img {
-    width: 70%;
-}
+
 
 .profile-card-head {
     padding: 3% 1.7%;
@@ -781,9 +740,6 @@ a {
     background-color: black;
 }
 
-.headerNavOnScroll .change-color {
-    background-color: black;
-}
 
 .header li a {
     display: block;
@@ -802,13 +758,6 @@ a {
     border-bottom: #da291c solid 1px;
 }
 
-/* .footer-group-1 {
-    height: 9vw;
-}
-
-.footer-group-2 {
-    height: 5vw;
-} */
 
 /* 48em = 768px */
 
@@ -817,7 +766,7 @@ a {
         float: left;
     }
     .header li a {
-        padding: 20px 30px;
+        padding: 20px 11px;
     }
     .header .menu {
         clear: none;
@@ -826,12 +775,33 @@ a {
     .header .menu-icon {
         display: none;
     }
+    .notification_count {
+        top: -65%;
+        right: -58%;
+    }
+    .right-side {
+        max-width: 30%;
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+   
+    .header li a {
+        padding: 20px 25px;
+    }
+
+    .notification_count {
+        top: -19%;
+        right: 13%;
+    }
+    .header .menu {
+         margin-left: 4%;
+    }
 }
 
 @media screen and (max-width: 480px) {
-    .maxDiv {
-        display: none;
-    }
+  
     .profile-user-name {
         font-size: 20px;
     }
@@ -888,6 +858,7 @@ a {
         height: 58vw;
         background-repeat: no-repeat;
         position: sticky;
+        background-position: 50% 0%;
     }
     .profile-contents {
         top: 22%;
@@ -906,11 +877,6 @@ a {
         padding-right: 0%;
     }
 
-    /* .footer-group-1 {
-            }
-    .footer-group-2 {
-        height: 20vw;
-    } */
     .footer {
         margin-right: -5%;
         margin-left: -5%;
