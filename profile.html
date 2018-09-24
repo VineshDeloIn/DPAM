@@ -132,7 +132,7 @@
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-3 col-lg-3">
                     <img src="Assets/images/profile-pic.png" class="rounded-circle profile-pic" alt="">
-                    <div data-toggle="modal" data-target=".successPopupModel">
+                    <div data-toggle="modal" data-target=".profileOptions">
                         <img src="Assets/images/profileOptions.png" class="profileOption" alt="pathIssue">
                     </div>
 
@@ -437,10 +437,10 @@
 
                                 <div class="row otp-common-padding">
                                     <div class="col-6">
-                                        <button type="button" class="btn btn-outline-secondary secondary-button">CANCEL</button>
+                                        <button type="button" class="btn btn-outline-secondary secondary-button cancelOtpEntPopup">CANCEL</button>
                                     </div>
                                     <div class="col-6">
-                                        <button type="submit" class="btn btn-dark primary-button">SUBMIT</button>
+                                        <button type="submit" class="btn btn-dark primary-button submitOtpEntPopUp">SUBMIT</button>
                                     </div>
                                 </div>
                             </form>
@@ -474,15 +474,13 @@
 
                                 <div class="row otp-common-padding">
                                     <div class="col-6">
-                                        <button type="button" class="btn btn-outline-secondary secondary-button">CANCEL</button>
+                                        <button type="button" class="btn btn-outline-secondary secondary-button cancelOtpCfmPopup">CANCEL</button>
                                     </div>
                                     <div class="col-6">
-                                        <button type="submit" class="btn btn-dark primary-button">SAVE</button>
+                                        <button type="submit" class="btn btn-dark primary-button saveOtpCfmPopup">SAVE</button>
                                     </div>
                                 </div>
                             </form>
-
-
                         </div>
                     </div>
                 </div>
@@ -517,7 +515,7 @@
                                     <div class="col-3"></div>
 
                                     <div class="col-6">
-                                        <button type="submit" class="btn btn-dark primary-button">OK</button>
+                                        <button type="submit" class="btn btn-dark primary-button okSuccessPopup">OK</button>
                                     </div>
                                 </div>
                             </form>
@@ -529,6 +527,96 @@
             </div>
         </div>
         <!-- Modal Success Pop Up End -->
+
+        <!-- Modal SuccessfulUpdate start -->
+        <div class="modal fade successfulUpdateModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog successfulUpdateModelBox" role="document">
+                <!--Content-->
+                <div class="modal-content form-elegant otpModelContent">
+                    <!--Body-->
+                    <div class="modal-body otpModelBody">
+                        <!--Body-->
+                        <button type="button" class="close otpModelClose" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <div class="otpTopAdj otp-common-padding">
+                            <p class="otp-common-padding">Successfully updated changes!</p>
+                            <p class="otp-commin-padding"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal SuccessfulUpdate End -->
+
+
+        <!-- Modal Success Pop start -->
+        <div class="modal fade emailVerPopupModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog emailVerPopupModelBox" role="document">
+                <!--Content-->
+                <div class="modal-content form-elegant otpModelContent">
+                    <!--Body-->
+                    <div class="modal-body otpModelBody">
+                        <!--Body-->
+                        <button type="button" class="close otpModelClose" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <div class="otpTopAdj">
+
+                            <p class="model-email-verify-text">An Email Verification link has been sent to
+                                <span class="userEmailPopupPH">username@email.com</span>. Please Click on the link to update changes. </p>
+
+
+                            <div class="row otp-common-padding">
+                                <div class="col-3"></div>
+
+                                <div class="col-6">
+                                    <button type="submit" class="btn btn-dark primary-button okEmailVerPopup">OK</button>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Success Pop Up End -->
+
+        <!-- Modal Change Confirm start -->
+        <div class="modal fade confirmChangesModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog otpConfirmModelBox" role="document">
+                <!--Content-->
+                <div class="modal-content form-elegant otpModelContent">
+                    <!--Body-->
+                    <div class="modal-body otpModelBody">
+                        <!--Body-->
+                        <button type="button" class="close otpModelClose" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <div class="otpTopAdj">
+
+                            <p class="model-sure-chg-text otp-commin-padding">Are you sure you want to make this change?</p>
+                            <form class="modelOtpForm" action="" novalidate>
+
+                                <div class="row otp-common-padding">
+                                    <div class="col-6">
+                                        <button type="button" class="btn btn-outline-secondary secondary-button cancelCfmPopUp">CANCEL</button>
+                                    </div>
+                                    <div class="col-6">
+                                        <button type="submit" class="btn btn-dark primary-button saveChgCfmPopUp">SAVE CHANGES</button>
+                                    </div>
+                                </div>
+                            </form>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Change Confirm End -->
 </body>
 
 </html>
