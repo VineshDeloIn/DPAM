@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="Assets/css/customFont.css">
     <link rel="stylesheet" href="Assets/css/profile.css">
     <link rel="stylesheet" href="Assets/css/component.css">
+   
 
 
     <script src="Assets/js/jquery-3.3.2.min.js"></script>
@@ -27,9 +28,9 @@
 </head>
 
 <body style="background-color: #f7f7f7;overflow:scroll;">
-    <div class="container-fluid profile-header">
+    <div class=" profile-header">
         <div class="profile-header-main">
-            <div class="row profile-header-margin">
+            <!-- <div class="row profile-header-margin">
                 <div class="col-2 col-sm-12 col-lg-2 left-navigation-image">
                     <img src="Assets/images/dpam_logo.svg" alt="pathIssue">
                 </div>
@@ -67,12 +68,35 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
+            <header class="header">
+                <a href="" class="logo"> <img src="Assets/images/dpam_logo.svg" alt="pathIssue"></a>
+                <input class="menu-btn" type="checkbox" id="menu-btn" />
+                <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+                <ul class="menu">
+                  <li><a href="#">HOME</a></li>
+                  <li><a href="#">SERVICES</a></li>
+                  <li><a href="#">AMENITIES</a></li>
+                  <li><a href="#">EVENTS</a></li>
+                  <li><a href="#">PAYMENT HISTORY</a></li>
+                  <li><a href="#">ME</a></li>
+                  <li><a href="#">MY DOCUMENTS</a></li>
+                </ul>
+            
+            
+                <ul class="myicons">
+                  <li><a href="#">  <img  src="./Assets/images/notification_profile.png" alt="">
+                    <span class="notification_count">0</span></a></li>
+                  <li class="hideMobile"><a href="#"><img  src="./Assets/images/settings_profile.png" alt=""></a></li>
+                  <li class="hideMobile"><a href="#">  <img  src="./Assets/images/logout_profile.png" alt=""></a></li>
+                  </ul>
+              </header>
+       
         </div>
     </div>
 
     <!-- <div class="container-fluid profile-content-bck"></div> -->
-    <div class="container-fluid profile-contents">
+    <div class=" profile-contents">
         <div class="container profile-summary">
 
             <div class="row">
@@ -103,7 +127,7 @@
                 </div>
             </div>
         </div>
-        <div class="container mt-5 profile-details">
+        <div class=" mt-5 profile-details">
             <div id="accordion" class="accordion">
 
                 <div class="card  profile-card">

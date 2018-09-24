@@ -1,4 +1,12 @@
 $(document).ready(function () {
+    
+    $(document).on('scroll', function () {
+        if ($(this).scrollTop() > 1) {
+            $('.profile-header').addClass('headerNavOnScroll');
+        } else {
+            $('.profile-header').removeClass('headerNavOnScroll');
+        }
+    });
 
     var isContactMobileChange = false;
     var isContactEmailChange = false;

@@ -1,7 +1,8 @@
-.profile-header img {
-    width: 60%;
+.profile-header .logo img {
+    width: 90%;
     height: auto;
     max-width: 100%;
+    margin-top: -10%;
 }
 
 .profileIllustratonAdj {
@@ -173,10 +174,21 @@
     color: #333f48;
 }
 
+<<<<<<< HEAD
 .profile-details {
     padding-left: 0%;
     padding-right: 0%;
 }
+=======
+  .profile-details {
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+ 
+  .profile-illustration{
+    margin-left: -15%;
+  }
+>>>>>>> 4152c3e44066946a89e9d21189a433a208539037
 
 .profile-details-title {
     font-family: HelveticaNeueReg;
@@ -281,7 +293,12 @@
     color: white;
     padding: 1px 3px;
     font-size: 10px;
+<<<<<<< HEAD
     position: absolute;
+=======
+    
+    position: relative;
+>>>>>>> 4152c3e44066946a89e9d21189a433a208539037
     top: 0;
     right: 0;
 }
@@ -449,8 +466,199 @@
     border-bottom: 1px solid #a7a9ad;
 }
 
-@media screen and (max-width: 480px) {
-    .maxDiv {
-        display: none;
-    }
+
+/*Header code added*/
+
+
+
+body {
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  a {
+    color: #000;
+  }
+  
+  /* header */
+  
+  .header {
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+  }
+  
+  .header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: transparent;
+  }
+  
+  .header li a {
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: 1px;
+  }
+  
+  .header li a:hover,
+  .header .menu-btn:hover {
+   
+  }
+  
+  .header .myicons{
+    display: inline-block;
+    float: right;
+    margin-right: 5%;
+  }
+  
+  
+.headerNavOnScroll {
+    
+    background:none;
 }
+
+.headerNavOnScroll .header{
+    
+    background-color:black;
+}
+  
+  .header .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+  
+  /* menu */
+  
+  .header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    display: inline-block;
+  }
+  
+  /* menu icon */
+  
+  .header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
+  
+  .header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+  
+  .header .menu-icon .navicon:before,
+  .header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .1s ease-out;
+    width: 100%;
+  }
+  
+  .header .menu-icon .navicon:before {
+    top: 5px;
+  }
+  
+  .header .menu-icon .navicon:after {
+    top: -5px;
+  }
+  
+  /* menu btn */
+  
+  .header .menu-btn {
+    display: none;
+  }
+  
+  .header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+    margin-left: -52%;
+    margin-top: 10%;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+  
+  /* 48em = 768px */
+  
+  @media screen and (min-width: 768px) {
+    .header li {
+      float: left;
+    }
+    .header li a {
+      padding: 20px 30px;
+    }
+    .header .menu {
+      clear: none;
+      max-height: none;
+    }
+    .header .menu-icon {
+      display: none;
+    }
+  
+  }
+   
+  
+
+@media screen and (max-width: 480px) {
+    .profile-header .logo img {
+      
+        margin-left: 63%;
+    }
+
+    .header .logo {
+        padding: 10px 40px;
+      }
+      .header .menu-icon {
+        float: left;
+      }
+      .header .menu-icon .navicon{
+        margin-left: -214px;
+      }
+  
+      .header .myicons .hideMobile{
+        display: none;
+      }
+  
+}
+
+
+
+
+
