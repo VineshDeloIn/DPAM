@@ -167,6 +167,7 @@
     letter-spacing: 0px;
     color: #585d63;
 }
+
 .model-email-ver-text {
     word-wrap: break-word;
     margin-top: 6%;
@@ -178,6 +179,20 @@
     line-height: 1.5;
     letter-spacing: 0px;
     color: #585d63;
+}
+
+.uploadProfileErr {
+    text-align: center;
+    font-family: HelveticaNeueReg;
+    font-size: 10px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    color: #ff1100;
+    margin-top: 1%;
+    position: relative;
 }
 
 .model-sure-chg-text {
@@ -193,6 +208,7 @@
     letter-spacing: 0px;
     color: #333f48;
 }
+
 .emailVerPopupModelBox {
     width: 455px;
     height: 290px;
@@ -598,13 +614,12 @@ a {
 
 /* header */
 
-
 .header {
     background-color: transparent;
     position: fixed;
     width: 100%;
     z-index: 0;
-  }
+}
 
 .header ul {
     margin: 0;
@@ -678,7 +693,8 @@ a {
 }
 
 .header .menu-icon .navicon:before, .header .menu-icon .navicon:after {
-    background: rgb(252, 250, 250);;
+    background: rgb(252, 250, 250);
+    ;
     content: '';
     display: block;
     height: 100%;
@@ -723,56 +739,51 @@ a {
     top: 0;
 }
 
-
 /*added for header footer*/
-.profile-header{
+
+.profile-header {
     background: url(../images/profile-banner.jpg);
     background-size: 100%;
     height: 32vw;
     background-repeat: no-repeat;
     position: sticky;
-   
-  }
+}
 
-  .right-side{
-    
-    right:0;
-      width: 20%;
-     position: fixed;
-     padding-top: 1%;
-     
-  }
-  .image-size{
-      width:100%;
-  }
-  .header ul {
+.right-side {
+    right: 0;
+    width: 20%;
+    position: fixed;
+    padding-top: 1%;
+}
+
+.image-size {
+    width: 100%;
+}
+
+.header ul {
     margin: 0;
     padding: 0;
     list-style: none;
     overflow: hidden;
-    background-color:transparent;
+    background-color: transparent;
     color: white;
-  }
-  
-  .headerNavOnScroll {
-      
-    background:none;
+}
+
+.headerNavOnScroll {
+    background: none;
     z-index: 10;
     position: sticky;
-  }
-  
-  .headerNavOnScroll .header{
-    
-    background-color:black;
-  } 
-  
-  
-  .headerNavOnScroll .change-color{
-    
-    background-color:black;
-  } 
-  
-  .header li a {
+}
+
+.headerNavOnScroll .header {
+    background-color: black;
+}
+
+.headerNavOnScroll .change-color {
+    background-color: black;
+}
+
+.header li a {
     display: block;
     text-decoration: none;
     font-family: HelveticaNeueReg;
@@ -783,18 +794,20 @@ a {
     line-height: normal;
     letter-spacing: 1px;
     color: #ffffff;
-  }
+}
+
 .header li a:hover {
     border-bottom: #da291c solid 1px;
 }
 
 .footer-group-1 {
-  height: 9vw;
+    height: 9vw;
 }
 
 .footer-group-2 {
-   height: 5vw;
+    height: 5vw;
 }
+
 /* 48em = 768px */
 
 @media screen and (min-width: 768px) {
@@ -864,51 +877,44 @@ a {
     .profile-edit-btn {
         text-align: center;
     }
-
-    .hide-div{
+    .hide-div {
         display: none;
-     }
-    .profile-header {
-         background: url(../images/profile-banner.jpg);
-         background-size: 200%;
-         height: 58vw;
-         background-repeat: no-repeat;
-         position: sticky;
-     }
-     .profile-contents {
-         top: 22%;
-         /* z-index: 1; */
-         position: absolute;
-         left: 20px;
-         right: 20px;
-     }
- 
-     .headerNavOnScroll {
-       
-         background:none;
-         z-index: 10;
-         position: sticky;
-       }
- 
-       .profile-details {
-         padding-left: 0%;
-         padding-right: 0%;
-     }
-      
-     .footer-group-1 {
-       height: 35vw;
     }
- 
-   .footer-group-2 {
-    height: 20vw;
-  }
-  .footer{
-    margin-right: -5%;
-    margin-left: -5%;
-  }
-  .right-side{
-      
-    width: 30%;
-    padding-top: 3%;
-}
+    .profile-header {
+        background: url(../images/profile-banner.jpg);
+        background-size: 200%;
+        height: 58vw;
+        background-repeat: no-repeat;
+        position: sticky;
+    }
+    .profile-contents {
+        top: 22%;
+        /* z-index: 1; */
+        position: absolute;
+        left: 20px;
+        right: 20px;
+    }
+    .headerNavOnScroll {
+        background: none;
+        z-index: 10;
+        position: sticky;
+    }
+    .profile-details {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+    .footer-group-1 {
+        height: 35vw;
+    }
+    .footer-group-2 {
+        height: 20vw;
+    }
+    .footer {
+        margin-right: -5%;
+        margin-left: -5%;
+    }
+    .right-side {
+        width: 30%;
+        padding-top: 3%;
+    }
 }

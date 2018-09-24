@@ -52,6 +52,16 @@ $(document).ready(function () {
         isOtherContactChange = true;
     });
 
+    
+    $('.profile-cancel-btn').click(function (e) {
+        e.preventDefault();
+        $("input[name='profile-contact-mobile']").attr('readonly', true);
+        $("input[name='profile-contact-mobile']").css("border-bottom", "none");
+        $("input[name='profile-contact-email']").attr('readonly', true);
+        $("input[name='profile-contact-email']").css("border-bottom", "none");
+        $("input[name='profile-contact-other']").attr('readonly', true);
+        $("input[name='profile-contact-other']").css("border-bottom", "none");
+    });
     $('.profile-save-btn').click(function (e) {
         e.preventDefault();
         
@@ -198,7 +208,7 @@ $(document).ready(function () {
         $(".uploadProfilePicFile").click();
 
         $('.uploadProfilePicFile').bind('change', function(event) {
-            //alert("change happened");
+            // alert("change happened");
             event.preventDefault();
             var profilePicPath = URL.createObjectURL(event.target.files[0]);
             // var v = $('.uploadProfilePicFile').val();
