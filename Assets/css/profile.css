@@ -89,6 +89,15 @@
     text-align: center;
 }
 
+.uploadOption img {
+    cursor: pointer;
+}
+
+.removeOption img {
+    cursor: pointer;
+}
+
+
 .profileInstTxt {
     font-family: HelveticaNeueReg;
     font-size: 14px;
