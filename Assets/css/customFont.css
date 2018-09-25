@@ -32,3 +32,8 @@
     font-family: HelveticaNeueCondenseBlck;
     src: url("../../Assets/fonts/HelveticaNeue-CondensedBlack.otf");
 }
+
+@font-face {
+    font-family: decalledscript;;
+    src: url("../../Assets/fonts/decalledFont.ttf");
+}

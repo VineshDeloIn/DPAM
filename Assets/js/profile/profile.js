@@ -43,6 +43,22 @@ $(document).ready(function () {
     var isContactEmailChange = false;
     var isOtherContactChange = false;
     var inValid = false;
+    var getProfileUrl = '';
+
+    var getProfilePic = function(){
+        $.ajax({
+            url: "http://dubaiam-integration.azurewebsites.net/api/",
+            type: "GET",
+            contentType: false,
+            success: function (result) {
+                 
+            },
+            error: function(error) {
+                console.log(error);
+                $('.profile-pic').attr("alt", "pathError");
+            }
+        });
+    }
 
     $('.profile-edit-btn').click(function (e) {
         e.preventDefault();
@@ -99,6 +115,7 @@ $(document).ready(function () {
         $('.profile-contact-cancel').hide();
         $('.profile-contact-save').hide();
     });
+
     $('.profile-save-btn').click(function (e) {
         e.preventDefault();
 
@@ -114,9 +131,10 @@ $(document).ready(function () {
             //   alert("here email change");
             if (isEmailValid) {
                 // alert("saved email");
-                $('.emailVerPopupModel').modal('show');
-
-            } else {
+                $('.userEmailPopupPH').html(profileContactEmail);
+                $('.emailVerPopupModel').modal('show'); 
+                 
+            }else {
                 inValid = true;
                 $(".profile-contact-mail-err").html("Invalid Email");
             }
@@ -134,8 +152,8 @@ $(document).ready(function () {
             $('.confirmChangesModel').modal('show');
         }
 
-        if (!inValid) {
-            $('.profile-contact-details-form').submit();
+        if(!inValid) {
+            // $('.profile-contact-details-form').submit();
         }
     });
 
