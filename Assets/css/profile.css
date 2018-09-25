@@ -931,4 +931,8 @@ a {
         margin-left: 54px;
       
     }
+    .notification_count {
+        top: -2px;
+        right: 7px;
+    }
 }
