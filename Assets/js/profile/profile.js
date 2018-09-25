@@ -1,5 +1,36 @@
+var arr = {};
+arr["name"] = "";
+arr["type"] = "";
+arr["breed"] = "";
+
+var dynArr = [];
+dynArr.push(arr);
+console.log(dynArr);
+
+var petCount = 0;
+var dynArr1 = {};
+
+
 $(document).ready(function () {
-    
+
+    $.ajax({
+        type: 'GET',
+        url: '',
+        dataType: 'json',
+        success: function (data) {
+
+            var familyJsonObj = $.parseJSON(data);
+
+            dynArr = [];
+            dynArr.push(familyJsonObj); 
+            $.each(dynArr, function(index,item){
+                dynamicPetFxn(item);
+               
+            })
+        }
+
+    });
+
     $(document).on('scroll', function () {
         if ($(this).scrollTop() > 1) {
             $('.profile-header').addClass('headerNavOnScroll');
@@ -15,10 +46,10 @@ $(document).ready(function () {
 
     $('.profile-edit-btn').click(function (e) {
         e.preventDefault();
-     //   alert("here");
-       
-        $(".profile-contact-cancel").css("display","inline-block");
-        $('.profile-contact-save').css("display","inline-block");
+        //   alert("here");
+
+        $(".profile-contact-cancel").css("display", "inline-block");
+        $('.profile-contact-save').css("display", "inline-block");
         // $('.profile-contact-cancel').show();
         // $('.profile-contact-save').show();
         $('.profile-contact-edit').hide();
@@ -27,7 +58,7 @@ $(document).ready(function () {
     });
 
     $("input[name='profile-contact-mobile']").keyup(function () {
-       // alert("mobile changed.");
+        // alert("mobile changed.");
         $("input[name='profile-contact-email']").attr('readonly', true);
         $("input[name='profile-contact-email']").css("border-bottom", "none");
         $("input[name='profile-contact-other']").attr('readonly', true);
@@ -36,7 +67,7 @@ $(document).ready(function () {
     });
 
     $("input[name='profile-contact-email']").keyup(function () {
-     //  alert("emil changed.");
+        //  alert("emil changed.");
         $("input[name='profile-contact-mobile']").attr('readonly', true);
         $("input[name='profile-contact-mobile']").css("border-bottom", "none");
         $("input[name='profile-contact-other']").attr('readonly', true);
@@ -45,7 +76,7 @@ $(document).ready(function () {
     });
 
     $("input[name='profile-contact-other']").keyup(function () {
-    //    alert("other changed.");
+        //    alert("other changed.");
         $("input[name='profile-contact-mobile']").attr('readonly', true);
         $("input[name='profile-contact-mobile']").css("border-bottom", "none");
         $("input[name='profile-contact-email']").attr('readonly', true);
@@ -53,7 +84,7 @@ $(document).ready(function () {
         isOtherContactChange = true;
     });
 
-    
+
     $('.profile-cancel-btn').click(function (e) {
         e.preventDefault();
         $("input[name='profile-contact-mobile']").attr('readonly', true);
@@ -70,8 +101,8 @@ $(document).ready(function () {
     });
     $('.profile-save-btn').click(function (e) {
         e.preventDefault();
-        
-       //  alert("here save");
+
+        //  alert("here save");
         var profileContactMobile = $(".profile-contact-mob").val();
         var profileContactEmail = $(".profile-contact-mail").val();
         // alert(profileContactMobile);
@@ -80,12 +111,12 @@ $(document).ready(function () {
         isEmailValid = validateEmail(profileContactEmail);
 
         if (isContactEmailChange) {
-         //   alert("here email change");
+            //   alert("here email change");
             if (isEmailValid) {
                 // alert("saved email");
-                $('.emailVerPopupModel').modal('show'); 
-                 
-            }else {
+                $('.emailVerPopupModel').modal('show');
+
+            } else {
                 inValid = true;
                 $(".profile-contact-mail-err").html("Invalid Email");
             }
@@ -93,17 +124,17 @@ $(document).ready(function () {
             // alert("here mobile change");
             //  alert(isMobileValid);
             if (isMobileValid) {
-            //    alert("saved mobile");
-               $('.otpModel').modal('show'); 
-            }else {
+                //    alert("saved mobile");
+                $('.otpModel').modal('show');
+            } else {
                 inValid = true;
                 $(".profile-contact-mob-err").html("Invalid Mobile Number");
             }
-        }else if (isOtherContactChange) {
-            $('.confirmChangesModel').modal('show'); 
+        } else if (isOtherContactChange) {
+            $('.confirmChangesModel').modal('show');
         }
 
-        if(!inValid) {
+        if (!inValid) {
             $('.profile-contact-details-form').submit();
         }
     });
@@ -111,7 +142,7 @@ $(document).ready(function () {
 
 
     $('.profile-dpndnt-family-add-btn').click(function (e) {
-      //  alert("family add");
+        //  alert("family add");
         var profileFamilyDynamicTxt = '<form class="profileFamilyForm" action="" novalidate> ' +
             '  <div class="row dynamic-profile-div"> ' +
             ' <div class="col-lg-2 profile-input"> ' +
@@ -135,7 +166,7 @@ $(document).ready(function () {
             ' </div> ' +
             ' <div class="col-lg-1 profile-delete remove-profile-family"><img  src="Assets/images/deleteIcon.svg" alt=""></div> ' +
             // '<span class="remove-profile-family" ><img  src="Assets/images/deleteIcon.svg" alt=""></span>'
-        '</div> '
+            '</div> '
         '</form> ';
 
 
@@ -166,7 +197,7 @@ $(document).ready(function () {
             ' <div class="col-lg-5"></div> ' +
             ' <div class="col-lg-1 profile-delete remove-profile-houseHelp"><img  src="Assets/images/deleteIcon.svg" alt=""></div> ' +
             // '<span class="remove-profile-houseHelp" ><img  src="Assets/images/deleteIcon.svg" alt=""></span>'
-        '</div> '
+            '</div> '
         '</form> ';
 
 
@@ -180,32 +211,16 @@ $(document).ready(function () {
     });
 
 
+
     $('.profile-dpndnt-pet-add-btn').click(function (e) {
         //alert("pet add");
-        var addPetDynamicTxt = '<form class="profilePetForm" action="" novalidate> ' +
-            '  <div class="row dynamic-profile-div"> ' +
-            ' <div class="col-lg-2 profile-input"> ' +
-            ' <input type="text" class="" name="" required>' +
-            ' <label class="">Name</label>' +
-            ' </div> ' +
-            ' <div class="col-lg-2"></div> ' +
-            ' <div class="col-lg-2 profile-input"> ' +
-            '  <input type="text" class="" name="" required> ' +
-            '  <label class="">Type</label>' +
-            ' </div> ' +
-            ' <div class="col-lg-2"></div> ' +
-            ' <div class="col-lg-2 profile-input"> ' +
-            '  <input type="text" class="" name="" required> ' +
-            '  <label class="">Breed</label>' +
-            ' </div> ' +
-            ' <div class="col-lg-1"></div> ' +
-            ' <div class="col-lg-1 profile-delete remove-profile-pet"><img  src="Assets/images/deleteIcon.svg" alt=""></div> ' +
-            // '<span class="remove-profile-houseHelp" ><img  src="Assets/images/deleteIcon.svg" alt=""></span>'
-        '</div> '
-        '</form> ';
-
-
-        $(".profile-pet-dynamic-div").append(addPetDynamicTxt);
+        petCount++;
+       var nn = $(".profile-pet-name").val(); alert(nn);
+       alert(dynArr.length);
+        $.each(dynArr, function(index,item){
+            dynamicPetFxn(item);
+           
+        })
 
 
     });
@@ -216,96 +231,153 @@ $(document).ready(function () {
         $(this).parent().remove();
     });
 
-    $(".uploadOption img").click(function() {
+    $(".uploadOption img").click(function () {
         // alert("upload pic");
         $(".uploadProfilePicFile").click();
 
-        $('.uploadProfilePicFile').bind('change', function(event) {
+        $('.uploadProfilePicFile').bind('change', function (event) {
             // alert("change happened");
             event.preventDefault();
             var profilePicPath = URL.createObjectURL(event.target.files[0]);
             // var v = $('.uploadProfilePicFile').val();
             // alert("change happened" + v);
-           
+
 
             var ext = $('.uploadProfilePicFile').val().split('.').pop().toLowerCase();
-            if ($.inArray(ext, ['bmp','png','jpeg']) == -1){
+            if ($.inArray(ext, ['bmp', 'png', 'jpeg']) == -1) {
                 //alert("iage of not right format");
                 $(".uploadProfileErr").html(" !Image is not of format bmp , png pr jpeg. Please use any of that");
-                }else{
+            } else {
                 var picsize = (this.files[0].size);
-                if (picsize > 5000000){
-              // alert("File is not of proper size");
-               $(".uploadProfileErr").html(" !Image size is more that 5MB");
-                }else {
+                if (picsize > 5000000) {
+                    // alert("File is not of proper size");
+                    $(".uploadProfileErr").html(" !Image size is more that 5MB");
+                } else {
                     $('.profile-pic').attr('src', profilePicPath);
                 }
-                
+
             }
-            
+
 
         });
     });
 
-    $(".removeOption img").click(function() {
+    $(".removeOption img").click(function () {
         $('.profile-pic').attr('src', "");
     });
 
-    $(".cancelOtpEntPopup").click(function() {
+    $(".cancelOtpEntPopup").click(function () {
         $('.popup-err-msg-otp').html("");
         // $('.otpModel').modal('hide'); 
     });
 
-    $(".submitOtpEntPopUp").click(function(event) {
+    $(".submitOtpEntPopUp").click(function (event) {
         event.preventDefault();
         var popUpInput = $(".model-otp-input").val();
         // alert(popUpInput);
-        var  otpRegex  =  /^\d{4}$/;
-        if(otpRegex.test(popUpInput)){
+        var otpRegex = /^\d{4}$/;
+        if (otpRegex.test(popUpInput)) {
             // alert('enteringregex');
-            $('.otpModel').modal('hide'); 
+            $('.otpModel').modal('hide');
             $('.otpConfirmModel').modal('show');
             //commenting this to prevent the next popup from popping up
             // $('.modelOtpEntForm').submit();
-        } else  {
+        } else {
             $('.popup-err-msg-otp').html("Invalid OTP!");
         }
-         
+
     });
 
-    $(".cancelOtpCfmPopup").click(function() {
-        $('.otpConfirmModel').modal('hide'); 
+    $(".cancelOtpCfmPopup").click(function () {
+        $('.otpConfirmModel').modal('hide');
     });
 
-    $(".saveOtpCfmPopup").click(function(event) {
+    $(".saveOtpCfmPopup").click(function (event) {
         event.preventDefault();
-        $('.otpConfirmModel').modal('hide'); 
-        $('.successPopupModel').modal('show'); 
+        $('.otpConfirmModel').modal('hide');
+        $('.successPopupModel').modal('show');
     });
 
 
-    $(".okSuccessPopup").click(function(event) {
+    $(".okSuccessPopup").click(function (event) {
         event.preventDefault();
-        $('.successPopupModel').modal('hide'); 
+        $('.successPopupModel').modal('hide');
     });
 
-    $(".okEmailVerPopup").click(function(event) {
+    $(".okEmailVerPopup").click(function (event) {
         event.preventDefault();
-        $('.emailVerPopupModel').modal('hide'); 
+        $('.emailVerPopupModel').modal('hide');
     });
 
-    $(".cancelCfmPopUp").click(function(event) {
+    $(".cancelCfmPopUp").click(function (event) {
         event.preventDefault();
-        $('.confirmChangesModel').modal('hide'); 
+        $('.confirmChangesModel').modal('hide');
     });
-     
 
-    $(".saveChgCfmPopUp").click(function(event) {
+
+    $(".saveChgCfmPopUp").click(function (event) {
         event.preventDefault();
-         
-        $('.confirmChangesModel').modal('hide'); 
-        $('.successfulUpdateModel').modal('show'); 
+
+        $('.confirmChangesModel').modal('hide');
+        $('.successfulUpdateModel').modal('show');
     });
+
+    $(".profile-dpndnt-save-btn").click(function (event) {
+        alert("in dependent save");
+
+        var js = [];
+        var s = {};
+        $.ajax({
+            type: 'POST',
+            url: '',
+            dataType: 'json',
+            data:'',
+            success: function (data) {
+    
+                var familyJsonObj = $.parseJSON(data);
+    
+                dynArr = [];
+                dynArr.push(familyJsonObj); 
+                $.each(dynArr, function(index,item){
+                    dynamicPetFxn(item);
+                   
+                })
+            }
+    
+        });
+       
+    });
+
 
 });
+
+function dynamicPetFxn(arr) {
+     var name = arr.name;
+     var type = arr.type;
+     var breed = arr.breed;
+
+    var addPetDynamicTxt = '<form class="profilePetForm" action="" novalidate> ' +
+        '  <div class="row dynamic-profile-div"> ' +
+        ' <div class="col-lg-2 profile-input"> ' +
+        ' <input type="text" class="" name=""  value="'+name+ '" required>' +
+        ' <label class="profile-pet-name">Name</label>' +
+        ' </div> ' +
+        ' <div class="col-lg-2"></div> ' +
+        ' <div class="col-lg-2 profile-input"> ' +
+        '  <input type="text" class="" name="" value="'+type+ '"  required> ' +
+        '  <label class="profile-pet-type">Type</label>' +
+        ' </div> ' +
+        ' <div class="col-lg-2"></div> ' +
+        ' <div class="col-lg-2 profile-input"> ' +
+        '  <input type="text" class="" name=""  value="'+breed+ '"  required> ' +
+        '  <label class="profile-pet-breed">Breed</label>' +
+        ' </div> ' +
+        ' <div class="col-lg-1"></div> ' +
+        ' <div class="col-lg-1 profile-delete remove-profile-pet"><img  src="Assets/images/deleteIcon.svg" alt=""></div> ' +
+        // '<span class="remove-profile-houseHelp" ><img  src="Assets/images/deleteIcon.svg" alt=""></span>'
+        '</div> '
+    '</form> ';
+
+    $(".profile-pet-dynamic-div").append(addPetDynamicTxt);
+}
 
