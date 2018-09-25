@@ -84,6 +84,7 @@ $(document).ready(function () {
         $('.profile-contact-cancel').hide();
         $('.profile-contact-save').hide();
     });
+
     $('.profile-save-btn').click(function (e) {
         e.preventDefault();
         
@@ -99,6 +100,7 @@ $(document).ready(function () {
          //   alert("here email change");
             if (isEmailValid) {
                 // alert("saved email");
+                $('.userEmailPopupPH').html(profileContactEmail);
                 $('.emailVerPopupModel').modal('show'); 
                  
             }else {
