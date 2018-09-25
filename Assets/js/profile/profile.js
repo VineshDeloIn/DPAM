@@ -1,6 +1,19 @@
+var arr = {};
+arr["name"] = "";
+arr["type"] = "";
+arr["breed"] = "";
+
+var dynArr = [];
+dynArr.push(arr);
+console.log(dynArr);
+
+var petCount = 0;
+var dynArr1 = {};
+
+
 $(document).ready(function () {
 
-    getProfilePic();
+    //getProfilePic();
 
     $(document).on('scroll', function () {
         if ($(this).scrollTop() > 1) {
@@ -201,32 +214,16 @@ $(document).ready(function () {
     });
 
 
+
     $('.profile-dpndnt-pet-add-btn').click(function (e) {
         //alert("pet add");
-        var addPetDynamicTxt = '<form class="profilePetForm" action="" novalidate> ' +
-            '  <div class="row dynamic-profile-div"> ' +
-            ' <div class="col-lg-2 profile-input"> ' +
-            ' <input type="text" class="" name="" required>' +
-            ' <label class="">Name</label>' +
-            ' </div> ' +
-            ' <div class="col-lg-2"></div> ' +
-            ' <div class="col-lg-2 profile-input"> ' +
-            '  <input type="text" class="" name="" required> ' +
-            '  <label class="">Type</label>' +
-            ' </div> ' +
-            ' <div class="col-lg-2"></div> ' +
-            ' <div class="col-lg-2 profile-input"> ' +
-            '  <input type="text" class="" name="" required> ' +
-            '  <label class="">Breed</label>' +
-            ' </div> ' +
-            ' <div class="col-lg-1"></div> ' +
-            ' <div class="col-lg-1 profile-delete remove-profile-pet"><img  src="Assets/images/deleteIcon.svg" alt=""></div> ' +
-            // '<span class="remove-profile-houseHelp" ><img  src="Assets/images/deleteIcon.svg" alt=""></span>'
-            '</div> '
-        '</form> ';
-
-
-        $(".profile-pet-dynamic-div").append(addPetDynamicTxt);
+        petCount++;
+       var nn = $(".profile-pet-name").val(); alert(nn);
+       alert(dynArr.length);
+        $.each(dynArr, function(index,item){
+            dynamicPetFxn(item);
+           
+        })
 
 
     });
@@ -238,7 +235,19 @@ $(document).ready(function () {
     });
 
     var uploadProfilepic = function(){
-        
+        $.ajax({
+            url: 'Profile/Update',
+            type: "POST",
+            contentType: false,
+            success: function (file, status) {
+                var getProfilePicPath
+                $('.profile-pic').attr('src', getProfilePicPath);
+            },
+            error: function (error) {
+                console.log(error);
+                $('.profile-pic').attr("alt", "pathError");
+            }
+        });
     }
 
     $(".uploadOption img").click(function () {
@@ -274,7 +283,8 @@ $(document).ready(function () {
     });
 
     $(".removeOption img").click(function () {
-        $('.profile-pic').attr('src', "");
+        $('.profile-pic').attr('src', "Assets/images/profile_pic_place_holder.png");
+        //write a function to make a delete request
     });
 
     $(".cancelOtpEntPopup").click(function () {
@@ -333,5 +343,62 @@ $(document).ready(function () {
         $('.successfulUpdateModel').modal('show');
     });
 
+    $(".profile-dpndnt-save-btn").click(function (event) {
+        alert("in dependent save");
+
+        var js = [];
+        var s = {};
+        $.ajax({
+            type: 'POST',
+            url: '',
+            dataType: 'json',
+            data:'',
+            success: function (data) {
+    
+                var familyJsonObj = $.parseJSON(data);
+    
+                dynArr = [];
+                dynArr.push(familyJsonObj); 
+                $.each(dynArr, function(index,item){
+                    dynamicPetFxn(item);
+                   
+                })
+            }
+    
+        });
+       
+    });
+
+
 });
+
+function dynamicPetFxn(arr) {
+     var name = arr.name;
+     var type = arr.type;
+     var breed = arr.breed;
+
+    var addPetDynamicTxt = '<form class="profilePetForm" action="" novalidate> ' +
+        '  <div class="row dynamic-profile-div"> ' +
+        ' <div class="col-lg-2 profile-input"> ' +
+        ' <input type="text" class="" name=""  value="'+name+ '" required>' +
+        ' <label class="profile-pet-name">Name</label>' +
+        ' </div> ' +
+        ' <div class="col-lg-2"></div> ' +
+        ' <div class="col-lg-2 profile-input"> ' +
+        '  <input type="text" class="" name="" value="'+type+ '"  required> ' +
+        '  <label class="profile-pet-type">Type</label>' +
+        ' </div> ' +
+        ' <div class="col-lg-2"></div> ' +
+        ' <div class="col-lg-2 profile-input"> ' +
+        '  <input type="text" class="" name=""  value="'+breed+ '"  required> ' +
+        '  <label class="profile-pet-breed">Breed</label>' +
+        ' </div> ' +
+        ' <div class="col-lg-1"></div> ' +
+        ' <div class="col-lg-1 profile-delete remove-profile-pet"><img  src="Assets/images/deleteIcon.svg" alt=""></div> ' +
+        // '<span class="remove-profile-houseHelp" ><img  src="Assets/images/deleteIcon.svg" alt=""></span>'
+        '</div> '
+    '</form> ';
+
+    $(".profile-pet-dynamic-div").append(addPetDynamicTxt);
+}
 

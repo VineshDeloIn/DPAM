@@ -562,15 +562,16 @@
 }
 
 .profile-my-details-center-text{
-    width: 265px;
-  height: 58px;
+    padding-bottom: 7%; 
+  width: 371px;
+  height: 81px;
   font-family: decalledscript;
-  font-size: 50px;
+  font-size: 70px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
-  letter-spacing: 2.1px;
+  letter-spacing: 2.9px;
   text-align: center;
   color: #ffffff;
   color: var(--white);
@@ -631,6 +632,11 @@ a {
     background-color: black;
 }
 
+
+.headerNavOnScroll .profile-my-details-center-text{
+    display: none;
+}
+
 .header .logo {
     display: block;
     float: left;
@@ -660,7 +666,7 @@ a {
 }
 
 .header .menu-icon .navicon {
-    background: rgb(252, 250, 250);
+    background: url("../../Assets/images/Header_Icon.png");
     display: block;
     height: 2px;
     position: relative;
@@ -669,8 +675,8 @@ a {
 }
 
 .header .menu-icon .navicon:before, .header .menu-icon .navicon:after {
-    background: rgb(252, 250, 250);
-    ;
+    /* background: rgb(252, 250, 250); */
+    background: url("../../Assets/images/Header_Icon.png");
     content: '';
     display: block;
     height: 100%;
@@ -695,7 +701,7 @@ a {
 
 .header .menu-btn:checked~.menu {
     max-height: 240px;
-    margin-left: -52%;
+    margin-left: -69%;
     margin-top: 10%;
 }
 
@@ -819,12 +825,16 @@ a {
   
     .profile-user-name {
         font-size: 20px;
+        padding-left: 15%;
     }
     .profile-fields {
         font-size: 12px;
+        padding-left: 24%;
+       padding-top: 3%;
     }
     .profile-fields-value {
         font-size: 14px;
+        padding-left: 22%;
     }
     .profile-details-fields {
         font-size: 12px;
@@ -847,7 +857,7 @@ a {
         top: 10%;
     }
     .profile-header .logo img {
-        margin-left: 63%;
+        margin-left: 47%;
     }
     .header .logo {
         padding: 10px 40px;
@@ -898,6 +908,32 @@ a {
     }
     .right-side {
         width: 30%;
-        padding-top: 3%;
+        padding-top: 6%;
+    }
+    .profile-my-details-center-text{
+      width: 395px;
+      height: 58px;
+      font-family: decalledscript;
+      font-size: 50px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: 2.1px;
+      text-align: center;
+      color: #ffffff;
+      color: var(--white);
+    }    
+
+    .profile-summary img {
+        left: 42px;
+    }
+    .profile-pic {
+        margin-left: 54px;
+      
+    }
+    .notification_count {
+        top: -2px;
+        right: 7px;
     }
 }
