@@ -12,6 +12,22 @@ $(document).ready(function () {
     var isContactEmailChange = false;
     var isOtherContactChange = false;
     var inValid = false;
+    var getProfileUrl = '';
+
+    var getProfilePic = function(){
+        $.ajax({
+            url: "http://dubaiam-integration.azurewebsites.net/api/",
+            type: "GET",
+            contentType: false,
+            success: function (result) {
+                 
+            },
+            error: function(error) {
+                console.log(error);
+                $('.profile-pic').attr("alt", "pathError");
+            }
+        });
+    }
 
     $('.profile-edit-btn').click(function (e) {
         e.preventDefault();
@@ -104,7 +120,7 @@ $(document).ready(function () {
         }
 
         if(!inValid) {
-            $('.profile-contact-details-form').submit();
+            // $('.profile-contact-details-form').submit();
         }
     });
 
