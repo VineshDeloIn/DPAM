@@ -257,7 +257,7 @@ $(document).ready(function () {
 
     var removeProfilepic = function () {
         $.ajax({
-            url: 'Profile/Remove',
+            url: 'ProfilePicture/removeImage',
             type: "DELETE",
             data: { tCode: sessionStorage.getItem("tCode") },
             contentType: false,
@@ -323,7 +323,7 @@ $(document).ready(function () {
                 }
 
                 $.ajax({
-                    url: "Action/Method",
+                    url: "ProfilePicture/updateImage",
                     type: "PUT",
                     contentType: "application/json",
                     data: objUpload,
