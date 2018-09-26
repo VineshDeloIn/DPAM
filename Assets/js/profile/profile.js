@@ -279,6 +279,8 @@ $(document).ready(function () {
                 $('.profile-pic').attr('src', profilePicPath);
             }
 
+            var objUpload;
+
             if (isUploadValid) {
                 // var fr = new FileReader();
                 var reader = new FileReader();
@@ -293,7 +295,7 @@ $(document).ready(function () {
                         }
                     }
 
-                    var objUpload = {                        
+                    objUpload = {                        
                             tCode: $('.tCode').val(),
                             uploadImg: fileByteArray                        
                     };
@@ -305,8 +307,8 @@ $(document).ready(function () {
                     contentType: "application/json",
                     data: objUpload,
                     processData: false,
-                    success: function (data,status) {  },
-                    error: function (xhr, status, error) {  }
+                    success: function (data,status) { console.log('success');  },
+                    error: function (xhr, status, error) { console.log('failure');  }
                 });
             }
         });
