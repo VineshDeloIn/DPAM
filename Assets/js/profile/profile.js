@@ -13,7 +13,25 @@ var dynArr1 = {};
 
 $(document).ready(function () {
 
-    //getProfilePic();
+    var getProfilePic = function () {
+        $.ajax({
+            url: 'ProfilePicture/getImage',
+            type: "GET",
+            data: { tCode: sessionStorage.getItem("tCode") },
+            contentType: false,
+            success: function (getByteArray, status) {
+                $('.profile-pic').attr('src', 'data:image/png;base64,${getByteArray}');
+            },
+            error: function (error) {
+                $('.profile-pic').attr('src', "Assets/images/profile_pic_place_holder.png");
+                $('.profile-pic').attr("alt", "pathError");
+                // console.log('Failed');
+                // console.log(error);
+            }
+        });
+    }
+
+    getProfilePic();
 
     $(document).on('scroll', function () {
         if ($(this).scrollTop() > 1) {
@@ -29,20 +47,7 @@ $(document).ready(function () {
     var inValid = false;
 
 
-    var getProfilePic = function () {
-        $.ajax({
-            url: 'Action/Method',
-            type: "GET",
-            contentType: false,
-            success: function (file, status) {
-                $('.profile-pic').attr('src', 'data:image/png;base64,${YourByte}');                
-            },
-            error: function (error) {
-                console.log(error);
-                $('.profile-pic').attr("alt", "pathError");
-            }
-        });
-    }
+
 
     $('.profile-edit-btn').click(function (e) {
         e.preventDefault();
@@ -233,31 +238,31 @@ $(document).ready(function () {
         $(this).parent().remove();
     });
 
-        // var uploadProfilepic = function (file) {
-        //     $.ajax({
-        //         url: 'Profile/Update',
-        //         type: "PUT",
-        //         contentType: false,
-        //         success: function (file, status) {
-        //             var getProfilePicPath
-        //             $('.profile-pic').attr('src', getProfilePicPath);
-        //         },
-        //         error: function (error) {
-        //             console.log(error);
-        //             $('.profile-pic').attr("alt", "pathError");
-        //         }
-        //     });
-        // }
+    // var uploadProfilepic = function (file) {
+    //     $.ajax({
+    //         url: 'Profile/Update',
+    //         type: "PUT",
+    //         contentType: false,
+    //         success: function (file, status) {
+    //             var getProfilePicPath
+    //             $('.profile-pic').attr('src', getProfilePicPath);
+    //         },
+    //         error: function (error) {
+    //             console.log(error);
+    //             $('.profile-pic').attr("alt", "pathError");
+    //         }
+    //     });
+    // }
 
 
-    var removeProfilepic = function(){
+    var removeProfilepic = function () {
         $.ajax({
             url: 'Profile/Remove',
             type: "DELETE",
+            data: { tCode: sessionStorage.getItem("tCode") },
             contentType: false,
             success: function (file, status) {
-                var getPathToRemovePicture
-                $('.profile-pic').attr('src', getPathToRemovePicture);
+                $('.profile-pic').attr('src', "Assets/images/profile_pic_place_holder.png");
             },
             error: function (error) {
                 $('.profile-pic').attr("alt", "unableToUpdate");
@@ -311,9 +316,9 @@ $(document).ready(function () {
                         }
                     }
 
-                    objUpload = {                        
-                            tCode: $('.tCode').val(),
-                            uploadImg: fileByteArray                        
+                    objUpload = {
+                        tCode: sessionStorage.getItem("tCode"),
+                        uploadImg: fileByteArray
                     };
                 }
 
@@ -323,15 +328,15 @@ $(document).ready(function () {
                     contentType: "application/json",
                     data: objUpload,
                     processData: false,
-                    success: function (data,status) { console.log('success');  },
-                    error: function (xhr, status, error) { console.log('failure');  }
+                    success: function (data, status) { console.log('upload Successful!'); },
+                    error: function (xhr, status, error) { console.log('upload Failure!'); }
                 });
             }
         });
     });
 
     $(".removeOption img").click(function () {
-        $('.profile-pic').attr('src', "Assets/images/profile_pic_place_holder.png");
+        removeProfilepic();
         //write a function to make a delete request
     });
 
