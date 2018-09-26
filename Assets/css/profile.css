@@ -19,7 +19,6 @@
 .otpModelBox {
     width: 550px;
     height: 480px;
-    /* padding: 57px; */
 }
 
 .otpConfirmModelBox {
@@ -65,7 +64,6 @@
 
 .profile-contents {
     top: 35%;
-    /* z-index: 1; */
     position: absolute;
     left: 0;
     right: 0;
@@ -115,7 +113,7 @@
 }
 
 .profile-header {
-    background: url("../../Assets/images/profile-banner.jpg");
+    background: url("../images/profile-banner.jpg");
     background-size: 100%;
     height: 32vw;
     background-repeat: no-repeat;
@@ -203,7 +201,6 @@
 
 .model-sure-chg-text {
     text-align: center;
-    /* word-wrap: break-word; */
     margin-top: 6%;
     font-family: HelveticaNeueReg;
     font-size: 16px;
@@ -221,7 +218,6 @@
 }
 
 .model-otp-text {
-    /* margin-top: 10%; */
     font-family: HelveticaNeueMed;
     font-size: 26px;
     font-weight: 500;
@@ -289,25 +285,25 @@
 }
 
 .card-header.profile-card-head:after {
-    content: url("../../Assets/images/upArrow.svg");
+    content: url("../images/upArrow.svg");
     margin-top: 1%;
     float: right;
     cursor: pointer;
 }
 
 .card-header.profile-card-head.collapsed:after {
-    content: url("../../Assets/images/downArrow.svg");
+    content: url("../images/downArrow.svg");
 }
 
 .card-header.profile-depend-card-head:after {
-    content: url("../../Assets/images/upArrow.svg");
+    content: url("../images/upArrow.svg");
     margin-top: 1%;
     float: right;
     cursor: pointer;
 }
 
 .card-header.profile-depend-card-head.collapsed:after {
-    content: url("../../Assets/images/downArrow.svg");
+    content: url("../images/downArrow.svg");
 }
 
 .profile-add-btn {
@@ -394,7 +390,6 @@
     border: 0;
     outline: 0;
     background: transparent;
-    /* border-bottom: 1px solid black; */
 }
 
 .profile-dependent-form input {
@@ -510,14 +505,12 @@
 }
 
 .model-input-otp {
-    /* margin-top: 6%; */
     width: 100%;
     box-sizing: border-box;
     box-shadow: none;
     outline: none;
     border: none;
     border-bottom: 1px solid #a7a9ad;
-    /* padding: 4% 0; */
     font-family: HelveticaNeueReg;
     font-size: 16px;
     font-weight: normal;
@@ -530,7 +523,6 @@
 
 .profile-input label {
     position: absolute;
-    /* top: 46%;     */
     top: 35%;
     transition: .5s;
     pointer-events: none;
@@ -554,7 +546,6 @@
     line-height: 1.5;
     letter-spacing: normal;
     color: #909aa1;
-    /* border: 2px solid blue; */
 }
 
 .profile-input :focus, .profile-input :valid {
@@ -670,7 +661,8 @@ a {
 }
 
 .header .menu-icon .navicon {
-    background: url("../../Assets/images/Header_Icon.png");
+    /* background: url("../../Assets/images/Header_Icon.png"); */
+    background: url("../images/Header_Icon.png");
     display: block;
     height: 2px;
     position: relative;
@@ -679,8 +671,7 @@ a {
 }
 
 .header .menu-icon .navicon:before, .header .menu-icon .navicon:after {
-    /* background: rgb(252, 250, 250); */
-    background: url("../../Assets/images/Header_Icon.png");
+    background: url("../images/Header_Icon.png");
     content: '';
     display: block;
     height: 100%;
@@ -728,7 +719,7 @@ a {
 /*added for header footer*/
 
 .profile-header {
-    background: url("../../Assets/images/profile-banner.jpg");
+    background: url("../images/profile-banner.jpg");
     background-size: 100%;
     height: 32vw;
     background-repeat: no-repeat;

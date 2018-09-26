@@ -40,6 +40,17 @@ window.onload = function () {
 
 $(document).ready(function () {
 
+
+    $(".loginMail").keyup(function () {
+        $(".login-button").prop('disabled', false);
+    });
+
+    $(".loginPassword").keyup(function () {
+        $(".login-button").prop('disabled', false);
+    });
+
+
+
     //getting values from the form
     var emailMob = $(".loginMail").val();
     var password = $(".loginPassword").val();
@@ -128,7 +139,7 @@ $(document).ready(function () {
     });
 
     $(".loginForm").on('submit', function (event) {
-         event.preventDefault();
+        //  event.preventDefault();
         var emailMob = $(".loginMail").val();
         var password = $(".loginPassword").val();
         isEmailMobValid = validatePhone(emailMob) || validateEmail(emailMob);
@@ -167,6 +178,8 @@ $(document).ready(function () {
 
         if (isEmailMobValid && isPasswordValid) {
             $(".loginForm").submit();
+        } else {
+            event.preventDefault();
         }
 
     });

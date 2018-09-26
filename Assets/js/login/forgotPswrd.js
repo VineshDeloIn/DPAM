@@ -6,11 +6,11 @@ $(document).ready(function () {
         $(".emailMobForgtPswrdErr").html("");
     });
 
-   
 
-    $( ".forgtPswrdForm" ).on('submit',function( event ) {        
+
+    $(".forgtPswrdForm").on('submit', function (event) {
         //  event.preventDefault();
-        var emailMob = $("#forgtPswrdMobMail").val();
+        var emailMob = $(".forgtPswrdMobMail").val();
 
 
         var isEmailMobValid = validatePhone(emailMob) || validateEmail(emailMob);
@@ -26,11 +26,13 @@ $(document).ready(function () {
 
         if (isEmailMobValid) {
             // event.preventDefault();
-            $(".forgtPswrdForm").submit();    
+            $(".forgtPswrdForm").submit();
+        } else {
+            event.preventDefault();
         }
 
-       
+
     });
-    
+
     // event.preventDefault();
 });

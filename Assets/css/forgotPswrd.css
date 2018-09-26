@@ -3,7 +3,6 @@
     height: 100vh;
     width: 100%;
     position: relative;
-    /* width: 100vw; */
 }
 
 .forgtPswrd-left-side{
@@ -11,9 +10,6 @@
     height: 100vh;
     width: 66.5%;
     float: left;
-    /* margin-bottom: 50vh; */
-    /* background-image: url("../../Assets/images/landingPageImage.png"); */
-   
 }
 
 .frgtPswrdDpamLogo {
@@ -35,19 +31,7 @@
      position: absolute;
      display: block;
 }
-    
-    
-/* .forgtPswrd-left-side img {
-    width: 100%;
-    height: 100vh;
-    max-width: 100%;
-} */
-
-/* .frgt-footer {
-    position: relative;
-    height: 20vh;
-} */
-
+  
 .forgtPswrd-right-side {
     z-index: 1;
     position: relative;
@@ -63,9 +47,7 @@
     background-color: #f7f7f7;
     padding-left: 8%;
     padding-right: 8%;
-    /* padding-top: 8%;  */
     margin-left: 0%;
-     /* border:2px solid blue;  */
 }
 
 
