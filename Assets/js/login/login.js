@@ -40,6 +40,17 @@ window.onload = function () {
 
 $(document).ready(function () {
 
+    
+    $(".loginMail").keyup(function () {
+        $(".login-button").prop('disabled',false);
+    });
+
+    $(".loginPassword").keyup(function () {
+        $(".login-button").prop('disabled',false);
+    });
+
+   
+
     //getting values from the form
     var emailMob = $(".loginMail").val();
     var password = $(".loginPassword").val();
