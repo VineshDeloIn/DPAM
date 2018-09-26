@@ -249,6 +249,22 @@ $(document).ready(function () {
         //     });
         // }
 
+
+    var removeProfilepic = function(){
+        $.ajax({
+            url: 'Profile/Remove',
+            type: "DELETE",
+            contentType: false,
+            success: function (file, status) {
+                var getPathToRemovePicture
+                $('.profile-pic').attr('src', getPathToRemovePicture);
+            },
+            error: function (error) {
+                $('.profile-pic').attr("alt", "unableToUpdate");
+            }
+        });
+    }
+
     $(".uploadOption img").click(function () {
         // alert("upload pic");
         $(".uploadProfilePicFile").click();
