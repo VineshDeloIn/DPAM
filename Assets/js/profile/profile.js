@@ -95,15 +95,14 @@ $(document).ready(function () {
     var isContactEmailChange = false;
     var isOtherContactChange = false;
     var inValid = false;
-    var getProfileUrl = '';
 
     var getProfilePic = function () {
         $.ajax({
-            url: "http://dubaiam-integration.azurewebsites.net/api/",
+            url: 'Action/Method',
             type: "GET",
             contentType: false,
-            success: function (result) {
-
+            success: function (file, status) {
+                $('.profile-pic').attr('src', 'data:image/png;base64,${YourByte}');                
             },
             error: function (error) {
                 console.log(error);
@@ -262,6 +261,38 @@ $(document).ready(function () {
         $(this).parent().remove();
     });
 
+        // var uploadProfilepic = function (file) {
+        //     $.ajax({
+        //         url: 'Profile/Update',
+        //         type: "PUT",
+        //         contentType: false,
+        //         success: function (file, status) {
+        //             var getProfilePicPath
+        //             $('.profile-pic').attr('src', getProfilePicPath);
+        //         },
+        //         error: function (error) {
+        //             console.log(error);
+        //             $('.profile-pic').attr("alt", "pathError");
+        //         }
+        //     });
+        // }
+
+
+    var removeProfilepic = function(){
+        $.ajax({
+            url: 'Profile/Remove',
+            type: "DELETE",
+            contentType: false,
+            success: function (file, status) {
+                var getPathToRemovePicture
+                $('.profile-pic').attr('src', getPathToRemovePicture);
+            },
+            error: function (error) {
+                $('.profile-pic').attr("alt", "unableToUpdate");
+            }
+        });
+    }
+
     $(".uploadOption img").click(function () {
         // alert("upload pic");
         $(".uploadProfilePicFile").click();
@@ -273,28 +304,61 @@ $(document).ready(function () {
             // var v = $('.uploadProfilePicFile').val();
             // alert("change happened" + v);
 
+            var isUploadValid = true;
 
             var ext = $('.uploadProfilePicFile').val().split('.').pop().toLowerCase();
             if ($.inArray(ext, ['bmp', 'png', 'jpeg']) == -1) {
                 //alert("iage of not right format");
                 $(".uploadProfileErr").html(" !Image is not of format bmp , png pr jpeg. Please use any of that");
-            } else {
-                var picsize = (this.files[0].size);
-                if (picsize > 5000000) {
-                    // alert("File is not of proper size");
-                    $(".uploadProfileErr").html(" !Image size is more that 5MB");
-                } else {
-                    $('.profile-pic').attr('src', profilePicPath);
-                }
-
+                isUploadValid = false;
             }
 
+            var picsize = (this.files[0].size);
+            if (picsize > 5000000) {
+                // alert("File is not of proper size");
+                $(".uploadProfileErr").html(" !Image size is more that 5MB");
+                isUploadValid = false;
+            } else {
+                isUploadValid = true;
+                $('.profile-pic').attr('src', profilePicPath);
+            }
 
+            if (isUploadValid) {
+                // var fr = new FileReader();
+                var reader = new FileReader();
+                var fileByteArray = [];
+                reader.readAsArrayBuffer(this.files[0]);
+                reader.onloadend = function (evt) {
+                    if (evt.target.readyState == FileReader.DONE) {
+                        var arrayBuffer = evt.target.result,
+                            array = new Uint8Array(arrayBuffer);
+                        for (var i = 0; i < array.length; i++) {
+                            fileByteArray.push(array[i]);
+                        }
+                    }
+
+                    var objUpload = {                        
+                            tCode: $('.tCode').val(),
+                            uploadImg: fileByteArray                        
+                    };
+                }
+
+                $.ajax({
+                    url: "Action/Method",
+                    type: "PUT",
+                    contentType: "application/json",
+                    data: objUpload,
+                    processData: false,
+                    success: function (data,status) {  },
+                    error: function (xhr, status, error) {  }
+                });
+            }
         });
     });
 
     $(".removeOption img").click(function () {
-        $('.profile-pic').attr('src', "");
+        $('.profile-pic').attr('src', "Assets/images/profile_pic_place_holder.png");
+        //write a function to make a delete request
     });
 
     $(".cancelOtpEntPopup").click(function () {
