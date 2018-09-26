@@ -1,35 +1,87 @@
-var arr = {};
-arr["name"] = "";
-arr["type"] = "";
-arr["breed"] = "";
-
-var dynArr = [];
-dynArr.push(arr);
-console.log(dynArr);
-
-var petCount = 0;
-var dynArr1 = {};
-
 
 $(document).ready(function () {
+    var defaultProfilePetObj = {};
+    defaultProfilePetObj["petName"] = "";
+    defaultProfilePetObj["petType"] = "";
+    defaultProfilePetObj["petBreed"] = "";
 
+    var defaultProfileFamilyObj = {};
+    defaultProfileFamilyObj["dependntName"] = "";
+    defaultProfileFamilyObj["dependntRel"] = "";
+    defaultProfileFamilyObj["dependntEmail"] = "";
+    defaultProfileFamilyObj["dependntMob"] = "";
+
+    var defaultProfileHouseHelpObj = {};
+    defaultProfileHouseHelpObj["houseHelpName"] = "";
+    defaultProfileHouseHelpObj["houseHelpContact"] = "";
+
+
+    var profilePetJson = [];
+    profilePetJson.push(defaultProfilePetObj);
+
+    var profileFamilyJson = [];
+    profileFamilyJson.push(defaultProfileFamilyObj);
+
+    var profileHouseHelpJson = [];
+    profileHouseHelpJson.push(defaultProfileHouseHelpObj);
+  
+    var dynamicPetCount = 0;
+    var dynamicFamilyCount = 0;
+    var dynamicHouseHelpCount = 0;
+
+//get the data for the dynamic profile dependent pet details
     $.ajax({
         type: 'GET',
         url: '',
         dataType: 'json',
         success: function (data) {
 
-            var familyJsonObj = $.parseJSON(data);
+            var petJson = $.parseJSON(data);
+ 
+            $.each(petJson, function (index, petJsonObj) {
+                dynamicPetCount++;
+                dynamicPetDetailsFxn(petJsonObj, dynamicPetCount);
 
-            dynArr = [];
-            dynArr.push(familyJsonObj); 
-            $.each(dynArr, function(index,item){
-                dynamicPetFxn(item);
-               
             })
         }
 
     });
+
+    //get the data for the dynamic profile dependent family details
+    $.ajax({
+        type: 'GET',
+        url: '',
+        dataType: 'json',
+        success: function (data) {
+
+            var familyJson = $.parseJSON(data);
+ 
+            $.each(familyJson, function (index, familyJsonObj) {
+                dynamicFamilyCount++;
+                dynamicFamilyDetailsFxn(familyJsonObj, dynamicFamilyCount);
+
+            })
+        }
+
+    });
+
+        //get the data for the dynamic profile dependent house help details
+        $.ajax({
+            type: 'GET',
+            url: '',
+            dataType: 'json',
+            success: function (data) {
+    
+                var houseHelpJson = $.parseJSON(data);
+     
+                $.each(houseHelpJson, function (index, houseHelpJsonObj) {
+                    dynamicHouseHelpCount++;
+                    dynamicHouseHelpDetailsFxn(houseHelpJsonObj, dynamicHouseHelpCount);
+    
+                })
+            }
+    
+        });
 
     $(document).on('scroll', function () {
         if ($(this).scrollTop() > 1) {
@@ -45,15 +97,15 @@ $(document).ready(function () {
     var inValid = false;
     var getProfileUrl = '';
 
-    var getProfilePic = function(){
+    var getProfilePic = function () {
         $.ajax({
             url: "http://dubaiam-integration.azurewebsites.net/api/",
             type: "GET",
             contentType: false,
             success: function (result) {
-                 
+
             },
-            error: function(error) {
+            error: function (error) {
                 console.log(error);
                 $('.profile-pic').attr("alt", "pathError");
             }
@@ -132,9 +184,9 @@ $(document).ready(function () {
             if (isEmailValid) {
                 // alert("saved email");
                 $('.userEmailPopupPH').html(profileContactEmail);
-                $('.emailVerPopupModel').modal('show'); 
-                 
-            }else {
+                $('.emailVerPopupModel').modal('show');
+
+            } else {
                 inValid = true;
                 $(".profile-contact-mail-err").html("Invalid Email");
             }
@@ -152,7 +204,7 @@ $(document).ready(function () {
             $('.confirmChangesModel').modal('show');
         }
 
-        if(!inValid) {
+        if (!inValid) {
             // $('.profile-contact-details-form').submit();
         }
     });
@@ -160,37 +212,14 @@ $(document).ready(function () {
 
 
     $('.profile-dpndnt-family-add-btn').click(function (e) {
-        //  alert("family add");
-        var profileFamilyDynamicTxt = '<form class="profileFamilyForm" action="" novalidate> ' +
-            '  <div class="row dynamic-profile-div"> ' +
-            ' <div class="col-lg-2 profile-input"> ' +
-            ' <input type="text" class="" name="" required>' +
-            ' <label class="">Name</label>' +
-            ' </div> ' +
-            ' <div class="col-lg-1"></div> ' +
-            ' <div class="col-lg-2 profile-input"> ' +
-            '  <input type="text" class="" name="" required> ' +
-            '  <label class="">Relationship</label>' +
-            ' </div> ' +
-            ' <div class="col-lg-1"></div> ' +
-            ' <div class="col-lg-2 profile-input"> ' +
-            '  <input type="text" class="" name="" required> ' +
-            '  <label class="">Email Id</label> ' +
-            ' </div> ' +
-            ' <div class="col-lg-1"></div> ' +
-            ' <div class="col-lg-2 profile-input"> ' +
-            '   <input type="text" class="" name="" required>  ' +
-            '   <label class="">Mobile</label>  ' +
-            ' </div> ' +
-            ' <div class="col-lg-1 profile-delete remove-profile-family"><img  src="Assets/images/deleteIcon.svg" alt=""></div> ' +
-            // '<span class="remove-profile-family" ><img  src="Assets/images/deleteIcon.svg" alt=""></span>'
-            '</div> '
-        '</form> ';
+        dynamicFamilyCount++;
+        
+        $.each(profileFamilyJson, function (index, profileFamilyObj) {
+            dynamicFamilyDetailsFxn(profileFamilyObj, dynamicFamilyCount);
 
-
-        $(".profile-family-dynamic-div").append(profileFamilyDynamicTxt);
-
-
+        })
+        
+        
     });
 
     $('.profile-family-dynamic-div').on('click', '.remove-profile-family', function () {
@@ -199,29 +228,14 @@ $(document).ready(function () {
 
 
     $('.profile-dpndnt-houseHelp-add-btn').click(function (e) {
-        //alert("house help add");
-        var houseHelpDynamicTxt = '<form class="houseHelpForm" action="" novalidate> ' +
-            '  <div class="row dynamic-profile-div"> ' +
-            ' <div class="col-lg-2 profile-input"> ' +
-            ' <input type="text" class="" name="" required>' +
-            ' <label class="">Name</label>' +
 
-            ' </div> ' +
-            ' <div class="col-lg-2"></div> ' +
-            ' <div class="col-lg-2 profile-input"> ' +
-            '  <input type="text" class="" name="" required> ' +
-            '  <label class="">Contact Number</label>' +
-            ' </div> ' +
-            ' <div class="col-lg-5"></div> ' +
-            ' <div class="col-lg-1 profile-delete remove-profile-houseHelp"><img  src="Assets/images/deleteIcon.svg" alt=""></div> ' +
-            // '<span class="remove-profile-houseHelp" ><img  src="Assets/images/deleteIcon.svg" alt=""></span>'
-            '</div> '
-        '</form> ';
+        dynamicHouseHelpCount++;
+        
+        $.each(profileHouseHelpJson, function (index, profileHouseHelpObj) {
+            dynamicHouseHelpDetailsFxn(profileHouseHelpObj, dynamicHouseHelpCount);
 
-
-        $(".profile-house-help-dynamic-div").append(houseHelpDynamicTxt);
-
-
+        })
+       
     });
 
     $('.profile-house-help-dynamic-div').on('click', '.remove-profile-houseHelp', function () {
@@ -232,12 +246,11 @@ $(document).ready(function () {
 
     $('.profile-dpndnt-pet-add-btn').click(function (e) {
         //alert("pet add");
-        petCount++;
-       var nn = $(".profile-pet-name").val(); alert(nn);
-       alert(dynArr.length);
-        $.each(dynArr, function(index,item){
-            dynamicPetFxn(item);
-           
+        dynamicPetCount++;
+        
+        $.each(profilePetJson, function (index, profilePetObj) {
+            dynamicPetDetailsFxn(profilePetObj, dynamicPetCount);
+
         })
 
 
@@ -341,54 +354,121 @@ $(document).ready(function () {
     });
 
     $(".profile-dpndnt-save-btn").click(function (event) {
-        alert("in dependent save");
+         //alert("in dependent save");
+        var petJson = [];
+        // alert(dynamicPetCount);
+        // iterate and push into the petJson to be save
+        for (var i = 1; i <= dynamicPetCount; i++) {
+             console.log("here"+i);
+            var petObj = {};
+            var petName = $('.profile-pet-name' + i).val();
+            var petType = $('.profile-pet-type' + i).val();
+            var petBreed = $('.profile-pet-breed' + i).val();
+            petObj["petName"] = petName;
+            petObj["petType"] = petType;
+            petObj["petBreed"] = petBreed;
+            petJson.push(petObj);
 
-        var js = [];
-        var s = {};
+        }
+            console.log(petJson);
+
+             // alert("in dependent save");
+        var dependentJson = [];
+        // alert(dynamicFamilyCount);
+        for (var i = 1; i <= dynamicFamilyCount; i++) {
+          //  console.log("here"+i);
+            var dependentObj = {};
+            var dependentName = $('.profile-depndnt-name' + i).val();
+            var dependentReln = $('.profile-depndnt-rel' + i).val();
+            var dependentMail = $('.profile-depndnt-mail' + i).val();
+            var dependentMob = $('.profile-depndnt-mob' + i).val();
+            dependentObj["dependntName"] = dependentName;
+            dependentObj["dependntRel"] = dependentReln;
+            dependentObj["dependntEmail"] = dependentMail;
+            dependentObj["dependntMOb"] = dependentMob;
+            dependentJson.push(dependentObj);
+
+        }
+          
+            console.log(dependentJson);
+
+            var houseHelpJson = [];
+            // alert(dynamicPetCount);
+            // iterate and push into the petJson to be save
+            for (var i = 1; i <= dynamicHouseHelpCount; i++) {
+                // console.log("here"+i);
+                // console.log(dynamicHouseHelpCount);
+                var houseHelpObj = {};
+                var houseHelpName = $('.profile-depndnt-houseHelp-name' + i).val();
+                console.log(houseHelpName);
+                var houseHelpContact = $('.profile-depndnt-houseHelp-contact' + i).val();
+                houseHelpObj["houseHelpName"] = houseHelpName;
+                houseHelpObj["houseHelpContact"] = houseHelpContact;
+                houseHelpJson.push(houseHelpObj);
+    
+            }
+                console.log("houseHelp"+houseHelpJson);
+    
+
         $.ajax({
             type: 'POST',
             url: '',
             dataType: 'json',
-            data:'',
+            data: petJson,
             success: function (data) {
-    
-                var familyJsonObj = $.parseJSON(data);
-    
-                dynArr = [];
-                dynArr.push(familyJsonObj); 
-                $.each(dynArr, function(index,item){
-                    dynamicPetFxn(item);
-                   
-                })
+                alert("petsSaved");
             }
-    
+
         });
-       
+
+        $.ajax({
+            type: 'POST',
+            url: '',
+            dataType: 'json',
+            data: petJson,
+            success: function (data) {
+                alert("dependentJson");
+            }
+
+        });
+
+        $.ajax({
+            type: 'POST',
+            url: '',
+            dataType: 'json',
+            data: houseHelpJson,
+            success: function (data) {
+                alert("houseHelpSaved");
+            }
+
+        });
+
     });
 
 
 });
 
-function dynamicPetFxn(arr) {
-     var name = arr.name;
-     var type = arr.type;
-     var breed = arr.breed;
+function dynamicPetDetailsFxn(profilePetObj, dynamicPetCount) {
+    var profilePetName = profilePetObj.petName;
+    var profilePetType = profilePetObj.petType;
+    var profilePetBreed = profilePetObj.petBreed;
 
-    var addPetDynamicTxt = '<form class="profilePetForm" action="" novalidate> ' +
+
+    var addPetDynamicTxt = '<form class="profilePetForm' + dynamicPetCount + '" action="" novalidate> ' +
         '  <div class="row dynamic-profile-div"> ' +
         ' <div class="col-lg-2 profile-input"> ' +
-        ' <input type="text" class="" name=""  value="'+name+ '" required>' +
-        ' <label class="profile-pet-name">Name</label>' +
+        ' <input type="text" class="profile-pet-name' + dynamicPetCount + '" name=""  value="' + profilePetName + '" required>' +
+        ' <label class="">Name</label>' +
         ' </div> ' +
         ' <div class="col-lg-2"></div> ' +
         ' <div class="col-lg-2 profile-input"> ' +
-        '  <input type="text" class="" name="" value="'+type+ '"  required> ' +
-        '  <label class="profile-pet-type">Type</label>' +
+        '  <input type="text" class="profile-pet-type' + dynamicPetCount + '" name="" value="' + profilePetType + '"  required> ' +
+        '  <label class="">Type</label>' +
         ' </div> ' +
         ' <div class="col-lg-2"></div> ' +
         ' <div class="col-lg-2 profile-input"> ' +
-        '  <input type="text" class="" name=""  value="'+breed+ '"  required> ' +
-        '  <label class="profile-pet-breed">Breed</label>' +
+        '  <input type="text" class="profile-pet-breed' + dynamicPetCount + '" name=""  value="' + profilePetBreed + '"  required> ' +
+        '  <label class="">Breed</label>' +
         ' </div> ' +
         ' <div class="col-lg-1"></div> ' +
         ' <div class="col-lg-1 profile-delete remove-profile-pet"><img  src="Assets/images/deleteIcon.svg" alt=""></div> ' +
@@ -398,4 +478,73 @@ function dynamicPetFxn(arr) {
 
     $(".profile-pet-dynamic-div").append(addPetDynamicTxt);
 }
+
+function dynamicFamilyDetailsFxn(profileFamilyObj, dynamicFamilyCount) {
+    var dependntName = profileFamilyObj.dependntName;
+    var dependntRel = profileFamilyObj.dependntRel;
+    var dependntEmail = profileFamilyObj.dependntEmail;
+    var dependntMob = profileFamilyObj.dependntMob;
+
+//  alert("family add");
+var profileFamilyDynamicTxt = '<form class="profileFamilyForm' + dynamicFamilyCount + '" action="" novalidate> ' +
+'  <div class="row dynamic-profile-div"> ' +
+' <div class="col-lg-2 profile-input"> ' +
+' <input type="text" class="profile-depndnt-name' + dynamicFamilyCount + '" name=""  value="' + dependntName + '"  required>' +
+' <label class="">Name</label>' +
+' </div> ' +
+' <div class="col-lg-1"></div> ' +
+' <div class="col-lg-2 profile-input"> ' +
+'  <input type="text" class="profile-depndnt-rel' + dynamicFamilyCount + '" name=""  value="' + dependntRel + '" required> ' +
+'  <label class="">Relationship</label>' +
+' </div> ' +
+' <div class="col-lg-1"></div> ' +
+' <div class="col-lg-2 profile-input"> ' +
+'  <input type="text" class="profile-depndnt-mail' + dynamicFamilyCount + '" name=""  value="' + dependntEmail + '" required> ' +
+'  <label class="">Email Id</label> ' +
+' </div> ' +
+' <div class="col-lg-1"></div> ' +
+' <div class="col-lg-2 profile-input"> ' +
+'   <input type="text" class="profile-depndnt-mob' + dynamicFamilyCount + '" name=""  value="' + dependntMob + '" required>  ' +
+'   <label class="">Mobile</label>  ' +
+' </div> ' +
+' <div class="col-lg-1 profile-delete remove-profile-family"><img  src="Assets/images/deleteIcon.svg" alt=""></div> ' +
+// '<span class="remove-profile-family" ><img  src="Assets/images/deleteIcon.svg" alt=""></span>'
+'</div> '
+'</form> ';
+
+
+$(".profile-family-dynamic-div").append(profileFamilyDynamicTxt);
+}
+
+function dynamicHouseHelpDetailsFxn(profileHouseHelpObj, dynamicHouseHelpCount) {
+    var houseHelpName = profileHouseHelpObj.houseHelpName;
+    var houseHelpContact = profileHouseHelpObj.houseHelpContact;
+
+     //alert("house help add");
+     var houseHelpDynamicTxt = '<form class="houseHelpForm' + dynamicHouseHelpCount + '" action="" novalidate> ' +
+     '  <div class="row dynamic-profile-div"> ' +
+     ' <div class="col-lg-2 profile-input"> ' +
+     ' <input type="text" class="profile-depndnt-houseHelp-name' + dynamicHouseHelpCount + '" name=""  value="' + houseHelpName + '"   required>' +
+     ' <label class="">Name</label>' +
+
+     ' </div> ' +
+     ' <div class="col-lg-2"></div> ' +
+     ' <div class="col-lg-2 profile-input"> ' +
+     '  <input type="text" class="profile-depndnt-houseHelp-contact' + dynamicHouseHelpCount + '" name=""   value="' + houseHelpContact + '"  required> ' +
+     '  <label class="">Contact Number</label>' +
+     ' </div> ' +
+     ' <div class="col-lg-5"></div> ' +
+     ' <div class="col-lg-1 profile-delete remove-profile-houseHelp"><img  src="Assets/images/deleteIcon.svg" alt=""></div> ' +
+     // '<span class="remove-profile-houseHelp" ><img  src="Assets/images/deleteIcon.svg" alt=""></span>'
+     '</div> '
+ '</form> ';
+
+
+ $(".profile-house-help-dynamic-div").append(houseHelpDynamicTxt);
+
+
+
+}
+
+
 
