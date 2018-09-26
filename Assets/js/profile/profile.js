@@ -35,8 +35,7 @@ $(document).ready(function () {
             type: "GET",
             contentType: false,
             success: function (file, status) {
-                var getProfilePicPath
-                $('.profile-pic').attr('src', getProfilePicPath);
+                $('.profile-pic').attr('src', 'data:image/png;base64,${YourByte}');                
             },
             error: function (error) {
                 console.log(error);
@@ -218,11 +217,11 @@ $(document).ready(function () {
     $('.profile-dpndnt-pet-add-btn').click(function (e) {
         //alert("pet add");
         petCount++;
-       var nn = $(".profile-pet-name").val(); alert(nn);
-       alert(dynArr.length);
-        $.each(dynArr, function(index,item){
+        var nn = $(".profile-pet-name").val(); alert(nn);
+        alert(dynArr.length);
+        $.each(dynArr, function (index, item) {
             dynamicPetFxn(item);
-           
+
         })
 
 
@@ -234,21 +233,21 @@ $(document).ready(function () {
         $(this).parent().remove();
     });
 
-    var uploadProfilepic = function(){
-        $.ajax({
-            url: 'Profile/Update',
-            type: "POST",
-            contentType: false,
-            success: function (file, status) {
-                var getProfilePicPath
-                $('.profile-pic').attr('src', getProfilePicPath);
-            },
-            error: function (error) {
-                console.log(error);
-                $('.profile-pic').attr("alt", "pathError");
-            }
-        });
-    }
+        // var uploadProfilepic = function (file) {
+        //     $.ajax({
+        //         url: 'Profile/Update',
+        //         type: "PUT",
+        //         contentType: false,
+        //         success: function (file, status) {
+        //             var getProfilePicPath
+        //             $('.profile-pic').attr('src', getProfilePicPath);
+        //         },
+        //         error: function (error) {
+        //             console.log(error);
+        //             $('.profile-pic').attr("alt", "pathError");
+        //         }
+        //     });
+        // }
 
 
     var removeProfilepic = function(){
@@ -294,6 +293,37 @@ $(document).ready(function () {
             } else {
                 isUploadValid = true;
                 $('.profile-pic').attr('src', profilePicPath);
+            }
+
+            if (isUploadValid) {
+                // var fr = new FileReader();
+                var reader = new FileReader();
+                var fileByteArray = [];
+                reader.readAsArrayBuffer(this.files[0]);
+                reader.onloadend = function (evt) {
+                    if (evt.target.readyState == FileReader.DONE) {
+                        var arrayBuffer = evt.target.result,
+                            array = new Uint8Array(arrayBuffer);
+                        for (var i = 0; i < array.length; i++) {
+                            fileByteArray.push(array[i]);
+                        }
+                    }
+
+                    var objUpload = {                        
+                            tCode: $('.tCode').val(),
+                            uploadImg: fileByteArray                        
+                    };
+                }
+
+                $.ajax({
+                    url: "Action/Method",
+                    type: "PUT",
+                    contentType: "application/json",
+                    data: objUpload,
+                    processData: false,
+                    success: function (data,status) {  },
+                    error: function (xhr, status, error) {  }
+                });
             }
         });
     });
@@ -368,45 +398,45 @@ $(document).ready(function () {
             type: 'POST',
             url: '',
             dataType: 'json',
-            data:'',
+            data: '',
             success: function (data) {
-    
+
                 var familyJsonObj = $.parseJSON(data);
-    
+
                 dynArr = [];
-                dynArr.push(familyJsonObj); 
-                $.each(dynArr, function(index,item){
+                dynArr.push(familyJsonObj);
+                $.each(dynArr, function (index, item) {
                     dynamicPetFxn(item);
-                   
+
                 })
             }
-    
+
         });
-       
+
     });
 
 
 });
 
 function dynamicPetFxn(arr) {
-     var name = arr.name;
-     var type = arr.type;
-     var breed = arr.breed;
+    var name = arr.name;
+    var type = arr.type;
+    var breed = arr.breed;
 
     var addPetDynamicTxt = '<form class="profilePetForm" action="" novalidate> ' +
         '  <div class="row dynamic-profile-div"> ' +
         ' <div class="col-lg-2 profile-input"> ' +
-        ' <input type="text" class="" name=""  value="'+name+ '" required>' +
+        ' <input type="text" class="" name=""  value="' + name + '" required>' +
         ' <label class="profile-pet-name">Name</label>' +
         ' </div> ' +
         ' <div class="col-lg-2"></div> ' +
         ' <div class="col-lg-2 profile-input"> ' +
-        '  <input type="text" class="" name="" value="'+type+ '"  required> ' +
+        '  <input type="text" class="" name="" value="' + type + '"  required> ' +
         '  <label class="profile-pet-type">Type</label>' +
         ' </div> ' +
         ' <div class="col-lg-2"></div> ' +
         ' <div class="col-lg-2 profile-input"> ' +
-        '  <input type="text" class="" name=""  value="'+breed+ '"  required> ' +
+        '  <input type="text" class="" name=""  value="' + breed + '"  required> ' +
         '  <label class="profile-pet-breed">Breed</label>' +
         ' </div> ' +
         ' <div class="col-lg-1"></div> ' +
