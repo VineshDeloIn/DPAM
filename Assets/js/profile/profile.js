@@ -83,7 +83,7 @@ $(document).ready(function () {
         });
     }
 
-    getProfilePic();
+    // getProfilePic();
         //get the data for the dynamic profile dependent house help details
         $.ajax({
             type: 'GET',
@@ -291,10 +291,11 @@ $(document).ready(function () {
             type: "DELETE",
             data: { tCode: sessionStorage.getItem("tCode") },
             contentType: false,
-            success: function (file, status) {
+            success: function (status) {
                 $('.profile-pic').attr('src', "Assets/images/profile_pic_place_holder.png");
             },
             error: function (error) {
+                $('.profile-pic').attr('src', "Assets/images/profile_pic_place_holder.png");
                 $('.profile-pic').attr("alt", "unableToUpdate");
             }
         });
@@ -314,7 +315,7 @@ $(document).ready(function () {
             var isUploadValid = true;
 
             var ext = $('.uploadProfilePicFile').val().split('.').pop().toLowerCase();
-            if ($.inArray(ext, ['bmp', 'png', 'jpeg']) == -1) {
+            if ($.inArray(ext, ['bmp', 'png', 'jpg','jpeg']) == -1) {
                 //alert("iage of not right format");
                 $(".uploadProfileErr").html(" !Image is not of format bmp , png pr jpeg. Please use any of that");
                 isUploadValid = false;
@@ -327,13 +328,15 @@ $(document).ready(function () {
                 isUploadValid = false;
             } else {
                 isUploadValid = true;
-                $('.profile-pic').attr('src', profilePicPath);
+                // $('.profile-pic').attr('src', profilePicPath);
             }
 
             var objUpload;
 
             if (isUploadValid) {
+                $('.profileOptions').modal('hide');
                 // var fr = new FileReader();
+                $('.profile-pic').attr('src', "Assets/images/loading_profile_pic_new.gif");
                 var reader = new FileReader();
                 var fileByteArray = [];
                 reader.readAsArrayBuffer(this.files[0]);
@@ -343,7 +346,7 @@ $(document).ready(function () {
                             array = new Uint8Array(arrayBuffer);
                         for (var i = 0; i < array.length; i++) {
                             fileByteArray.push(array[i]);
-                        }
+                        }   
                     }
 
                     objUpload = {
@@ -358,8 +361,12 @@ $(document).ready(function () {
                     contentType: "application/json",
                     data: objUpload,
                     processData: false,
-                    success: function (data, status) { console.log('upload Successful!'); },
-                    error: function (xhr, status, error) { console.log('upload Failure!'); }
+                    success: function (status) { 
+                        $('.profile-pic').attr('src', profilePicPath);     
+                        console.log('upload Successful!'); 
+                    },
+                    error: function (xhr, status, error) {                         
+                        console.log('upload Failure!'); }
                 });
             }
         });
