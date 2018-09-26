@@ -878,7 +878,6 @@ a {
         display: none;
     }
     .profile-header {
-        background: url("../../Assets/images/profile-banner.jpg");
         background-size: 200%;
         height: 58vw;
         background-repeat: no-repeat;
